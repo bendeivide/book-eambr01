@@ -1,16 +1,32 @@
 bookdown::gitbook:
-  css: ear.css
+#  split_by: section
+#  css: ear.css
   config:
     toc:
+      collapse: subsubsection
+      scroll_highlight: yes
       before: |
         <li><a href="./">Estudando o ambiente R</a></li>
       after: |
         <li><a href="https://bendeivide.github.io/cursor" target="blank">Acesse o curso desse material!</a></li>
-    download: ["pdf", "epub"]
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
+#    download: ["pdf", "epub"]
+    edit: https://github.com/bendeivide/book-eambr/edit/main/%s
+    toolbar:
+      position: fixed # static
+    sharing:
+      facebook: yes
+      github: yes
+      twitter: yes
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      whatsapp: yes
+# bookdown::pdf_book:
+#   includes:
+#     in_header: preamble.tex
+#   latex_engine: xelatex
+#   citation_package: natbib
+#   keep_tex: yes
+#   toc_depth: 2
+# bookdown::epub_book: default

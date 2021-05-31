@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Estudando o Ambiente R</title>
-  <meta name="description" content="Estudando o Ambiente R" />
+  <title>Capítulo 4 Objetos | Estudando o Ambiente R</title>
+  <meta name="description" content="Capítulo 4 Objetos | Estudando o Ambiente R" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Estudando o Ambiente R" />
+  <meta property="og:title" content="Capítulo 4 Objetos | Estudando o Ambiente R" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://bendeivide.github.io/book-eambr/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="bendeivide/book-eambr" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Estudando o Ambiente R" />
+  <meta name="twitter:title" content="Capítulo 4 Objetos | Estudando o Ambiente R" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="epígrafe.html"/>
+<link rel="prev" href="introdução-ao-r.html"/>
+<link rel="next" href="importando-dados.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,23 +178,55 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Estudando o Ambiente R</h1>
-<p class="author"><em>Ben Dêivide, Diego Arthur</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-05-31</em></p>
+<div id="objetos" class="section level1" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Objetos</h1>
+<div id="atributos" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Atributos</h2>
+<div id="atributos-intrínsecos" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Atributos intrínsecos</h3>
 </div>
-<div id="bem-vindo" class="section level1 unnumbered">
-<h1>Bem-vindo</h1>
-<p><a href="http://bendeivide.github.io/cursor"><img src="capa.png" align="right" width="250" height="366" class="cover" alt="Compre pela internet" /></a> Esse é um <em>livro digital</em> da 1ª edição do <strong>“<a href="">Estudando o ambiente R</a>”</strong>, um livro com o selo Democratizando Conhecimento (DC). O Livro é destinado aos usuários <code>R</code> que objetivam aprofundar no entendimento do ambiente R para seus projetos pessoais e profissionais.</p>
-O número de leitores que acessaram esse livro:
-</br>
-<div align="center">
-<a href='https://www.free-website-hit-counter.com'><img src='https://hitwebcounter.com/counter/counter.php?page=7819661&style=0024&nbdigits=9&type=page&initCount=0' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">Free website hit counter</a></small>
 </div>
-<div id="licença" class="section level2 unnumbered">
-<h2>Licença</h2>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este trabalho está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons - Atribuição-NãoComercial 4.0 Internacional</a>.</p>
-<p><a href="https://bendeivide.github.io/dc/"><img src="Logo-DC-preto2.png" align="left" width="180" /></a></p>
+<div id="coersão" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Coersão</h2>
+</div>
+<div id="tipo-de-objetos" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Tipo de objetos</h2>
+<div id="vetores" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Vetores</h3>
+<div id="vetores-escalares" class="section level4" number="4.3.1.1">
+<h4><span class="header-section-number">4.3.1.1</span> Vetores escalares</h4>
+</div>
+<div id="vetores-longos" class="section level4" number="4.3.1.2">
+<h4><span class="header-section-number">4.3.1.2</span> Vetores longos</h4>
+</div>
+<div id="manipulando-vetores" class="section level4" number="4.3.1.3">
+<h4><span class="header-section-number">4.3.1.3</span> Manipulando vetores</h4>
+</div>
+</div>
+<div id="matrizes-bidimensionais" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Matrizes bidimensionais</h3>
+</div>
+<div id="matrizes-multidimensionais" class="section level3" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Matrizes multidimensionais</h3>
+</div>
+<div id="listas" class="section level3" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> Listas</h3>
+</div>
+<div id="quadro-de-dados" class="section level3" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> Quadro de dados</h3>
+</div>
+<div id="funções" class="section level3" number="4.3.6">
+<h3><span class="header-section-number">4.3.6</span> Funções</h3>
+<div id="estruturas-de-controle" class="section level4" number="4.3.6.1">
+<h4><span class="header-section-number">4.3.6.1</span> Estruturas de controle</h4>
+</div>
+<div id="como-criar-funções" class="section level4" number="4.3.6.2">
+<h4><span class="header-section-number">4.3.6.2</span> Como criar funções</h4>
+</div>
+<div id="escopo-léxico" class="section level4" number="4.3.6.3">
+<h4><span class="header-section-number">4.3.6.3</span> Escopo léxico</h4>
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -202,8 +234,8 @@ O número de leitores que acessaram esse livro:
           </div>
         </div>
       </div>
-
-<a href="epígrafe.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introdução-ao-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="importando-dados.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -235,7 +267,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/bendeivide/book-eambr/edit/main/index.Rmd",
+"link": "https://github.com/bendeivide/book-eambr/edit/main/02-nbasico.Rmd",
 "text": "Edit"
 },
 "history": {
