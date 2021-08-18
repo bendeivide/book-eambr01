@@ -1,3 +1,11 @@
+
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
 # Introdução ao livro
 
 O curso R não tem como objetivo principal de ensinar análise de dados. Mas sim, proporcionar a você um conhecimento sobre a linguagem R, de modo que consiga usufruir todos os recursos que ela possa lhe proporcionar.

@@ -1,7 +1,7 @@
 --- 
 title: "Estudando o Ambiente R"
 author: "Ben Dêivide, Diego Arthur"
-date: "2021-05-31"
+date: "2021-08-18"
 site: bookdown::bookdown_site
 
 bibliography:
