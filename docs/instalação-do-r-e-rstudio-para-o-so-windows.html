@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Instalação do R e RStudio para o SO Windows | Estudando o Ambiente R</title>
+  <meta name="description" content="Capítulo 2 Instalação do R e RStudio para o SO Windows | Estudando o Ambiente R" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Instalação do R e RStudio para o SO Windows | Estudando o Ambiente R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://bendeivide.github.io/book-eambr/" />
+  
+  
+  <meta name="github-repo" content="bendeivide/book-eambr" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Instalação do R e RStudio para o SO Windows | Estudando o Ambiente R" />
+  
+  
+  
+
+<meta name="author" content="Ben Dêivide, Diego Arthur" />
+
+
+<meta name="date" content="2021-08-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introdução-ao-livro.html"/>
+<link rel="next" href="introdução-ao-r.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Estudando o ambiente R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bem-vindo</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#licença"><i class="fa fa-check"></i>Licença</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html"><i class="fa fa-check"></i><b>1</b> Introdução ao livro</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html#basico"><i class="fa fa-check"></i><b>1.1</b> Programação em R (Nível Básico)</a></li>
+<li class="chapter" data-level="1.2" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html#intermediario"><i class="fa fa-check"></i><b>1.2</b> Programação em R (Nível Intermediário)</a></li>
+<li class="chapter" data-level="1.3" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html#avancado"><i class="fa fa-check"></i><b>1.3</b> Programação em R (Nível Avançado)</a></li>
+<li class="chapter" data-level="1.4" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html#referencias"><i class="fa fa-check"></i><b>1.4</b> Referências dos curso</a></li>
+<li class="chapter" data-level="1.5" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html#buscarmateriais"><i class="fa fa-check"></i><b>1.5</b> Onde encontrar os nossos materiais</a></li>
+<li class="chapter" data-level="1.6" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html#pacutilizados"><i class="fa fa-check"></i><b>1.6</b> Pacotes R utilizados para esse curso</a></li>
+</ul></li>
+<li class="part"><span><b>I Programação em R (Nível Básico)</b></span></li>
+<li class="chapter" data-level="2" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html"><i class="fa fa-check"></i><b>2</b> Instalação do R e RStudio para o SO Windows</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#história-do-r"><i class="fa fa-check"></i><b>2.2</b> História do R</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html"><i class="fa fa-check"></i><b>3</b> Introdução ao R</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#como-o-r-trabalha"><i class="fa fa-check"></i><b>3.1</b> Como o R trabalha</a></li>
+<li class="chapter" data-level="3.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#comandos-no-r-e-ambiente-global"><i class="fa fa-check"></i><b>3.2</b> Comandos no R e Ambiente Global</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#console-e-prompt-de-comando"><i class="fa fa-check"></i><b>3.2.1</b> Console e <em>Prompt</em> de comando</a></li>
+<li class="chapter" data-level="3.2.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#comandos-elementares"><i class="fa fa-check"></i><b>3.2.2</b> Comandos elementares</a></li>
+<li class="chapter" data-level="3.2.3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#execução-de-comandos"><i class="fa fa-check"></i><b>3.2.3</b> Execução de comandos</a></li>
+<li class="chapter" data-level="3.2.4" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#chamada-e-correção-de-comandos-anteriores"><i class="fa fa-check"></i><b>3.2.4</b> Chamada e correção de comandos anteriores</a></li>
+<li class="chapter" data-level="3.2.5" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#ambiente-global-área-de-trabalho-ou-workspace"><i class="fa fa-check"></i><b>3.2.5</b> Ambiente Global (área de trabalho ou <em>Workspace</em>)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#arquivos-.rdata-e-.rhistory"><i class="fa fa-check"></i><b>3.3</b> Arquivos <code>.RData</code> e <code>.Rhistory</code></a></li>
+<li class="chapter" data-level="3.4" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#criando-e-salvando-um-script"><i class="fa fa-check"></i><b>3.4</b> Criando e salvando um <em>script</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>4</b> Objetos</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="objetos.html"><a href="objetos.html#atributos"><i class="fa fa-check"></i><b>4.1</b> Atributos</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="objetos.html"><a href="objetos.html#atributos-1"><i class="fa fa-check"></i><b>4.1.1</b> Atributos</a></li>
+<li class="chapter" data-level="4.1.2" data-path="objetos.html"><a href="objetos.html#atributos-intrínsecos"><i class="fa fa-check"></i><b>4.1.2</b> Atributos intrínsecos</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="objetos.html"><a href="objetos.html#coersão"><i class="fa fa-check"></i><b>4.2</b> Coersão</a></li>
+<li class="chapter" data-level="4.3" data-path="objetos.html"><a href="objetos.html#tipo-de-objetos"><i class="fa fa-check"></i><b>4.3</b> Tipo de objetos</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="objetos.html"><a href="objetos.html#vetores"><i class="fa fa-check"></i><b>4.3.1</b> Vetores</a></li>
+<li class="chapter" data-level="4.3.2" data-path="objetos.html"><a href="objetos.html#matrizes-bidimensionais"><i class="fa fa-check"></i><b>4.3.2</b> Matrizes bidimensionais</a></li>
+<li class="chapter" data-level="4.3.3" data-path="objetos.html"><a href="objetos.html#matrizes-multidimensionais"><i class="fa fa-check"></i><b>4.3.3</b> Matrizes multidimensionais</a></li>
+<li class="chapter" data-level="4.3.4" data-path="objetos.html"><a href="objetos.html#listas"><i class="fa fa-check"></i><b>4.3.4</b> Listas</a></li>
+<li class="chapter" data-level="4.3.5" data-path="objetos.html"><a href="objetos.html#quadro-de-dados"><i class="fa fa-check"></i><b>4.3.5</b> Quadro de dados</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html"><i class="fa fa-check"></i><b>5</b> Boas práticas de como escrever um código</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos"><i class="fa fa-check"></i><b>5.1</b> Nomes de arquivos</a></li>
+<li class="chapter" data-level="5.2" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando"><i class="fa fa-check"></i><b>5.2</b> Comentar as linahs de comando</a></li>
+<li class="chapter" data-level="5.3" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos"><i class="fa fa-check"></i><b>5.3</b> Nome de objetos</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe"><i class="fa fa-check"></i><b>5.3.1</b> Sintaxe</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="pacotes.html"><a href="pacotes.html"><i class="fa fa-check"></i><b>6</b> Pacotes</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="pacotes.html"><a href="pacotes.html#instalação-de-um-pacote"><i class="fa fa-check"></i><b>6.1</b> Instalação de um pacote</a></li>
+<li class="chapter" data-level="6.2" data-path="pacotes.html"><a href="pacotes.html#objetivos-de-um-pacote"><i class="fa fa-check"></i><b>6.2</b> Objetivos de um pacote</a></li>
+<li class="chapter" data-level="6.3" data-path="pacotes.html"><a href="pacotes.html#utilizando-funções-de-um-pacote"><i class="fa fa-check"></i><b>6.3</b> Utilizando funções de um pacote</a></li>
+<li class="chapter" data-level="6.4" data-path="pacotes.html"><a href="pacotes.html#carregando-e-anexando-um-pacote"><i class="fa fa-check"></i><b>6.4</b> Carregando e anexando um pacote</a></li>
+<li class="chapter" data-level="6.5" data-path="pacotes.html"><a href="pacotes.html#namespace-de-um-pacote"><i class="fa fa-check"></i><b>6.5</b> <em>NAMESPACE</em> de um pacote</a></li>
+<li class="chapter" data-level="6.6" data-path="pacotes.html"><a href="pacotes.html#usando-os-operadores-e"><i class="fa fa-check"></i><b>6.6</b> Usando os operadores <code>::</code> e <code>:::</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html"><i class="fa fa-check"></i><b>7</b> Ambientes e caminho de busca</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html#a-superatribuição"><i class="fa fa-check"></i><b>7.1</b> A superatribuição</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="interfaces-com-outras-linguagens.html"><a href="interfaces-com-outras-linguagens.html"><i class="fa fa-check"></i><b>8</b> Interfaces com outras linguagens</a></li>
+<li class="divider"></li>
+<li><a href="https://bendeivide.github.io/cursor" target="blank">Acesse o curso desse material!</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Estudando o Ambiente R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="instalação-do-r-e-rstudio-para-o-so-windows" class="section level1" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> Instalação do R e RStudio para o SO Windows</h1>
+<p>A linguagem <em>R</em> é o objetivo principal desse curso. Assim, faremos inicialmente a sua instalação, uma vez que o <em>RStudio</em> é apenas uma GUI, e sem o <em>R</em>, não há sentido instalá-lo.</p>
+<p>Dessa forma, seguem os passos para a instalação:</p>
+<ul>
+<li>Instalação do <em>R</em>: <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a></li>
+</ul>
+<!-- IMAGEM 01   -->
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="img/Instalacao_R_01.PNG" alt=" Primeiro passo para Instalação do R" width="100%" />
+<p class="caption">
+FIGURA 2.1:  Primeiro passo para Instalação do R
+</p>
+</div>
+<!-- IMAGEM 02   -->
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="img/Instalacao_R_02.PNG" alt="Segundo passo para Instalação do R" width="100%" />
+<p class="caption">
+FIGURA 2.2: Segundo passo para Instalação do R
+</p>
+</div>
+<!-- IMAGEM 03   -->
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="img/Instalacao_R_03.PNG" alt="Terceiro passo para Instalação do R." width="100%" />
+<p class="caption">
+FIGURA 2.3: Terceiro passo para Instalação do R.
+</p>
+</div>
+<ul>
+<li>Instalação do <em>RStudio</em>: <a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a></li>
+</ul>
+<!-- IMAGEM 04   -->
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="img/Instalacao_R_Studio01.PNG" alt="Instalação do RStudio" width="100%" />
+<p class="caption">
+FIGURA 2.4: Instalação do RStudio
+</p>
+</div>
+<p>Justificamos a utilização do <em>RStudio</em> pela quantidade de recursos disponíveis e a diversidade de usuários <em>R</em>, que hoje o perfil não é apenas de um programador, mas de um usuário que necessita de uma ferramenta estatística para análise de seus dados. Dessa forma, até por questão de praticidade, e de uso pessoal, não deixaremos de repassar o entendimento sobre a linguagem <em>R</em> com o uso do <em>RStudio</em>.</p>
+<div id="como-utilizar-o-r-e-o-rstudio" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Como utilizar o R e o RStudio</h2>
+<p>A primeira ideia que temos sobre a linguagem <em>R</em> é a linha de comando, que é simbolizada pelo prompt de comando “&gt;.” Este símbolo significa que o R está pronto para receber os comandos do usuário. O <em>prompt</em> de comando está localizado no console do <em>R</em>. Vejamos o console do <em>R</em> a seguir, que é o local que recebe as linhas de comando do usuário.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="img/Console_do_R.png" alt="Console do R (Versão 4.0.3)" width="100%" />
+<p class="caption">
+FIGURA 2.5: Console do R (Versão 4.0.3)
+</p>
+</div>
+<p>O <em>R</em> ao ser iniciado, está pronto para receber as linhas de comando desejadas. Uma forma simples de armazernar os seus comandos é por meio de um <em>script</em>, isto é, um arquivo de texto com extensão .R. Para criar, basta ir em: Arquivo &gt; Novo script…. Veremos muitas outras informações ao longo do curso.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="img/Console_do_R_Comando.png" alt="Inserção de comandos no Console R" width="100%" />
+<p class="caption">
+FIGURA 2.6: Inserção de comandos no Console R
+</p>
+</div>
+<p>O <em>RStudio</em> se apresenta como uma interface para facilitar a utilização do <em>R</em>, tendo por padrão quatro quadrantes, demonstrado na Figura <a href="instalação-do-r-e-rstudio-para-o-so-windows.html#fig:InterfaceRStudio">2.7</a></p>
+<div class="figure" style="text-align: center"><span id="fig:InterfaceRStudio"></span>
+<img src="img/Interface_RStudio.png" alt="Interface do RStudio (Versão 1.4.1103)" width="100%" />
+<p class="caption">
+FIGURA 2.7: Interface do RStudio (Versão 1.4.1103)
+</p>
+</div>
+<p>Muitas coisas na interface do <em>R</em> podem se tornar problemas para os usuários, uma vez que janelas gráficas, janelas de scripts, dentre outras, se sobrepõe. Uma vantagem no RStudio foi essa divisão de quadrantes, que torna muito mais organizado as atividades realizadas no <em>R</em>. De um modo geral, diremos que o:</p>
+<ul>
+<li><strong>primeiro quadrante:</strong> é responsável pela entrada de dados, comandos, isto é, o <em>input</em>.</li>
+<li><strong>segundo quadrante:</strong> é o console do R, representa tanto entrada quanto saída de informações (<em>input/output</em>).<br />
+</li>
+<li><strong>terceiro quadrante:</strong> representa informações básicas como objetos no ambiente global, a memória de comandos na aba <em>History</em>, dentre outras, e também representa entrada e saída de informações (<em>input/output</em>).</li>
+<li><strong>quarto quadrante:</strong> por fim, é responsável pelas representaçõs gráficas, help dos pacotes, instalação de pacotes e renderização de páginas web.</li>
+</ul>
+<p>Dependendo das atividades as abas podem aumentar.</p>
+</div>
+<div id="história-do-r" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> História do R</h2>
+<p>A linguagem <em>R</em> tem a sua primeira aparição científica publicada em 1996, com o artigo intitulado <em>R: A Language for Data Analysis and Graphics</em>, cujos os autores são os desenvolvedores da linguagem, George Ross Ihaka e Robert Clifford Gentleman.</p>
+<div class="figure" style="text-align: center"><span id="fig:CriadoresR"></span>
+<img src="img/Criadores_R.PNG" alt="Criadores do R." width="100%" />
+<p class="caption">
+FIGURA 2.8: Criadores do R.
+</p>
+</div>
+<p>Durante a época em que estes professores trabalhavam na Universidade de Auckland, Nova Zelândia, desenvolvendo uma implementação alternativa da linguagem <em>S</em>, desenvolvida por John Chambers, que comercialmente era o <em>S-PLUS</em>, nasceu em 1991, o projeto da linguagem <em>R</em>, em que em 1993 o projeto é divulgado e em 1995 ocorre o primeiro lançamento oficial como software livre com a licença GNU. Devido a demanda de correções da linguagem estar acima da capacidade de atualização em tempo real, foi criado em 1997, um grupo central voluntário, responsável por essas atualizações, o conhecido <em>R Development Core Team</em>, que hoje está em 20 membros: Douglas Bates, John Chambers, Peter Delgaard, Robert Gentleman, Kurt Hornik, Ross Ihaka, Tomas kalibera, Michael Lawrence, Friedrich Leish, Uwe Ligges, Thomas Lumley, Martin Maechler, Martin Morgan, Paul Murrel, Martyn Plummer, Brian Ripley, Deepayan Sarkarm, Duncan Temple Lang, Luke Tierney e Simon Urbanek.</p>
+<p>Por fim, o CRAN (<em>Comprehensive R Archive Network</em>) foi oficialmente anunciado em 23 de abril de 1997. O CRAN é um conjunto de sites (espelhos) que transportam material idêntico, com as contribuições do <em>R</em> de uma forma geral.</p>
+<p><em>R</em> é uma linguagem de programação e ambiente de software livre e código aberto (open source). Entendemos:</p>
+<ul>
+<li><p><em>Software livre</em>: software que respeita a liberdade e sendo de comunidade dos usuários, isto é, os usuários possuem a liberdade de executar, copiar, distribuir, estudar, mudar, melhorar o software. Ainda reforça que um software é livre se os seus usuários possuem quatro liberdades:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Liberdade 0</strong> - A liberdade de executar o programa como você desejar, para qualquer propósito;</li>
+<li><strong>Liberdade 1</strong> - A liberdade de estudar como o programa funciona, e adaptá-la as suas necessidades;</li>
+<li><strong>Liberdade 2</strong> - A liberdade de redistribuir cópias de modo que você possa ajudar outros;</li>
+<li><strong>Liberdade 3</strong> - A liberdade de distribuir cópias de suas versões modificadas a outros;</li>
+</ol></li>
+</ul>
+<p>Algo que deve estar claro é que um <em>software livre</em> não significa não comercial. Sem esse fim, o software livre não atingiria seus objetivos.</p>
+<p>Agora perceba que, segundo Richard Stallman, a ideia de software livre faz campanha pela liberdade para os usuários da computação. Por outro lado, o código aberto valoriza principalmente a vantagem prática e não faz campanha por princípios.</p>
+<ul>
+<li><em>Código aberto</em>: Para Richard Stallman código aberto apoia critérios um pouco mais flexíveis que os do software livre. Todos os códigos abertos de software livre lançados se qualificariam como código aberto. Quase todos os softwares de código aberto são softwares livres, mas há exceções, como algumas licenças de código aberto que são restritivas demais, de forma que elas não se qualificam como licenças livres. Nesse contexto, o autor cita muitas situações que diferenciam os dois termos. Vale a pena a leitura.</li>
+</ul>
+<p>A linguagem <em>R</em> é uma combinação da linguagem <em>S</em> com a semântica de escopo léxico da linguagem <em>Scheme</em>. Dessa forma, a linguagem <em>R</em> se diferencia em dois aspectos principais:</p>
+<ul>
+<li><p><strong>Gerenciamento de memória</strong>: usando as próprias palavras de Ross Ihaka, em <em>R</em>, alocamos uma quantidade fixa de memória na inicialização e a gerenciamos com um coletor de lixo dinâmico. Isso significa que há muito pouco crescimento de <em>heap</em> e, como resultado, há menos problemas de paginação do que os vistos em <em>S</em>.</p></li>
+<li><p><strong>Escopo</strong>: na linguagem <em>R</em>, as funções acessam as variáveis criadas pelo o corpo da própria função, como também as variáveis contidas no ambiente que a função foi criada. No caso da linguagem <em>S</em>, isso não ocorre, assim, como por exemplo na linguagem <em>C</em>, em que as funções acessam apenas variáveis definidas globalmente.</p></li>
+</ul>
+<p>Vejamos alguns exemplos para entendimento (Se você ainda não está ambientado ao <em>R</em>, estude esse módulo primeiro, e depois reflita sobre esses exemplos). Antes de executar as linhas de comando, instale o pacote lobstr como segue:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instale o pacote lobstr</span></span>
+<span id="cb1-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;lobstr&quot;</span>)</span></code></pre></div>
+<ul>
+<li>Exemplo 1: As funções têm acesso ao escopo em que foram criadas.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &quot;n&quot; associado a um objeto 10 no escopo da funcao</span></span>
+<span id="cb2-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb2-3"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &quot;funcao&quot; associado a um objeto que é uma funcao</span></span>
+<span id="cb2-5"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-5" aria-hidden="true" tabindex="-1"></a>funcao <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb2-6"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n)</span>
+<span id="cb2-7"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-8"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimindo &#39;funcao&#39;</span></span>
+<span id="cb2-10"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">funcao</span>()</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<ul>
+<li>Exemplo 2: As variáveis criadas ou alteradas dentro de uma função, permanecem na função.</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &quot;n&quot; associado a um objeto 10 no escopo da funcao</span></span>
+<span id="cb4-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb4-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb4-3"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb4-3" aria-hidden="true" tabindex="-1"></a>lobstr<span class="sc">::</span><span class="fu">obj_addr</span>(n) <span class="co"># Identificador do objeto</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb5-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;0x290f1900&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &quot;funcao&quot; associado a um objeto que é uma funcao</span></span>
+<span id="cb6-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-2" aria-hidden="true" tabindex="-1"></a>funcao <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb6-3"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Imprimindo n</span></span>
+<span id="cb6-4"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n)</span>
+<span id="cb6-5"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Criando um nome &quot;n&quot; associado a um objeto 15 no corpo da funcao</span></span>
+<span id="cb6-6"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">15</span></span>
+<span id="cb6-7"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Imprimindo n</span></span>
+<span id="cb6-8"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n)</span>
+<span id="cb6-9"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-10"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimindo &#39;funcao&#39;</span></span>
+<span id="cb6-11"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">funcao</span>()</span></code></pre></div>
+<pre><code>## [1] 10
+## [1] 15</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimindo &#39;n&#39;. Retorna o objeto associado ao &#39;n&#39; fora da função</span></span>
+<span id="cb8-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb8-2" aria-hidden="true" tabindex="-1"></a>n</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb10-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;0x290f1900&quot;</span></span></code></pre></div>
+<ul>
+<li>Exemplo 3: As variáveis dentro de uma função permanecem nelas, exceto no caso em que a atribuição ao escopo seja explicitamente solicitada.</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &quot;n&quot; associado a um objeto 10 no escopo da funcao</span></span>
+<span id="cb11-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb11-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb11-3"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb11-3" aria-hidden="true" tabindex="-1"></a>lobstr<span class="sc">::</span><span class="fu">obj_addr</span>(n) <span class="co"># Identificador do objeto</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb12-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;0x9f51a30&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &quot;funcao&quot; associado a um objeto que é uma funcao</span></span>
+<span id="cb13-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-2" aria-hidden="true" tabindex="-1"></a>funcao <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb13-3"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Imprimindo n</span></span>
+<span id="cb13-4"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n)</span>
+<span id="cb13-5"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Criando um nome &quot;n&quot; associado a um objeto 15 no corpo da funcao</span></span>
+<span id="cb13-6"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-6" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;&lt;-</span> <span class="dv">15</span></span>
+<span id="cb13-7"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Imprimindo n</span></span>
+<span id="cb13-8"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n)</span>
+<span id="cb13-9"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-10"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimindo &#39;funcao&#39;</span></span>
+<span id="cb13-11"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">funcao</span>()</span></code></pre></div>
+<pre><code>## [1] 10
+## [1] 15</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Observe que depois de usar a superatribuicao (&quot;&lt;&lt;-&quot;) dentro da funcao,</span></span>
+<span id="cb15-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#o nome &quot;n&quot; passou a estar associado ao numero 15 e nao mais ao numero 10, observe</span></span>
+<span id="cb15-3"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb15-3" aria-hidden="true" tabindex="-1"></a>n</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb17-1" aria-hidden="true" tabindex="-1"></a>lobstr<span class="sc">::</span><span class="fu">obj_addr</span>(n) <span class="co"># Identificador do objeto</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb18-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;0x9f51950&quot;</span></span></code></pre></div>
+<ul>
+<li>Exemplo 4: Por fim, embora a linguagem R tenha um escopo padrão, chamado ambiente global, os escopos de funções podem ser alterados.</li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &#39;n&#39; associado a um objeto 10 no escopo da funcao (ambiente global)</span></span>
+<span id="cb19-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb19-3"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &#39;funcao&#39; associado a um objeto que é uma função criado no ambiete global</span></span>
+<span id="cb19-4"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-4" aria-hidden="true" tabindex="-1"></a>funcao <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb19-5"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Imprimindo n</span></span>
+<span id="cb19-6"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n)</span>
+<span id="cb19-7"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-8"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimindo &#39;funcao&#39; no ambiente global</span></span>
+<span id="cb19-9"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">funcao</span>()</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um novo ambiente</span></span>
+<span id="cb21-2"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb21-2" aria-hidden="true" tabindex="-1"></a>novo_ambiente <span class="ot">&lt;-</span> <span class="fu">new.env</span>()</span>
+<span id="cb21-3"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome &quot;n&quot; associado ao objeto 20 no ambiente  &#39;novo_ambiente&#39;</span></span>
+<span id="cb21-4"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb21-4" aria-hidden="true" tabindex="-1"></a>novo_ambiente<span class="sc">$</span>n <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb21-5"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um objeto funcao no ambiente &#39;novo_ambiente&#39;</span></span>
+<span id="cb21-6"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">environment</span>(funcao) <span class="ot">&lt;-</span> novo_ambiente</span>
+<span id="cb21-7"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimindo &#39;funcao&#39; no ambiente &#39;novo_ambiente&#39;</span></span>
+<span id="cb21-8"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">funcao</span>()</span></code></pre></div>
+<pre><code>## [1] 20</code></pre>
+<p>Como a linguagem <em>S</em> é uma linguagem interpretada cuja base é a linguagem <em>FORTRAN</em>, a linguagem <em>R</em> também é uma linguagem interpretada e baseada além da linguagem <em>S</em>, tem como base as linguagens de baixo nível <em>C</em>, <em>FORTRAN</em> e a própria linguagem <em>R</em>.</p>
+<p>Embora o <em>R</em> tenha uma interface baseada em linhas de comando, existem muitas interfaces gráficas ao usuário com destaque ao <em>RStudio</em>, criado por Joseph J. Allaire, Figura <a href="instalação-do-r-e-rstudio-para-o-so-windows.html#fig:CriadorRStudio">2.9</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:CriadorRStudio"></span>
+<img src="img/Criador_RStudio.PNG" alt="J. J. Allaire, o criador do RStudio" width="100%" />
+<p class="caption">
+FIGURA 2.9: J. J. Allaire, o criador do RStudio
+</p>
+</div>
+<p>Essa interface tornou o <em>R</em> mais popular, pois além de produzir,hoje, pacotes de grande utilização como a família de pacotes <em>tidyverse</em>, <em>rmarkdown</em>, <em>shiny</em>, dentre outros, permite uma eficiente capacidade de trabalho de análise de utilização do R. Uma vez que o RStudio facilita a utilização de muitos recursos por meio de botões, como por exemplo, a criação de um pacote <em>R</em>. Há quem diga que para um iniciante em <em>R</em>, não seja recomendado utilizar o <em>RStudio</em> para o entendimento da linguagem. Cremos, que o problema não é a IDE utilizada, e sim, o caminho onde deseja chegar com a linguagem <em>R</em>.</p>
+<p>No Brasil, o primeiro espelho do <em>CRAN</em> foi criado na UFPR, pelo grupo do Prof. Paulo Justiniano. Inclusive um dos primeiros materiais mais completos sobre a linguagem <em>R</em> produzidos no Brasil, foi dele, iniciado em 2005, intitulado “Introdução ao Ambiente Estatístico R.” Vale a pena assistirmos do evento a palestra: <em>R Reflexões: um pouco de história e experiências com o R</em>, proferida pelo Prof. Paulo Justiniano Ribeiro Júnior, no <em>R Day - Encontro nacional de usuários do R</em>, ocorrido em 2018 em Curitiba/UFPR, do qual o vídeo está disponível no Canal (Youtube) LEG UFPR.</p>
+<p>Para quem não sabe, o Prof. Paulo Justiniano (Figura <a href="instalação-do-r-e-rstudio-para-o-so-windows.html#fig:RDay">2.10</a>) e sua equipe trouxeram o primeiro espelho do <em>R</em> para o Brasil e foi o desenvolvedor de um dos 100 primeiros pacotes submetidos ao <em>CRAN</em>. Devido a sua ida para Lancaster/Inglaterra para fazer o doutorado, em 1997, se deparou com o início dos estudos sobre o <em>R</em> fora do país. Isso porque havia uma necessidade muito grande de um programa para ser utilizado nas plataforma UNIX. Nesse momento a linguagem <em>S</em> estava sendo uma saída para isso, porém, o uso de memória que a linguagem consumia nos computadores, na criação das rotinas, era muito grande (Claro que grande para aquela época!). Não satisfeito, ao voltar para o Brasil, em 2002, se depara com alguns usuários da linguagem <em>S</em>, porém, com a mudança de cultura na utilização da linguagem <em>R</em>, passou a desenvolver materiais didáticos da linguagem para as disciplinas do departamento de Estatística (UFPR).</p>
+<div class="figure" style="text-align: center"><span id="fig:RDay"></span>
+<img src="img/RDay.PNG" alt="Foto de divulgação de Paulo Justiniano no R Day." width="100%" />
+<p class="caption">
+FIGURA 2.10: Foto de divulgação de Paulo Justiniano no R Day.
+</p>
+</div>
+<!--
+======  03- nbasico.Rmd=========
+================================
+# Introdução ao R
+
+## Como o R trabalha
+
+## Comandos no R e Ambiente Global
+
+### Console e *Prompt* de comando
+
+### Comandos elementares
+
+### Execução de comandos
+
+### Chamada e correção de comandos anteriores
+
+### Ambiente Global (área de trabalho ou *Workspace*)
+
+## Arquivos `.RData` e `.Rhistory`
+
+## Criando e salvando um *script*
+
+
+
+# Objetos
+
+## Atributos
+
+### Atributos intrínsecos
+
+## Coersão
+
+## Tipo de objetos
+
+### Vetores
+
+#### Vetores escalares
+
+#### Vetores longos
+
+#### Manipulando vetores
+
+### Matrizes bidimensionais
+
+### Matrizes multidimensionais
+
+### Listas
+
+### Quadro de dados
+
+### Funções
+
+#### Estruturas de controle
+
+#### Como criar funções
+
+#### Escopo léxico
+
+
+
+# Importando dados
+
+## Preparação dos dados
+
+## Importando dados
+
+
+
+
+# Boas práticas de como escrever um código
+
+## Nomes de arquivos
+
+## Comentar as linahs de comando
+
+## Nome de objetos
+
+### Sintaxe
+
+
+
+
+
+# Pacotes
+
+## Estrutura básica de um pacote
+
+## Instalação de um pacote
+
+## Objetivos de um pacote
+
+## Utilizando funções de um pacote
+
+## Carregando e anexando um pacote
+
+## *NAMESPACE* de um pacote
+
+## Usando os operadores `::` e `:::`
+
+
+
+
+# Ambientes e caminho de busca
+
+## A superatribuição
+
+
+
+
+# Interfaces com outras linguagens
+
+
+
+# Considerações e preparação para Programação em R (Nível Intermediário)
+
+-->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introdução-ao-livro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introdução-ao-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": true,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/bendeivide/book-eambr/edit/main/02-nbasico.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsubsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
