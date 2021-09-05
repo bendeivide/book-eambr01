@@ -182,7 +182,7 @@ f1()
 ## [1] 1
 ## 
 ## $`Ambiente de execução`
-## <environment: 0x000000001582fda0>
+## <environment: 0x000000001601fd68>
 ## 
 ## $`Ambiente Pai`
 ## <environment: R_GlobalEnv>
@@ -229,7 +229,7 @@ f1()$`Ambiente de execução`
 ```
 
 ```
-## <environment: 0x00000000132def10>
+## <environment: 0x0000000013ad0f38>
 ```
 
 
@@ -238,7 +238,7 @@ f1()$`Ambiente de execução`
 ```
 
 ```
-## <environment: 0x00000000156d50b0>
+## <environment: 0x0000000015ec5078>
 ```
 
 
@@ -247,7 +247,7 @@ f1()$`Ambiente de execução`
 ```
 
 ```
-## <environment: 0x0000000015b5ff80>
+## <environment: 0x000000001634ff80>
 ```
 
 O ambiente pai do ambiente de execução, é o ambiente envolvente de f1, que nesse caso é o ambiente global. Assim, observe que o ocorre quando executamos o comando de superatribuição. O nome x no ambiente global passou a está associado ao valor 2, porque foi alterado por <<-, mas o nome x continuou associado ao valor 1, porque a função f1() retornou o valor 1. Isso mostra que a superatribuição não cria um objeto no ambiente atual, mas em um ambiente pai se não existe ou altera o nome existente. Vejamos o complemento dessa afirmação no próximo exemplo.
@@ -314,10 +314,10 @@ contador1()
 ## [1] 1
 ## 
 ## $AmbExec_aux
-## <environment: 0x0000000015ba5228>
+## <environment: 0x0000000016395228>
 ## 
 ## $AmbExec_contador
-## <environment: 0x0000000015b4aa38>
+## <environment: 0x000000001633aa38>
 ```
 
 
@@ -330,10 +330,10 @@ contador1()
 ## [1] 2
 ## 
 ## $AmbExec_aux
-## <environment: 0x0000000013cfbe00>
+## <environment: 0x00000000144ebeb8>
 ## 
 ## $AmbExec_contador
-## <environment: 0x0000000015b4aa38>
+## <environment: 0x000000001633aa38>
 ```
 
 
@@ -346,10 +346,10 @@ contador1()
 ## [1] 3
 ## 
 ## $AmbExec_aux
-## <environment: 0x0000000013a094f0>
+## <environment: 0x00000000141ee9d0>
 ## 
 ## $AmbExec_contador
-## <environment: 0x0000000015b4aa38>
+## <environment: 0x000000001633aa38>
 ```
 
 
@@ -365,10 +365,10 @@ contador2()
 ## [1] 1
 ## 
 ## $AmbExec_aux
-## <environment: 0x00000000156b8ec0>
+## <environment: 0x0000000015ea8e88>
 ## 
 ## $AmbExec_contador
-## <environment: 0x0000000013e22298>
+## <environment: 0x0000000014614270>
 ```
 
 Quando uma função function() é criada dentro de outra função function() o ambiente de execução da função superior, contador(), é o ambiente envolvente da função interna, aux(). Dessa forma, o ambiente de execução de contador() não será mais efêmero, isto é, não será apagado após a execução, como pode ser visto em contador1(). Observamos que executamos contador1() três vezes. O nome i foi atualizado, devido a superatribuição, a cada chamada da mesma função. Ao passo que, quando realizamos uma nova chamada de contador(), por meio de contador2(), o resultado de i retora o valor 1, porque um novo ambiente de execução para contador() foi criado, como pode ser observado.
@@ -536,7 +536,7 @@ sd
 ## function (x, na.rm = FALSE) 
 ## sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), 
 ##     na.rm = na.rm))
-## <bytecode: 0x00000000153dec40>
+## <bytecode: 0x0000000015bcea70>
 ## <environment: namespace:stats>
 ```
 

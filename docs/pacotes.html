@@ -24,7 +24,7 @@
 <meta name="author" content="Ben Dêivide, Diego Arthur" />
 
 
-<meta name="date" content="2021-08-18" />
+<meta name="date" content="2021-09-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -150,10 +150,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.6" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html#pacutilizados"><i class="fa fa-check"></i><b>1.6</b> Pacotes R utilizados para esse curso</a></li>
 </ul></li>
 <li class="part"><span><b>I Programação em R (Nível Básico)</b></span></li>
-<li class="chapter" data-level="2" data-path="instalação-do-r-e-rstudio.html"><a href="instalação-do-r-e-rstudio.html"><i class="fa fa-check"></i><b>2</b> Instalação do R e RStudio</a>
+<li class="chapter" data-level="2" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html"><i class="fa fa-check"></i><b>2</b> Instalação do R e RStudio para o SO Windows</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="instalação-do-r-e-rstudio.html"><a href="instalação-do-r-e-rstudio.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
-<li class="chapter" data-level="2.2" data-path="instalação-do-r-e-rstudio.html"><a href="instalação-do-r-e-rstudio.html#história-do-r"><i class="fa fa-check"></i><b>2.2</b> História do R</a></li>
+<li class="chapter" data-level="2.1" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#história-do-r"><i class="fa fa-check"></i><b>2.2</b> História do R</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html"><i class="fa fa-check"></i><b>3</b> Introdução ao R</a>
 <ul>
@@ -269,15 +269,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="instalação-de-um-pacote" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Instalação de um pacote</h2>
 <p>A instalação de um pacote via CRAN pode ser feito pela função install.packages(pkgs = “nome_pacote”). Por exemplo, vamos tentar instalar o pacote midrangeMCP, da seguinte forma:</p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="pacotes.html#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;midrangeMCP&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="pacotes.html#cb243-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;midrangeMCP&quot;</span>)</span></code></pre></div>
 <p>Pode ser que nesse processo, dependendo de onde o usuário esteja executando essa linha de comando, interface do R ou RStudio, que seja solicitado o espelho por onde deseja fazer a instalação. Isso é apenas um atalho para ter um acesso mais rápido na instalação do pacote. A sugestão é escolher um espelho de seu país de origem.</p>
 <p>Uma forma simples de se ter detalhes do pacote na internet, tais como, baixar o pacote fonte ou o pacote binário do midrangeMCP, por exemplo, é sempre usar essa url: <a href="http://cran.r-project.org/package=midrangeMCP" class="uri">http://cran.r-project.org/package=midrangeMCP</a>. Para qualquer outro pacote, basta mudar o nome do pacote na url, e assim, estaremos na página do repositório do pacote. O pacote fonte, como falado anteriormente, é compactado com extensão .tar.gz, no caso, midrangeMCP_3.1.1.tar.gz. O pacote binário tem a compactação zipada, midrangeMCP_3.1.1.tar.zip para o Windows e midrangeMCP_3.1.1.tgz para o Macintosh. O acesso aos arquivos do pacote mencionados no esqueleto são disponíveis no pacote fonte.</p>
 <p>Uma outra forma possível de instalação é baixar o arquivo do pacote fonte para o seu computador e instalá-lo,</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="pacotes.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs =</span> <span class="st">&quot;./midrangeMCP.tar.gz&quot;</span>, <span class="at">repos =</span> <span class="cn">NULL</span>, <span class="at">type =</span> <span class="st">&quot;source&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="pacotes.html#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="at">pkgs =</span> <span class="st">&quot;./midrangeMCP.tar.gz&quot;</span>, <span class="at">repos =</span> <span class="cn">NULL</span>, <span class="at">type =</span> <span class="st">&quot;source&quot;</span>)</span></code></pre></div>
 <p>Consideramos que o arquivo do pacote esteja no diretório de trabalho do usuário. Caso contrário, deve ser informado o local onde pacote se encontra no computador. Para o Window ou Macintosh, é possível instalar também, a partir dos pacotes binários.</p>
 <p>Muitos dos desenvolvedores, estão disponibilizando seus projetos de pacotes, principalmente no GitHub, inclusive com manuals de ajuda com maiores detalhes. Pode ser possível instalar esses pacotes por esse repositório. Precisamos inicialmente do pacote devtools, e posteriormente a instalação do pacote. Segue,</p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="pacotes.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
-<span id="cb212-2"><a href="pacotes.html#cb212-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">&quot;bendeivide/midrangeMCP&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="pacotes.html#cb245-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
+<span id="cb245-2"><a href="pacotes.html#cb245-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">&quot;bendeivide/midrangeMCP&quot;</span>)</span></code></pre></div>
 <p>Contudo, devemos dar a preferência pela instalação via CRAN. Por lá, teremos a garantia que os pacotes estão estáveis para a utilização nas referidas plataformas mencionadas acima.</p>
 <p>Alguns pacotes, por falta de manutenção, seja por atualizações do R ou por qualquer outro motivo, podem se tornar incompatíveis para utilização sobre alguns dos três sistemas operacionais básicos (SO Windows, Unix e SO Mac) exigidos pelo R. Dessa forma, se as correções não forem feitas, estes pacotes e tornam órfãos, ou seja, desativados sob o CRAN. O primeiros pacotes sob o CRAN, por exemplo, não tinham o arquivo NAMESPACE, que hoje é exigido. Qualquer tentativa de instalação desses pacotes nessas situações, não serão bem sucedidas. Dessa forma, fizemos uma vídeo-aula, como tentativa de recuperar os pacotes desativados. Porém, deixemos claro que nem sempre é possível a instalação de pacotes desativados.</p>
 </div>
@@ -290,34 +290,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="utilizando-funções-de-um-pacote" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Utilizando funções de um pacote</h2>
 <p>Uma vez instalado o pacote, precisamos carregar e anexá-lo, para que possamos utilizar os recursos disponíveis no pacote, como funções, dados, etc. Isso significa, disponibilizar na memória e inseri-lo no caminho de busca, respectivamente. Para fazer essas duas ações ao mesmo tempo, use a função library() ou require(). A primeira função se for utilizada sem argumento algum, retorna todos os pacotes instalados na bibioteca de pacotes do R. Vejamos o exemplo do pacote midrangeMCP,</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="pacotes.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e anexando o pacote midrangeMCP</span></span>
-<span id="cb213-2"><a href="pacotes.html#cb213-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(midrangeMCP)</span>
-<span id="cb213-3"><a href="pacotes.html#cb213-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb213-4"><a href="pacotes.html#cb213-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Usando a função MRtest() desse pacote</span></span>
-<span id="cb213-5"><a href="pacotes.html#cb213-5" aria-hidden="true" tabindex="-1"></a><span class="co">#-----</span></span>
-<span id="cb213-6"><a href="pacotes.html#cb213-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados simulados de um experimento em DIC (Delineamento Inteiramente Casualizado)</span></span>
-<span id="cb213-7"><a href="pacotes.html#cb213-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb213-8"><a href="pacotes.html#cb213-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Variavel resposta</span></span>
-<span id="cb213-9"><a href="pacotes.html#cb213-9" aria-hidden="true" tabindex="-1"></a>rv <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">100.08</span>, <span class="fl">105.66</span>, <span class="fl">97.64</span>, <span class="fl">100.11</span>, <span class="fl">102.60</span>, <span class="fl">121.29</span>, <span class="fl">100.80</span>,</span>
-<span id="cb213-10"><a href="pacotes.html#cb213-10" aria-hidden="true" tabindex="-1"></a>        <span class="fl">99.11</span>, <span class="fl">104.43</span>, <span class="fl">122.18</span>, <span class="fl">119.49</span>, <span class="fl">124.37</span>, <span class="fl">123.19</span>, <span class="fl">134.16</span>,</span>
-<span id="cb213-11"><a href="pacotes.html#cb213-11" aria-hidden="true" tabindex="-1"></a>        <span class="fl">125.67</span>, <span class="fl">128.88</span>, <span class="fl">148.07</span>, <span class="fl">134.27</span>, <span class="fl">151.53</span>, <span class="fl">127.31</span>)</span>
-<span id="cb213-12"><a href="pacotes.html#cb213-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb213-13"><a href="pacotes.html#cb213-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Tratamento</span></span>
-<span id="cb213-14"><a href="pacotes.html#cb213-14" aria-hidden="true" tabindex="-1"></a>treat <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">rep</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">each =</span> <span class="dv">4</span>))</span>
-<span id="cb213-15"><a href="pacotes.html#cb213-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb213-16"><a href="pacotes.html#cb213-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Anava</span></span>
-<span id="cb213-17"><a href="pacotes.html#cb213-17" aria-hidden="true" tabindex="-1"></a>res     <span class="ot">&lt;-</span> <span class="fu">anova</span>(<span class="fu">aov</span>(rv<span class="sc">~</span>treat))</span>
-<span id="cb213-18"><a href="pacotes.html#cb213-18" aria-hidden="true" tabindex="-1"></a>DFerror <span class="ot">&lt;-</span> res<span class="sc">$</span>Df[<span class="dv">2</span>]</span>
-<span id="cb213-19"><a href="pacotes.html#cb213-19" aria-hidden="true" tabindex="-1"></a>MSerror <span class="ot">&lt;-</span> res<span class="sc">$</span><span class="st">`</span><span class="at">Mean Sq</span><span class="st">`</span>[<span class="dv">2</span>]</span>
-<span id="cb213-20"><a href="pacotes.html#cb213-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb213-21"><a href="pacotes.html#cb213-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Aplicando testes</span></span>
-<span id="cb213-22"><a href="pacotes.html#cb213-22" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> midrangeMCP<span class="sc">::</span><span class="fu">MRtest</span>(<span class="at">y =</span> rv,</span>
-<span id="cb213-23"><a href="pacotes.html#cb213-23" aria-hidden="true" tabindex="-1"></a>                  <span class="at">trt =</span> treat,</span>
-<span id="cb213-24"><a href="pacotes.html#cb213-24" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dferror =</span> DFerror,</span>
-<span id="cb213-25"><a href="pacotes.html#cb213-25" aria-hidden="true" tabindex="-1"></a>                  <span class="at">mserror =</span> MSerror,</span>
-<span id="cb213-26"><a href="pacotes.html#cb213-26" aria-hidden="true" tabindex="-1"></a>                  <span class="at">alpha =</span> <span class="fl">0.05</span>,</span>
-<span id="cb213-27"><a href="pacotes.html#cb213-27" aria-hidden="true" tabindex="-1"></a>                  <span class="at">main =</span> <span class="st">&quot;PCMs&quot;</span>,</span>
-<span id="cb213-28"><a href="pacotes.html#cb213-28" aria-hidden="true" tabindex="-1"></a>                  <span class="at">MCP =</span> <span class="fu">c</span>(<span class="st">&quot;all&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="pacotes.html#cb246-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e anexando o pacote midrangeMCP</span></span>
+<span id="cb246-2"><a href="pacotes.html#cb246-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(midrangeMCP)</span>
+<span id="cb246-3"><a href="pacotes.html#cb246-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb246-4"><a href="pacotes.html#cb246-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Usando a função MRtest() desse pacote</span></span>
+<span id="cb246-5"><a href="pacotes.html#cb246-5" aria-hidden="true" tabindex="-1"></a><span class="co">#-----</span></span>
+<span id="cb246-6"><a href="pacotes.html#cb246-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados simulados de um experimento em DIC (Delineamento Inteiramente Casualizado)</span></span>
+<span id="cb246-7"><a href="pacotes.html#cb246-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb246-8"><a href="pacotes.html#cb246-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Variavel resposta</span></span>
+<span id="cb246-9"><a href="pacotes.html#cb246-9" aria-hidden="true" tabindex="-1"></a>rv <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">100.08</span>, <span class="fl">105.66</span>, <span class="fl">97.64</span>, <span class="fl">100.11</span>, <span class="fl">102.60</span>, <span class="fl">121.29</span>, <span class="fl">100.80</span>,</span>
+<span id="cb246-10"><a href="pacotes.html#cb246-10" aria-hidden="true" tabindex="-1"></a>        <span class="fl">99.11</span>, <span class="fl">104.43</span>, <span class="fl">122.18</span>, <span class="fl">119.49</span>, <span class="fl">124.37</span>, <span class="fl">123.19</span>, <span class="fl">134.16</span>,</span>
+<span id="cb246-11"><a href="pacotes.html#cb246-11" aria-hidden="true" tabindex="-1"></a>        <span class="fl">125.67</span>, <span class="fl">128.88</span>, <span class="fl">148.07</span>, <span class="fl">134.27</span>, <span class="fl">151.53</span>, <span class="fl">127.31</span>)</span>
+<span id="cb246-12"><a href="pacotes.html#cb246-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb246-13"><a href="pacotes.html#cb246-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Tratamento</span></span>
+<span id="cb246-14"><a href="pacotes.html#cb246-14" aria-hidden="true" tabindex="-1"></a>treat <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">rep</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">each =</span> <span class="dv">4</span>))</span>
+<span id="cb246-15"><a href="pacotes.html#cb246-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb246-16"><a href="pacotes.html#cb246-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Anava</span></span>
+<span id="cb246-17"><a href="pacotes.html#cb246-17" aria-hidden="true" tabindex="-1"></a>res     <span class="ot">&lt;-</span> <span class="fu">anova</span>(<span class="fu">aov</span>(rv<span class="sc">~</span>treat))</span>
+<span id="cb246-18"><a href="pacotes.html#cb246-18" aria-hidden="true" tabindex="-1"></a>DFerror <span class="ot">&lt;-</span> res<span class="sc">$</span>Df[<span class="dv">2</span>]</span>
+<span id="cb246-19"><a href="pacotes.html#cb246-19" aria-hidden="true" tabindex="-1"></a>MSerror <span class="ot">&lt;-</span> res<span class="sc">$</span><span class="st">`</span><span class="at">Mean Sq</span><span class="st">`</span>[<span class="dv">2</span>]</span>
+<span id="cb246-20"><a href="pacotes.html#cb246-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb246-21"><a href="pacotes.html#cb246-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Aplicando testes</span></span>
+<span id="cb246-22"><a href="pacotes.html#cb246-22" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> midrangeMCP<span class="sc">::</span><span class="fu">MRtest</span>(<span class="at">y =</span> rv,</span>
+<span id="cb246-23"><a href="pacotes.html#cb246-23" aria-hidden="true" tabindex="-1"></a>                  <span class="at">trt =</span> treat,</span>
+<span id="cb246-24"><a href="pacotes.html#cb246-24" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dferror =</span> DFerror,</span>
+<span id="cb246-25"><a href="pacotes.html#cb246-25" aria-hidden="true" tabindex="-1"></a>                  <span class="at">mserror =</span> MSerror,</span>
+<span id="cb246-26"><a href="pacotes.html#cb246-26" aria-hidden="true" tabindex="-1"></a>                  <span class="at">alpha =</span> <span class="fl">0.05</span>,</span>
+<span id="cb246-27"><a href="pacotes.html#cb246-27" aria-hidden="true" tabindex="-1"></a>                  <span class="at">main =</span> <span class="st">&quot;PCMs&quot;</span>,</span>
+<span id="cb246-28"><a href="pacotes.html#cb246-28" aria-hidden="true" tabindex="-1"></a>                  <span class="at">MCP =</span> <span class="fu">c</span>(<span class="st">&quot;all&quot;</span>))</span></code></pre></div>
 <pre><code>## MCP&#39;s based on distributions of the studentized midrange and range
 ## 
 ## Study:  PCMs 
@@ -388,25 +388,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## C 117.62     g3
 ## B 105.95     g4
 ## A 100.87     g4</code></pre>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="pacotes.html#cb215-1" aria-hidden="true" tabindex="-1"></a>midrangeMCP<span class="sc">::</span><span class="fu">MRbarplot</span>(results)</span></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="pacotes.html#cb248-1" aria-hidden="true" tabindex="-1"></a>midrangeMCP<span class="sc">::</span><span class="fu">MRbarplot</span>(results)</span></code></pre></div>
 <p><img src="06-nbasico_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p><span class="math display">\[FIGURA\]</span></p>
 </div>
 <div id="carregando-e-anexando-um-pacote" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Carregando e anexando um pacote</h2>
 <p>Anteriormente, falamos que usamos a função library() ou require() para carregar e anexar um pacote para utilizar suas funções, após a instalação. Carregar um pacote significa disponibilizar na memória ativa. Para acessar uma função de um pacote após ter sido carregado, usamos o operador ::, isto é, nome_pacote::nome_função. Isto significa, que será chamado a função necessária sem anexar o pacote no caminho de busca. Estudaremos a seguir um pouco mais sobre caminho de busca. Para esse momento, entenda que é um caminho hierarquizado de ambientes, isto é, objetos que armazenam, em forma de lista, nomes associados a objetos. A função para ver o caminho de busca é search(). Em nosso caso, temos:</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="pacotes.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Caminho de busca</span></span>
-<span id="cb216-2"><a href="pacotes.html#cb216-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="pacotes.html#cb249-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Caminho de busca</span></span>
+<span id="cb249-2"><a href="pacotes.html#cb249-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
 <pre><code>##  [1] &quot;.GlobalEnv&quot;          &quot;package:midrangeMCP&quot; &quot;package:stats&quot;      
 ##  [4] &quot;package:graphics&quot;    &quot;package:grDevices&quot;   &quot;package:utils&quot;      
 ##  [7] &quot;package:datasets&quot;    &quot;package:methods&quot;     &quot;Autoloads&quot;          
 ## [10] &quot;package:base&quot;</code></pre>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="pacotes.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e chamando uma função de um pacote</span></span>
-<span id="cb218-2"><a href="pacotes.html#cb218-2" aria-hidden="true" tabindex="-1"></a>midrangeMCP<span class="sc">::</span><span class="fu">MRwrite</span>(results, <span class="at">extension =</span> <span class="st">&quot;latex&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="pacotes.html#cb251-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e chamando uma função de um pacote</span></span>
+<span id="cb251-2"><a href="pacotes.html#cb251-2" aria-hidden="true" tabindex="-1"></a>midrangeMCP<span class="sc">::</span><span class="fu">MRwrite</span>(results, <span class="at">extension =</span> <span class="st">&quot;latex&quot;</span>)</span></code></pre></div>
 <pre><code>## Table in latex of results of the MGM test
 ## 
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -426,7 +426,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Table in latex of results of the MGR test
 ## 
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -446,7 +446,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Table in latex of results of the SNKM test
 ## 
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -466,7 +466,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Table in latex of results of the TM test
 ## 
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -487,7 +487,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## $`Result of tests`
 ## $`Result of tests`$group.MGM
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrl}
@@ -505,7 +505,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## $`Result of tests`$group.MGR
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrl}
@@ -523,7 +523,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## $`Result of tests`$group.SNKM
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrl}
@@ -541,7 +541,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## $`Result of tests`$group.TM
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrl}
@@ -560,7 +560,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## $`Descriptive Statistics`
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrrrrr}
@@ -575,31 +575,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##    \hline
 ## \end{tabular}
 ## \end{table}</code></pre>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="pacotes.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando novamente o caminho de busca</span></span>
-<span id="cb221-2"><a href="pacotes.html#cb221-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="pacotes.html#cb254-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando novamente o caminho de busca</span></span>
+<span id="cb254-2"><a href="pacotes.html#cb254-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
 <pre><code>##  [1] &quot;.GlobalEnv&quot;          &quot;package:midrangeMCP&quot; &quot;package:stats&quot;      
 ##  [4] &quot;package:graphics&quot;    &quot;package:grDevices&quot;   &quot;package:utils&quot;      
 ##  [7] &quot;package:datasets&quot;    &quot;package:methods&quot;     &quot;Autoloads&quot;          
 ## [10] &quot;package:base&quot;</code></pre>
 <p>Com as linhas de comando apresentadas anteriormente, percebemos ao executar a função MRwrite() do pacote midrangeMCP, usando :: que o caminho de busca não foi alterado. Isso significa que o pacote não foi anexado, apenas carregado, ou seja, se o usuário desejar usar alguma função do pacote midrangeMCP digitando apenas o nome no console, não será possível, porque o pacote não está anexado ao caminho de busca.</p>
 <p>Vejamos uma outra situação,</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="pacotes.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Caminho de busca</span></span>
-<span id="cb223-2"><a href="pacotes.html#cb223-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="pacotes.html#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Caminho de busca</span></span>
+<span id="cb256-2"><a href="pacotes.html#cb256-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
 <pre><code>##  [1] &quot;.GlobalEnv&quot;          &quot;package:midrangeMCP&quot; &quot;package:stats&quot;      
 ##  [4] &quot;package:graphics&quot;    &quot;package:grDevices&quot;   &quot;package:utils&quot;      
 ##  [7] &quot;package:datasets&quot;    &quot;package:methods&quot;     &quot;Autoloads&quot;          
 ## [10] &quot;package:base&quot;</code></pre>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="pacotes.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e anexando um pacote</span></span>
-<span id="cb225-2"><a href="pacotes.html#cb225-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(midrangeMCP)</span>
-<span id="cb225-3"><a href="pacotes.html#cb225-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb225-4"><a href="pacotes.html#cb225-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando novamente o caminho de busca</span></span>
-<span id="cb225-5"><a href="pacotes.html#cb225-5" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="pacotes.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e anexando um pacote</span></span>
+<span id="cb258-2"><a href="pacotes.html#cb258-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(midrangeMCP)</span>
+<span id="cb258-3"><a href="pacotes.html#cb258-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb258-4"><a href="pacotes.html#cb258-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando novamente o caminho de busca</span></span>
+<span id="cb258-5"><a href="pacotes.html#cb258-5" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
 <pre><code>##  [1] &quot;.GlobalEnv&quot;          &quot;package:midrangeMCP&quot; &quot;package:stats&quot;      
 ##  [4] &quot;package:graphics&quot;    &quot;package:grDevices&quot;   &quot;package:utils&quot;      
 ##  [7] &quot;package:datasets&quot;    &quot;package:methods&quot;     &quot;Autoloads&quot;          
 ## [10] &quot;package:base&quot;</code></pre>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="pacotes.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chamando uma funcao do pacote</span></span>
-<span id="cb227-2"><a href="pacotes.html#cb227-2" aria-hidden="true" tabindex="-1"></a><span class="co"># guimidrangeMCP()</span></span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="pacotes.html#cb260-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chamando uma funcao do pacote</span></span>
+<span id="cb260-2"><a href="pacotes.html#cb260-2" aria-hidden="true" tabindex="-1"></a><span class="co"># guimidrangeMCP()</span></span></code></pre></div>
 <p>Com o uso da função library(), percebemos que o caminho de busca foi alterado, porque agora temos o ambiente de pacote package:midrangeMCP. Isso significa que agora poderemos acessar os objetos desse pacote apenas digitando o nome associado a eles. Por fim, a última linha foi comentada, porque é uma interface gráfica ao usuário para o pacote, o que chamamos de GUI (do inglês, Graphical User Interface), mas que pode ser visualizado na Figura 19.</p>
 <p><span class="math display">\[FIGURA\]</span></p>
 </div>
@@ -616,13 +616,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="usando-os-operadores-e" class="section level2" number="7.6">
 <h2><span class="header-section-number">7.6</span> Usando os operadores <code>::</code> e <code>:::</code></h2>
 <p>Como falamos anteriormente, para chamarmos uma função sem a necessidade de anexar o pacote, usamos o operador ::. Comentamos também, que algumas funções não eram exportadas pelo NAMESPACE de um pacote. Contudo, se desejarmos visualizar ou executá-las, poderemos utilizar o operador :::. Vejamos um exemplo,</p>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="pacotes.html#cb228-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instale o pacote SMR</span></span>
-<span id="cb228-2"><a href="pacotes.html#cb228-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(SMR) # Descomente a linha de comando para instalar</span></span>
-<span id="cb228-3"><a href="pacotes.html#cb228-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e chamando funcoes exportadas do pacote SMR</span></span>
-<span id="cb228-4"><a href="pacotes.html#cb228-4" aria-hidden="true" tabindex="-1"></a>SMR<span class="sc">::</span><span class="fu">pSMR</span>(<span class="at">q =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">df =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="pacotes.html#cb261-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instale o pacote SMR</span></span>
+<span id="cb261-2"><a href="pacotes.html#cb261-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(SMR) # Descomente a linha de comando para instalar</span></span>
+<span id="cb261-3"><a href="pacotes.html#cb261-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e chamando funcoes exportadas do pacote SMR</span></span>
+<span id="cb261-4"><a href="pacotes.html#cb261-4" aria-hidden="true" tabindex="-1"></a>SMR<span class="sc">::</span><span class="fu">pSMR</span>(<span class="at">q =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">df =</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>## [1] 0.9905216</code></pre>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="pacotes.html#cb230-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e chamando funcoes nao exportadas ao pacote</span></span>
-<span id="cb230-2"><a href="pacotes.html#cb230-2" aria-hidden="true" tabindex="-1"></a>SMR<span class="sc">:::</span><span class="fu">GaussLegendre</span>(<span class="at">size =</span> <span class="dv">4</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="pacotes.html#cb263-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e chamando funcoes nao exportadas ao pacote</span></span>
+<span id="cb263-2"><a href="pacotes.html#cb263-2" aria-hidden="true" tabindex="-1"></a>SMR<span class="sc">:::</span><span class="fu">GaussLegendre</span>(<span class="at">size =</span> <span class="dv">4</span>)</span></code></pre></div>
 <pre><code>## $nodes
 ## [1] -0.8611363 -0.3399810  0.3399810  0.8611363
 ## 

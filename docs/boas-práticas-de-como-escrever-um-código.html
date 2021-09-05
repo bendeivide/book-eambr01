@@ -24,7 +24,7 @@
 <meta name="author" content="Ben Dêivide, Diego Arthur" />
 
 
-<meta name="date" content="2021-08-18" />
+<meta name="date" content="2021-09-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -150,10 +150,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.6" data-path="introdução-ao-livro.html"><a href="introdução-ao-livro.html#pacutilizados"><i class="fa fa-check"></i><b>1.6</b> Pacotes R utilizados para esse curso</a></li>
 </ul></li>
 <li class="part"><span><b>I Programação em R (Nível Básico)</b></span></li>
-<li class="chapter" data-level="2" data-path="instalação-do-r-e-rstudio.html"><a href="instalação-do-r-e-rstudio.html"><i class="fa fa-check"></i><b>2</b> Instalação do R e RStudio</a>
+<li class="chapter" data-level="2" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html"><i class="fa fa-check"></i><b>2</b> Instalação do R e RStudio para o SO Windows</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="instalação-do-r-e-rstudio.html"><a href="instalação-do-r-e-rstudio.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
-<li class="chapter" data-level="2.2" data-path="instalação-do-r-e-rstudio.html"><a href="instalação-do-r-e-rstudio.html#história-do-r"><i class="fa fa-check"></i><b>2.2</b> História do R</a></li>
+<li class="chapter" data-level="2.1" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="instalação-do-r-e-rstudio-para-o-so-windows.html"><a href="instalação-do-r-e-rstudio-para-o-so-windows.html#história-do-r"><i class="fa fa-check"></i><b>2.2</b> História do R</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html"><i class="fa fa-check"></i><b>3</b> Introdução ao R</a>
 <ul>
@@ -263,10 +263,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Com isso, colorações nas linhas de comando ocorrerão, distinguindo diversas estruturas, como linhas de comentário, funções, espaçamentos, dentre outras coisas.</p>
 <p>Uma vez feito isso, vamos para o passo seguinte que são as boas práticas de como se escrever um script. Temos algumas ferramentas prontas, como o pacote styler e como alternativa o formatR, que automatiza todo o nosso código seja em script, contido em um pacote, ou diretório. Acesse <a href="https://yihui.org/formatr" class="uri">https://yihui.org/formatr</a>, para mais detalhes. Para instalar e anexar o pacote styler, use as linhas de comando:</p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="boas-práticas-de-como-escrever-um-código.html#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalando pacote</span></span>
-<span id="cb208-2"><a href="boas-práticas-de-como-escrever-um-código.html#cb208-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(styler)</span>
-<span id="cb208-3"><a href="boas-práticas-de-como-escrever-um-código.html#cb208-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e anexando</span></span>
-<span id="cb208-4"><a href="boas-práticas-de-como-escrever-um-código.html#cb208-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(styler)</span></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="boas-práticas-de-como-escrever-um-código.html#cb241-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalando pacote</span></span>
+<span id="cb241-2"><a href="boas-práticas-de-como-escrever-um-código.html#cb241-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(styler)</span>
+<span id="cb241-3"><a href="boas-práticas-de-como-escrever-um-código.html#cb241-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando e anexando</span></span>
+<span id="cb241-4"><a href="boas-práticas-de-como-escrever-um-código.html#cb241-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(styler)</span></code></pre></div>
 <p>Vejamos a seguinte ilustração, para entendermos a funcionabilidade desse pacote.</p>
 <p><span class="math display">\[IMAGEM\]</span></p>
 <p>Pela Figura 17, percebemos que inicialmente, a leitura do código sem nenhum padrão de hierarquização, de funções dentro de funções, torna mais difícil a leitura quando não seguimos algumas regras básicas de espaçamentos iniciais nas linhas de comando. Ao passo que, após aplicar a função styler:::style_active_file(), conseguimos distinguir quais as funções que estão dentro de outras, bem como as suas expressões.</p>

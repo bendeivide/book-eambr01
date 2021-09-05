@@ -216,7 +216,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## Table in latex of results of the MGM test
 ## 
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -236,7 +236,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## Table in latex of results of the MGR test
 ## 
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -256,7 +256,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## Table in latex of results of the SNKM test
 ## 
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -276,7 +276,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## Table in latex of results of the TM test
 ## 
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -300,7 +300,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## $`Result of tests`
 ## $`Result of tests`$group.MGM
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrl}
@@ -318,7 +318,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## 
 ## $`Result of tests`$group.MGR
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrl}
@@ -336,7 +336,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## 
 ## $`Result of tests`$group.SNKM
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrl}
@@ -354,7 +354,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## 
 ## $`Result of tests`$group.TM
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrl}
@@ -373,7 +373,7 @@ midrangeMCP::MRwrite(results, extension = "latex")
 ## 
 ## $`Descriptive Statistics`
 ## % latex table generated in R 4.0.3 by xtable 1.8-4 package
-## % Wed Aug 18 08:51:31 2021
+## % Sun Sep 05 20:29:58 2021
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rlrrrrr}

@@ -3,12 +3,19 @@ fig:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
+fig:unnamed-chunk-6
 fig:InterfaceRStudio
 fig:CriadoresR
 fig:CriadorRStudio
 fig:RDay
 fig:CriadorS
 fig:FuncionamentoR
+fig:CompletarFuncaoR
+fig:CompletarFuncaoRStudio
+fig:FuncaoArgumento
+fig:ExecutandoScriptConsoleR
+fig:ExecutandoScriptConsoleRStudio
+fig:ComentarioCodigoRStudio
 fig:LigacaoObjeto
 fig:LigacaoObjeto2
 fig:ObjetoAmbienteGlobal
@@ -21,7 +28,7 @@ avancado
 referencias
 buscarmateriais
 pacutilizados
-instalação-do-r-e-rstudio
+instalação-do-r-e-rstudio-para-o-so-windows
 como-utilizar-o-r-e-o-rstudio
 história-do-r
 introdução-ao-r
@@ -129,5 +136,3 @@ carregando-e-anexando-um-pacote-1
 namespace-de-um-pacote-1
 usando-os-operadores-e-1
 a-superatribuição-1
-fig:unnamed-chunk-6
-instalação-do-r-e-rstudio-para-o-so-windows
