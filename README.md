@@ -1,1 +1,3 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/home/about/ for how to compile this example.
+# Livro Estudando o Ambiente R - Volume I: Nível Básico
+
+Esse livro terá o objetivo de apresentar de forma introdutória a **sintaxe** e **semântica** da linguagem `R`, enfatizando definições importantíssimas para a linguagem como **objeto**, **função** e **pacote**, como também outras definições.
