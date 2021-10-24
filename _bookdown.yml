@@ -13,7 +13,7 @@ language:
     edit: "Edit"
     chapter_name: "Capítulo "
  
-rmd_files: ["index.Rmd", "01-intro.Rmd", "02-nbasico.Rmd", "03-nbasico.Rmd","04-nbasico.Rmd","05-nbasico.Rmd","06-nbasico.Rmd","07-nbasico.Rmd","08-nbasico.Rmd"]
+# rmd_files: ["index.Rmd", "01-intro.Rmd", "02-nbasico.Rmd", "03-nbasico.Rmd","04-nbasico.Rmd","05-nbasico.Rmd","06-nbasico.Rmd","07-nbasico.Rmd","08-nbasico.Rmd"]
     
    
 
