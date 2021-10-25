@@ -1,6 +1,15 @@
-bookdown::gitbook:
-#  split_by: section
-#  css: ear.css
+# bookdown::gitbook:
+bookdown::bs4_book:
+  #split_by: section
+  #css: style.css
+  # "#FFF0E2"
+  theme:
+    # Cor dos links
+    primary: "#59293F"
+    # Cor do texto
+    fg: "#000000"
+    # Cor do fundo
+    bg: "#EBEBEB"
   config:
     toc:
       collapse: subsubsection

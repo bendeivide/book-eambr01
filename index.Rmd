@@ -3,6 +3,8 @@ title: "Estudando o Ambiente R"
 subtitle: "Volume I: Nível Básico"
 author: "Ben Dêivide, Diego Arthur"
 date: "`r Sys.Date()`"
+#lang: pt
+csl: abnt.csl
 site: bookdown::bookdown_site
 bibliography:
 - biblio.bib

@@ -1,8 +1,8 @@
-book_filename: book-eambr
+book_filename: book-eambr01
 new_session: yes
 delete_merged_file: yes
 output_dir: "docs"
-repo: https://github.com/bendeivide/book-eambr/
+repo: https://github.com/bendeivide/book-eambr01/
 
 
 language:
