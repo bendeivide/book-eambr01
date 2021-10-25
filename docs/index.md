@@ -20,7 +20,7 @@ github-repo: bendeivide/book-eambr
 ---
 # Bem-vindo {-}
 
-<a href="http://bendeivide.github.io/cursor"><img src="capa.png" align="right" width="250" height="366" class="cover" alt="Compre pela internet" /></a> Esse é um *livro digital* da 1ª edição do __"[Estudando o ambiente R]()"__, um livro com o selo Democratizando Conhecimento (DC). O Livro é destinado aos usuários R que objetivam aprofundar no entendimento do ambiente R para seus projetos pessoais e profissionais.
+<a href="http://bendeivide.github.io/cursor"><img src="capa.png" align="right" width="250" height="366" class="cover" alt="Compre pela internet" /></a> Esse é um *livro digital* da coleção __"[Estudando o ambiente R]()"__, *Volume 1: Nível Básico*, com o selo [Democratizando Conhecimento (DC)](https://bendeivide.github.io/dc/). O Livro é destinado aos usuários R que objetivam aprofundar o entendimento do ambiente R para seus projetos pessoais e profissionais.
 
 O número de leitores  que acessaram esse livro:
 </br>
