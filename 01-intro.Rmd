@@ -7,7 +7,7 @@ github <- "[GitHub](http://github.com/){target='_blank'}"
 git <- "[Git](https://git-scm.com/)"
 ```
 
-# Entendendo a coleção *Estudando o ambiente R*
+# Entendendo a coleção *Estudando o ambiente R *
 
 A Coleção *Estudando o ambiente R* não tem como objetivo principal de ensinar análise de dados. Mas sim, proporcionar ao leitor um conhecimento sobre a linguagem `r rlink`, de modo que se possa usufruir todos os recursos que esse ambiente possa proporcionar.
 
