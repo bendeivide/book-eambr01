@@ -1,6 +1,6 @@
 
 
-# Entendendo a coleção *Estudando o ambiente R*
+# Entendendo a coleção *Estudando o ambiente R *
 
 A Coleção *Estudando o ambiente R* não tem como objetivo principal de ensinar análise de dados. Mas sim, proporcionar ao leitor um conhecimento sobre a linguagem [R](http://r-project.org/){target='_blank'}, de modo que se possa usufruir todos os recursos que esse ambiente possa proporcionar.
 
@@ -69,22 +69,22 @@ Citaremos alguns livros e materiais utilizados para o desenvolvimento dessa cole
 
 Vale salientar que esses três últimos livros, se pudéssemos unir, seria a bíblia do ambiente [R](http://r-project.org/){target='_blank'}.
 
-## Pacotes R utilizados para esse curso {#pacutilizados}
+## Pacotes R utilizados para essa coleção {#pacutilizados}
 
 Apresentamos uma lista de pacotes, Tabela \@ref(tab:instalar-pacotes), utilizados ao longo da coleção para os exemplos abordados, como também para o próprio desenvolvimento dos livros.
 
 Table: (\#tab:instalar-pacotes) Pacotes a serem instalados para o acompanhamento dos exemplos e exercícios da coleção *Estudando o ambiente R*.
 
-| Pacote | Objetivo para o curso |
+| Pacote | Finalidade |
 |:------:|:---------------------:|
-| [lobstr](https://lobstr.r-lib.org/)  | Auxilia no estudo sobre a sintaxe do pacote |
-| [codetools](https://cran.r-project.org/package=codetools/)| Auxilia no estudo sobre a sintaxe do pacote |
-|[XR](https://cran.r-project.org/package=XR/) | Auxilia no estudo sobre a sintaxe do pacote |
-| [rlang](https://rlang.r-lib.org/) | Auxilia no estudo sobre a sintaxe do pacote |
-| [sloop](https://sloop.r-lib.org/) | Auxilia a compreender interativamente a programação orientada a objetos |
+| [lobstr](https://lobstr.r-lib.org/)  | Estudar a sintaxe do ambiente [R](http://r-project.org/){target='_blank'} |
+| [codetools](https://cran.r-project.org/package=codetools/)| Estudar a sintaxe do ambiente [R](http://r-project.org/){target='_blank'} |
+|[XR](https://cran.r-project.org/package=XR/) | Estudar a sintaxe do ambiente [R](http://r-project.org/){target='_blank'} |
+| [rlang](https://rlang.r-lib.org/) | Estudar a sintaxe do ambiente [R](http://r-project.org/){target='_blank'} |
+| [sloop](https://sloop.r-lib.org/) | Compreender interativamente a programação orientada a objetos |
 | [styler](https://styler.r-lib.org) | Auxilia no estilo de código |
 | [formatR](https://yihui.org/formatr) | Auxilia no estilo de código |
-| [distill](https://rstudio.github.io/distill/) | Criação da página|
+| [distill](https://rstudio.github.io/distill/) | Criação da página *web*|
 
 
 
