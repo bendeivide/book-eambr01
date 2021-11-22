@@ -1,6 +1,48 @@
 # Como o R trabalha
 
+Iniciamos a discussão por uma afirmação de John McKinley Chambers, do qual afirmou que o R tem três princípios (Chambers 2016):
+
+```{r Criadores, echo=FALSE, out.width="50%", fig.cap="John Chambers, o criador da linguagem S",fig.align='center'}
+knitr::include_graphics("img/Criador_S.PNG")
+```
+
+- **Princípio do Objeto**: Tudo que existe em **R** é um objeto;
+- **Princípio da Função**: Tudo que acontece no **R** é uma chamada de função;
+- **Princípio da Interface**: Interfaces para outros programas são parte do **R**;
+
+Ao longo de todo o curso, para os três módulos, iremos nos referir a esses princípios. Vamos inicialmente observar uma adaptação da ilustração feita por Paradis (2005), mostrando como o R trabalha, Figura \@ref(fig:FuncionamentoR).
+
+Toda ação que acontece no **R** é uma chamada de função (Operadores e funções), que por sua vez é armazenada na forma de um objeto, e este se associa a um nome. A forma de execução de uma função é baseada em argumentos (dados, fórmulas, expressões, etc), que são entradas, ou argumentos padrões que já são pré-estabelecidos na criação da função. Esses tipos de argumentos podem ser modificados na execução da função. Por fim, a saída é o resultado, que é também um objeto, e pode ser usado como argumento de outras funções.
+
+
+```{r FuncionamentoR, echo=FALSE, out.width="50%", fig.cap="Esquema de como o R funciona.",fig.align='center'}
+knitr::include_graphics("img/Funcionamento_R.PNG")
+```
+
+Na Figura \@ref(fig:FuncionamentoR), observamos que todas as ações realizadas sobre os objetos ficam armazenadas na memória ativa do computador. Esses objetos são criados por comandos (teclado ou mouse) através de funções ou operadores (chamada de função), dos quais leem ou escrevem arquivos de dados do disco rígido, ou leem da própria internet. Por fim, o resultado desses objetos podem ser apresentados no console (memória ativa), exportados em formato de imagem, página web, etc. (disco rígido), ou até mesmo ser reaproveitado como argumento de outras funções, porque o resultado também é um objeto.
+
+
+
 ## Como utilizar o R e o RStudio
+
+A primeira ideia que temos sobre a linguagem **R** é a linha de comando, que é simbolizada pelo prompt de comando “>”. Este símbolo significa que o **R** está pronto para receber os comandos do usuário. O prompt de comando está localizado no console do **R**. Vejamos o console do **R** a seguir, que é o local que recebe as linhas de comando do usuário, Figura \@ref(fig:ConsoledoR).
+
+O **R** ao ser iniciado, está pronto para receber as linhas de comando desejadas. Uma forma simples de armazernar os seus comandos é por meio de um script, isto é, um arquivo de texto com extensão .R. Para criar, basta ir em: Arquivo > Novo script.... Veremos muitas outras informações ao longo do curso.
+
+O **RStudio** se apresenta como uma interface para facilitar a utilização do **R**, tendo por padrão quatro quadrantes, demonstrado na Figura \@ref(fig:InterfaceRStudio)
+
+Muitas coisas na interface do **R** podem se tornar problemas para os usuários, uma vez que janelas gráficas, janelas de scripts, dentre outras, se sobrepõe. Uma vantagem no **RStudio** foi essa divisão de quadrantes, que torna muito mais organizado as atividades realizadas no **R**.De um modo geral, diremos que o primeiro quadrante é responsável pela entrada de dados, comandos, isto é, o input. O segundo quadrante, que é o console do R , representa tanto entrada como saída de informações (input/output). Dependendo as atividades as abas podem aumentar. O terceiro quadrante representa informações básicas como objetos no ambiente global, a memória de comandos na aba History, dentre outras, e também representa entrada como saída de informações (input/output). Por fim, o quarto quadrante é responsável por representação gráficas, instalação de pacotes, renderização de páginas web.
+
+
+```{r ConsoledoR, echo=FALSE, out.width="100%", fig.cap="Console do R (Versão 4.0.3)",fig.align='center'}
+knitr::include_graphics("img/Console_do_R.PNG")
+```
+
+```{r InterfaceRStudio, echo=FALSE, out.width="100%", fig.cap="Interface do RStudio (Versão 1.4.1103)",fig.align='center'}
+knitr::include_graphics("img/Interface_RStudio.PNG")
+```
+
+
 
 ## Comandos no R e Ambiente Global
 
