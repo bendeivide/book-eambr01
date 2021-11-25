@@ -1,12 +1,180 @@
 # Objetos
 
+Definimos um objeto como uma entidade no ambiente R com características internas contendo informações necessárias para interpretar sua estrutura e conteúdo. Essas características são chamadas de **atributos**. Vamos entender o termo estrutura como a disposição de como está o seu conteúdo. Por exemplo, a estrutura de um objeto mais simples no R é um **vetor atômico**, pois os elementos contidos nele, apresenta o mesmo **modo**, um tipo de atributo. Falaremos nisso, mais à frente. De forma didática, adaptaremos a representação dos objetos no formato de diagrama. Vejamos a seguinte linha de comando:
+
+
+$$CODIGO$$
+Todo mundo que tem uma certa noção sobre a linguagem **R** afirmaria: “criei um objeto x que recebe o valor 10”. Para Wickham (2019) essa afirmação é imprecisa e pode levar um entendimento equivocado sobre o que acontece de fato. Para o mesmo autor, o correto é afirmar que o objeto 10 está se ligando a um nome. E de fato, o objeto não tem um nome, mas o nome tem um objeto. O símbolo que associa um objeto a um nome é o de atribuição, <-, isto é, a junção do símbolo desigualdade menor e o símbolo de menos. Para ver qual objeto associado ao nome, o usuário precisa apenas digitar o nome no console e apertar a tecla *ENTER*.
+
+
+Representaremos em termos de diagrama, um nome se ligando a um objeto, na Figura \@ref(fig:LigacaoObjeto).
+
+```{r LigacaoObjeto, echo=FALSE, out.width="100%", fig.cap="Dizemos que o nome 'x' se liga ao objeto do tipo (estrutura) vetor.",fig.align='center'}
+knitr::include_graphics("img/Ligacao_Objeto.PNG")
+```
+O identificador na memória ativa desse objeto pode ser obtida por:
+
+$$CODIGO$$
+
+
+O diagrama explica que o nome criado x se associou com um objeto do **tipo** (estrutura) vetor (vector) e **modo** numérico (numeric)1 , cuja identificação na memória ativa do seu computador foi <0xf8a104fc20>. É claro que para cada vez que o usuário abri o ambiente **R** e executar novamente esse comando, ou repeti o comando, esse identificador irá alterar.
+
+Essa outra representação, Código R ??, ficará mais claro para a afirmação feita anteriormente, no segundo diagrama, Figura 5.2, que representa a ligação do nome y ao mesmo objeto. Os termos nos diagramas, serão usados de acordo com a sintaxe da linguagem com os termos em inglês para melhor compreensão e fixação dos termos utilizados em R , uma vez que os termos na linguagem são baseados nesse idioma.
+
+$$CODIGO$$
+
+Observem que não houve a criação de um outro objeto, mas apenas a ligação de mais um nome ao objeto existente, pois o identificador na memória ativa para o objeto não alterou, é o mesmo. Logo, não temos um outro objeto, mais dois nomes que se ligam ao mesmo objeto.
+
+```{r LigacaoObjeto2, echo=FALSE, out.width="100%", fig.cap="Dizemos que o nome 'x' e ‘y’ se ligam ao objeto do tipo (estrutura) vetor.",fig.align='center'}
+knitr::include_graphics("img/Ligacao_Objeto2.PNG")
+```
+
+Mais especificamente, acrescentamos um outro diagrama, Figura \@ref(fig:ObjetoAmbienteGlobal), mostrando a representação do ambiente global (.GlobalEnv, nome associado ao objeto que representa o ambiente global).
+
+```{r ObjetoAmbienteGlobal, echo=FALSE, out.width="100%", fig.cap="Dizemos que o nome 'x' e 'y' se ligam ao objeto do tipo (estrutura) vetor e essa ligação fica armazenada no ambiente global.",fig.align='center'}
+knitr::include_graphics("img/Objeto_Ambiente_Global.PNG")
+```
+De todo modo, deixaremos para o Volume II, uma abordagem mais profunda sobre o assunto. O símbolo de atribuição poderá ser representado na direção da esquerda para à direita ou vice-versa, isto é,
+
+$$CODIGO$$
+Essas duas linhas de comando anteriores podem ter passado despercebidas pelo leitor em uma situação. Se na segunda linha tivéssemos alterado o valor do objeto de 10 para 30, por exemplo, a associação de x seria ao objeto 30. Isso significa que se o nome já existe, ele será apagado da memória ativa do computador e associado ao novo objeto 2. Veja,
+$$CODIGO$$
+Uma outra forma menos convencional é usar a função assign(), isto é,
+
+$$CODIGO$$
+Ao invés do símbolo de atribuição, muitos usuários utilizam o símbolo da igualdade “=” para associarmos nomes aos objetos, que o ambiente **R** compreenderá. Contudo, discutiremos mas adiante, Capítulo ??, que o uso da igualdade deverá em **R** ser usado apenas para a utilização em argumentos de uma função.
+
+Quando desejamos executar mais de uma linha de comando por vez, separamos estas pelo símbolo “;”, isto é,
+
+$$CODIGO$$
+Neste caso, executamos quatro comandos em uma linha. Associamos dois nomes a dois objetos e imprimimos os seus valores.
+
+Por questão de comodidade, iremos a partir de agora, sempre nos referir a um objeto pelo nome associado a ele, para não está sempre se expressando como “um nome associado a um objeto”. Mas que fique claro a discussão realizada anteriormente sobre esses conceitos.
+
+Nesse momento, nos limitaremos a falar sobre objetos que armazenam dados, do tipo caracteres,
+números e operadores lógicos (TRUE/FALSE).
+
 ## Atributos
+
+Todos os objetos, terão pelo menos dois tipos de atributos, chamados de atributos intrínsecos. Os demais atributos, quando existem, podem ser verificados pela função attributes(). A ideia dos atributos pode ser pensada como metadados, isto é, um conjunto de informações que caracterizam o objeto.
+
+Diremos também que todos os objetos **R** tem uma classe, e por meio dessas classes, determinadas funções podem ter comportamento diferente a objetos com classes diferentes. Agora, devemos deixar claro essa informação, apesar do R seguir o princípio do objeto, nem tudo é orientado a objetos, como por exemplo, observamos na linguagens C++ e Java. Deixemos esse tópico para discorrer no Volume II.
+
+A forma de se verificar a classe de um objeto é pela função class(). Contudo, os objetos internos do **R** (base), quando solicitado sua classe pela função class(), acabam retornando, algumas vezes, resultados equivocados. Uma alternativa é utilizar a função sloop::s3_class() do pacote **sloop**.Isso também será discutido no Volume II.
+
+Devemos nos atentar a uma questão: **existe um atributo também chamado classe** (class), e nem todos os objetos necessariamente tem esse atributo, apenas aqueles orientados a objetos, como é o caso do objeto com atributo classe. Por exemplo, é devido a classe factor no objeto criado pela função factor() que apesar do seu resultado ser numérico, este não se comporta como numérico. Isto significa que o atributo classe muda o comportamento de como funções veem esse objeto. Entretanto, mesmo os objetos que não apresentam esse atributo, quando pedimos pela chamada class() desse referido objeto, haverá o retorno do que chamamos de **classe implícita**, que nada mais é do que a tipagem do objeto baseado no atributo modo (mode() ou typeof()). A Classe implícita não é definida pelo atributo class, mas pela tipagem do objeto. Isso também será abordado no Volume II.
+
+Para verificarmos se tal objeto tem o atributo class, usamos a função attributes(). Quando este atributo existe, ele é coincidente com o resultado obtido também pela função class().
+
+O tipo da classe implícita pode ser *numeric*, *logical*, *character*, *list*, *matrix*, *array*. Outros objetos apresentam classes definidas pelo atributo class, como factor, data.frame, dentre outros.
+
+Para remover o efeito do atributo class, usamos a função unclass() para tal.
+
+Por exemplo, quando criamos um objeto da classe data.frame, vejamos o que acontece quando removemos esse atributo no Código R 5.2.
+
+$$CODIGO$$
+
+Observe que sem o atributo *class= 'data.frame'*, o objeto tem classe list. Isto significa que, o objeto tem uma estrutura em forma de list, mas se comporta como um *data.frame*, que se apresenta como mostrado anteriormente. 
+
+Veremos no Volume II como criar atributos, classes, e mostrar que não conseguiremos mostrar todos os tipos de classes, pois a todo momento se cria classes em objetos R no desenvolvimento de pacotes.
+
+
 
 ### Atributos intrínsecos
 
+Todos os objetos tem dois atributos intrínsecos: o **modo** e **comprimento**. O modo representa a natureza dos elementos objetos. Para o caso dos vetores atômicos, o **modo** dos vetores podem ser cinco, numérico (*numeric*), lógico (*logic*), caractere 3 (*character*), complexo (*complex*) ou bruto (*raw*). Este último, não daremos evidência para esse momento, lembrando que essa tipagem está relacionada alinguagem S. O **comprimento** mede a quantidade de elementos no objeto. Para determinarmos o **modo** de um objeto, usamos a função *mode()*. Vejamos alguns exemplos pelo Código R 5.3.
+
+$$CODIGO$$
+
+Contudo, essa função *mode()* se baseou nos atributos baseados na linguagem S. Temos uma outra função para verificarmos o **modo** do objeto que é por typeof(). O atributo **modo** retornado de um objeto para esta última função, está relacionado a tipagem da linguagem C, Código R 5.4, uma vez que boa parte das rotinas no **R** está nessa linguagem, principalmente as funções do pacote **base**. Existem 24 tipos que serão detalhados no Volume II.
+
+
+$$CODIGO$$
+Observamos que apesar de alguns vetores serem vazios, estes ainda tem um modo, observe nas seguintes linhas de comando, no Código R 5.5.
+
+
+$$CODIGO$$
+
+A diferença existente nos objetos $y$ e $y^2$ para as funções *mode()* e *typeof()* se referem apenas
+como o **R** armazena essas informações na memória do computador. Podemos perguntar ao **R** se
+dois números são iguais, assim:
+
+$$CODIGO$$
+Veja que o resultado é *TRUE*, isto é, sim eles são iguais. Agora, veja a próxima linha de comando:
+
+$$CODIGO$$
+
+O retorno agora foi *FALSE*, que significa que o armazenamento dessas informações não são iguais. Posteriormente, entenderemos no que isso reflete no código do usuário, uma vez que um código escrito pode apresentar uma perda de desempenho simplesmente pela não necessidade de determinados objetos serem copiados.
+
+O termo *double* retornado pela função *typeof()* significa dupla precisão na linguagem de programação, que acaba tenho uma exigência de mais memória do que o objeto de modo integer. Esses termos são utilizados na linguagem C. Já a linguagem S não os diferencia, utiliza tudo como *numeric*.
+
+Aqui vale um destaque para o termo numérico, que no **R** podem ter três significados:
+
+- Pode significar um número real, isto é, para a computação um número de dupla precisão (*numeric* e *double* seriam iguais nesse aspecto), Código R 5.6;
+
+$$CODIGO$$
+
+- nos sistemas S3 e S4 (orientação a objetos), o termo numérico é usado como atalho para o modo integer ou double. Esse ponto veremos Volume II. Contudo, vejamos o Código R 5.7;
+
+$$CODIGO$$
+
+- Pode ser utilizado (*is.numeric()*) para verificar se determinados objetos tem o modo numé- rico. Por exemplo, temos um objeto de classe factor que é importante para a área da estatística experimental, representando os níveis de um fator em um experimento. Os elementos desse objeto pode ser número ou caracteres, mas serão representados como sempre por números. Entretanto, não se comportam como numérico, Código R 5.8;
+$$CODIGO$$
+
+A Tabela 5.1 a seguir, mostra o retorno dos seis principais modos de um objeto do tipo (estrutura) de vetores atômicos (Os modos apresentados baseiam-se apenas quanto a característica dos dados do objeto. É claro que um objeto não armazena apenas dados. Existem outras naturezas, que serão omitidas nesse momento).
+
+typeof   | mode
+:---------: | :------:
+logical | logical
+integer | numeric
+double | numeric
+complex | complex
+character | character
+raw | raw
+
+
+O comprimento do objeto é informado pela função lenght(), do qual a representação em diagrama informa esse atributo. Vejamos as linhas de comando no Código R 5.9.
+
+$$CODIGO$$
+
+Um diagrama apresentando esses três objetos no ambiente global, pode ser apresentado na Figura \@ref(fig:DiagramaObjetos). Observe que acrescentamos agora o **comprimento** dos objetos no diagrama entre colchetes, ao lado do atributo **modo**.
+
+```{r DiagramaObjetos, echo=FALSE, out.width="100%", fig.cap="Objetos v1, v2 e v3.",fig.align='center'}
+knitr::include_graphics("img/Diagrama_Objetos.PNG")
+```
+
+Um resumo as funções mensionadas podem ser refletidas com as seguintes indagações:
+
+- base::class() e loop::c3_class(): Qual o tipo de objeto?
+- base::mode(): Qual o tipo de dados baseados na linguagem S?
+- base::typeof(): Qual o tipo de dados baseados na linguagem C?
+- base::attributes(): O objeto tem atributos?
+- base::length(): Qual o comprimento do objeto?
+
+Usamos essa sintaxe pacote::nome_função() para entedermos qual o pacote da função que utilizamos. Contudo, essa forma tem uma importância no sentido de acesso a funções em um pacote sem necessitar anexá-lo no caminho de busca. Assunto abordado mais a frente.
+
+
 ## Coersão
 
+Como falamos anteriormente, os vetores atômicos armazenam um conjunto de elementos de mesmo modo. A coerção é a forma como o **R** coage o **modo** dos objetos. Por exemplo, se um elemento de **modo** caractere estiver em um vetor, todos os demais elementos serão convertidos para esse modo. Vejamos a linha de comando, a seguir.
+
+$$CODIGO$$
+
+Observe que todos os elementos ganharam aspas, isto é, se tornaram um caractere ou uma cadeia de caracteres. A coersão entre vetores de modo numeric, character e logical será sempre como verificado pela Figura \@ref(fig:CoersaoVetores).
+
+```{r CoersaoVetores, echo=FALSE, out.width="100%", fig.cap="",fig.align='center'}
+knitr::include_graphics("img/Coersao_Vetores.PNG")
+```
+
+No caso dos vetores lógicos, todo TRUE se converterá em 1, e FALSE em 0. Porém, os modos dos vetores podem ser coagidos pelo usuário, usando as funções do tipo as.<modo ou tipo>() com prefixo as., isto é, se desejarmos que um objeto meu_objeto tenha o modo “character,” basta usar as.character(meu_objeto). Para desejar saber se um objeto é de um determinado modo, usamos as funções do tipo is.<modo ou tipo>(), com o prefixo "is.". Vejamos o Código R 5.10, para elucidar o que discutimos anteriormente.
+$$CODIGO$$
+
+
 ## Tipo de objetos
+
+
+
+
 
 ### Vetores
 
