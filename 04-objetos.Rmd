@@ -154,7 +154,7 @@ Um resumo as funções mensionadas podem ser refletidas com as seguintes indaga�
 Usamos essa sintaxe pacote::nome_função() para entedermos qual o pacote da função que utilizamos. Contudo, essa forma tem uma importância no sentido de acesso a funções em um pacote sem necessitar anexá-lo no caminho de busca. Assunto abordado mais a frente.
 
 
-## Coersão
+## Coerção
 
 Como falamos anteriormente, os vetores atômicos armazenam um conjunto de elementos de mesmo modo. A coerção é a forma como o **R** coage o **modo** dos objetos. Por exemplo, se um elemento de **modo** caractere estiver em um vetor, todos os demais elementos serão convertidos para esse modo. Vejamos a linha de comando, a seguir.
 
@@ -167,22 +167,125 @@ knitr::include_graphics("img/Coersao_Vetores.PNG")
 ```
 
 No caso dos vetores lógicos, todo TRUE se converterá em 1, e FALSE em 0. Porém, os modos dos vetores podem ser coagidos pelo usuário, usando as funções do tipo as.<modo ou tipo>() com prefixo as., isto é, se desejarmos que um objeto meu_objeto tenha o modo “character,” basta usar as.character(meu_objeto). Para desejar saber se um objeto é de um determinado modo, usamos as funções do tipo is.<modo ou tipo>(), com o prefixo "is.". Vejamos o Código R 5.10, para elucidar o que discutimos anteriormente.
+
 $$CODIGO$$
+
+$$CODIGO$$
+
+$$CODIGO$$
+
+
+
 
 
 ## Tipo de objetos
 
+Por fim, pretendemos falar sobre os principais tipos de objetos. O **tipo** vamos entender como a estrutura de como os dados estão organizados em um objeto, relacionados aos seus atributos. Falamos anteriormente sobre a estrutura mais simples, que é o vetor atômico. Mas entendemos que um vetor em **R** podem ser considerados: atômicos ou listas. Podemos então subdividi-los em:
 
+
+- Vetores atômicos:
+  - Lógicos, Numéricos e Caracteres;
+  - Matrizes unidimensionais (Matrix) e multidimensionais (Arrays);
+
+- Vetores em listas:
+  - Listas (Lists);
+  - Quadro de dados (Data frames);
+
+Existem outros, mas para esse módulo, exploraremos estes nas seções seguintes. As funções para as coerções realizadas pelos usuários, são similares as funções de coerção para modo, isto é, usar as funções prefixadas as.*<modo>*.
+
+Daremos uma visão geral dos objetos apresentados até o momento na Tabela 5.2.
 
 
 
 ### Vetores
 
-#### Vetores escalares
+Podemos dizer que existem três tipos principais de vetores atômicos: 
+
+- Numéricos (numeric):
+  - Inteiro (integer);
+  - Real (double);
+- Lógico (logical);
+- Caractere (character)
+
+Existem dois tipos raros que são os complexos (complex) e brutos (raw), que falaremos no Volume
+II.
+
+#### Vetores escalares ou constantes
+O menor comprimento de um vetor é de tamanho um, conhecido também como um escalar. Porém, para o **R** tudo é observado como um vetor. As sintaxes para os tipos especiais são:
+
+- os vetores lógicos assumem valores: TRUE ou FALSE, ou abreviados, T ou F, respectivamente. Existem valores especiais devido a precisão de operações na programação, que são os chamados pontos flutuantes. Nesse caso temos: Inf, -Inf e NaN, quando o resultados tende a $\infty$, $-\infty$, sem número, respectivamente;
+
+- os vetores numéricos do tipo ‘double‘ podem ser representados de forma decima (0.123), científica (1.23e5), ou hexadecimal (3E0A);
+
+- os vetores numéricos do tipo integer são representados pela letra L ao final do número inteiro,
+isto é, 1L, 1.23e5L, etc.;
+
+- os caracteres são representados pelas palavras, letras, números ou caracteres especiais entre aspas, isto é, ’Ben’, ’a’. Pode ser utilizado também aspa simples, ’Ben’, ’a’, etc.
+
+
+
+Objeto   | Classe | Modo  | São possíveis vários modos no mesmo objeto?
+:---------: | :------: | :---------: | :------:
+Vetor | numeric (integer ou double), character, complex, logical, raw | numeric (integer ou double), character, complex, logical, raw | Não
+Matriz | matrix | numeric (integer ou double), character, complex, logical, raw | Não
+Array | array | numeric (integer ou double), character, complex, logical, raw| Não
+Lista | list | numeric (integer ou double), character, complex, logical, raw, expression, function| Sim
+Quadro de dados | data.frame | numeric (integer ou double), character, complex, logical, raw| Sim
+
+
+$$tabela-informativo$$
+$$CODIGO-1$$
+$$CODIGO-2$$
+$$CODIGO-3$$
+
+$$CODIGO-4$$
+
+$$CODIGO-5$$
 
 #### Vetores longos
 
+Os vetores longos podem ser criados pela função c(), a inicial da palavra concatenar (do inglês, concatenate), que significa agrupar. Vejamos um primeiro exemplo no Código R 5.16.
+
+$$CODIGO-1$$
+$$CODIGO-2$$
+$$CODIGO-3$$
+$$CODIGO-4$$
+
+Uma forma mais eficiente para criarmos um vetor com elementos de sequências regulares, é por meio da função primitiva (:), isto é, <menor valor da sequência>:<maior valor da sequência>, isto é,
+
+
+$$CODIGO-1$$
+Veremos mais a frente outras funções para construir sequências regulares. Se verificarmos os três objetos, veremos que todos eles são iguais:
+
+$$CODIGO-1$$
+
+O que vai diferenciá-los é a forma de armazená-lo (double ou integer), e por consequência, o espaço na memória ativa, como podemos observar no Código R 5.18.
+
+$$CODIGO-1$$
+
+$$CODIGO-2$$
+
+$$CODIGO-3$$
+
+O que podemos observar é que o vetor de modo double precisa de mais memória para armazenar os valores do que o objeto de modo integer. O último objeto, gerado pela chamada ‘:‘(), aparentemente ocupa mais memória. Porém, essa função apresenta um recurso interessante apresentado nas versões posteriores **R** (3.5.0), que é chamado de **abreviação alternativa**. Esse recurso faz com que a sequência de números não seja armazenada completamente, apenas os extremos. Isso significa que para qualquer tamanho de sequência, a ocupação de memória do objeto será sempre a mesma. Lembrando que essa sequência sempre terá o modo double na tipagem C. Outras formas de criar
+sequências de números é usando as funções *rep()*, *rep_len()* (mais rápido), *seq()*, *seq_along()* (mais rápido) e *seq_len()* (mais rápido), *sequence()*, *replicate()*, *gl()*, e que pode ser observado no Código R 5.19.
+$$CODIGO-1$$
+$$CODIGO-2$$
+
+Dessa forma, poderemos ter com o último objeto (vetor.num3) uma economia de memória, dependendo do tamanho do seu vetor, quando se compara com as outras opções, isto é,
+
+$$CODIGO-1$$
+
+
 #### Manipulando vetores
+
+Quando algum elemento de um vetor não está disponível, representamos pela constante lógica NA, que pode ser coagida para qualquer outro modo de vetor, exceto para raw. Podemos ter constantes lógicas NA específicas para modos específicos: NA_integer_, NA_real_ (o equivalente para o modo double), NA_complex_ e NA_character_. Entretando, dependendo de onde o NA é inserido, o atributo modo no objeto já converte para NA específico de acordo com o seu atributo modo. Essa constante contido no vetor não altera o modo do vetor, isto é,
+
+$$CODIGO-1$$
+Podemos criar vetores atômicos iniciais sem nenhuma elemento, por meio das funções numeric(0),
+character(0) e logical(0), isto é,
+
+$$CODIGO-1$$
 
 ### Matrizes bidimensionais
 
