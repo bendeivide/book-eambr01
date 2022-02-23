@@ -1,7 +1,7 @@
 --- 
 title: "Estudando o Ambiente R"
 subtitle: "Volume I: Nível Básico"
-author: "Ben Dêivide, Diego Arthur"
+author: "Ben Dêivide, Diego Arthur e Henrique JP Alves"
 date: "2022-02-23"
 #lang: pt
 csl: abnt.csl

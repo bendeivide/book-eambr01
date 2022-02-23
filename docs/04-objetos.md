@@ -19,7 +19,7 @@ knitr::include_graphics("img/Ligacao_Objeto.PNG")
 ```
 
 <div class="figure" style="text-align: center">
-<img src="img/Ligacao_Objeto.PNG" alt="Dizemos que o nome `'x'` se liga ao objeto do tipo (estrutura) vetor." width="420" />
+<img src="img/Ligacao_Objeto.PNG" alt="Dizemos que o nome `'x'` se liga ao objeto do tipo (estrutura) vetor." width="839" />
 <p class="caption">(\#fig:objx)Dizemos que o nome `'x'` se liga ao objeto do tipo (estrutura) vetor.</p>
 </div>
 
@@ -51,7 +51,7 @@ knitr::include_graphics("img/Ligacao_Objeto2.PNG")
 ```
 
 <div class="figure" style="text-align: center">
-<img src="img/Ligacao_Objeto2.PNG" alt="Dizemos que o nome `'x'` e '`y`' se ligam ao objeto do tipo (estrutura) vetor." width="434" />
+<img src="img/Ligacao_Objeto2.PNG" alt="Dizemos que o nome `'x'` e '`y`' se ligam ao objeto do tipo (estrutura) vetor." width="869" />
 <p class="caption">(\#fig:objxy)Dizemos que o nome `'x'` e '`y`' se ligam ao objeto do tipo (estrutura) vetor.</p>
 </div>
 
@@ -542,7 +542,7 @@ knitr::include_graphics("img/Diagrama_Objetos.PNG")
 ```
 
 <div class="figure" style="text-align: center">
-<img src="img/Diagrama_Objetos.PNG" alt="Objetos `v1`, `v2` e `v3`." width="442" />
+<img src="img/Diagrama_Objetos.PNG" alt="Objetos `v1`, `v2` e `v3`." width="884" />
 <p class="caption">(\#fig:v1v2v3)Objetos `v1`, `v2` e `v3`.</p>
 </div>
 

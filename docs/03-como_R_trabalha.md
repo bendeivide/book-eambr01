@@ -9,7 +9,7 @@ knitr::include_graphics("img/Criador_S.PNG")
 ```
 
 <div class="figure" style="text-align: center">
-<img src="img/Criador_S.PNG" alt="John Chambers^[Fonte da foto: Retirada de sua página pessoal, [https://statweb.stanford.edu/~jmc4/](https://statweb.stanford.edu/~jmc4/)], o criador da linguagem `S`." width="89" />
+<img src="img/Criador_S.PNG" alt="John Chambers^[Fonte da foto: Retirada de sua página pessoal, [https://statweb.stanford.edu/~jmc4/](https://statweb.stanford.edu/~jmc4/)], o criador da linguagem `S`." width="178" />
 <p class="caption">(\#fig:chambers)John Chambers^[Fonte da foto: Retirada de sua página pessoal, [https://statweb.stanford.edu/~jmc4/](https://statweb.stanford.edu/~jmc4/)], o criador da linguagem `S`.</p>
 </div>
 
