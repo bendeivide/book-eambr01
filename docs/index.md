@@ -2,7 +2,7 @@
 title: "Estudando o Ambiente R"
 subtitle: "Volume I: Nível Básico"
 author: "Ben Dêivide, Diego Arthur"
-date: "2021-11-05"
+date: "2022-02-23"
 #lang: pt
 csl: abnt.csl
 site: bookdown::bookdown_site

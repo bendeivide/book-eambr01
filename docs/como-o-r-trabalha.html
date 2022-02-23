@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 3 Como o R trabalha | Estudando o Ambiente R</title>
-  <meta name="description" content="Capítulo 3 Como o R trabalha | Estudando o Ambiente R" />
+  <title>Capítulo 2 Como o R trabalha | Estudando o Ambiente R</title>
+  <meta name="description" content="Capítulo 2 Como o R trabalha | Estudando o Ambiente R" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 3 Como o R trabalha | Estudando o Ambiente R" />
+  <meta property="og:title" content="Capítulo 2 Como o R trabalha | Estudando o Ambiente R" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://bendeivide.github.io/book-eambr/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="bendeivide/book-eambr" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 Como o R trabalha | Estudando o Ambiente R" />
+  <meta name="twitter:title" content="Capítulo 2 Como o R trabalha | Estudando o Ambiente R" />
   
   
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Ben Dêivide, Diego Arthur" />
 
 
-<meta name="date" content="2021-11-05" />
+<meta name="date" content="2022-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="instalação-e-história-do-r.html"/>
+<link rel="prev" href="entendendo-a-coleção-estudando-o-ambiente-r.html"/>
 <link rel="next" href="objetos.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -64,6 +64,70 @@
 </script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -119,73 +183,71 @@ div.csl-indent {
 <li class="chapter" data-level="1.4" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#demais-volumes"><i class="fa fa-check"></i><b>1.4</b> Demais volumes</a></li>
 <li class="chapter" data-level="1.5" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#referencias"><i class="fa fa-check"></i><b>1.5</b> Referências complementares da Coleção</a></li>
 <li class="chapter" data-level="1.6" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#pacutilizados"><i class="fa fa-check"></i><b>1.6</b> Pacotes R utilizados para essa coleção</a></li>
+<li class="chapter" data-level="1.7" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#história-do-r"><i class="fa fa-check"></i><b>1.7</b> História do R</a></li>
+<li class="chapter" data-level="1.8" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#o-que-é-o-r"><i class="fa fa-check"></i><b>1.8</b> O que é o R ?</a></li>
+<li class="chapter" data-level="1.9" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#instalação-do-r-e-rstudio"><i class="fa fa-check"></i><b>1.9</b> Instalação do R e RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="instalação-e-história-do-r.html"><a href="instalação-e-história-do-r.html"><i class="fa fa-check"></i><b>2</b> Instalação e história do R</a>
+<li class="chapter" data-level="2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html"><i class="fa fa-check"></i><b>2</b> Como o R trabalha</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="instalação-e-história-do-r.html"><a href="instalação-e-história-do-r.html#instalação-do-r-e-rstudio"><i class="fa fa-check"></i><b>2.1</b> Instalação do R e RStudio</a></li>
-<li class="chapter" data-level="2.2" data-path="instalação-e-história-do-r.html"><a href="instalação-e-história-do-r.html#história-do-r"><i class="fa fa-check"></i><b>2.2</b> História do R</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html"><i class="fa fa-check"></i><b>3</b> Como o R trabalha</a>
+<li class="chapter" data-level="2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-no-r"><i class="fa fa-check"></i><b>2.2</b> Comandos no R</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>3.1</b> Como utilizar o R e o RStudio</a></li>
-<li class="chapter" data-level="3.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-no-r-e-ambiente-global"><i class="fa fa-check"></i><b>3.2</b> Comandos no R e Ambiente Global</a>
+<li class="chapter" data-level="2.2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#console-e-prompt-de-comando"><i class="fa fa-check"></i><b>2.2.1</b> Console e <em>Prompt</em> de comando</a></li>
+<li class="chapter" data-level="2.2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-elementares"><i class="fa fa-check"></i><b>2.2.2</b> Comandos elementares</a></li>
+<li class="chapter" data-level="2.2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#execução-de-comandos"><i class="fa fa-check"></i><b>2.2.3</b> Execução de comandos</a></li>
+<li class="chapter" data-level="2.2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores"><i class="fa fa-check"></i><b>2.2.4</b> Chamada e correção de comandos anteriores</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace"><i class="fa fa-check"></i><b>2.3</b> Ambiente Global (área de trabalho ou <em>Workspace</em>)</a></li>
+<li class="chapter" data-level="2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory"><i class="fa fa-check"></i><b>2.4</b> Arquivos <code>.RData</code> e <code>.Rhistory</code></a></li>
+<li class="chapter" data-level="2.5" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#criando-e-salvando-um-script"><i class="fa fa-check"></i><b>2.5</b> Criando e salvando um <em>script</em></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>3</b> Objetos</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#console-e-prompt-de-comando"><i class="fa fa-check"></i><b>3.2.1</b> Console e <em>Prompt</em> de comando</a></li>
-<li class="chapter" data-level="3.2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-elementares"><i class="fa fa-check"></i><b>3.2.2</b> Comandos elementares</a></li>
-<li class="chapter" data-level="3.2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#execução-de-comandos"><i class="fa fa-check"></i><b>3.2.3</b> Execução de comandos</a></li>
-<li class="chapter" data-level="3.2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores"><i class="fa fa-check"></i><b>3.2.4</b> Chamada e correção de comandos anteriores</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace"><i class="fa fa-check"></i><b>3.3</b> Ambiente Global (área de trabalho ou <em>Workspace</em>)</a></li>
-<li class="chapter" data-level="3.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory"><i class="fa fa-check"></i><b>3.4</b> Arquivos <code>.RData</code> e <code>.Rhistory</code></a></li>
-<li class="chapter" data-level="3.5" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#criando-e-salvando-um-script"><i class="fa fa-check"></i><b>3.5</b> Criando e salvando um <em>script</em></a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>4</b> Objetos</a>
+<li class="chapter" data-level="3.1" data-path="objetos.html"><a href="objetos.html#atributos"><i class="fa fa-check"></i><b>3.1</b> Atributos</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="objetos.html"><a href="objetos.html#atributos"><i class="fa fa-check"></i><b>4.1</b> Atributos</a>
+<li class="chapter" data-level="3.1.1" data-path="objetos.html"><a href="objetos.html#atributos-intrínsecos"><i class="fa fa-check"></i><b>3.1.1</b> Atributos intrínsecos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="objetos.html"><a href="objetos.html#coerção"><i class="fa fa-check"></i><b>3.2</b> Coerção</a></li>
+<li class="chapter" data-level="3.3" data-path="objetos.html"><a href="objetos.html#tipo-de-objetos"><i class="fa fa-check"></i><b>3.3</b> Tipo de objetos</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="objetos.html"><a href="objetos.html#atributos-intrínsecos"><i class="fa fa-check"></i><b>4.1.1</b> Atributos intrínsecos</a></li>
+<li class="chapter" data-level="3.3.1" data-path="objetos.html"><a href="objetos.html#vetores"><i class="fa fa-check"></i><b>3.3.1</b> Vetores</a></li>
+<li class="chapter" data-level="3.3.2" data-path="objetos.html"><a href="objetos.html#matrizes-bidimensionais"><i class="fa fa-check"></i><b>3.3.2</b> Matrizes bidimensionais</a></li>
+<li class="chapter" data-level="3.3.3" data-path="objetos.html"><a href="objetos.html#matrizes-multidimensionais"><i class="fa fa-check"></i><b>3.3.3</b> Matrizes multidimensionais</a></li>
+<li class="chapter" data-level="3.3.4" data-path="objetos.html"><a href="objetos.html#listas"><i class="fa fa-check"></i><b>3.3.4</b> Listas</a></li>
+<li class="chapter" data-level="3.3.5" data-path="objetos.html"><a href="objetos.html#quadro-de-dados"><i class="fa fa-check"></i><b>3.3.5</b> Quadro de dados</a></li>
+<li class="chapter" data-level="3.3.6" data-path="objetos.html"><a href="objetos.html#funções"><i class="fa fa-check"></i><b>3.3.6</b> Funções</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="objetos.html"><a href="objetos.html#coersão"><i class="fa fa-check"></i><b>4.2</b> Coersão</a></li>
-<li class="chapter" data-level="4.3" data-path="objetos.html"><a href="objetos.html#tipo-de-objetos"><i class="fa fa-check"></i><b>4.3</b> Tipo de objetos</a>
+</ul></li>
+<li class="chapter" data-level="4" data-path="importando-dados.html"><a href="importando-dados.html"><i class="fa fa-check"></i><b>4</b> Importando dados</a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="objetos.html"><a href="objetos.html#vetores"><i class="fa fa-check"></i><b>4.3.1</b> Vetores</a></li>
-<li class="chapter" data-level="4.3.2" data-path="objetos.html"><a href="objetos.html#matrizes-bidimensionais"><i class="fa fa-check"></i><b>4.3.2</b> Matrizes bidimensionais</a></li>
-<li class="chapter" data-level="4.3.3" data-path="objetos.html"><a href="objetos.html#matrizes-multidimensionais"><i class="fa fa-check"></i><b>4.3.3</b> Matrizes multidimensionais</a></li>
-<li class="chapter" data-level="4.3.4" data-path="objetos.html"><a href="objetos.html#listas"><i class="fa fa-check"></i><b>4.3.4</b> Listas</a></li>
-<li class="chapter" data-level="4.3.5" data-path="objetos.html"><a href="objetos.html#quadro-de-dados"><i class="fa fa-check"></i><b>4.3.5</b> Quadro de dados</a></li>
-<li class="chapter" data-level="4.3.6" data-path="objetos.html"><a href="objetos.html#funções"><i class="fa fa-check"></i><b>4.3.6</b> Funções</a></li>
+<li class="chapter" data-level="4.1" data-path="importando-dados.html"><a href="importando-dados.html#preparação-dos-dados"><i class="fa fa-check"></i><b>4.1</b> Preparação dos dados</a></li>
+<li class="chapter" data-level="4.2" data-path="importando-dados.html"><a href="importando-dados.html#importando-dados-1"><i class="fa fa-check"></i><b>4.2</b> Importando dados</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="importando-dados.html"><a href="importando-dados.html"><i class="fa fa-check"></i><b>5</b> Importando dados</a>
+<li class="chapter" data-level="5" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html"><i class="fa fa-check"></i><b>5</b> Boas práticas de como escrever um código</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="importando-dados.html"><a href="importando-dados.html#preparação-dos-dados"><i class="fa fa-check"></i><b>5.1</b> Preparação dos dados</a></li>
-<li class="chapter" data-level="5.2" data-path="importando-dados.html"><a href="importando-dados.html#importando-dados-1"><i class="fa fa-check"></i><b>5.2</b> Importando dados</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html"><i class="fa fa-check"></i><b>6</b> Boas práticas de como escrever um código</a>
+<li class="chapter" data-level="5.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos"><i class="fa fa-check"></i><b>5.1</b> Nomes de arquivos</a></li>
+<li class="chapter" data-level="5.2" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando"><i class="fa fa-check"></i><b>5.2</b> Comentar as linahs de comando</a></li>
+<li class="chapter" data-level="5.3" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos"><i class="fa fa-check"></i><b>5.3</b> Nome de objetos</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos"><i class="fa fa-check"></i><b>6.1</b> Nomes de arquivos</a></li>
-<li class="chapter" data-level="6.2" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando"><i class="fa fa-check"></i><b>6.2</b> Comentar as linahs de comando</a></li>
-<li class="chapter" data-level="6.3" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos"><i class="fa fa-check"></i><b>6.3</b> Nome de objetos</a>
+<li class="chapter" data-level="5.3.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe"><i class="fa fa-check"></i><b>5.3.1</b> Sintaxe</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="pacotes.html"><a href="pacotes.html"><i class="fa fa-check"></i><b>6</b> Pacotes</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe"><i class="fa fa-check"></i><b>6.3.1</b> Sintaxe</a></li>
+<li class="chapter" data-level="6.1" data-path="pacotes.html"><a href="pacotes.html#estrutura-básica-de-um-pacote"><i class="fa fa-check"></i><b>6.1</b> Estrutura básica de um pacote</a></li>
+<li class="chapter" data-level="6.2" data-path="pacotes.html"><a href="pacotes.html#instalação-de-um-pacote"><i class="fa fa-check"></i><b>6.2</b> Instalação de um pacote</a></li>
+<li class="chapter" data-level="6.3" data-path="pacotes.html"><a href="pacotes.html#objetivos-de-um-pacote"><i class="fa fa-check"></i><b>6.3</b> Objetivos de um pacote</a></li>
+<li class="chapter" data-level="6.4" data-path="pacotes.html"><a href="pacotes.html#utilizando-funções-de-um-pacote"><i class="fa fa-check"></i><b>6.4</b> Utilizando funções de um pacote</a></li>
+<li class="chapter" data-level="6.5" data-path="pacotes.html"><a href="pacotes.html#carregando-e-anexando-um-pacote"><i class="fa fa-check"></i><b>6.5</b> Carregando e anexando um pacote</a></li>
+<li class="chapter" data-level="6.6" data-path="pacotes.html"><a href="pacotes.html#namespace-de-um-pacote"><i class="fa fa-check"></i><b>6.6</b> <em>NAMESPACE</em> de um pacote</a></li>
+<li class="chapter" data-level="6.7" data-path="pacotes.html"><a href="pacotes.html#usando-os-operadores-e"><i class="fa fa-check"></i><b>6.7</b> Usando os operadores <code>::</code> e <code>:::</code></a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="pacotes.html"><a href="pacotes.html"><i class="fa fa-check"></i><b>7</b> Pacotes</a>
+<li class="chapter" data-level="7" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html"><i class="fa fa-check"></i><b>7</b> Ambientes e caminho de busca</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="pacotes.html"><a href="pacotes.html#estrutura-básica-de-um-pacote"><i class="fa fa-check"></i><b>7.1</b> Estrutura básica de um pacote</a></li>
-<li class="chapter" data-level="7.2" data-path="pacotes.html"><a href="pacotes.html#instalação-de-um-pacote"><i class="fa fa-check"></i><b>7.2</b> Instalação de um pacote</a></li>
-<li class="chapter" data-level="7.3" data-path="pacotes.html"><a href="pacotes.html#objetivos-de-um-pacote"><i class="fa fa-check"></i><b>7.3</b> Objetivos de um pacote</a></li>
-<li class="chapter" data-level="7.4" data-path="pacotes.html"><a href="pacotes.html#utilizando-funções-de-um-pacote"><i class="fa fa-check"></i><b>7.4</b> Utilizando funções de um pacote</a></li>
-<li class="chapter" data-level="7.5" data-path="pacotes.html"><a href="pacotes.html#carregando-e-anexando-um-pacote"><i class="fa fa-check"></i><b>7.5</b> Carregando e anexando um pacote</a></li>
-<li class="chapter" data-level="7.6" data-path="pacotes.html"><a href="pacotes.html#namespace-de-um-pacote"><i class="fa fa-check"></i><b>7.6</b> <em>NAMESPACE</em> de um pacote</a></li>
-<li class="chapter" data-level="7.7" data-path="pacotes.html"><a href="pacotes.html#usando-os-operadores-e"><i class="fa fa-check"></i><b>7.7</b> Usando os operadores <code>::</code> e <code>:::</code></a></li>
+<li class="chapter" data-level="7.1" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html#a-superatribuição"><i class="fa fa-check"></i><b>7.1</b> A superatribuição</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html"><i class="fa fa-check"></i><b>8</b> Ambientes e caminho de busca</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html#a-superatribuição"><i class="fa fa-check"></i><b>8.1</b> A superatribuição</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="interfaces-com-outras-linguagens.html"><a href="interfaces-com-outras-linguagens.html"><i class="fa fa-check"></i><b>9</b> Interfaces com outras linguagens</a></li>
-<li class="chapter" data-level="10" data-path="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><i class="fa fa-check"></i><b>10</b> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li class="chapter" data-level="8" data-path="interfaces-com-outras-linguagens.html"><a href="interfaces-com-outras-linguagens.html"><i class="fa fa-check"></i><b>8</b> Interfaces com outras linguagens</a></li>
+<li class="chapter" data-level="9" data-path="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><i class="fa fa-check"></i><b>9</b> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
 <li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
 <li class="divider"></li>
 <li><a href="https://bendeivide.github.io/cursor" target="blank">Acesse o curso desse material!</a></li>
@@ -207,43 +269,181 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="como-o-r-trabalha" class="section level1" number="3">
-<h1><span class="header-section-number">Capítulo 3</span> Como o R trabalha</h1>
-<div id="como-utilizar-o-r-e-o-rstudio" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Como utilizar o R e o RStudio</h2>
+<div id="como-o-r-trabalha" class="section level1" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> Como o R trabalha</h1>
+<p>Iniciamos a discussão por uma afirmação de John McKinley Chambers, do qual afirmou que o R tem três princípios (Chambers 2016):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="como-o-r-trabalha.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Criador_S.PNG&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:chambers"></span>
+<img src="img/Criador_S.PNG" alt="John Chambers^[Fonte da foto: Retirada de sua página pessoal, [https://statweb.stanford.edu/~jmc4/](https://statweb.stanford.edu/~jmc4/)], o criador da linguagem `S`." width="89" />
+<p class="caption">
+FIGURA 2.1: John Chambers<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, o criador da linguagem <code>S</code>.
+</p>
 </div>
-<div id="comandos-no-r-e-ambiente-global" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Comandos no R e Ambiente Global</h2>
-<div id="console-e-prompt-de-comando" class="section level3" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> Console e <em>Prompt</em> de comando</h3>
+<ul>
+<li><strong>Princípio do Objeto</strong>: Tudo que existe em <strong>R</strong> é um objeto;</li>
+<li><strong>Princípio da Função</strong>: Tudo que acontece no <strong>R</strong> é uma chamada de função;</li>
+<li><strong>Princípio da Interface</strong>: Interfaces para outros programas são parte do <strong>R</strong>;</li>
+</ul>
+<p>Ao longo de todo o curso, para os três módulos, iremos nos referir a esses princípios. Vamos inicialmente observar uma adaptação da ilustração feita por Paradis (2005), mostrando como o R trabalha, Figura <a href="como-o-r-trabalha.html#fig:rworks">2.2</a>.</p>
+<p>Toda ação que acontece no <strong>R</strong> é uma chamada de função (Operadores e funções), que por sua vez é armazenada na forma de um objeto, e este se associa a um nome. A forma de execução de uma função é baseada em argumentos (dados, fórmulas, expressões, etc), que são entradas, ou argumentos padrões que já são pré-estabelecidos na criação da função. Esses tipos de argumentos podem ser modificados na execução da função. Por fim, a saída é o resultado, que é também um objeto, e pode ser usado como argumento de outras funções.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="como-o-r-trabalha.html#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Funcionamento_R.PNG&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:rworks"></span>
+<img src="img/Funcionamento_R.PNG" alt="Esquema de como o `R` funciona." width="50%" />
+<p class="caption">
+FIGURA 2.2: Esquema de como o <code>R</code> funciona.
+</p>
 </div>
-<div id="comandos-elementares" class="section level3" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> Comandos elementares</h3>
+<p>Na Figura <a href="como-o-r-trabalha.html#fig:rworks">2.2</a>, observamos que todas as ações realizadas sobre os objetos ficam armazenadas na memória ativa do computador. Esses objetos são criados por comandos (teclado ou mouse) através de funções ou operadores (chamada de função), dos quais leem ou escrevem arquivos de dados do disco rígido, ou leem da própria internet. Por fim, o resultado desses objetos podem ser apresentados no console (memória ativa), exportados em formato de imagem, página web, etc. (disco rígido), ou até mesmo ser reaproveitado como argumento de outras funções, porque o resultado também é um objeto.</p>
+<div id="como-utilizar-o-r-e-o-rstudio" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Como utilizar o R e o RStudio</h2>
+<p>A primeira ideia que temos sobre a linguagem <strong>R</strong> é a linha de comando, que é simbolizada pelo prompt de comando “&gt;”. Este símbolo significa que o <strong>R</strong> está pronto para receber os comandos do usuário. O prompt de comando está localizado no console do <strong>R</strong>. Vejamos o console do <strong>R</strong> a seguir, que é o local que recebe as linhas de comando do usuário, Figura <a href="como-o-r-trabalha.html#fig:promptr">2.3</a>.</p>
+<p>O <strong>R</strong> ao ser iniciado, está pronto para receber as linhas de comando desejadas. Uma forma simples de armazernar os seus comandos é por meio de um script, isto é, um arquivo de texto com extensão .R. Para criar, basta ir em: Arquivo &gt; Novo script…. Veremos muitas outras informações ao longo do curso.</p>
+<p>O <strong>RStudio</strong> se apresenta como uma interface para facilitar a utilização do <strong>R</strong>, tendo por padrão quatro quadrantes, demonstrado na Figura <a href="como-o-r-trabalha.html#fig:iderstudio">2.4</a></p>
+<p>Muitas coisas na interface do <strong>R</strong> podem se tornar problemas para os usuários, uma vez que janelas gráficas, janelas de scripts, dentre outras, se sobrepõe. Uma vantagem no <strong>RStudio</strong> foi essa divisão de quadrantes, que torna muito mais organizado as atividades realizadas no <strong>R</strong>.De um modo geral, diremos que o primeiro quadrante é responsável pela entrada de dados, comandos, isto é, o input. O segundo quadrante, que é o console do R , representa tanto entrada como saída de informações (input/output). Dependendo as atividades as abas podem aumentar. O terceiro quadrante representa informações básicas como objetos no ambiente global, a memória de comandos na aba History, dentre outras, e também representa entrada como saída de informações (input/output). Por fim, o quarto quadrante é responsável por representação gráficas, instalação de pacotes, renderização de páginas web.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="como-o-r-trabalha.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Console_do_R.PNG&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:promptr"></span>
+<img src="img/Console_do_R.png" alt="Console do R (Versão 4.0.3)." width="80%" />
+<p class="caption">
+FIGURA 2.3: Console do R (Versão 4.0.3).
+</p>
 </div>
-<div id="execução-de-comandos" class="section level3" number="3.2.3">
-<h3><span class="header-section-number">3.2.3</span> Execução de comandos</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="como-o-r-trabalha.html#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Interface_RStudio.PNG&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:iderstudio"></span>
+<img src="img/Interface_RStudio.png" alt="Interface do RStudio (Versão 1.4.1103)." width="80%" />
+<p class="caption">
+FIGURA 2.4: Interface do RStudio (Versão 1.4.1103).
+</p>
 </div>
-<div id="chamada-e-correção-de-comandos-anteriores" class="section level3" number="3.2.4">
-<h3><span class="header-section-number">3.2.4</span> Chamada e correção de comandos anteriores</h3>
+</div>
+<div id="comandos-no-r" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Comandos no R</h2>
+<div id="console-e-prompt-de-comando" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Console e <em>Prompt</em> de comando</h3>
+<p>Como falado anteriormente, o <strong>R</strong> é uma linguagem baseada em linhas de comando, e as linhas de comando, são executadas uma de cada vez, no console. Assim que o prompt de comando está visível na tela do console, o <strong>R</strong> indica que o usuário está pronto para inserir as linhas de comando. O símbolo padrão do prompt de comando é “&gt;”, porém, ele pode ser alterado. Para isso, use a linha de comando, por exemplo <a href="#cod:promptdor"><strong>??</strong></a></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="como-o-r-trabalha.html#cb5-1" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span><span class="fu">options</span>(<span class="at">prompt =</span> <span class="st">&quot;R&gt;&quot;</span>)</span>
+<span id="cb5-2"><a href="como-o-r-trabalha.html#cb5-2" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span><span class="co"># Toda vez que o console iniciar, começarar por &#39;R&gt;&#39;</span></span>
+<span id="cb5-3"><a href="como-o-r-trabalha.html#cb5-3" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span><span class="dv">10</span></span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<p>O conjunto de símbolos que podem ser utilizados no <strong>R</strong> depende do sistema operacional e do país em que o <strong>R</strong> está sendo executado. Basicamente, todos os símbolos alfanuméricos podem ser utilizados, mas para evitar problemas quanto ao uso das letras aos nomes, opte pelos caracteres ASCII.</p>
+<p>A escolha do nome associado a um objeto tem algumas regras:</p>
+<ul>
+<li><p>Deve consistir em letras, dígitos, “.” e “_”;</p></li>
+<li><p>Os nomes devem ser iniciado por uma letra ou um ponto não seguido de um número, isto é, Ex.: .123, 1n, dentre outros;</p></li>
+<li><p>As letras maiúsculas se distinguem das letras minúsculas;</p></li>
+<li><p>Não pode inicia por “_” ou dígito, é retornado um erro no console caso isso ocorra;</p></li>
+<li><p>Não pode usar qualquer uma das palavras reservadas pela linguagem, isto é, TRUE, FALSE, if,
+for, dentre outras, que pode ser consultado usando o comando ?Reserved().</p></li>
+</ul>
+<p>Um nome que não segue essas regras é chamado de um nome <strong>não sintático</strong>. Um comando que pode ser usado para converter nomes não sintatícos em nomes <strong>sintáticos</strong> é <em>make.names</em>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="como-o-r-trabalha.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nome nao sintatico</span></span>
+<span id="cb7-2"><a href="como-o-r-trabalha.html#cb7-2" aria-hidden="true" tabindex="-1"></a>.<span class="dv">123</span> <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb7-3"><a href="como-o-r-trabalha.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in 0.123 &lt;- 50 : lado esquerdo da atribuicao inválida (do_set)</span></span>
+<span id="cb7-4"><a href="como-o-r-trabalha.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Qual a sugestao de nome sintatico para &#39;.123&#39;?</span></span>
+<span id="cb7-5"><a href="como-o-r-trabalha.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make.names</span>(.<span class="dv">123</span>)</span>
+<span id="cb7-6"><a href="como-o-r-trabalha.html#cb7-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;X0.123&quot;</span></span></code></pre></div>
+<p>Apesar dessas justificativas, algumas situações como as apresentadas nos exemplos anteriores são possíveis, ver Wickham (2019) na Seção 2.2.1.</p>
+</div>
+<div id="comandos-elementares" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Comandos elementares</h3>
+<p>Os <strong>comandos elementares</strong> podem ser divididos em <strong>expressões</strong> e <strong>atribuições</strong>. Por exemplo, podemos estar interessados em resolver a seguinte expressão <span class="math inline">\(10+15=25\)</span>. No console quando passamos pelo comando:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="como-o-r-trabalha.html#cb8-1" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">15</span></span></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<p>No <em>console</em> quando passamos pelo comando do Código R 4.2, o <strong>R</strong> avalia essa expressão internamente e imprime o resultado na tela, após apertar o botão ENTER do teclado. Esse fato é o que ocorre no segundo princípio mencionado por Chambers (2016), tudo em <strong>R</strong> acontece por uma chamada de função. Na realidade o símbolo + é uma função interna do <strong>R</strong> , que chamamos de função primitiva, porque foi implementada em outra linguagem. Assim, esse é o resultado de três objetos (“10”, “+”, “15”) que são avaliados internamente, do qual a função ‘+‘(e1, e2) é chamada, e em seguida o resultado é impresso no console. Intrinsecamente, podemos também afirmar que a função print() também trabalha nessa situação, fazendo o papel de imprimir o resultado no console.</p>
+<p>Do mesmo modo, se houver algum problema em algum dos objetos o retorno da avaliação pode ser uma mensagem de erro. Um caso muito prático é quando utilizamos o separador de casas decimais, sendo a <strong>vírgula “,”</strong>, para os números. Quando na realidade deve ser um <strong>ponto “.”</strong>, respeitando o sistema internacional de medidas. A vírgula é utilizada para separar elementos, argumentos em uma função, etc. Vejamos um exemplo no Código R 4.3.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="como-o-r-trabalha.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fl">10.5</span> <span class="sc">+</span> <span class="fl">15.5</span></span></code></pre></div>
+<pre><code>## [1] 26</code></pre>
+<p>Porém, tem que ficar claro que uma expressão é qualquer comando repassado no console. Este comando é avaliado e seu resultado impresso, há menos que explicitamente o usuário queira tornálo invisível. Caso algum elemento do comando não seja reconhecido pelo <strong>R</strong>, há um retorno de alguma mensagem em forma de “erro” ou “alerta”, tentando indicar o possível problema. Todos esses processos ocorrem na memória ativa do computador, e uma vez o resultado impresso no console, o valor é perdido, há menos que você atribua essa expressão a um nome, que erroneamento usamos o termo: “criamos um objeto!”. A atribuição dessa expressão será dada pela junção de dois símbolos &lt;-, falado mais a frente. Um comando em forma de atribuição também avalia a sua expressão, um nome se associa ao seu resultado, e o resultado será mostrado, se posteriormente, após a execução você digitar o “nome” atribuído a esse resultado. Vejamos um exemplo o Código R 4.4.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="como-o-r-trabalha.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Foi criado um objeto do tipo caractere e o nome &quot;meu_nome&quot; foi associado a ele</span></span>
+<span id="cb12-2"><a href="como-o-r-trabalha.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># O &#39;R&#39; avalia essa expressão, mas não imprime no console!</span></span>
+<span id="cb12-3"><a href="como-o-r-trabalha.html#cb12-3" aria-hidden="true" tabindex="-1"></a>meu_nome <span class="ot">&lt;-</span> <span class="st">&quot;Ben&quot;</span></span>
+<span id="cb12-4"><a href="como-o-r-trabalha.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Para imprimir o resultado da expressão, digitamos o nome &quot;meu_nome&quot; no console</span></span>
+<span id="cb12-5"><a href="como-o-r-trabalha.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># e apertamos o botão ENTER do teclado!</span></span>
+<span id="cb12-6"><a href="como-o-r-trabalha.html#cb12-6" aria-hidden="true" tabindex="-1"></a>meu_nome</span></code></pre></div>
+<pre><code>## [1] &quot;Ben&quot;</code></pre>
+</div>
+<div id="execução-de-comandos" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Execução de comandos</h3>
+<p>Quando inserimos um comando no console, executamos uma linha de comando por vez ou separados por “;” em uma mesma linha. Vejamos o Código</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="como-o-r-trabalha.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uma linha de comando por vez</span></span>
+<span id="cb14-2"><a href="como-o-r-trabalha.html#cb14-2" aria-hidden="true" tabindex="-1"></a>meu_nome <span class="ot">&lt;-</span> <span class="st">&quot;Ben&quot;</span> <span class="co"># Criamos e associamos um nome ao objeto</span></span>
+<span id="cb14-3"><a href="como-o-r-trabalha.html#cb14-3" aria-hidden="true" tabindex="-1"></a>meu_nome <span class="co"># Imprimos o objeto</span></span></code></pre></div>
+<pre><code>## [1] &quot;Ben&quot;</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="como-o-r-trabalha.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tudo em uma linha de comando</span></span>
+<span id="cb16-2"><a href="como-o-r-trabalha.html#cb16-2" aria-hidden="true" tabindex="-1"></a>meu_nome <span class="ot">&lt;-</span> <span class="st">&quot;Ben&quot;</span>; meu_nome</span></code></pre></div>
+<pre><code>## [1] &quot;Ben&quot;</code></pre>
+<p>Se um comando for muito grande e não couber em uma linha, ou caso deseje completar um
+comando em mais de uma linha, após a primeira linha haverá o símbolo “+” iniciando a linha seguinte ao invés do símbolo de prompt de comando (“&gt;”), até que o comando esteja sintaticamente
+completo. Vejamos o Código R 4.6, a seguir.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="como-o-r-trabalha.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uma linha de comando em mais de uma linha</span></span>
+<span id="cb18-2"><a href="como-o-r-trabalha.html#cb18-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span> <span class="sc">+</span> <span class="dv">10</span>) <span class="sc">/</span></span>
+<span id="cb18-3"><a href="como-o-r-trabalha.html#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<p>Por fim, todas linhas de comando quando iniciam pelo símbolo jogo da velha, “#” indica um comentário e essa linha de comando não é avaliada pelo console, apenas impressa na tela. E ainda, as linhas de comandos no console são limitadas a aproximadamente 4095 bytes (não caracteres).</p>
+</div>
+<div id="chamada-e-correção-de-comandos-anteriores" class="section level3" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Chamada e correção de comandos anteriores</h3>
+<p>Uma vez que um comando foi executado no console, esse comando por ser recuperado usando as teclas de setas para cima e para baixo do teclado, recuperando os comandos anteriorermente executados, e que os caracteres podem ser alterados usando as teclas esquerda e direita do teclado, removidas com o botão Delete ou Backspace do teclado, ou acrescentadas digitando os caracteres necessários. Uma outra forma de completar determinados comandos já existentes, como por exemplo, uma função que já existe nas bibliotecas de instalação do <strong>R</strong>, usando o botão Tab do teclado. O usuário começa digitando as iniciais, e para completar o nome aperta a tecla Tab. Posteriormente, basta completar a linha de comando e apertar ENTER para executá-la. Para entender mais detalhes, acesse o link: <a href="https://youtu.be/0MRPmVsPvk4" class="uri">https://youtu.be/0MRPmVsPvk4</a>, e veja em vídeo-aula mais detalhes.</p>
+<p>Esses recursos no <strong>RStudio</strong> são mais dinâmicos e vão mais além. Por exemplo, quando usamos um objeto do tipo função, estes apresentam o que chamamos de argumento(s) dentro do parêntese de uma função, do qual são elementos necessários, para que a função seja executada corretamente. Nesse caso, ao inseri o nome dessas funções no console, usando o <strong>RStudio</strong>, ao iniciá-la com a abertura do parêntese, abre-se uma janela informando todos os argumentos possíveis dessa função. Isso torna muito dinâmico escrever linhas de comando, porque não precisaremos estar lembrando do nome dos argumentos de uma função, mas apenas entender o objetivo dessa função. Para entender mais detalhes, acesse o link: <a href="https://youtu.be/KL3WAB_GFNI" class="uri">https://youtu.be/KL3WAB_GFNI</a>, e veja em vídeo-aula mais detalhes.</p>
 </div>
 </div>
-<div id="ambiente-global-área-de-trabalho-ou-workspace" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Ambiente Global (área de trabalho ou <em>Workspace</em>)</h2>
+<div id="ambiente-global-área-de-trabalho-ou-workspace" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Ambiente Global (área de trabalho ou <em>Workspace</em>)</h2>
+<p>Quando usamos um comando de atribuição no console, o R armazena o nome associado ao objeto
+criado na área de trabalho (Workspace), que nós chamamos de Ambiente Global. Teremos uma seção
+introdutória na seção Ambientes e caminhos de busca, mas entendamos inicialmente que o objetivo
+de um ambiente é associar um conjunto de nomes a um conjunto de valores. Vejamos o Código R
+4.7.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="como-o-r-trabalha.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nomes criados no ambiente </span></span>
+<span id="cb20-2"><a href="como-o-r-trabalha.html#cb20-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="sc">-</span> <span class="dv">6</span>; y <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="sc">+</span> <span class="dv">4</span>; w <span class="ot">&lt;-</span> <span class="st">&quot;Maria Isabel&quot;</span></span>
+<span id="cb20-3"><a href="como-o-r-trabalha.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando o nomes contidos no ambiente global</span></span>
+<span id="cb20-4"><a href="como-o-r-trabalha.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;meu_nome&quot; &quot;w&quot;        &quot;x&quot;        &quot;y&quot;</code></pre>
+<p>Observemos que todos os objetos criados até o momento estão listados, e o que é mais surpreendente é que ambientes podem conter outros ambientes e até mesmo se conterem. Observe o objeto meu_nome é um ambiente e está contido no Ambiente global. Será sempre dessa forma que recuperaremos um objeto criado no console do <strong>R</strong> . Caso contrário, se no console esse comando não for de atribuição esse objeto é perdido.</p>
 </div>
-<div id="arquivos-.rdata-e-.rhistory" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Arquivos <code>.RData</code> e <code>.Rhistory</code></h2>
+<div id="arquivos-.rdata-e-.rhistory" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Arquivos <code>.RData</code> e <code>.Rhistory</code></h2>
+<p>Ao final do que falamos até agora, todo o processo ao inserir linhas de comando do console, e desejarmos finalizar os trabalhos do ambiente <strong>R</strong> , dois arquivos são criados, sob a instrução do usuário em querer aceitar ou não, um <em>.RData</em> e outro <em>.Rhistory</em>, cujas finalidades são:</p>
+<ul>
+<li><p>.RData: salvar todos os objetos criados que estão atualmente disponíveis;</p></li>
+<li><p>.Rhistory: salvar todas as linhas de comandos inseridas no console.</p></li>
+</ul>
+<p>Ao iniciar o <strong>R</strong> no mesmo diretório onde esses arquivos foram salvos, é carregado toda a sua área de trabalho anteriormente, bem como o histórico das linhas de comando utilizadas anteriormente.</p>
 </div>
-<div id="criando-e-salvando-um-script" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> Criando e salvando um <em>script</em></h2>
+<div id="criando-e-salvando-um-script" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Criando e salvando um <em>script</em></h2>
+<p>A melhor forma de armazenarmos nossas linhas de código inseridas no console é criando um Script. Este é um arquivo de texto com a extensão <em>.R</em>. Uma vez criada, poderemos ao final salvar o arquivo e guardá-lo para utilizar futuramente.</p>
+<p>No <strong>R</strong> , ao ser iniciado poderemos ir no menu em Arquivo &gt; Novo script…. Posteriormente, pode ser inserido as linhas de comando, executadas no console pela tecla de atalho F5. As janelas do Script e console possivelmente ficarão sobrepostas. Para uma melhor utilização, estas janelas podem ficar lado a lado, configurando-as no menu em Janelas &gt; Dividir na horizontal (ou Dividir lado a lado).</p>
+<p>No <strong>RStudio</strong>, poderemos criar um Script no menu em File &gt; New File &gt; R Script, ou diretamente no ícone abaixo da opção File no menu, cujo o símbolo é um arquivo com o símbolo “+” em verde, que é o ícone do New File, e escolher R Script. Esse arquivo abrirá no primeiro quadrante na interface do <strong>RStudio</strong>.</p>
+<p>Para salvar, devemos clicar no botão com o símbolo de disquete (R/RStudio), escolher o nome do arquivo e o diretório onde o arquivo será armazenado no seu computador. Algumas ressalvas devem ser feitas:</p>
+<ul>
+<li><p>Escolha sempre um nome sem caracteres especiais, com acentos, etc.;</p></li>
+<li><p>Escolha sempre um nome curto ou abreviado, que identifique a finalidade das linhas de comando escritas;</p></li>
+<li><p>Evite espaços se o nome do arquivo for composto. Para isso, use o símbolo underline "_";</p></li>
+<li><p>Quando escrever um código, evite também escrever caracteres especiais, exceto em casos de necessidade, como imprimir um texto na tela, títulos na criação de gráficos, dentre outras. Nos referimos especificamente, nos comentários do código.</p></li>
+</ul>
+<p>Um ponto bem interessante é o diretório. Quando criamos um Script a primeira vez, e trabalhamos nele a pós a criação, muitos erros podem ser encontrados de início. Um problema clássico é a importação de dados. O usuário tem um conjunto de de dados e deseja fazer a importação para o R , porém, mesmo com todos os comandos corretos, o console retorna um erro, informando que não existe esse arquivo que contém os dados para serem informados. Isso é devido ao diretório de trabalho atual. Para verificar qual o diretório que está trabalhando no momento, use a linha de comando:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="como-o-r-trabalha.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<p>Para alterar o diretório de trabalho, o usuário deve usar a seguinte função setwd(“Aqui, deve ser apontado para o local desejado!”). Supomos que salvamos o nosso Script em C:_scripts_r. Assim, usamos a função setwd() e ao apontarmos o local, as barras devem ser inseridas de modo invertido, isto é, setwd(“C:/meu_scripts_r”), além de estar entre aspas.</p>
+<p>No RStudio , isso pode ser feito em Session &gt; Set Working Directory &gt; To Source File Location. Isso levará ao diretório corrente do Script. Se desejar escolher outro diretório, vá em Session &gt; Set Working Directory &gt; Choose Directory…. Porém, uma vez criado um Script, e utilizado novamente, se o usuário estiver abrindo o RStudio também naquele primeiro momento, por padrão, o diretório de trabalho corrente será o mesmo do diretório do Script. Isso acaba otimizando o trabalho.</p>
+<p>Devemos nos atentar também, quando trabalhamos utilizando Scripts ou arquivos de banco de dados, em locais diferentes do diretório corrente. Um outro recurso interessante é a função source(), que tem o objetivo de executar todas as linhas de comando de um Script sem precisar abri-lo. Isso pode ser útil, quando criamos funções para as nossas atividades, porém elas não se encontram no Script de trabalho para o momento. Assim, podemos criar um Script auxiliar que armazenas todas as funções criadas para as análises desejadas, e no Script corrente, poderemos chamá-las sem precisar abri o Script auxiliar. Todos os objetos passam a estar disponíveis no ambiente global.</p>
+<p>Por fim, algo de muita importância para um programador e usuário de linguagem, comente suas linhas de comando. Mas faça isso a partir do primeiro dia em que foi desenvolvido o primeiro Script. Isso criará um hábito, uma vez que o arquivo não está sendo criado apenas para um momento, mas para futuras consultas. E quando voltamos a Scripts com muitas linhas de comando, principalmente depois de algum tempo, e sem comentários, possivelmente você passará alguns instantes para tentar
+entender o que foi escrito.</p>
+<p>Outra coisa importante, é a boa prática de escrita de um código, Capítulo ??, e o RStudio nos proporciona algumas ferramentas interessantes. Mas isso será visto mais a frente.</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>Fonte da foto: Retirada de sua página pessoal, <a href="https://statweb.stanford.edu/~jmc4/">https://statweb.stanford.edu/~jmc4/</a><a href="como-o-r-trabalha.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="instalação-e-história-do-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="entendendo-a-coleção-estudando-o-ambiente-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="objetos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -299,6 +499,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

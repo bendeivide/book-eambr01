@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 4 Objetos | Estudando o Ambiente R</title>
-  <meta name="description" content="Capítulo 4 Objetos | Estudando o Ambiente R" />
+  <title>Capítulo 3 Objetos | Estudando o Ambiente R</title>
+  <meta name="description" content="Capítulo 3 Objetos | Estudando o Ambiente R" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 4 Objetos | Estudando o Ambiente R" />
+  <meta property="og:title" content="Capítulo 3 Objetos | Estudando o Ambiente R" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://bendeivide.github.io/book-eambr/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="bendeivide/book-eambr" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 4 Objetos | Estudando o Ambiente R" />
+  <meta name="twitter:title" content="Capítulo 3 Objetos | Estudando o Ambiente R" />
   
   
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Ben Dêivide, Diego Arthur" />
 
 
-<meta name="date" content="2021-11-05" />
+<meta name="date" content="2022-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -64,6 +64,70 @@
 </script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -119,73 +183,71 @@ div.csl-indent {
 <li class="chapter" data-level="1.4" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#demais-volumes"><i class="fa fa-check"></i><b>1.4</b> Demais volumes</a></li>
 <li class="chapter" data-level="1.5" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#referencias"><i class="fa fa-check"></i><b>1.5</b> Referências complementares da Coleção</a></li>
 <li class="chapter" data-level="1.6" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#pacutilizados"><i class="fa fa-check"></i><b>1.6</b> Pacotes R utilizados para essa coleção</a></li>
+<li class="chapter" data-level="1.7" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#história-do-r"><i class="fa fa-check"></i><b>1.7</b> História do R</a></li>
+<li class="chapter" data-level="1.8" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#o-que-é-o-r"><i class="fa fa-check"></i><b>1.8</b> O que é o R ?</a></li>
+<li class="chapter" data-level="1.9" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#instalação-do-r-e-rstudio"><i class="fa fa-check"></i><b>1.9</b> Instalação do R e RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="instalação-e-história-do-r.html"><a href="instalação-e-história-do-r.html"><i class="fa fa-check"></i><b>2</b> Instalação e história do R</a>
+<li class="chapter" data-level="2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html"><i class="fa fa-check"></i><b>2</b> Como o R trabalha</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="instalação-e-história-do-r.html"><a href="instalação-e-história-do-r.html#instalação-do-r-e-rstudio"><i class="fa fa-check"></i><b>2.1</b> Instalação do R e RStudio</a></li>
-<li class="chapter" data-level="2.2" data-path="instalação-e-história-do-r.html"><a href="instalação-e-história-do-r.html#história-do-r"><i class="fa fa-check"></i><b>2.2</b> História do R</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html"><i class="fa fa-check"></i><b>3</b> Como o R trabalha</a>
+<li class="chapter" data-level="2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-no-r"><i class="fa fa-check"></i><b>2.2</b> Comandos no R</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>3.1</b> Como utilizar o R e o RStudio</a></li>
-<li class="chapter" data-level="3.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-no-r-e-ambiente-global"><i class="fa fa-check"></i><b>3.2</b> Comandos no R e Ambiente Global</a>
+<li class="chapter" data-level="2.2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#console-e-prompt-de-comando"><i class="fa fa-check"></i><b>2.2.1</b> Console e <em>Prompt</em> de comando</a></li>
+<li class="chapter" data-level="2.2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-elementares"><i class="fa fa-check"></i><b>2.2.2</b> Comandos elementares</a></li>
+<li class="chapter" data-level="2.2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#execução-de-comandos"><i class="fa fa-check"></i><b>2.2.3</b> Execução de comandos</a></li>
+<li class="chapter" data-level="2.2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores"><i class="fa fa-check"></i><b>2.2.4</b> Chamada e correção de comandos anteriores</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace"><i class="fa fa-check"></i><b>2.3</b> Ambiente Global (área de trabalho ou <em>Workspace</em>)</a></li>
+<li class="chapter" data-level="2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory"><i class="fa fa-check"></i><b>2.4</b> Arquivos <code>.RData</code> e <code>.Rhistory</code></a></li>
+<li class="chapter" data-level="2.5" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#criando-e-salvando-um-script"><i class="fa fa-check"></i><b>2.5</b> Criando e salvando um <em>script</em></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>3</b> Objetos</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#console-e-prompt-de-comando"><i class="fa fa-check"></i><b>3.2.1</b> Console e <em>Prompt</em> de comando</a></li>
-<li class="chapter" data-level="3.2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-elementares"><i class="fa fa-check"></i><b>3.2.2</b> Comandos elementares</a></li>
-<li class="chapter" data-level="3.2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#execução-de-comandos"><i class="fa fa-check"></i><b>3.2.3</b> Execução de comandos</a></li>
-<li class="chapter" data-level="3.2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores"><i class="fa fa-check"></i><b>3.2.4</b> Chamada e correção de comandos anteriores</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace"><i class="fa fa-check"></i><b>3.3</b> Ambiente Global (área de trabalho ou <em>Workspace</em>)</a></li>
-<li class="chapter" data-level="3.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory"><i class="fa fa-check"></i><b>3.4</b> Arquivos <code>.RData</code> e <code>.Rhistory</code></a></li>
-<li class="chapter" data-level="3.5" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#criando-e-salvando-um-script"><i class="fa fa-check"></i><b>3.5</b> Criando e salvando um <em>script</em></a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>4</b> Objetos</a>
+<li class="chapter" data-level="3.1" data-path="objetos.html"><a href="objetos.html#atributos"><i class="fa fa-check"></i><b>3.1</b> Atributos</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="objetos.html"><a href="objetos.html#atributos"><i class="fa fa-check"></i><b>4.1</b> Atributos</a>
+<li class="chapter" data-level="3.1.1" data-path="objetos.html"><a href="objetos.html#atributos-intrínsecos"><i class="fa fa-check"></i><b>3.1.1</b> Atributos intrínsecos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="objetos.html"><a href="objetos.html#coerção"><i class="fa fa-check"></i><b>3.2</b> Coerção</a></li>
+<li class="chapter" data-level="3.3" data-path="objetos.html"><a href="objetos.html#tipo-de-objetos"><i class="fa fa-check"></i><b>3.3</b> Tipo de objetos</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="objetos.html"><a href="objetos.html#atributos-intrínsecos"><i class="fa fa-check"></i><b>4.1.1</b> Atributos intrínsecos</a></li>
+<li class="chapter" data-level="3.3.1" data-path="objetos.html"><a href="objetos.html#vetores"><i class="fa fa-check"></i><b>3.3.1</b> Vetores</a></li>
+<li class="chapter" data-level="3.3.2" data-path="objetos.html"><a href="objetos.html#matrizes-bidimensionais"><i class="fa fa-check"></i><b>3.3.2</b> Matrizes bidimensionais</a></li>
+<li class="chapter" data-level="3.3.3" data-path="objetos.html"><a href="objetos.html#matrizes-multidimensionais"><i class="fa fa-check"></i><b>3.3.3</b> Matrizes multidimensionais</a></li>
+<li class="chapter" data-level="3.3.4" data-path="objetos.html"><a href="objetos.html#listas"><i class="fa fa-check"></i><b>3.3.4</b> Listas</a></li>
+<li class="chapter" data-level="3.3.5" data-path="objetos.html"><a href="objetos.html#quadro-de-dados"><i class="fa fa-check"></i><b>3.3.5</b> Quadro de dados</a></li>
+<li class="chapter" data-level="3.3.6" data-path="objetos.html"><a href="objetos.html#funções"><i class="fa fa-check"></i><b>3.3.6</b> Funções</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="objetos.html"><a href="objetos.html#coersão"><i class="fa fa-check"></i><b>4.2</b> Coersão</a></li>
-<li class="chapter" data-level="4.3" data-path="objetos.html"><a href="objetos.html#tipo-de-objetos"><i class="fa fa-check"></i><b>4.3</b> Tipo de objetos</a>
+</ul></li>
+<li class="chapter" data-level="4" data-path="importando-dados.html"><a href="importando-dados.html"><i class="fa fa-check"></i><b>4</b> Importando dados</a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="objetos.html"><a href="objetos.html#vetores"><i class="fa fa-check"></i><b>4.3.1</b> Vetores</a></li>
-<li class="chapter" data-level="4.3.2" data-path="objetos.html"><a href="objetos.html#matrizes-bidimensionais"><i class="fa fa-check"></i><b>4.3.2</b> Matrizes bidimensionais</a></li>
-<li class="chapter" data-level="4.3.3" data-path="objetos.html"><a href="objetos.html#matrizes-multidimensionais"><i class="fa fa-check"></i><b>4.3.3</b> Matrizes multidimensionais</a></li>
-<li class="chapter" data-level="4.3.4" data-path="objetos.html"><a href="objetos.html#listas"><i class="fa fa-check"></i><b>4.3.4</b> Listas</a></li>
-<li class="chapter" data-level="4.3.5" data-path="objetos.html"><a href="objetos.html#quadro-de-dados"><i class="fa fa-check"></i><b>4.3.5</b> Quadro de dados</a></li>
-<li class="chapter" data-level="4.3.6" data-path="objetos.html"><a href="objetos.html#funções"><i class="fa fa-check"></i><b>4.3.6</b> Funções</a></li>
+<li class="chapter" data-level="4.1" data-path="importando-dados.html"><a href="importando-dados.html#preparação-dos-dados"><i class="fa fa-check"></i><b>4.1</b> Preparação dos dados</a></li>
+<li class="chapter" data-level="4.2" data-path="importando-dados.html"><a href="importando-dados.html#importando-dados-1"><i class="fa fa-check"></i><b>4.2</b> Importando dados</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="importando-dados.html"><a href="importando-dados.html"><i class="fa fa-check"></i><b>5</b> Importando dados</a>
+<li class="chapter" data-level="5" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html"><i class="fa fa-check"></i><b>5</b> Boas práticas de como escrever um código</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="importando-dados.html"><a href="importando-dados.html#preparação-dos-dados"><i class="fa fa-check"></i><b>5.1</b> Preparação dos dados</a></li>
-<li class="chapter" data-level="5.2" data-path="importando-dados.html"><a href="importando-dados.html#importando-dados-1"><i class="fa fa-check"></i><b>5.2</b> Importando dados</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html"><i class="fa fa-check"></i><b>6</b> Boas práticas de como escrever um código</a>
+<li class="chapter" data-level="5.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos"><i class="fa fa-check"></i><b>5.1</b> Nomes de arquivos</a></li>
+<li class="chapter" data-level="5.2" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando"><i class="fa fa-check"></i><b>5.2</b> Comentar as linahs de comando</a></li>
+<li class="chapter" data-level="5.3" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos"><i class="fa fa-check"></i><b>5.3</b> Nome de objetos</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos"><i class="fa fa-check"></i><b>6.1</b> Nomes de arquivos</a></li>
-<li class="chapter" data-level="6.2" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando"><i class="fa fa-check"></i><b>6.2</b> Comentar as linahs de comando</a></li>
-<li class="chapter" data-level="6.3" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos"><i class="fa fa-check"></i><b>6.3</b> Nome de objetos</a>
+<li class="chapter" data-level="5.3.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe"><i class="fa fa-check"></i><b>5.3.1</b> Sintaxe</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="pacotes.html"><a href="pacotes.html"><i class="fa fa-check"></i><b>6</b> Pacotes</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe"><i class="fa fa-check"></i><b>6.3.1</b> Sintaxe</a></li>
+<li class="chapter" data-level="6.1" data-path="pacotes.html"><a href="pacotes.html#estrutura-básica-de-um-pacote"><i class="fa fa-check"></i><b>6.1</b> Estrutura básica de um pacote</a></li>
+<li class="chapter" data-level="6.2" data-path="pacotes.html"><a href="pacotes.html#instalação-de-um-pacote"><i class="fa fa-check"></i><b>6.2</b> Instalação de um pacote</a></li>
+<li class="chapter" data-level="6.3" data-path="pacotes.html"><a href="pacotes.html#objetivos-de-um-pacote"><i class="fa fa-check"></i><b>6.3</b> Objetivos de um pacote</a></li>
+<li class="chapter" data-level="6.4" data-path="pacotes.html"><a href="pacotes.html#utilizando-funções-de-um-pacote"><i class="fa fa-check"></i><b>6.4</b> Utilizando funções de um pacote</a></li>
+<li class="chapter" data-level="6.5" data-path="pacotes.html"><a href="pacotes.html#carregando-e-anexando-um-pacote"><i class="fa fa-check"></i><b>6.5</b> Carregando e anexando um pacote</a></li>
+<li class="chapter" data-level="6.6" data-path="pacotes.html"><a href="pacotes.html#namespace-de-um-pacote"><i class="fa fa-check"></i><b>6.6</b> <em>NAMESPACE</em> de um pacote</a></li>
+<li class="chapter" data-level="6.7" data-path="pacotes.html"><a href="pacotes.html#usando-os-operadores-e"><i class="fa fa-check"></i><b>6.7</b> Usando os operadores <code>::</code> e <code>:::</code></a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="pacotes.html"><a href="pacotes.html"><i class="fa fa-check"></i><b>7</b> Pacotes</a>
+<li class="chapter" data-level="7" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html"><i class="fa fa-check"></i><b>7</b> Ambientes e caminho de busca</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="pacotes.html"><a href="pacotes.html#estrutura-básica-de-um-pacote"><i class="fa fa-check"></i><b>7.1</b> Estrutura básica de um pacote</a></li>
-<li class="chapter" data-level="7.2" data-path="pacotes.html"><a href="pacotes.html#instalação-de-um-pacote"><i class="fa fa-check"></i><b>7.2</b> Instalação de um pacote</a></li>
-<li class="chapter" data-level="7.3" data-path="pacotes.html"><a href="pacotes.html#objetivos-de-um-pacote"><i class="fa fa-check"></i><b>7.3</b> Objetivos de um pacote</a></li>
-<li class="chapter" data-level="7.4" data-path="pacotes.html"><a href="pacotes.html#utilizando-funções-de-um-pacote"><i class="fa fa-check"></i><b>7.4</b> Utilizando funções de um pacote</a></li>
-<li class="chapter" data-level="7.5" data-path="pacotes.html"><a href="pacotes.html#carregando-e-anexando-um-pacote"><i class="fa fa-check"></i><b>7.5</b> Carregando e anexando um pacote</a></li>
-<li class="chapter" data-level="7.6" data-path="pacotes.html"><a href="pacotes.html#namespace-de-um-pacote"><i class="fa fa-check"></i><b>7.6</b> <em>NAMESPACE</em> de um pacote</a></li>
-<li class="chapter" data-level="7.7" data-path="pacotes.html"><a href="pacotes.html#usando-os-operadores-e"><i class="fa fa-check"></i><b>7.7</b> Usando os operadores <code>::</code> e <code>:::</code></a></li>
+<li class="chapter" data-level="7.1" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html#a-superatribuição"><i class="fa fa-check"></i><b>7.1</b> A superatribuição</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html"><i class="fa fa-check"></i><b>8</b> Ambientes e caminho de busca</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html#a-superatribuição"><i class="fa fa-check"></i><b>8.1</b> A superatribuição</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="interfaces-com-outras-linguagens.html"><a href="interfaces-com-outras-linguagens.html"><i class="fa fa-check"></i><b>9</b> Interfaces com outras linguagens</a></li>
-<li class="chapter" data-level="10" data-path="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><i class="fa fa-check"></i><b>10</b> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li class="chapter" data-level="8" data-path="interfaces-com-outras-linguagens.html"><a href="interfaces-com-outras-linguagens.html"><i class="fa fa-check"></i><b>8</b> Interfaces com outras linguagens</a></li>
+<li class="chapter" data-level="9" data-path="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><i class="fa fa-check"></i><b>9</b> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
 <li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
 <li class="divider"></li>
 <li><a href="https://bendeivide.github.io/cursor" target="blank">Acesse o curso desse material!</a></li>
@@ -207,53 +269,545 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="objetos" class="section level1" number="4">
-<h1><span class="header-section-number">Capítulo 4</span> Objetos</h1>
-<div id="atributos" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Atributos</h2>
-<div id="atributos-intrínsecos" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Atributos intrínsecos</h3>
+<div id="objetos" class="section level1" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Objetos</h1>
+<p>Definimos um objeto como uma entidade no ambiente R com características internas contendo informações necessárias para interpretar sua estrutura e conteúdo. Essas características são chamadas de <strong>atributos</strong>. Vamos entender o termo estrutura como a disposição de como está o seu conteúdo. Por exemplo, a estrutura de um objeto mais simples no R é um <strong>vetor atômico</strong>, pois os elementos contidos nele, apresenta o mesmo <strong>modo</strong>, um tipo de atributo. Falaremos nisso, mais à frente. De forma didática, adaptaremos a representação dos objetos no formato de diagrama. Vejamos a seguinte linha de comando:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="objetos.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
+<p>Todo mundo que tem uma certa noção sobre a linguagem <strong>R</strong> afirmaria: “criei um objeto x que recebe o valor 10”. Para Wickham (2019) essa afirmação é imprecisa e pode levar um entendimento equivocado sobre o que acontece de fato. Para o mesmo autor, o correto é afirmar que o objeto 10 está se ligando a um nome. E de fato, o objeto não tem um nome, mas o nome tem um objeto. O símbolo que associa um objeto a um nome é o de atribuição, &lt;-, isto é, a junção do símbolo desigualdade menor e o símbolo de menos. Para ver qual objeto associado ao nome, o usuário precisa apenas digitar o nome no console e apertar a tecla <em>ENTER</em>.</p>
+<p>Representaremos em termos de diagrama, um nome se ligando a um objeto, na Figura <a href="objetos.html#fig:objx">3.1</a>.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="objetos.html#cb24-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Ligacao_Objeto.PNG&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:objx"></span>
+<img src="img/Ligacao_Objeto.PNG" alt="Dizemos que o nome `'x'` se liga ao objeto do tipo (estrutura) vetor." width="420" />
+<p class="caption">
+FIGURA 3.1: Dizemos que o nome <code>'x'</code> se liga ao objeto do tipo (estrutura) vetor.
+</p>
+</div>
+<p>O identificador na memória ativa desse objeto pode ser obtida por:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="objetos.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_addr</span>(x)</span>
+<span id="cb25-2"><a href="objetos.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># [1] &quot;0xf8a104fc20&quot;</span></span></code></pre></div>
+<p>O diagrama explica que o nome criado x se associou com um objeto do <strong>tipo</strong> (estrutura) vetor (vector) e <strong>modo</strong> numérico (numeric)1 , cuja identificação na memória ativa do seu computador foi &lt;0xf8a104fc20&gt;. É claro que para cada vez que o usuário abri o ambiente <strong>R</strong> e executar novamente esse comando, ou repeti o comando, esse identificador irá alterar.</p>
+<p>Essa outra representação, Código R ??, ficará mais claro para a afirmação feita anteriormente, no segundo diagrama, Figura <a href="objetos.html#fig:objxy">3.2</a>, que representa a ligação do nome y ao mesmo objeto. Os termos nos diagramas, serão usados de acordo com a sintaxe da linguagem com os termos em inglês para melhor compreensão e fixação dos termos utilizados em R , uma vez que os termos na linguagem são baseados nesse idioma.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="objetos.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> y <span class="ot">&lt;-</span> x</span>
+<span id="cb26-2"><a href="objetos.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_addr</span>(y)</span>
+<span id="cb26-3"><a href="objetos.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># [1] &quot;0xf8a104fc20&quot;</span></span></code></pre></div>
+<p>Observem que não houve a criação de um outro objeto, mas apenas a ligação de mais um nome ao objeto existente, pois o identificador na memória ativa para o objeto não alterou, é o mesmo. Logo, não temos um outro objeto, mais dois nomes que se ligam ao mesmo objeto.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="objetos.html#cb27-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Ligacao_Objeto2.PNG&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:objxy"></span>
+<img src="img/Ligacao_Objeto2.PNG" alt="Dizemos que o nome `'x'` e '`y`' se ligam ao objeto do tipo (estrutura) vetor." width="434" />
+<p class="caption">
+FIGURA 3.2: Dizemos que o nome <code>'x'</code> e ‘<code>y</code>’ se ligam ao objeto do tipo (estrutura) vetor.
+</p>
+</div>
+<p>Mais especificamente, acrescentamos um outro diagrama, Figura <a href="objetos.html#fig:objxyglobalenv">3.3</a>, mostrando a representação do ambiente global (.GlobalEnv, nome associado ao objeto que representa o ambiente global).</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="objetos.html#cb28-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Objeto_Ambiente_Global.PNG&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:objxyglobalenv"></span>
+<img src="img/Objeto_Ambiente_Global.PNG" alt="Dizemos que o nome `'x'` e `'y'` se ligam ao objeto do tipo (estrutura) vetor e essa ligação fica armazenada no ambiente global." width="80%" />
+<p class="caption">
+FIGURA 3.3: Dizemos que o nome <code>'x'</code> e <code>'y'</code> se ligam ao objeto do tipo (estrutura) vetor e essa ligação fica armazenada no ambiente global.
+</p>
+</div>
+<p>De todo modo, deixaremos para o Volume II, uma abordagem mais profunda sobre o assunto. O símbolo de atribuição poderá ser representado na direção da esquerda para à direita ou vice-versa, isto é,</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="objetos.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb29-2"><a href="objetos.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">10</span> <span class="ot">-&gt;</span> x</span></code></pre></div>
+<p>Essas duas linhas de comando anteriores podem ter passado despercebidas pelo leitor em uma situação. Se na segunda linha tivéssemos alterado o valor do objeto de 10 para 30, por exemplo, a associação de x seria ao objeto 30. Isso significa que se o nome já existe, ele será apagado da memória ativa do computador e associado ao novo objeto 2. Veja,</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="objetos.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_addr</span>(x)</span>
+<span id="cb30-2"><a href="objetos.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># [1] &quot;0xf8a104fc20&quot;</span></span>
+<span id="cb30-3"><a href="objetos.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> x <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb30-4"><a href="objetos.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_addr</span>(x)</span>
+<span id="cb30-5"><a href="objetos.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># [1] &quot;0x42db6dbb50&quot;</span></span></code></pre></div>
+<p>Uma outra forma menos convencional é usar a função assign(), isto é,</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="objetos.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">assign</span>(<span class="st">&quot;m&quot;</span>, <span class="dv">15</span>)</span>
+<span id="cb31-2"><a href="objetos.html#cb31-2" aria-hidden="true" tabindex="-1"></a>m</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<p>Ao invés do símbolo de atribuição, muitos usuários utilizam o símbolo da igualdade “=” para associarmos nomes aos objetos, que o ambiente <strong>R</strong> compreenderá. Contudo, discutiremos mas adiante, Capítulo ??, que o uso da igualdade deverá em <strong>R</strong> ser usado apenas para a utilização em argumentos de uma função.</p>
+<p>Quando desejamos executar mais de uma linha de comando por vez, separamos estas pelo símbolo “;”, isto é,</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="objetos.html#cb33-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span>; w <span class="ot">&lt;-</span> <span class="dv">15</span>; x; w</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<pre><code>## [1] 15</code></pre>
+<p>Neste caso, executamos quatro comandos em uma linha. Associamos dois nomes a dois objetos e imprimimos os seus valores.</p>
+<p>Por questão de comodidade, iremos a partir de agora, sempre nos referir a um objeto pelo nome associado a ele, para não está sempre se expressando como “um nome associado a um objeto”. Mas que fique claro a discussão realizada anteriormente sobre esses conceitos.</p>
+<p>Nesse momento, nos limitaremos a falar sobre objetos que armazenam dados, do tipo caracteres,
+números e operadores lógicos (TRUE/FALSE).</p>
+<div id="atributos" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Atributos</h2>
+<p>Todos os objetos, terão pelo menos dois tipos de atributos, chamados de atributos intrínsecos. Os demais atributos, quando existem, podem ser verificados pela função attributes(). A ideia dos atributos pode ser pensada como metadados, isto é, um conjunto de informações que caracterizam o objeto.</p>
+<p>Diremos também que todos os objetos <strong>R</strong> tem uma classe, e por meio dessas classes, determinadas funções podem ter comportamento diferente a objetos com classes diferentes. Agora, devemos deixar claro essa informação, apesar do R seguir o princípio do objeto, nem tudo é orientado a objetos, como por exemplo, observamos na linguagens C++ e Java. Deixemos esse tópico para discorrer no Volume II.</p>
+<p>A forma de se verificar a classe de um objeto é pela função class(). Contudo, os objetos internos do <strong>R</strong> (base), quando solicitado sua classe pela função class(), acabam retornando, algumas vezes, resultados equivocados. Uma alternativa é utilizar a função sloop::s3_class() do pacote <strong>sloop</strong>.Isso também será discutido no Volume II.</p>
+<p>Devemos nos atentar a uma questão: <strong>existe um atributo também chamado classe</strong> (class), e nem todos os objetos necessariamente tem esse atributo, apenas aqueles orientados a objetos, como é o caso do objeto com atributo classe. Por exemplo, é devido a classe factor no objeto criado pela função factor() que apesar do seu resultado ser numérico, este não se comporta como numérico. Isto significa que o atributo classe muda o comportamento de como funções veem esse objeto. Entretanto, mesmo os objetos que não apresentam esse atributo, quando pedimos pela chamada class() desse referido objeto, haverá o retorno do que chamamos de <strong>classe implícita</strong>, que nada mais é do que a tipagem do objeto baseado no atributo modo (mode() ou typeof()). A Classe implícita não é definida pelo atributo class, mas pela tipagem do objeto. Isso também será abordado no Volume II.</p>
+<p>Para verificarmos se tal objeto tem o atributo class, usamos a função attributes(). Quando este atributo existe, ele é coincidente com o resultado obtido também pela função class().</p>
+<p>O tipo da classe implícita pode ser <em>numeric</em>, <em>logical</em>, <em>character</em>, <em>list</em>, <em>matrix</em>, <em>array</em>. Outros objetos apresentam classes definidas pelo atributo class, como factor, data.frame, dentre outros.</p>
+<p>Para remover o efeito do atributo class, usamos a função unclass() para tal.</p>
+<p>Por exemplo, quando criamos um objeto da classe data.frame, vejamos o que acontece quando removemos esse atributo no Código R 5.2.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="objetos.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criamos um objeto de classe &#39;data.frame&#39;</span></span>
+<span id="cb36-2"><a href="objetos.html#cb36-2" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">b =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
+<span id="cb36-3"><a href="objetos.html#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimindo na tela</span></span>
+<span id="cb36-4"><a href="objetos.html#cb36-4" aria-hidden="true" tabindex="-1"></a>dados</span></code></pre></div>
+<pre><code>##   a b
+## 1 1 A
+## 2 2 B
+## 3 3 C</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="objetos.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando sua classe</span></span>
+<span id="cb38-2"><a href="objetos.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(dados)</span></code></pre></div>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="objetos.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando o efeito do objeto &#39;dados&#39;,</span></span>
+<span id="cb40-2"><a href="objetos.html#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co"># sem o efeito da classe</span></span>
+<span id="cb40-3"><a href="objetos.html#cb40-3" aria-hidden="true" tabindex="-1"></a>dados2 <span class="ot">&lt;-</span> <span class="fu">unclass</span>(dados); dados2</span></code></pre></div>
+<pre><code>## $a
+## [1] 1 2 3
+## 
+## $b
+## [1] &quot;A&quot; &quot;B&quot; &quot;C&quot;
+## 
+## attr(,&quot;row.names&quot;)
+## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="objetos.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Qual a classe desse objeto sem o efeito da</span></span>
+<span id="cb42-2"><a href="objetos.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="co"># classe &#39;data.frame&#39;</span></span>
+<span id="cb42-3"><a href="objetos.html#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(dados2)</span></code></pre></div>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<p>Observe que sem o atributo <em>class= ‘data.frame’</em>, o objeto tem classe list. Isto significa que, o objeto tem uma estrutura em forma de list, mas se comporta como um <em>data.frame</em>, que se apresenta como mostrado anteriormente.</p>
+<p>Veremos no Volume II como criar atributos, classes, e mostrar que não conseguiremos mostrar todos os tipos de classes, pois a todo momento se cria classes em objetos R no desenvolvimento de pacotes.</p>
+<div id="atributos-intrínsecos" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Atributos intrínsecos</h3>
+<p>Todos os objetos tem dois atributos intrínsecos: o <strong>modo</strong> e <strong>comprimento</strong>. O modo representa a natureza dos elementos objetos. Para o caso dos vetores atômicos, o <strong>modo</strong> dos vetores podem ser cinco, numérico (<em>numeric</em>), lógico (<em>logic</em>), caractere 3 (<em>character</em>), complexo (<em>complex</em>) ou bruto (<em>raw</em>). Este último, não daremos evidência para esse momento, lembrando que essa tipagem está relacionada alinguagem S. O <strong>comprimento</strong> mede a quantidade de elementos no objeto. Para determinarmos o <strong>modo</strong> de um objeto, usamos a função <em>mode()</em>. Vejamos alguns exemplos pelo Código R 5.3.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="objetos.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo caractere</span></span>
+<span id="cb44-2"><a href="objetos.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> x <span class="ot">&lt;-</span> <span class="st">&quot;Ben&quot;</span>; <span class="fu">mode</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="objetos.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo numerico</span></span>
+<span id="cb46-2"><a href="objetos.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> y <span class="ot">&lt;-</span> 10L; <span class="fu">mode</span>(y)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="objetos.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo numerico</span></span>
+<span id="cb48-2"><a href="objetos.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> y2 <span class="ot">&lt;-</span> <span class="dv">10</span>; <span class="fu">mode</span>(y2)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="objetos.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo logico</span></span>
+<span id="cb50-2"><a href="objetos.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> z <span class="ot">&lt;-</span> <span class="cn">TRUE</span>; <span class="fu">mode</span>(z)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="objetos.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo complexo</span></span>
+<span id="cb52-2"><a href="objetos.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> w <span class="ot">&lt;-</span> 1i; <span class="fu">mode</span>(w)</span></code></pre></div>
+<pre><code>## [1] &quot;complex&quot;</code></pre>
+<p>Contudo, essa função <em>mode()</em> se baseou nos atributos baseados na linguagem S. Temos uma outra função para verificarmos o <strong>modo</strong> do objeto que é por typeof(). O atributo <strong>modo</strong> retornado de um objeto para esta última função, está relacionado a tipagem da linguagem C, Código R 5.4, uma vez que boa parte das rotinas no <strong>R</strong> está nessa linguagem, principalmente as funções do pacote <strong>base</strong>. Existem 24 tipos que serão detalhados no Volume II.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="objetos.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo caractere</span></span>
+<span id="cb54-2"><a href="objetos.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> x <span class="ot">&lt;-</span> <span class="st">&quot;Ben&quot;</span>; <span class="fu">typeof</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="objetos.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo numerico (Inteiro)</span></span>
+<span id="cb56-2"><a href="objetos.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> y <span class="ot">&lt;-</span> 10L; <span class="fu">typeof</span>(y) </span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="objetos.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo numerico (Real)</span></span>
+<span id="cb58-2"><a href="objetos.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> y2 <span class="ot">&lt;-</span> <span class="dv">10</span>; <span class="fu">typeof</span>(y2)</span></code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="objetos.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo logico</span></span>
+<span id="cb60-2"><a href="objetos.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> z <span class="ot">&lt;-</span> <span class="cn">TRUE</span>; <span class="fu">typeof</span>(z)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="objetos.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo complexo</span></span>
+<span id="cb62-2"><a href="objetos.html#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> w <span class="ot">&lt;-</span> 1i; <span class="fu">typeof</span>(w)</span></code></pre></div>
+<pre><code>## [1] &quot;complex&quot;</code></pre>
+<p>Observamos que apesar de alguns vetores serem vazios, estes ainda tem um modo, observe nas seguintes linhas de comando, no Código R 5.5.</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="objetos.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Vetor numérico vazio de comprimento 1</span></span>
+<span id="cb64-2"><a href="objetos.html#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">numeric</span>(<span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## numeric(0)</code></pre>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="objetos.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Verificando o seu modo</span></span>
+<span id="cb66-2"><a href="objetos.html#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">mode</span>(<span class="fu">numeric</span>(<span class="dv">0</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="objetos.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">typeof</span>(<span class="fu">numeric</span>(<span class="dv">0</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="objetos.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Vetor caractere vazio de comprimento 1</span></span>
+<span id="cb70-2"><a href="objetos.html#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">character</span>(<span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## character(0)</code></pre>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="objetos.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Verificando o seu modo</span></span>
+<span id="cb72-2"><a href="objetos.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">mode</span>(<span class="fu">character</span>(<span class="dv">0</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="objetos.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">typeof</span>(<span class="fu">character</span>(<span class="dv">0</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>A diferença existente nos objetos <span class="math inline">\(y\)</span> e <span class="math inline">\(y^2\)</span> para as funções <em>mode()</em> e <em>typeof()</em> se referem apenas
+como o <strong>R</strong> armazena essas informações na memória do computador. Podemos perguntar ao <strong>R</strong> se
+dois números são iguais, assim:</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="objetos.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># 10 eh igual a 10L ?</span></span>
+<span id="cb76-2"><a href="objetos.html#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="dv">10</span> <span class="sc">==</span> 10L</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Veja que o resultado é <em>TRUE</em>, isto é, sim eles são iguais. Agora, veja a próxima linha de comando:</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="objetos.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># 10 eh identico a 10L ?</span></span>
+<span id="cb78-2"><a href="objetos.html#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">identical</span>(<span class="dv">10</span>, 10L)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>O retorno agora foi <em>FALSE</em>, que significa que o armazenamento dessas informações não são iguais. Posteriormente, entenderemos no que isso reflete no código do usuário, uma vez que um código escrito pode apresentar uma perda de desempenho simplesmente pela não necessidade de determinados objetos serem copiados.</p>
+<p>O termo <em>double</em> retornado pela função <em>typeof()</em> significa dupla precisão na linguagem de programação, que acaba tenho uma exigência de mais memória do que o objeto de modo integer. Esses termos são utilizados na linguagem C. Já a linguagem S não os diferencia, utiliza tudo como <em>numeric</em>.</p>
+<p>Aqui vale um destaque para o termo numérico, que no <strong>R</strong> podem ter três significados:</p>
+<ul>
+<li>Pode significar um número real, isto é, para a computação um número de dupla precisão (<em>numeric</em> e <em>double</em> seriam iguais nesse aspecto), Código R 5.6;</li>
+</ul>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="objetos.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criacao de dois objetos de modo numerico</span></span>
+<span id="cb80-2"><a href="objetos.html#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> a <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">1</span>); b <span class="ot">&lt;-</span> <span class="fu">double</span>(<span class="dv">1</span>)</span>
+<span id="cb80-3"><a href="objetos.html#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Verificando o modo</span></span>
+<span id="cb80-4"><a href="objetos.html#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">mode</span>(a); <span class="fu">mode</span>(b)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="objetos.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Verificando se &#39;a&#39; e &#39;b&#39; sao identificos</span></span>
+<span id="cb83-2"><a href="objetos.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">identical</span>(a, b)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<ul>
+<li>nos sistemas S3 e S4 (orientação a objetos), o termo numérico é usado como atalho para o modo integer ou double. Esse ponto veremos Volume II. Contudo, vejamos o Código R 5.7;</li>
+</ul>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="objetos.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sloop<span class="sc">::</span><span class="fu">s3_class</span>(<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;double&quot;  &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="objetos.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sloop<span class="sc">::</span><span class="fu">s3_class</span>(1L)</span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot; &quot;numeric&quot;</code></pre>
+<ul>
+<li>Pode ser utilizado (<em>is.numeric()</em>) para verificar se determinados objetos tem o modo numé- rico. Por exemplo, temos um objeto de classe factor que é importante para a área da estatística experimental, representando os níveis de um fator em um experimento. Os elementos desse objeto pode ser número ou caracteres, mas serão representados como sempre por números. Entretanto, não se comportam como numérico, Código R 5.8;</li>
+</ul>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="objetos.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criando um objeto de atributo classe &#39;factor&#39;:</span></span>
+<span id="cb89-2"><a href="objetos.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> fator <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="st">&quot;a&quot;</span>); fator</span></code></pre></div>
+<pre><code>## [1] a
+## Levels: a</code></pre>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="objetos.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># O atributo classe muda a forma dos elementos. Veja quando retiramos o atributo </span></span>
+<span id="cb91-2"><a href="objetos.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># classe &#39;factor&#39;, o objeto retorna o valor 1</span></span>
+<span id="cb91-3"><a href="objetos.html#cb91-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">unclass</span>(fator)</span></code></pre></div>
+<pre><code>## [1] 1
+## attr(,&quot;levels&quot;)
+## [1] &quot;a&quot;</code></pre>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="objetos.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Para confirmar essa afirmacao anterior, vejamos o modo</span></span>
+<span id="cb93-2"><a href="objetos.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">mode</span>(fator)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="objetos.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">typeof</span>(fator)</span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="objetos.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Apesar do resultado retornar 1, veja que ele nao se comporta como numerico</span></span>
+<span id="cb97-2"><a href="objetos.html#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">is.numeric</span>(fator)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="objetos.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">is.integer</span>(fator)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>A Tabela 5.1 a seguir, mostra o retorno dos seis principais modos de um objeto do tipo (estrutura) de vetores atômicos (Os modos apresentados baseiam-se apenas quanto a característica dos dados do objeto. É claro que um objeto não armazena apenas dados. Existem outras naturezas, que serão omitidas nesse momento).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">typeof</th>
+<th align="center">mode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">logical</td>
+<td align="center">logical</td>
+</tr>
+<tr class="even">
+<td align="center">integer</td>
+<td align="center">numeric</td>
+</tr>
+<tr class="odd">
+<td align="center">double</td>
+<td align="center">numeric</td>
+</tr>
+<tr class="even">
+<td align="center">complex</td>
+<td align="center">complex</td>
+</tr>
+<tr class="odd">
+<td align="center">character</td>
+<td align="center">character</td>
+</tr>
+<tr class="even">
+<td align="center">raw</td>
+<td align="center">raw</td>
+</tr>
+</tbody>
+</table>
+<p>O <strong>comprimento</strong> do objeto é informado pela função lenght(), do qual a representação em diagrama informa esse atributo. Vejamos as linhas de comando no Código R 5.9.</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="objetos.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Vetor de comprimento 5</span></span>
+<span id="cb101-2"><a href="objetos.html#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> v1 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb101-3"><a href="objetos.html#cb101-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Vetor de comprimento 3</span></span>
+<span id="cb101-4"><a href="objetos.html#cb101-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> v2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Ben&quot;</span>, <span class="st">&quot;Maria&quot;</span>, <span class="st">&quot;Lana&quot;</span>)</span>
+<span id="cb101-5"><a href="objetos.html#cb101-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Vetor de comprimento quatro</span></span>
+<span id="cb101-6"><a href="objetos.html#cb101-6" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> v3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb101-7"><a href="objetos.html#cb101-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Vejamos o comprimento dos vetores</span></span>
+<span id="cb101-8"><a href="objetos.html#cb101-8" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">length</span>(v1)</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="objetos.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">length</span>(v2)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="objetos.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">length</span>(v3)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>Um diagrama apresentando esses três objetos no ambiente global, pode ser apresentado na Figura <a href="objetos.html#fig:v1v2v3">3.4</a>. Observe que acrescentamos agora o <strong>comprimento</strong> dos objetos no diagrama entre colchetes, ao lado do atributo <strong>modo</strong>.</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="objetos.html#cb107-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Diagrama_Objetos.PNG&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:v1v2v3"></span>
+<img src="img/Diagrama_Objetos.PNG" alt="Objetos `v1`, `v2` e `v3`." width="442" />
+<p class="caption">
+FIGURA 3.4: Objetos <code>v1</code>, <code>v2</code> e <code>v3</code>.
+</p>
+</div>
+<p>Um resumo as funções mensionadas podem ser refletidas com as seguintes indagações:</p>
+<ul>
+<li>base::class() e loop::c3_class(): Qual o tipo de objeto?</li>
+<li>base::mode(): Qual o tipo de dados baseados na linguagem S?</li>
+<li>base::typeof(): Qual o tipo de dados baseados na linguagem C?</li>
+<li>base::attributes(): O objeto tem atributos?</li>
+<li>base::length(): Qual o comprimento do objeto?</li>
+</ul>
+<p>Usamos essa sintaxe pacote::nome_função() para entedermos qual o pacote da função que utilizamos. Contudo, essa forma tem uma importância no sentido de acesso a funções em um pacote sem necessitar anexá-lo no caminho de busca. Assunto abordado mais a frente.</p>
 </div>
 </div>
-<div id="coersão" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Coersão</h2>
+<div id="coerção" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Coerção</h2>
+<p>Como falamos anteriormente, os vetores atômicos armazenam um conjunto de elementos de mesmo modo. A coerção é a forma como o <strong>R</strong> coage o <strong>modo</strong> dos objetos. Por exemplo, se um elemento de <strong>modo</strong> caractere estiver em um vetor, todos os demais elementos serão convertidos para esse modo. Vejamos a linha de comando, a seguir.</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="objetos.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criando um objeto x e imprimindo o seu resultado</span></span>
+<span id="cb108-2"><a href="objetos.html#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Nome&quot;</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>);x</span></code></pre></div>
+<pre><code>## [1] &quot;Nome&quot; &quot;3&quot;    &quot;4&quot;    &quot;5&quot;</code></pre>
+<p>Observe que todos os elementos ganharam aspas, isto é, se tornaram um caractere ou uma cadeia de caracteres. A coersão entre vetores de modo numeric, character e logical será sempre como verificado pela Figura <a href="#fig:CoersaoVetores"><strong>??</strong></a>.</p>
+<p><img src="img/Coersao_Vetores.PNG" width="100%" style="display: block; margin: auto;" /></p>
+<p>No caso dos vetores lógicos, todo TRUE se converterá em 1, e FALSE em 0. Porém, os modos dos vetores podem ser coagidos pelo usuário, usando as funções do tipo as.<modo ou tipo>() com prefixo as., isto é, se desejarmos que um objeto meu_objeto tenha o modo “character,” basta usar as.character(meu_objeto). Para desejar saber se um objeto é de um determinado modo, usamos as funções do tipo is.<modo ou tipo>(), com o prefixo “is.”. Vejamos o Código R 5.10, para elucidar o que discutimos anteriormente.</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="objetos.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto de modo numerico</span></span>
+<span id="cb110-2"><a href="objetos.html#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> minha_idade <span class="ot">&lt;-</span> <span class="dv">35</span></span>
+<span id="cb110-3"><a href="objetos.html#cb110-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mode</span>(minha_idade)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="objetos.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Coersão do objeto para modo caractere (`string`)</span></span>
+<span id="cb112-2"><a href="objetos.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> minha_idade <span class="ot">&lt;-</span> <span class="fu">as.character</span>(minha_idade)</span>
+<span id="cb112-3"><a href="objetos.html#cb112-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">mode</span>(minha_idade)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="objetos.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Verificando se o objeto tem modo &#39;character&#39;</span></span>
+<span id="cb114-2"><a href="objetos.html#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">is.character</span>(minha_idade)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="tipo-de-objetos" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Tipo de objetos</h2>
-<div id="vetores" class="section level3" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> Vetores</h3>
-<div id="vetores-escalares" class="section level4" number="4.3.1.1">
-<h4><span class="header-section-number">4.3.1.1</span> Vetores escalares</h4>
+<div id="tipo-de-objetos" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Tipo de objetos</h2>
+<p>Por fim, pretendemos falar sobre os principais tipos de objetos. O <strong>tipo</strong> vamos entender como a estrutura de como os dados estão organizados em um objeto, relacionados aos seus atributos. Falamos anteriormente sobre a estrutura mais simples, que é o vetor atômico. Mas entendemos que um vetor em <strong>R</strong> podem ser considerados: atômicos ou listas. Podemos então subdividi-los em:</p>
+<ul>
+<li>Vetores atômicos:
+<ul>
+<li>Lógicos, Numéricos e Caracteres;</li>
+<li>Matrizes unidimensionais (Matrix) e multidimensionais (Arrays);</li>
+</ul></li>
+<li>Vetores em listas:
+<ul>
+<li>Listas (Lists);</li>
+<li>Quadro de dados (Data frames);</li>
+</ul></li>
+</ul>
+<p>Existem outros, mas para esse módulo, exploraremos estes nas seções seguintes. As funções para as coerções realizadas pelos usuários, são similares as funções de coerção para modo, isto é, usar as funções prefixadas as.<em><modo></em>.</p>
+<p>Daremos uma visão geral dos objetos apresentados até o momento na Tabela 5.2.</p>
+<div id="vetores" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Vetores</h3>
+<p>Podemos dizer que existem três tipos principais de vetores atômicos:</p>
+<ul>
+<li>Numéricos (numeric):
+<ul>
+<li>Inteiro (integer);</li>
+<li>Real (double);</li>
+</ul></li>
+<li>Lógico (logical);</li>
+<li>Caractere (character)</li>
+</ul>
+<p>Existem dois tipos raros que são os complexos (complex) e brutos (raw), que falaremos no Volume
+II.</p>
+<div id="vetores-escalares-ou-constantes" class="section level4" number="3.3.1.1">
+<h4><span class="header-section-number">3.3.1.1</span> Vetores escalares ou constantes</h4>
+<p>O menor comprimento de um vetor é de tamanho um, conhecido também como um escalar. Porém, para o <strong>R</strong> tudo é observado como um vetor. As sintaxes para os tipos especiais são:</p>
+<ul>
+<li><p>os vetores lógicos assumem valores: TRUE ou FALSE, ou abreviados, T ou F, respectivamente. Existem valores especiais devido a precisão de operações na programação, que são os chamados pontos flutuantes. Nesse caso temos: Inf, -Inf e NaN, quando o resultados tende a <span class="math inline">\(\infty\)</span>, <span class="math inline">\(-\infty\)</span>, sem número, respectivamente;</p></li>
+<li><p>os vetores numéricos do tipo ‘double‘ podem ser representados de forma decima (0.123), científica (1.23e5), ou hexadecimal (3E0A);</p></li>
+<li><p>os vetores numéricos do tipo integer são representados pela letra L ao final do número inteiro,
+isto é, 1L, 1.23e5L, etc.;</p></li>
+<li><p>os caracteres são representados pelas palavras, letras, números ou caracteres especiais entre aspas, isto é, ’Ben’, ’a’. Pode ser utilizado também aspa simples, ’Ben’, ’a’, etc.</p></li>
+</ul>
+<table>
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="9%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Objeto</th>
+<th align="center">Classe</th>
+<th align="center">Modo</th>
+<th align="center">São possíveis vários modos no mesmo objeto?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Vetor</td>
+<td align="center"><code>numeric</code> (<code>integer</code> ou <code>double</code>), <code>character</code>, <code>complex</code>, <code>logical</code>, <code>raw</code></td>
+<td align="center"><code>numeric</code> (<code>integer</code> ou <code>double</code>), <code>character</code>, <code>complex</code>, <code>logical</code>, <code>raw</code></td>
+<td align="center">Não</td>
+</tr>
+<tr class="even">
+<td align="center">Matriz</td>
+<td align="center"><code>matrix</code></td>
+<td align="center"><code>numeric</code> (<code>integer</code> ou <code>double</code>), <code>character</code>, <code>complex</code>, <code>logical</code>, <code>raw</code></td>
+<td align="center">Não</td>
+</tr>
+<tr class="odd">
+<td align="center">Array</td>
+<td align="center"><code>array</code></td>
+<td align="center"><code>numeric</code> (<code>integer</code> ou <code>double</code>), <code>character</code>, <code>complex</code>, <code>logical</code>, <code>raw</code></td>
+<td align="center">Não</td>
+</tr>
+<tr class="even">
+<td align="center">lista</td>
+<td align="center"><code>list</code></td>
+<td align="center"><code>numeric</code> (<code>integer</code> ou <code>double</code>), <code>character</code>, <code>complex</code>, <code>logical</code>, <code>raw</code>, <code>expression</code>, <code>function</code></td>
+<td align="center">Sim</td>
+</tr>
+<tr class="odd">
+<td align="center">Quadro de dados</td>
+<td align="center"><code>data.frame</code></td>
+<td align="center"><code>numeric</code> (<code>integer</code> ou <code>double</code>), <code>character</code>, <code>complex</code>, <code>logical</code>, <code>raw</code></td>
+<td align="center">Sim</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[CODIGO-1\]</span>
+<span class="math display">\[CODIGO-2\]</span>
+<span class="math display">\[CODIGO-3\]</span></p>
+<p><span class="math display">\[CODIGO-4\]</span></p>
+<p><span class="math display">\[CODIGO-5\]</span></p>
 </div>
-<div id="vetores-longos" class="section level4" number="4.3.1.2">
-<h4><span class="header-section-number">4.3.1.2</span> Vetores longos</h4>
+<div id="vetores-longos" class="section level4" number="3.3.1.2">
+<h4><span class="header-section-number">3.3.1.2</span> Vetores longos</h4>
+<p>Os vetores longos podem ser criados pela função c(), a inicial da palavra concatenar (do inglês, concatenate), que significa agrupar. Vejamos um primeiro exemplo no Código R 5.16.</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="objetos.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criando um vetor &#39;double&#39;</span></span>
+<span id="cb116-2"><a href="objetos.html#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> vetor.num <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>); vetor.num</span></code></pre></div>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="objetos.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">typeof</span>(vetor.num)</span></code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p>Uma coisa interessante é que por padrão, a função c() sempre cria um vetor de modo double, a
+menos que o usuário determine que estes elementos sejam inteiros, como pode ser visto no Código
+R 5.17.</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="objetos.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criando um vetor &#39;integer&#39;</span></span>
+<span id="cb120-2"><a href="objetos.html#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> vetor.num2 <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 2L, 3L, 4L, 5L); vetor.num; <span class="fu">typeof</span>(vetor.num2)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p>Uma forma mais eficiente para criarmos um vetor com elementos de sequências regulares, é por meio da função primitiva (:), isto é, <menor valor da sequência>:<maior valor da sequência>, isto é,</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="objetos.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criando uma sequência de 1 a 5</span></span>
+<span id="cb123-2"><a href="objetos.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> vetor.num3 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>; vetor.num3; <span class="fu">typeof</span>(vetor.num3)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p>Veremos mais a frente outras funções para construir sequências regulares. Se verificarmos os três objetos, veremos que todos eles são iguais:</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="objetos.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> vetor.num <span class="sc">==</span> vetor.num2</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="objetos.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> vetor.num <span class="sc">==</span> vetor.num3</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="objetos.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> vetor.num2 <span class="sc">==</span> vetor.num3</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+<p>O que vai diferenciá-los é a forma de armazená-lo (double ou integer), e por consequência, o espaço na memória ativa, como podemos observar no Código R 5.18.</p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="objetos.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objetos:</span></span>
+<span id="cb132-2"><a href="objetos.html#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> vetor.num <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb132-3"><a href="objetos.html#cb132-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> vetor.num2 <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 2L, 3L, 4L, 5L)</span>
+<span id="cb132-4"><a href="objetos.html#cb132-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> vetor.num3 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb132-5"><a href="objetos.html#cb132-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Memoria:</span></span>
+<span id="cb132-6"><a href="objetos.html#cb132-6" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(vetor.num)</span></code></pre></div>
+<pre><code>## 96 B</code></pre>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="objetos.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(vetor.num2)</span></code></pre></div>
+<pre><code>## 80 B</code></pre>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="objetos.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(vetor.num3)</span></code></pre></div>
+<pre><code>## 680 B</code></pre>
+<p>O que podemos observar é que o vetor de modo double precisa de mais memória para armazenar os valores do que o objeto de modo integer. O último objeto, gerado pela chamada ‘:‘(), aparentemente ocupa mais memória. Porém, essa função apresenta um recurso interessante apresentado nas versões posteriores <strong>R</strong> (3.5.0), que é chamado de <strong>abreviação alternativa</strong>. Esse recurso faz com que a sequência de números não seja armazenada completamente, apenas os extremos. Isso significa que para qualquer tamanho de sequência, a ocupação de memória do objeto será sempre a mesma. Lembrando que essa sequência sempre terá o modo double na tipagem C. Outras formas de criar
+sequências de números é usando as funções <em>rep()</em>, <em>rep_len()</em> (mais rápido), <em>seq()</em>, <em>seq_along()</em> (mais rápido) e <em>seq_len()</em> (mais rápido), <em>sequence()</em>, <em>replicate()</em>, <em>gl()</em>, e que pode ser observado no Código R 5.19.</p>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="objetos.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Repete o numero 2 tres vezes</span></span>
+<span id="cb138-2"><a href="objetos.html#cb138-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">times =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 2 2 2</code></pre>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="objetos.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Repete o vetor 1:3 tres vezes</span></span>
+<span id="cb140-2"><a href="objetos.html#cb140-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">times =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 1 2 3 1 2 3</code></pre>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="objetos.html#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Repete cada numero do vetor, tres vezes</span></span>
+<span id="cb142-2"><a href="objetos.html#cb142-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">each =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 1 1 1 2 2 2 3 3 3</code></pre>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="objetos.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Repete cada numero do vetor duas vezes,</span></span>
+<span id="cb144-2"><a href="objetos.html#cb144-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># porem, o comprimento dessa sequencia esta</span></span>
+<span id="cb144-3"><a href="objetos.html#cb144-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># limitado a 4</span></span>
+<span id="cb144-4"><a href="objetos.html#cb144-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">each =</span> <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] 1 1 2 2</code></pre>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="objetos.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># O vetor eh repetido ate obter uma</span></span>
+<span id="cb146-2"><a href="objetos.html#cb146-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># sequencia de tamanho 7</span></span>
+<span id="cb146-3"><a href="objetos.html#cb146-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">length.out =</span> <span class="dv">7</span>)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 1 2 3 1</code></pre>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="objetos.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># (Versao mais rapida de rep) O vetor eh repetido ate obter uma</span></span>
+<span id="cb148-2"><a href="objetos.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># sequencia de tamanho 15</span></span>
+<span id="cb148-3"><a href="objetos.html#cb148-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">rep_len</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">length.out =</span> <span class="dv">15</span>)</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10  1  2  3  4  5</code></pre>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="objetos.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Sequencia criada de 1 a 2, espacada em 0.1</span></span>
+<span id="cb150-2"><a href="objetos.html#cb150-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">2</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span></code></pre></div>
+<pre><code>##  [1] 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="objetos.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Sequencia criada de 1 a 10, espacada em 1</span></span>
+<span id="cb152-2"><a href="objetos.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="objetos.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Sequencia criada de 1 a 10 de forma equisespacada</span></span>
+<span id="cb154-2"><a href="objetos.html#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># de comprimento 20</span></span>
+<span id="cb154-3"><a href="objetos.html#cb154-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>, <span class="at">length.out =</span> <span class="dv">20</span>)</span></code></pre></div>
+<pre><code>##  [1]  1.000000  1.473684  1.947368  2.421053  2.894737  3.368421  3.842105
+##  [8]  4.315789  4.789474  5.263158  5.736842  6.210526  6.684211  7.157895
+## [15]  7.631579  8.105263  8.578947  9.052632  9.526316 10.000000</code></pre>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="objetos.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Eh o mesmo que 1:length(y)</span></span>
+<span id="cb156-2"><a href="objetos.html#cb156-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb156-3"><a href="objetos.html#cb156-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">seq</span>(<span class="at">along.with =</span> y)</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="objetos.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Sequencia de 1 a 20</span></span>
+<span id="cb158-2"><a href="objetos.html#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">seq</span>(<span class="dv">20</span>)</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="objetos.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Sequencia criada de 10 a 100 de mesmo comprimento</span></span>
+<span id="cb160-2"><a href="objetos.html#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># de x</span></span>
+<span id="cb160-3"><a href="objetos.html#cb160-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb160-4"><a href="objetos.html#cb160-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">10</span>, <span class="at">to =</span> <span class="dv">100</span>, <span class="at">along.with =</span> x)</span></code></pre></div>
+<pre><code>##  [1]  10  20  30  40  50  60  70  80  90 100</code></pre>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="objetos.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># (Versao mais rapida para seq) Eh o mesmo que</span></span>
+<span id="cb162-2"><a href="objetos.html#cb162-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># 1:lenght(w)</span></span>
+<span id="cb162-3"><a href="objetos.html#cb162-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb162-4"><a href="objetos.html#cb162-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">seq_along</span>(w)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 4</code></pre>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="objetos.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># (Versao mais rapida para seq) Eh o mesmo que 1:4</span></span>
+<span id="cb164-2"><a href="objetos.html#cb164-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">seq_len</span>(<span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 4</code></pre>
+<p>Dessa forma, poderemos ter com o último objeto (vetor.num3) uma economia de memória, dependendo do tamanho do seu vetor, quando se compara com as outras opções, isto é,</p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="objetos.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Tamanho de memoria dos objetos</span></span>
+<span id="cb166-2"><a href="objetos.html#cb166-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## 680 B</code></pre>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="objetos.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>)</span></code></pre></div>
+<pre><code>## 680 B</code></pre>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="objetos.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">1000000</span>)</span></code></pre></div>
+<pre><code>## 680 B</code></pre>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="objetos.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>))</span></code></pre></div>
+<pre><code>## 96 B</code></pre>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="objetos.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>))</span></code></pre></div>
+<pre><code>## 40,048 B</code></pre>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="objetos.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">1000000</span>))</span></code></pre></div>
+<pre><code>## 4,000,048 B</code></pre>
 </div>
-<div id="manipulando-vetores" class="section level4" number="4.3.1.3">
-<h4><span class="header-section-number">4.3.1.3</span> Manipulando vetores</h4>
+<div id="manipulando-vetores" class="section level4" number="3.3.1.3">
+<h4><span class="header-section-number">3.3.1.3</span> Manipulando vetores</h4>
+<p>Quando algum elemento de um vetor não está disponível, representamos pela constante lógica NA, que pode ser coagida para qualquer outro modo de vetor, exceto para raw. Podemos ter constantes lógicas NA específicas para modos específicos: NA_integer_, NA_real_ (o equivalente para o modo double), NA_complex_ e NA_character_. Entretando, dependendo de onde o NA é inserido, o atributo modo no objeto já converte para NA específico de acordo com o seu atributo modo. Essa constante contido no vetor não altera o modo do vetor, isto é,</p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="objetos.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">typeof</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">NA</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="objetos.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">typeof</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">NA</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="objetos.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">typeof</span>(<span class="fu">c</span>(<span class="st">&quot;c&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;a&quot;</span>, <span class="cn">NA</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>Podemos criar vetores atômicos iniciais sem nenhuma elemento, por meio das funções numeric(0),
+character(0) e logical(0), isto é,</p>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="objetos.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Vetor numerico de comprimento 0</span></span>
+<span id="cb184-2"><a href="objetos.html#cb184-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> v1 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">0</span>); <span class="fu">length</span>(v1)</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="objetos.html#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> v2 <span class="ot">&lt;-</span> <span class="fu">character</span>(<span class="dv">0</span>); <span class="fu">length</span>(v2)</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="objetos.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> v3 <span class="ot">&lt;-</span> <span class="fu">logical</span>(<span class="dv">0</span>); <span class="fu">length</span>(v2)</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
 </div>
 </div>
-<div id="matrizes-bidimensionais" class="section level3" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> Matrizes bidimensionais</h3>
+<div id="matrizes-bidimensionais" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Matrizes bidimensionais</h3>
 </div>
-<div id="matrizes-multidimensionais" class="section level3" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> Matrizes multidimensionais</h3>
+<div id="matrizes-multidimensionais" class="section level3" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Matrizes multidimensionais</h3>
 </div>
-<div id="listas" class="section level3" number="4.3.4">
-<h3><span class="header-section-number">4.3.4</span> Listas</h3>
+<div id="listas" class="section level3" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Listas</h3>
 </div>
-<div id="quadro-de-dados" class="section level3" number="4.3.5">
-<h3><span class="header-section-number">4.3.5</span> Quadro de dados</h3>
+<div id="quadro-de-dados" class="section level3" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Quadro de dados</h3>
 </div>
-<div id="funções" class="section level3" number="4.3.6">
-<h3><span class="header-section-number">4.3.6</span> Funções</h3>
-<div id="estruturas-de-controle" class="section level4" number="4.3.6.1">
-<h4><span class="header-section-number">4.3.6.1</span> Estruturas de controle</h4>
+<div id="funções" class="section level3" number="3.3.6">
+<h3><span class="header-section-number">3.3.6</span> Funções</h3>
+<div id="estruturas-de-controle" class="section level4" number="3.3.6.1">
+<h4><span class="header-section-number">3.3.6.1</span> Estruturas de controle</h4>
 </div>
-<div id="como-criar-funções" class="section level4" number="4.3.6.2">
-<h4><span class="header-section-number">4.3.6.2</span> Como criar funções</h4>
+<div id="como-criar-funções" class="section level4" number="3.3.6.2">
+<h4><span class="header-section-number">3.3.6.2</span> Como criar funções</h4>
 </div>
-<div id="escopo-léxico" class="section level4" number="4.3.6.3">
-<h4><span class="header-section-number">4.3.6.3</span> Escopo léxico</h4>
+<div id="escopo-léxico" class="section level4" number="3.3.6.3">
+<h4><span class="header-section-number">3.3.6.3</span> Escopo léxico</h4>
 
 </div>
 </div>
@@ -320,6 +874,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
