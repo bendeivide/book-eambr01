@@ -290,6 +290,7 @@ knitr::include_graphics("img/Coersao_Vetores.PNG")
 
 No caso dos vetores lógicos, todo TRUE se converterá em 1, e FALSE em 0. Porém, os modos dos vetores podem ser coagidos pelo usuário, usando as funções do tipo as.<modo ou tipo>() com prefixo as., isto é, se desejarmos que um objeto meu_objeto tenha o modo “character,” basta usar as.character(meu_objeto). Para desejar saber se um objeto é de um determinado modo, usamos as funções do tipo is.<modo ou tipo>(), com o prefixo "is.". Vejamos o Código R 5.10, para elucidar o que discutimos anteriormente.
 
+
 ```{r echo=TRUE, prompt=TRUE}
 # Objeto de modo numerico
 minha_idade <- 35
@@ -360,13 +361,42 @@ isto é, 1L, 1.23e5L, etc.;
 | Quadro de dados | `data.frame` |`numeric` (`integer` ou `double`), `character`, `complex`, `logical`, `raw` | Sim |
 
 
-$$CODIGO-1$$
-$$CODIGO-2$$
-$$CODIGO-3$$
 
-$$CODIGO-4$$
+```{r echo=TRUE, prompt=TRUE}
+c(NaN, "a")
 
-$$CODIGO-5$$
+c(NA, "a")
+```
+
+```{r echo=TRUE, prompt=TRUE}
+sqrt(-1)
+0 / 0
+Inf - Inf
+
+```
+```{r echo=TRUE, prompt=TRUE}
+NA^0
+
+NaN^0
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+NA + 1
+NaN + 5
+NA * 5
+sqrt(NaN)
+NaN + NA
+NA + NaN
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+length(c(NA, 1, 2))
+length(c(NaN, 1, 2))
+length(c(NULL, 1, 2))
+
+```
 
 #### Vetores longos
 
@@ -433,15 +463,15 @@ rep(x = 1:3, each = 3)
 # Repete cada numero do vetor duas vezes,
 # porem, o comprimento dessa sequencia esta
 # limitado a 4
-> rep(1:3, each = 2, length.out = 4)
+rep(1:3, each = 2, length.out = 4)
 
 # O vetor eh repetido ate obter uma
 # sequencia de tamanho 7
-> rep(x = 1:3, length.out = 7)
+rep(x = 1:3, length.out = 7)
 
 # (Versao mais rapida de rep) O vetor eh repetido ate obter uma
 # sequencia de tamanho 15
-> rep_len(x = 1:10, length.out = 15)
+rep_len(x = 1:10, length.out = 15)
 
 ```
 
@@ -508,10 +538,348 @@ v1 <- numeric(0); length(v1)
 v2 <- character(0); length(v2)
 v3 <- logical(0); length(v2)
 ```
+Para inserirmos valores a esses vetores usamos o sistema de indexação, que no caso da linguagem
+R, o contador começa a partir do número 1. Vejamos,
+
+
+```{r echo=TRUE, prompt=TRUE}
+ # Vetor numerico de comprimento 0
+ v1 <- numeric(0)
+ v2 <- character(0)
+ v3 <- logical(0)
+ # Inserimos 3 elementos em v1 e depois imprimimos o seu resultado
+ v1[1] <- 5; v1[2] <- 3; v1[3] <- 10; v1
+ length(v1)
+
+```
+Assim, como exercício vocês podem completar para os dois outros vetores. Uma vez criado o vetor, se desejarmos acessar os seus elementos, usamos também o sistema de indexação:
+
+```{r echo=TRUE, prompt=TRUE}
+# Vetor numerico de comprimento 0
+ v1 <- numeric(0)
+ v2 <- character(0)
+ v3 <- logical(0)
+
+ # Inserimos 3 elementos em v1 e depois imprimos o seu resultado
+ v1[1] <- 5; v1[2] <- 3; v1[3] <- 10
+
+ # Imprimindo apenas o primeiro valor
+ v1[1]
+
+
+ # Imprimindo os dois ultimos
+ v1[2:3]; v1[c(2, 3)]
+
+
+ # Imprimindo todos
+ v1
+
+```
+#### Aritmética e outras operações
+
+As operações com vetores não necessariamente são as operações realizadas baseadas na álgebra de matrizes. O que a linguagem *R* faz é realizar as operações elemento a elemento, mantendoo comprimento de tamanho igual ao tamanho do maior vetor na operação. Vejamos as operações aritméticas entre vetores de tamanho 1, a seguir.
+
+```{r echo=TRUE, prompt=TRUE}
+
+ # Soma de dois vetores
+ 2 + 3
+
+```
+```{r echo=TRUE, prompt=TRUE}
+
+# Exceto pela sintaxe, '+' eh uma chamada de funcao
+ `+`(2, 3)
+
+```
+```{r echo=TRUE, prompt=TRUE}
+ # Subtracao de dois vetores
+ 3 - 2
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+ # Exceto pela sintaxe, '-' eh uma chamada de funcao
+`-`(3, 2)
+```
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Multiplicacao de dois vetores
+3 * 2
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+ # Exceto pela sintaxe, '*' eh uma chamada de funcao
+ `*`(3, 2)
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+# Divisao de dois vetores
+3 / 2
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Exceto pela sintaxe, '/' eh uma chamada de funcao
+`/`(3, 2)
+
+
+```
+
+Essas mesmas operações podem ser realizadas elemento a elemento para vetores de comprimento maior que 1, observemos a próxima execução de comandos.
+
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Soma de vetores
+ c(4, 5, 6) + c(1, 2, 3)
+
+ # Subtracao de vetores
+ c(4, 5, 6) + c(1, 2, 3)
+ 
+ # Multiplicacao dois vetores
+ c(4, 5, 6) * c(1, 2, 3)
+ 
+ # Divisao de dois vetores
+ c(4, 5, 6) / c(1, 2, 3)
+
+
+
+```
+Quando os vetores não têm mesmo comprimento, o **R** completará de forma sequencial o menor
+vetor até que ele atinja o tamanho do maior vetor, isto é,
+
+```{r echo=TRUE, prompt=TRUE}
+# Soma de vetores de comprimento diferente
+1:10 + 3:10
+
+```
+
+O segundo vetor repetiu os elementos 3, 4, 5, isto é, os três primeiros elementos do vetor, para que o seu comprimento se tornasse igual ao comprimento do primeiro vetor. Após isso, foi realizado a soma elemento a elemento. Esse procedimento ocorre com os demais tipos de operações. Demais operações podem ser realizadas de acordo com as funções apresentadas na Tabela 4.3. Demais funções podem ser procuradas no manual An Introduction to R (VENABLES; SMITH; R CORE TEAM, 2021), ou execute no console ?Arithmetic.
+
+| Função (Ou operador) |                                    Finalidade                                    |
+|:----------------------:|--------------------------------------------------------------------------------|
+|           +          | Soma unária, por exemplo (+ 4), ou binária entre dois vetores                    |
+|           -          | Subtração unária, por exemplo (- 3), ou binária entre dois vetores               |
+|           *          | Multiplicação entre dois vetores                                                 |
+|           /          | Divisão entre dois vetores                                                       |
+|        ^ ou **       | Exponenciação binária, isto é 2^3 ou 2 ** 3                                      |
+|          %/%         | Divisão inteira                                                                  |
+|          %%          | Restante da divisão                                                              |
+|         sum()        | Soma de elementos de um vetor                                                    |
+|        prod()        | Produtório dos elementos de um vetor                                             |
+|        sqrt()        | Raiz quadrada dos elementos de um vetor                                          |
+|         log()        | Função Logaritmo neperiano                                                       |
+|        log10()       | Função Logaritmo na base 10                                                      |
+|         exp()        | Função exponencial                                                               |
+|        mean()        | Média dos elementos de um vetor                                                  |
+|         sd()         | Desvio padrão dos elementos de um vetor                                          |
+|         var()        | Variância dos elementos de um vetor                                              |
+|       median()       | Mediana dos elementos de um vetor                                                |
+|        round()       | Arredondamento de vetor numérico. Outros tipos são: trunc(), floor() e ceiling() |
+|                      |                                                                                  |
+
+
+#### Operadores lógicos
+
+
+Os operadores lógicos têm a função de avaliar determinada condição e retornar TRUE ou FALSE, sendo
+apresentados na Tabela 4.4.
+
+| Operador lógico |          Sintaxe          | Pergunta                                       |
+|-----------------|:-------------------------:|------------------------------------------------|
+|        <        | a < b                     | a é menor que b?                               |
+|        >        | a > b                     | a é maior que b?                               |
+|        ==       | a == b                    | a é igual b?                                   |
+|        !=       | a != b                    | a é diferente b?                               |
+|        >=       | a >= b                    | a é maior ou igual a b?                        |
+|        <=       | a <= b                    | a é menor ou igual a b?                        |
+| %in%            | 'a' %in% c('a', 'b', 'c') | O elemento 'a' está no vetor c('a', 'b', 'c')? |
+
+
+
+A operação binária significa que a função exige dois argumentos (ou operandos), isto é, <Arg1> <Operador> <Arg2>. Para mais detalhes, use no console ?Syntax. Vejamos alguns exemplos, no Código R 4.21.
+
+```{r echo=TRUE, prompt=TRUE}
+
+ # Operador '>' entre vetores de comprimento 1
+ 1 > 3
+
+```
+```{r echo=TRUE, prompt=TRUE}
+
+# Operador '<' com vetor de comprimento maior que 1
+ 1 < c(0, 1, 3)
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+ # Operador '==' entre vetores
+
+ c(1, 2, 3) == c(3, 2, 1)
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Operador '%in%' verificando se os elementos do primeiro vetor
+# estao no segundo vetor
+ 1 %in% c(3, 4, 5)
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+
+ # Operador '%in%' verificando se os elementos do primeiro vetor
+# estao no segundo vetor
+ c(1, 2) %in% c(3, 4, 5)
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+ # Operador '%in%' verificando se os elementos do primeiro vetor
+# estao no segundo vetor
+ c(1, 2, 3) %in% c(3, 4, 5)
+
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Operador '%in%' verificando se os elementos do primeiro vetor
+# estao no segundo vetor
+c(1, 2, 3, 4) %in% c(3, 4, 5)
+
+```
+
+O que é interessante nesse operador %in%, que na realidade é uma função com dois argumentos, constitui uma forma de criar operadores binários especiais do tipo %<nome_sintatico>%, que esse tipo de função é uma das mais conhecidas hoje na análise de dados usando o operador pipe (%>%) do pacote **magrittr** da família de pacotes **tidyverse**. A diferença no operador pipe é que o segundo operando (Argumento 2) é uma função que recebe no primeiro argumento o operando 1 (Argumento 1). Por fim, o operador %>% acaba sendo um operado unário. Esse operador acabou ganhando tanta visibilidade que na versão **R** (>= 4.1.0), foi implementado a versão nativa do operador pipe (|>).
+
+Veremos mais detalhes na seção sobre criação de funções.
+
+
+#### Operadores booleanos
+
+O operadores booleanos avaliam diversas operações lógicas (condições) para ao final retornar um TRUE ou FALSE. Na Tabela 4.5 a seguir, com esses operadores e suas indagações.
+
+
+| Operador booleano (ou função) |         Sintaxe        | Pergunta                                |
+|-------------------------------|:----------------------:|-----------------------------------------|
+|            & ou &&            | cond1 & cond2          | As cond1 e cond2 são verdadeiras?       |
+|           \| ou \|\|          | cond1 \| cond2         | A cond1 ou cond2 é(são) verdadeira(s)?  |
+|             xor()             | xor(cond1, cond2)      | Apenas a cond1 ou a cond2 é verdadeira? |
+|               !               | !cond1                 | É falso a cond1?                        |
+|             any()             | any(cond1, cond2, ...) | Alguma das condições são verdadeiras?   |
+|             all()             | all(cond1, cond2,...)  | Todas as condições são verdadeiras?     |
+
+Vejamos alguns exemplos de operadores booleanos, no Código R 4.22. Deixamos como sugestão de exercício, o desenvolvimento de rotinas apresentando condições para os demais operadores booleanos.
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Criando objetos
+x <- 1:3
+y <- 1:3
+z <- c(1, 2, 4)
+# Primeira condicao
+x == y
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+# Segunda condicao
+y == z
+
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+# Terceira condicao
+x == y & y == z
+
+
+```
+
+
+
 
 ### Matrizes bidimensionais
 
+A apresentação dos próximos objetos daqui pra frente, desde matrizes até quadro de dados (data frame) não é apresentar todas as manipulações possíveis sobre esses objetos. Mas mostrar a sua estrutura e condições básicas imposta sobre eles. Assim, não apresentaremos funções para manipulações com matrizes, por exemplo, porque isso não é o propósito do curso. Daremos a ideia de que uma matriz é na realidade um vetor bidimensional, assim como um quadro de dados que na realidade é uma lista.
+
+Quando usamos um atributo chamado dim em um vetor atômico, criamos na realidade vetores bi ou multidimencionais, isto é, objetos do tipo matrizes ou arrays. Assim como falamos anteriormente, o atributo pode mudar a estrutura do objeto. Vejamos o Código R 4.23, para o entendimento desse tipo de objeto.
+
+```{r echo=TRUE, prompt=TRUE}
+# Criando um vetor atomico
+x <- 1:6; x
+
+```
+```{r echo=TRUE, prompt=TRUE}
+
+# Verificando se o objeto 'x' tem atributo adicionado
+attributes(x)
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Vamos verificar a classe do objeto x
+sloop::s3_class(x)
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+# Adicionando o atributo dim
+dim(x) <- c(2, 3) # 2 x 3 = 6 (Comp do vetor)
+# attr(x, "dim") <- c(2, 3)
+# Observando agora o comportamento do objeto 'x'
+x
+
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+# Verificando se o objeto 'x' tem atributo adicionado
+attributes(x)
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Verificando a classe do objeto
+sloop::s3_class(x)
+
+
+```
+
+
+O atributo dim recebeu uma informação bidimensional, isto é, o número de linhas e colunas, respectivamente. Uma outra forma para construir uma matriz é usando a função matrix(), que pode ser apresentado no Código R 4.24.
+
+```{r echo=TRUE, prompt=TRUE}
+# Criando uma matriz (Numeros inseridos em linhas)
+matrix(1:6, 2, 3)
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+# Criando uma matriz (Numeros inseridos em colunas)
+matrix(1:6, 2, 3, byrow = TRUE)
+
+```
+
+Como verificado no Código R 4.24 [linha 4], quando desejamos criar uma matriz inserindo os valores em colunas, usamos o argumento byrow = TRUE. Para acessarmos ou alterarmos os elementos de uma matriz, usamos o sistema de indexação similar ao vetor, porém, devemos indexar as linhas e colunas. Por exemplo, o elemento da primeira linha e primeira coluna pode ser obtido por x[1, 1], e assim por diante. Todos os elementos da linha 1, x[1,], ou todos os elementos da coluna 1, x[,1].
+
 ### Matrizes multidimensionais
+
 
 ### Listas
 
