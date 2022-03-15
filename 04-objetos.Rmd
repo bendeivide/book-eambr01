@@ -1086,3 +1086,5 @@ Essa função attach() tem implicações, quando por exemplo se deseja inseri-la
 #### Objeto tibble
 
 
+
+
