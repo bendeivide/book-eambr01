@@ -879,16 +879,210 @@ matrix(1:6, 2, 3, byrow = TRUE)
 Como verificado no Código R 4.24 [linha 4], quando desejamos criar uma matriz inserindo os valores em colunas, usamos o argumento byrow = TRUE. Para acessarmos ou alterarmos os elementos de uma matriz, usamos o sistema de indexação similar ao vetor, porém, devemos indexar as linhas e colunas. Por exemplo, o elemento da primeira linha e primeira coluna pode ser obtido por x[1, 1], e assim por diante. Todos os elementos da linha 1, x[1,], ou todos os elementos da coluna 1, x[,1].
 
 ### Matrizes multidimensionais
+A ideia do objeto matriz multidimensional (ou array) é similar ao da matriz, a diferença é que agora é um vetor atômico de mais de duas dimensões, como pode ser observado no Código R 4.25.
+
+```{r echo=TRUE, prompt=TRUE}
+# Criando um vetor atomico
+ x <- 1:12; x
+
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Verificando se o objeto 'x' tem atributo adicionado
+attributes(x)
+
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+# Vamos verificar a classe do objeto x
+sloop::s3_class(x)
+
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+# Adicionando o atributo dim
+dim(x) <- c(2, 3, 2) # 2 x 3 x 2 = 12 (Comp do vetor x)
+# attr(x, "dim") <- c(2, 3, 2)
+# Observando agora o comportamento do objeto 'x'
+x
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+# Verificando novamente se 'x' tem atributo
+attributes(x)
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+# Verificando a classe do objeto
+sloop::s3_class(x)
+```
+
+Criamos duas matrizes de dimensão (2 x 3). Para acessar os elementos desse objeto, usaremos também o sistema de indexação, agora acrescentando a terceira dimensão. Por exemplo, para acessar o elemento da linha 1, coluna 1, matriz 1, temos x[1, 1, 1], ou todos os elementos da linha 1, matriz 1, temos x[1, , 1]. Uma outra forma de criar um objeto array é usar a função array(), isto é,
+
+```{r echo=TRUE, prompt=TRUE}
+# Criando um array
+array(1:12, c(2, 3, 2))
+
+
+```
+Mostramos um quadro resumo de funções que podem ser utilizadas (WICKHAM, 2019), correlatas para vetores, matrizes e arrays, Tabela 4.6. Para auxílio nas funções, use sempre o símbolo de interrogação antes das funções e execute no console. Por exemplo, ajuda da função names(), use ?names().
+
+
+| Vetor           |         Matriz         | Array          |
+|-----------------|:----------------------:|----------------|
+|     names()     | rownames(), colnames() | dimnames()     |
+|     length()    | nrow(), ncol()         | dim()          |
+|       c()       | rbind(), cbind()       | abind::abind() |
+|        -        | t()                    | aperm()        |
+| is.null(dim(x)) | is.matrix()            | is.array       |
+
 
 
 ### Listas
 
+As listas são como vetores atômicos, porém mais complexos, isto é, os elementos de uma lista são vetores atômicos, como também outras listas, funções, expressões. Esta última é o que chamamos de objetos recursivos. A forma de se obter uma lista é pela função list(). Vejamos os comandos no Código R 4.26.
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Criando uma lista
+l0 <- list(1:3, letters[5], list(1, 2, 3),
+mean, expression(x ~ y))
+# Imprimindo a lista
+l0
+
+```
+Podemos acessar ou alterar os elementos de uma lista por meio do operador $, ou pelo sistema de indexação, que diferencia um pouco da indexação dos vetores. Por exemplo, o primeiro elemento desse vetor pode ser acessado por l0[[1]], o terceiro l0[[3]], e assim por diante. Para acessar informações específicas dentro dos elementos, usamos l0[[3]][2], isto é, imprimimos o segundo valor do segundo elemento. Os elementos de um lista são na realidade outros objetos, do qual conseguimos acessar também os elementos desses objetos.
+
+Quando nominamos os objetos contidos nas listas, podemos utilizar o operador $, para acessar esses objetos. Vejamos Código R 4.27.
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Criando uma lista
+l0 <- list(l01 = 1:3,
+l02 = letters[5],
+l03 = list(1, 2, 3),
+l04 = mean,
+l05 = expression(x ~ y))
+# Imprimindo o primeiro elemento (objeto) da lista 'l0'
+l0$l01
+
+```
+```{r echo=TRUE, prompt=TRUE}
+
+# Imprimindo o segundo
+l0$l02
+
+
+```
+
+As listas têm importâncias diversas dentro do ambiente **R** , por exemplo, o atributo em um objeto é armazenado em forma de lista. A coerção sempre força um vetor atômico a uma lista. Vejamos as linhas de comando a seguir, Código R 4.28.
+
+```{r echo=TRUE, prompt=TRUE}
+
+# Vejamos as linhas de comando
+l1 <- list(list(1, 2), c(3, 4))
+l2 <- c(list(1, 2), c(3, 4))
+# Vejamos as suas estruturas
+str(l1)
+
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+str(l2)
+
+```
+Observamos no objeto l1, temos uma lista cujos elementos são outra lista, o elemento 3 e o elemento 4. O vetor c(3, 4) se transformou em dois elementos de l1. No objeto l2, poderíamos pensar que como a lista está dentro da função c(), os elementos da lista fariam parte dos elementos de um vetor. Porém isso não ocorre. O que temos é uma coerção em que a lista força ao vetor a se tornar lista. Por fim, temos em l2 quatro elementos em uma lista.
+
 ### Quadro de dados
 
-### Funções
+O objeto quadro de dados *(Data frame)* é uma lista com classe data.frame, em que contém dois atributos. Porém, com algumas restrições:
 
-#### Estruturas de controle
+- Os componentes devem ser vetores uni ou multidimencionais, listas ou até mesmo quadro de
+dados;
 
-#### Como criar funções
+- As colunas das matrizes, listas ou quadro de dados são inseridas como colunas do quadro de
+dados;
 
-#### Escopo léxico
+
+- A partir da versão **R** (4.0.0), os vetores terão mesmo modo no quadro de dados. Antes os vetores em modo caractere eram convertidos em objeto do tipo fator. Para convertê-lo automaticamente use o argumento stringsAsFactors = TRUE. Por sugestão, prefira a mudança usando a função factor(), para ter um maior controle dos níveis;
+
+- Os objetos inseridos no quadro de dados devem ter o mesmo comprimento.
+
+Para criarmos um objeto do tipo quadro de dados (data frame), usamos a função data.frame(). Assim, como nas listas podemos inserir os objetos no quadro de dados inserindo o nome nas colunas ou não. A forma de acessar os elementos é interessante, podemos usar a sintaxe de indexação de uma lista ou de uma matriz. Vejamos o Código R 4.29.
+
+```{r echo=TRUE, prompt=TRUE}
+# Criando um quadro de dados
+dados <- data.frame(x = 1:10,
+y = letters[1:10],
+z = rep(c(TRUE, FALSE), 5))
+# Imprimindo dados
+dados
+
+
+
+```
+
+
+```{r echo=TRUE, prompt=TRUE}
+# Acessando os elementos de forma de lista
+dados[[1]]
+
+```
+```{r echo=TRUE, prompt=TRUE}
+dados$x
+
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+# Acessando os elementos em forma de matriz
+dados[1, ] # Coluna 1
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+dados[1, 1] # Elemento da linha 1 coluna 1
+
+
+```
+
+```{r echo=TRUE, prompt=TRUE}
+dados[, 1] # Linha 1
+
+
+```
+
+Quando importamos um conjunto de dados, por exemplo usando a função read.table(), o objeto que armazena esses dados é um quadro de dados. Assunto discutido mais a frente.
+
+A semelhança com a forma retangular de uma matriz, faz com que algumas funções utilizadas em matrizes sejam utilizadas em quadro de dados:
+
+- As funções *rownames()* e *colnames()*, retornam ou inserem os nomes das linhas e colunas, respectivamente. A função *names()* retorna o nome das colunas
+
+- A dimensão das linhas e colunas podem ser obtidas pelas funções *nrow()* e *ncol()*, respectivamente. A função *length()* retorna o número de colunas.
+
+Em algumas situações, estamos interessados em otimizar o nosso tempo de programação, e achamos muito demorado ou não conveniente a utilização da sintaxe objeto$elemento para acessar os elementos de uma lista. Dessa forma, poderemos utilizar a função attach() para que os elementos do quadro de dados estejam disponíveis (anexados) no caminho de busca, e assim, possamos acessar os elementos (ou objetos) do quadro de dados sem precisar mencioná-lo.
+
+Essa função attach() tem implicações, quando por exemplo se deseja inseri-la na construção de um pacote R . Iremos discutir esse ponto mais a frente. Para desanexar o quadro de dados, use detach(). A função attach() é genérica e pode ser usada em qualquer objeto de modo list ser anexado no caminho de busca.
+
+
+#### Fatores
+#### Datas e horas
+#### Objeto para dados temporais
+#### Objeto tibble
+
+
