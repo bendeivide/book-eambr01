@@ -12,7 +12,7 @@ Portanto, entenda que nem todo pacote sob o CRAN é confiável naquilo que se pr
 
 Para uma instalação mais rápida dos pacotes, optem pelos espelhos disponíveis nos países em que vivem, uma vez que a transferência de dados ocorrem mais rapidamente. Aqui no Brasil, por exemplo, o primeiro espelho desenvolvido e ativo até hoje é o da UFPR. Mas, temos mais quatro espelhos: dois na USP, uma na Fiocruz/RJ, e outra na UESC.
 
-Um termo que deve ficar claro, que erroneamente, alguns usuários chamam o termo biblioteca como um sinônimo de pacote. Nas documentações do R , biblioteca é o diretório onde os pacotes são instalados, também chamados de diretório de biblioteca ou diretório de árvores. O outro sentido de biblioteca é o de biblioteca compartilhada (dinâmica ou estática), que armazenam código compilado que se vinculam aos pacotes, por exemplo, no Windows são as DLLs.
+Um termo que deve ficar claro, que erroneamente, alguns usuários chamam o termo biblioteca como um sinônimo de pacote. Nas documentações do **R** , biblioteca é o diretório onde os pacotes são instalados, também chamados de diretório de biblioteca ou diretório de árvores. O outro sentido de biblioteca é o de biblioteca compartilhada (dinâmica ou estática), que armazenam código compilado que se vinculam aos pacotes, por exemplo, no Windows são as DLLs.
 
 
 
@@ -43,27 +43,16 @@ necessário. Mas isso é assunto para o *Volume V: Desenvolvimento de Pacotes R*
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## Instalação de um pacote
 
-A instalação de um pacote via R pode ser feito pela função install.packages(pkgs = "nome_pacote"). Por exemplo, vamos tentar instalar o pacote midrangeMCP, da seguinte forma:
+A instalação de um pacote via **R** pode ser feito pela função install.packages(pkgs = "nome_pacote"). Por exemplo, vamos tentar instalar o pacote **midrangeMCP**, da seguinte forma:
 
 ```{r echo=TRUE, prompt=TRUE}
 install.packages("midrangeMCP")
 ```
-Pode ser que nesse processo, dependendo de onde o usuário esteja executando essa linha de comando, interface do R ou RStudio , que seja solicitado o espelho por onde deseja fazer a instalação. Isso é apenas um atalho para ter um acesso mais rápido na instalação do pacote. A sugestão é escolher um espelho de seu país de origem.
+Pode ser que nesse processo, dependendo de onde o usuário esteja executando essa linha de comando, interface do **R** ou **RStudio**, que seja solicitado o espelho por onde deseja fazer a instalação. Isso é apenas um atalho para ter um acesso mais rápido na instalação do pacote. A sugestão é escolher um espelho de seu país de origem.
 
-Uma forma simples de se ter detalhes do pacote na internet, tais como, baixar o pacote fonte ou o pacote binário do midrangeMCP, por exemplo, é sempre usar essa url: <http://cran.r-project. org/package=midrangeMCP>. Para qualquer outro pacote, basta mudar o nome do pacote na url, e assim, estaremos na página do repositório do pacote. O pacote fonte, como falado anteriormente, é compactado com extensão .tar.gz, no caso, midrangeMCP_3.1.1.tar.gz. O pacote binário tem a compactação zipada, midrangeMCP_3.1.1.tar.zip para o Windows e midrangeMCP_3.1.1.tgz para o Macintosh. O acesso aos arquivos do pacote mencionados no esqueleto são disponíveis no pacote fonte.
+Uma forma simples de se ter detalhes do pacote na internet, tais como, baixar o pacote fonte ou o pacote binário do midrangeMCP, por exemplo, é sempre usar essa url: <http://cran.r-project. org/package=midrangeMCP>. Para qualquer outro pacote, basta mudar o nome do pacote na url, e assim, estaremos na página do repositório do pacote. O pacote fonte, como falado anteriormente, é compactado com extensão *.tar.gz*, no caso, midrangeMCP_3.1.1.tar.gz. O pacote binário tem a compactação zipada, midrangeMCP_3.1.1.tar.zip para o Windows e midrangeMCP_3.1.1.tgz para o Macintosh. O acesso aos arquivos do pacote mencionados no esqueleto são disponíveis no pacote fonte.
 
 Uma outra forma possível de instalação é baixar o arquivo do pacote fonte para o seu computador e instalá-lo, via comando:
 
@@ -73,7 +62,7 @@ Uma outra forma possível de instalação é baixar o arquivo do pacote fonte pa
 
 Consideramos que o arquivo do pacote esteja no diretório de trabalho do usuário. Caso contrário, deve ser informado o local onde pacote se encontra no computador. Para o Window ou Macintosh, é possível instalar também, a partir dos pacotes binários.
 
-Muitos dos desenvolvedores, estão disponibilizando seus projetos de pacotes, principalmente no GitHub , inclusive com manuals de ajuda com maiores detalhes. Pode ser possível instalar esses pacotes por esse repositório. Precisamos inicialmente do pacote devtools, e posteriormente a instalação do pacote. Segue as linhas de comando:
+Muitos dos desenvolvedores, estão disponibilizando seus projetos de pacotes, principalmente no **GitHub**, inclusive com manuals de ajuda com maiores detalhes. Pode ser possível instalar esses pacotes por esse repositório. Precisamos inicialmente do pacote **devtools**, e posteriormente a instalação do pacote. Segue as linhas de comando:
 
 ```{r echo=TRUE, prompt=TRUE}
 install.packages("devtools")
