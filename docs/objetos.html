@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 3 Objetos | Estudando o Ambiente R</title>
-  <meta name="description" content="Capítulo 3 Objetos | Estudando o Ambiente R" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <title>Capítulo 3 Objetos | R básico</title>
+  <meta name="description" content="Capítulo 3 Objetos | R básico" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 3 Objetos | Estudando o Ambiente R" />
+  <meta property="og:title" content="Capítulo 3 Objetos | R básico" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://bendeivide.github.io/book-eambr/" />
   
   
   <meta name="github-repo" content="bendeivide/book-eambr" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 Objetos | Estudando o Ambiente R" />
+  <meta name="twitter:title" content="Capítulo 3 Objetos | R básico" />
   
   
   
 
-<meta name="author" content="Ben Dêivide, Diego Arthur e Henrique JP Alves" />
+<meta name="author" content="Ben Dêivide e Diego Arthur" />
 
 
-<meta name="date" content="2022-02-23" />
+<meta name="date" content="2022-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="como-o-r-trabalha.html"/>
 <link rel="next" href="importando-dados.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script>
 <script>
@@ -169,86 +168,87 @@ div.csl-indent {
 <li><a href="./">Estudando o ambiente R</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bem-vindo</a>
+<li><a href="index.html#bem-vindo" id="toc-bem-vindo">Bem-vindo<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#licença"><i class="fa fa-check"></i>Licença</a></li>
+<li><a href="index.html#sugestões-e-críticas" id="toc-sugestões-e-críticas">Sugestões e críticas<span></span></a></li>
+<li><a href="index.html#licença" id="toc-licença">Licença<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="epígrafe.html"><a href="epígrafe.html"><i class="fa fa-check"></i>Epígrafe</a></li>
-<li class="chapter" data-level="" data-path="prefácio.html"><a href="prefácio.html"><i class="fa fa-check"></i>Prefácio</a></li>
-<li class="chapter" data-level="1" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html"><i class="fa fa-check"></i><b>1</b> Entendendo a coleção <em>Estudando o ambiente R </em></a>
+<li><a href="epígrafe.html#epígrafe" id="toc-epígrafe">Epígrafe<span></span></a></li>
+<li><a href="prefácio.html#prefácio" id="toc-prefácio">Prefácio<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#entendendo-a-coleção-estudando-o-ambiente-r" id="toc-entendendo-a-coleção-estudando-o-ambiente-r"><span class="toc-section-number">1</span> Entendendo a coleção <em>Estudando o ambiente R </em><span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-i-nível-básico"><i class="fa fa-check"></i><b>1.1</b> Volume I: Nível Básico</a></li>
-<li class="chapter" data-level="1.2" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-ii-nível-intermediário"><i class="fa fa-check"></i><b>1.2</b> Volume II: Nível Intermediário</a></li>
-<li class="chapter" data-level="1.3" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-iii-nível-avançado"><i class="fa fa-check"></i><b>1.3</b> Volume III: Nível Avançado</a></li>
-<li class="chapter" data-level="1.4" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#demais-volumes"><i class="fa fa-check"></i><b>1.4</b> Demais volumes</a></li>
-<li class="chapter" data-level="1.5" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#referencias"><i class="fa fa-check"></i><b>1.5</b> Referências complementares da Coleção</a></li>
-<li class="chapter" data-level="1.6" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#pacutilizados"><i class="fa fa-check"></i><b>1.6</b> Pacotes R utilizados para essa coleção</a></li>
-<li class="chapter" data-level="1.7" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#história-do-r"><i class="fa fa-check"></i><b>1.7</b> História do R</a></li>
-<li class="chapter" data-level="1.8" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#o-que-é-o-r"><i class="fa fa-check"></i><b>1.8</b> O que é o R ?</a></li>
-<li class="chapter" data-level="1.9" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#instalação-do-r-e-rstudio"><i class="fa fa-check"></i><b>1.9</b> Instalação do R e RStudio</a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-i-nível-básico" id="toc-volume-i-nível-básico"><span class="toc-section-number">1.1</span> Volume I: Nível Básico<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-ii-nível-intermediário" id="toc-volume-ii-nível-intermediário"><span class="toc-section-number">1.2</span> Volume II: Nível Intermediário<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-iii-nível-avançado" id="toc-volume-iii-nível-avançado"><span class="toc-section-number">1.3</span> Volume III: Nível Avançado<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#demais-volumes" id="toc-demais-volumes"><span class="toc-section-number">1.4</span> Demais volumes<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#referencias" id="toc-referencias"><span class="toc-section-number">1.5</span> Referências complementares da Coleção<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#pacutilizados" id="toc-pacutilizados"><span class="toc-section-number">1.6</span> Pacotes R utilizados para essa coleção<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#história-do-r" id="toc-história-do-r"><span class="toc-section-number">1.7</span> História do R<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#o-que-é-o-r" id="toc-o-que-é-o-r"><span class="toc-section-number">1.8</span> O que é o R ?<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#instalação-do-r-e-rstudio" id="toc-instalação-do-r-e-rstudio"><span class="toc-section-number">1.9</span> Instalação do R e RStudio<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html"><i class="fa fa-check"></i><b>2</b> Como o R trabalha</a>
+<li><a href="como-o-r-trabalha.html#como-o-r-trabalha" id="toc-como-o-r-trabalha"><span class="toc-section-number">2</span> Como o R trabalha<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
-<li class="chapter" data-level="2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-no-r"><i class="fa fa-check"></i><b>2.2</b> Comandos no R</a>
+<li><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio" id="toc-como-utilizar-o-r-e-o-rstudio"><span class="toc-section-number">2.1</span> Como utilizar o R e o RStudio<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#comandos-no-r" id="toc-comandos-no-r"><span class="toc-section-number">2.2</span> Comandos no R<span></span></a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#console-e-prompt-de-comando"><i class="fa fa-check"></i><b>2.2.1</b> Console e <em>Prompt</em> de comando</a></li>
-<li class="chapter" data-level="2.2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-elementares"><i class="fa fa-check"></i><b>2.2.2</b> Comandos elementares</a></li>
-<li class="chapter" data-level="2.2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#execução-de-comandos"><i class="fa fa-check"></i><b>2.2.3</b> Execução de comandos</a></li>
-<li class="chapter" data-level="2.2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores"><i class="fa fa-check"></i><b>2.2.4</b> Chamada e correção de comandos anteriores</a></li>
+<li><a href="como-o-r-trabalha.html#console-e-prompt-de-comando" id="toc-console-e-prompt-de-comando"><span class="toc-section-number">2.2.1</span> Console e <em>Prompt</em> de comando<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#comandos-elementares" id="toc-comandos-elementares"><span class="toc-section-number">2.2.2</span> Comandos elementares<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#execução-de-comandos" id="toc-execução-de-comandos"><span class="toc-section-number">2.2.3</span> Execução de comandos<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores" id="toc-chamada-e-correção-de-comandos-anteriores"><span class="toc-section-number">2.2.4</span> Chamada e correção de comandos anteriores<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace"><i class="fa fa-check"></i><b>2.3</b> Ambiente Global (área de trabalho ou <em>Workspace</em>)</a></li>
-<li class="chapter" data-level="2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory"><i class="fa fa-check"></i><b>2.4</b> Arquivos <code>.RData</code> e <code>.Rhistory</code></a></li>
-<li class="chapter" data-level="2.5" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#criando-e-salvando-um-script"><i class="fa fa-check"></i><b>2.5</b> Criando e salvando um <em>script</em></a></li>
+<li><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace" id="toc-ambiente-global-área-de-trabalho-ou-workspace"><span class="toc-section-number">2.3</span> Ambiente Global (área de trabalho ou <em>Workspace</em>)<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory" id="toc-arquivos-.rdata-e-.rhistory"><span class="toc-section-number">2.4</span> Arquivos <code>.RData</code> e <code>.Rhistory</code><span></span></a></li>
+<li><a href="como-o-r-trabalha.html#criando-e-salvando-um-script" id="toc-criando-e-salvando-um-script"><span class="toc-section-number">2.5</span> Criando e salvando um <em>script</em><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>3</b> Objetos</a>
+<li><a href="objetos.html#objetos" id="toc-objetos"><span class="toc-section-number">3</span> Objetos<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="objetos.html"><a href="objetos.html#atributos"><i class="fa fa-check"></i><b>3.1</b> Atributos</a>
+<li><a href="objetos.html#atributos" id="toc-atributos"><span class="toc-section-number">3.1</span> Atributos<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="objetos.html"><a href="objetos.html#atributos-intrínsecos"><i class="fa fa-check"></i><b>3.1.1</b> Atributos intrínsecos</a></li>
+<li><a href="objetos.html#atributos-intrínsecos" id="toc-atributos-intrínsecos"><span class="toc-section-number">3.1.1</span> Atributos intrínsecos<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="objetos.html"><a href="objetos.html#coerção"><i class="fa fa-check"></i><b>3.2</b> Coerção</a></li>
-<li class="chapter" data-level="3.3" data-path="objetos.html"><a href="objetos.html#tipo-de-objetos"><i class="fa fa-check"></i><b>3.3</b> Tipo de objetos</a>
+<li><a href="objetos.html#coerção" id="toc-coerção"><span class="toc-section-number">3.2</span> Coerção<span></span></a></li>
+<li><a href="objetos.html#tipo-de-objetos" id="toc-tipo-de-objetos"><span class="toc-section-number">3.3</span> Tipo de objetos<span></span></a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="objetos.html"><a href="objetos.html#vetores"><i class="fa fa-check"></i><b>3.3.1</b> Vetores</a></li>
-<li class="chapter" data-level="3.3.2" data-path="objetos.html"><a href="objetos.html#matrizes-bidimensionais"><i class="fa fa-check"></i><b>3.3.2</b> Matrizes bidimensionais</a></li>
-<li class="chapter" data-level="3.3.3" data-path="objetos.html"><a href="objetos.html#matrizes-multidimensionais"><i class="fa fa-check"></i><b>3.3.3</b> Matrizes multidimensionais</a></li>
-<li class="chapter" data-level="3.3.4" data-path="objetos.html"><a href="objetos.html#listas"><i class="fa fa-check"></i><b>3.3.4</b> Listas</a></li>
-<li class="chapter" data-level="3.3.5" data-path="objetos.html"><a href="objetos.html#quadro-de-dados"><i class="fa fa-check"></i><b>3.3.5</b> Quadro de dados</a></li>
-<li class="chapter" data-level="3.3.6" data-path="objetos.html"><a href="objetos.html#funções"><i class="fa fa-check"></i><b>3.3.6</b> Funções</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="importando-dados.html"><a href="importando-dados.html"><i class="fa fa-check"></i><b>4</b> Importando dados</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="importando-dados.html"><a href="importando-dados.html#preparação-dos-dados"><i class="fa fa-check"></i><b>4.1</b> Preparação dos dados</a></li>
-<li class="chapter" data-level="4.2" data-path="importando-dados.html"><a href="importando-dados.html#importando-dados-1"><i class="fa fa-check"></i><b>4.2</b> Importando dados</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html"><i class="fa fa-check"></i><b>5</b> Boas práticas de como escrever um código</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos"><i class="fa fa-check"></i><b>5.1</b> Nomes de arquivos</a></li>
-<li class="chapter" data-level="5.2" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando"><i class="fa fa-check"></i><b>5.2</b> Comentar as linahs de comando</a></li>
-<li class="chapter" data-level="5.3" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos"><i class="fa fa-check"></i><b>5.3</b> Nome de objetos</a>
-<ul>
-<li class="chapter" data-level="5.3.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe"><i class="fa fa-check"></i><b>5.3.1</b> Sintaxe</a></li>
+<li><a href="objetos.html#vetores" id="toc-vetores"><span class="toc-section-number">3.3.1</span> Vetores<span></span></a></li>
+<li><a href="objetos.html#matrizes-bidimensionais" id="toc-matrizes-bidimensionais"><span class="toc-section-number">3.3.2</span> Matrizes bidimensionais<span></span></a></li>
+<li><a href="objetos.html#matrizes-multidimensionais" id="toc-matrizes-multidimensionais"><span class="toc-section-number">3.3.3</span> Matrizes multidimensionais<span></span></a></li>
+<li><a href="objetos.html#listas" id="toc-listas"><span class="toc-section-number">3.3.4</span> Listas<span></span></a></li>
+<li><a href="objetos.html#quadro-de-dados" id="toc-quadro-de-dados"><span class="toc-section-number">3.3.5</span> Quadro de dados<span></span></a></li>
+<li><a href="objetos.html#funções" id="toc-funções"><span class="toc-section-number">3.3.6</span> Funções<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="pacotes.html"><a href="pacotes.html"><i class="fa fa-check"></i><b>6</b> Pacotes</a>
+<li><a href="importando-dados.html#importando-dados" id="toc-importando-dados"><span class="toc-section-number">4</span> Importando dados<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="pacotes.html"><a href="pacotes.html#estrutura-básica-de-um-pacote"><i class="fa fa-check"></i><b>6.1</b> Estrutura básica de um pacote</a></li>
-<li class="chapter" data-level="6.2" data-path="pacotes.html"><a href="pacotes.html#instalação-de-um-pacote"><i class="fa fa-check"></i><b>6.2</b> Instalação de um pacote</a></li>
-<li class="chapter" data-level="6.3" data-path="pacotes.html"><a href="pacotes.html#objetivos-de-um-pacote"><i class="fa fa-check"></i><b>6.3</b> Objetivos de um pacote</a></li>
-<li class="chapter" data-level="6.4" data-path="pacotes.html"><a href="pacotes.html#utilizando-funções-de-um-pacote"><i class="fa fa-check"></i><b>6.4</b> Utilizando funções de um pacote</a></li>
-<li class="chapter" data-level="6.5" data-path="pacotes.html"><a href="pacotes.html#carregando-e-anexando-um-pacote"><i class="fa fa-check"></i><b>6.5</b> Carregando e anexando um pacote</a></li>
-<li class="chapter" data-level="6.6" data-path="pacotes.html"><a href="pacotes.html#namespace-de-um-pacote"><i class="fa fa-check"></i><b>6.6</b> <em>NAMESPACE</em> de um pacote</a></li>
-<li class="chapter" data-level="6.7" data-path="pacotes.html"><a href="pacotes.html#usando-os-operadores-e"><i class="fa fa-check"></i><b>6.7</b> Usando os operadores <code>::</code> e <code>:::</code></a></li>
+<li><a href="importando-dados.html#preparação-dos-dados" id="toc-preparação-dos-dados"><span class="toc-section-number">4.1</span> Preparação dos dados<span></span></a></li>
+<li><a href="importando-dados.html#importando-dados-1" id="toc-importando-dados-1"><span class="toc-section-number">4.2</span> Importando dados<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html"><i class="fa fa-check"></i><b>7</b> Ambientes e caminho de busca</a>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#boas-práticas-de-como-escrever-um-código" id="toc-boas-práticas-de-como-escrever-um-código"><span class="toc-section-number">5</span> Boas práticas de como escrever um código<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html#a-superatribuição"><i class="fa fa-check"></i><b>7.1</b> A superatribuição</a></li>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos" id="toc-nomes-de-arquivos"><span class="toc-section-number">5.1</span> Nomes de arquivos<span></span></a></li>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando" id="toc-comentar-as-linahs-de-comando"><span class="toc-section-number">5.2</span> Comentar as linahs de comando<span></span></a></li>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos" id="toc-nome-de-objetos"><span class="toc-section-number">5.3</span> Nome de objetos<span></span></a>
+<ul>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe" id="toc-sintaxe"><span class="toc-section-number">5.3.1</span> Sintaxe<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="interfaces-com-outras-linguagens.html"><a href="interfaces-com-outras-linguagens.html"><i class="fa fa-check"></i><b>8</b> Interfaces com outras linguagens</a></li>
-<li class="chapter" data-level="9" data-path="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><i class="fa fa-check"></i><b>9</b> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
-<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+</ul></li>
+<li><a href="pacotes.html#pacotes" id="toc-pacotes"><span class="toc-section-number">6</span> Pacotes<span></span></a>
+<ul>
+<li><a href="pacotes.html#estrutura-básica-de-um-pacote" id="toc-estrutura-básica-de-um-pacote"><span class="toc-section-number">6.1</span> Estrutura básica de um pacote<span></span></a></li>
+<li><a href="pacotes.html#instalação-de-um-pacote" id="toc-instalação-de-um-pacote"><span class="toc-section-number">6.2</span> Instalação de um pacote<span></span></a></li>
+<li><a href="pacotes.html#objetivos-de-um-pacote" id="toc-objetivos-de-um-pacote"><span class="toc-section-number">6.3</span> Objetivos de um pacote<span></span></a></li>
+<li><a href="pacotes.html#utilizando-funções-de-um-pacote" id="toc-utilizando-funções-de-um-pacote"><span class="toc-section-number">6.4</span> Utilizando funções de um pacote<span></span></a></li>
+<li><a href="pacotes.html#carregando-e-anexando-um-pacote" id="toc-carregando-e-anexando-um-pacote"><span class="toc-section-number">6.5</span> Carregando e anexando um pacote<span></span></a></li>
+<li><a href="pacotes.html#namespace-de-um-pacote" id="toc-namespace-de-um-pacote"><span class="toc-section-number">6.6</span> <em>NAMESPACE</em> de um pacote<span></span></a></li>
+<li><a href="pacotes.html#usando-os-operadores-e" id="toc-usando-os-operadores-e"><span class="toc-section-number">6.7</span> Usando os operadores <code>::</code> e <code>:::</code><span></span></a></li>
+</ul></li>
+<li><a href="ambientes-e-caminho-de-busca.html#ambientes-e-caminho-de-busca" id="toc-ambientes-e-caminho-de-busca"><span class="toc-section-number">7</span> Ambientes e caminho de busca<span></span></a>
+<ul>
+<li><a href="ambientes-e-caminho-de-busca.html#a-superatribuição" id="toc-a-superatribuição"><span class="toc-section-number">7.1</span> A superatribuição<span></span></a></li>
+</ul></li>
+<li><a href="interfaces-com-outras-linguagens.html#interfaces-com-outras-linguagens" id="toc-interfaces-com-outras-linguagens"><span class="toc-section-number">8</span> Interfaces com outras linguagens<span></span></a></li>
+<li><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html#considerações-e-preparação-para-programação-em-r-nível-intermediário" id="toc-considerações-e-preparação-para-programação-em-r-nível-intermediário"><span class="toc-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)<span></span></a></li>
+<li><a href="referências.html#referências" id="toc-referências">Referências<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://bendeivide.github.io/cursor" target="blank">Acesse o curso desse material!</a></li>
 
@@ -261,7 +261,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Estudando o Ambiente R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R básico</a>
           </h1>
         </div>
 
@@ -269,14 +269,14 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="objetos" class="section level1" number="3">
-<h1><span class="header-section-number">Capítulo 3</span> Objetos</h1>
+<div id="objetos" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Objetos<a href="objetos.html#objetos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Definimos um objeto como uma entidade no ambiente R com características internas contendo informações necessárias para interpretar sua estrutura e conteúdo. Essas características são chamadas de <strong>atributos</strong>. Vamos entender o termo estrutura como a disposição de como está o seu conteúdo. Por exemplo, a estrutura de um objeto mais simples no R é um <strong>vetor atômico</strong>, pois os elementos contidos nele, apresenta o mesmo <strong>modo</strong>, um tipo de atributo. Falaremos nisso, mais à frente. De forma didática, adaptaremos a representação dos objetos no formato de diagrama. Vejamos a seguinte linha de comando:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="objetos.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
 <p>Todo mundo que tem uma certa noção sobre a linguagem <strong>R</strong> afirmaria: “criei um objeto x que recebe o valor 10”. Para Wickham (2019) essa afirmação é imprecisa e pode levar um entendimento equivocado sobre o que acontece de fato. Para o mesmo autor, o correto é afirmar que o objeto 10 está se ligando a um nome. E de fato, o objeto não tem um nome, mas o nome tem um objeto. O símbolo que associa um objeto a um nome é o de atribuição, &lt;-, isto é, a junção do símbolo desigualdade menor e o símbolo de menos. Para ver qual objeto associado ao nome, o usuário precisa apenas digitar o nome no console e apertar a tecla <em>ENTER</em>.</p>
 <p>Representaremos em termos de diagrama, um nome se ligando a um objeto, na Figura <a href="objetos.html#fig:objx">3.1</a>.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="objetos.html#cb24-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Ligacao_Objeto.PNG&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:objx"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:objx"></span>
 <img src="img/Ligacao_Objeto.PNG" alt="Dizemos que o nome `'x'` se liga ao objeto do tipo (estrutura) vetor." width="420" />
 <p class="caption">
 FIGURA 3.1: Dizemos que o nome <code>'x'</code> se liga ao objeto do tipo (estrutura) vetor.
@@ -292,7 +292,7 @@ FIGURA 3.1: Dizemos que o nome <code>'x'</code> se liga ao objeto do tipo (estru
 <span id="cb26-3"><a href="objetos.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># [1] &quot;0xf8a104fc20&quot;</span></span></code></pre></div>
 <p>Observem que não houve a criação de um outro objeto, mas apenas a ligação de mais um nome ao objeto existente, pois o identificador na memória ativa para o objeto não alterou, é o mesmo. Logo, não temos um outro objeto, mais dois nomes que se ligam ao mesmo objeto.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="objetos.html#cb27-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Ligacao_Objeto2.PNG&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:objxy"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:objxy"></span>
 <img src="img/Ligacao_Objeto2.PNG" alt="Dizemos que o nome `'x'` e '`y`' se ligam ao objeto do tipo (estrutura) vetor." width="434" />
 <p class="caption">
 FIGURA 3.2: Dizemos que o nome <code>'x'</code> e ‘<code>y</code>’ se ligam ao objeto do tipo (estrutura) vetor.
@@ -300,7 +300,7 @@ FIGURA 3.2: Dizemos que o nome <code>'x'</code> e ‘<code>y</code>’ se ligam 
 </div>
 <p>Mais especificamente, acrescentamos um outro diagrama, Figura <a href="objetos.html#fig:objxyglobalenv">3.3</a>, mostrando a representação do ambiente global (.GlobalEnv, nome associado ao objeto que representa o ambiente global).</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="objetos.html#cb28-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Objeto_Ambiente_Global.PNG&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:objxyglobalenv"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:objxyglobalenv"></span>
 <img src="img/Objeto_Ambiente_Global.PNG" alt="Dizemos que o nome `'x'` e `'y'` se ligam ao objeto do tipo (estrutura) vetor e essa ligação fica armazenada no ambiente global." width="80%" />
 <p class="caption">
 FIGURA 3.3: Dizemos que o nome <code>'x'</code> e <code>'y'</code> se ligam ao objeto do tipo (estrutura) vetor e essa ligação fica armazenada no ambiente global.
@@ -328,8 +328,8 @@ FIGURA 3.3: Dizemos que o nome <code>'x'</code> e <code>'y'</code> se ligam ao o
 <p>Por questão de comodidade, iremos a partir de agora, sempre nos referir a um objeto pelo nome associado a ele, para não está sempre se expressando como “um nome associado a um objeto”. Mas que fique claro a discussão realizada anteriormente sobre esses conceitos.</p>
 <p>Nesse momento, nos limitaremos a falar sobre objetos que armazenam dados, do tipo caracteres,
 números e operadores lógicos (TRUE/FALSE).</p>
-<div id="atributos" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Atributos</h2>
+<div id="atributos" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Atributos<a href="objetos.html#atributos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Todos os objetos, terão pelo menos dois tipos de atributos, chamados de atributos intrínsecos. Os demais atributos, quando existem, podem ser verificados pela função attributes(). A ideia dos atributos pode ser pensada como metadados, isto é, um conjunto de informações que caracterizam o objeto.</p>
 <p>Diremos também que todos os objetos <strong>R</strong> tem uma classe, e por meio dessas classes, determinadas funções podem ter comportamento diferente a objetos com classes diferentes. Agora, devemos deixar claro essa informação, apesar do R seguir o princípio do objeto, nem tudo é orientado a objetos, como por exemplo, observamos na linguagens C++ e Java. Deixemos esse tópico para discorrer no Volume II.</p>
 <p>A forma de se verificar a classe de um objeto é pela função class(). Contudo, os objetos internos do <strong>R</strong> (base), quando solicitado sua classe pela função class(), acabam retornando, algumas vezes, resultados equivocados. Uma alternativa é utilizar a função sloop::s3_class() do pacote <strong>sloop</strong>.Isso também será discutido no Volume II.</p>
@@ -366,8 +366,8 @@ números e operadores lógicos (TRUE/FALSE).</p>
 <pre><code>## [1] &quot;list&quot;</code></pre>
 <p>Observe que sem o atributo <em>class= ‘data.frame’</em>, o objeto tem classe list. Isto significa que, o objeto tem uma estrutura em forma de list, mas se comporta como um <em>data.frame</em>, que se apresenta como mostrado anteriormente.</p>
 <p>Veremos no Volume II como criar atributos, classes, e mostrar que não conseguiremos mostrar todos os tipos de classes, pois a todo momento se cria classes em objetos R no desenvolvimento de pacotes.</p>
-<div id="atributos-intrínsecos" class="section level3" number="3.1.1">
-<h3><span class="header-section-number">3.1.1</span> Atributos intrínsecos</h3>
+<div id="atributos-intrínsecos" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Atributos intrínsecos<a href="objetos.html#atributos-intrínsecos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Todos os objetos tem dois atributos intrínsecos: o <strong>modo</strong> e <strong>comprimento</strong>. O modo representa a natureza dos elementos objetos. Para o caso dos vetores atômicos, o <strong>modo</strong> dos vetores podem ser cinco, numérico (<em>numeric</em>), lógico (<em>logic</em>), caractere 3 (<em>character</em>), complexo (<em>complex</em>) ou bruto (<em>raw</em>). Este último, não daremos evidência para esse momento, lembrando que essa tipagem está relacionada alinguagem S. O <strong>comprimento</strong> mede a quantidade de elementos no objeto. Para determinarmos o <strong>modo</strong> de um objeto, usamos a função <em>mode()</em>. Vejamos alguns exemplos pelo Código R 5.3.</p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="objetos.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Objeto modo caractere</span></span>
 <span id="cb44-2"><a href="objetos.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> x <span class="ot">&lt;-</span> <span class="st">&quot;Ben&quot;</span>; <span class="fu">mode</span>(x)</span></code></pre></div>
@@ -523,7 +523,7 @@ dois números são iguais, assim:</p>
 <pre><code>## [1] 4</code></pre>
 <p>Um diagrama apresentando esses três objetos no ambiente global, pode ser apresentado na Figura <a href="objetos.html#fig:v1v2v3">3.4</a>. Observe que acrescentamos agora o <strong>comprimento</strong> dos objetos no diagrama entre colchetes, ao lado do atributo <strong>modo</strong>.</p>
 <div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="objetos.html#cb107-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;img/Diagrama_Objetos.PNG&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:v1v2v3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:v1v2v3"></span>
 <img src="img/Diagrama_Objetos.PNG" alt="Objetos `v1`, `v2` e `v3`." width="442" />
 <p class="caption">
 FIGURA 3.4: Objetos <code>v1</code>, <code>v2</code> e <code>v3</code>.
@@ -540,8 +540,8 @@ FIGURA 3.4: Objetos <code>v1</code>, <code>v2</code> e <code>v3</code>.
 <p>Usamos essa sintaxe pacote::nome_função() para entedermos qual o pacote da função que utilizamos. Contudo, essa forma tem uma importância no sentido de acesso a funções em um pacote sem necessitar anexá-lo no caminho de busca. Assunto abordado mais a frente.</p>
 </div>
 </div>
-<div id="coerção" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Coerção</h2>
+<div id="coerção" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Coerção<a href="objetos.html#coerção" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como falamos anteriormente, os vetores atômicos armazenam um conjunto de elementos de mesmo modo. A coerção é a forma como o <strong>R</strong> coage o <strong>modo</strong> dos objetos. Por exemplo, se um elemento de <strong>modo</strong> caractere estiver em um vetor, todos os demais elementos serão convertidos para esse modo. Vejamos a linha de comando, a seguir.</p>
 <div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="objetos.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criando um objeto x e imprimindo o seu resultado</span></span>
 <span id="cb108-2"><a href="objetos.html#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Nome&quot;</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>);x</span></code></pre></div>
@@ -561,8 +561,8 @@ FIGURA 3.4: Objetos <code>v1</code>, <code>v2</code> e <code>v3</code>.
 <span id="cb114-2"><a href="objetos.html#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">is.character</span>(minha_idade)</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="tipo-de-objetos" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Tipo de objetos</h2>
+<div id="tipo-de-objetos" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Tipo de objetos<a href="objetos.html#tipo-de-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Por fim, pretendemos falar sobre os principais tipos de objetos. O <strong>tipo</strong> vamos entender como a estrutura de como os dados estão organizados em um objeto, relacionados aos seus atributos. Falamos anteriormente sobre a estrutura mais simples, que é o vetor atômico. Mas entendemos que um vetor em <strong>R</strong> podem ser considerados: atômicos ou listas. Podemos então subdividi-los em:</p>
 <ul>
 <li>Vetores atômicos:
@@ -578,8 +578,8 @@ FIGURA 3.4: Objetos <code>v1</code>, <code>v2</code> e <code>v3</code>.
 </ul>
 <p>Existem outros, mas para esse módulo, exploraremos estes nas seções seguintes. As funções para as coerções realizadas pelos usuários, são similares as funções de coerção para modo, isto é, usar as funções prefixadas as.<em><modo></em>.</p>
 <p>Daremos uma visão geral dos objetos apresentados até o momento na Tabela 5.2.</p>
-<div id="vetores" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> Vetores</h3>
+<div id="vetores" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Vetores<a href="objetos.html#vetores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Podemos dizer que existem três tipos principais de vetores atômicos:</p>
 <ul>
 <li>Numéricos (numeric):
@@ -592,12 +592,12 @@ FIGURA 3.4: Objetos <code>v1</code>, <code>v2</code> e <code>v3</code>.
 </ul>
 <p>Existem dois tipos raros que são os complexos (complex) e brutos (raw), que falaremos no Volume
 II.</p>
-<div id="vetores-escalares-ou-constantes" class="section level4" number="3.3.1.1">
-<h4><span class="header-section-number">3.3.1.1</span> Vetores escalares ou constantes</h4>
+<div id="vetores-escalares-ou-constantes" class="section level4 hasAnchor" number="3.3.1.1">
+<h4><span class="header-section-number">3.3.1.1</span> Vetores escalares ou constantes<a href="objetos.html#vetores-escalares-ou-constantes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>O menor comprimento de um vetor é de tamanho um, conhecido também como um escalar. Porém, para o <strong>R</strong> tudo é observado como um vetor. As sintaxes para os tipos especiais são:</p>
 <ul>
 <li><p>os vetores lógicos assumem valores: TRUE ou FALSE, ou abreviados, T ou F, respectivamente. Existem valores especiais devido a precisão de operações na programação, que são os chamados pontos flutuantes. Nesse caso temos: Inf, -Inf e NaN, quando o resultados tende a <span class="math inline">\(\infty\)</span>, <span class="math inline">\(-\infty\)</span>, sem número, respectivamente;</p></li>
-<li><p>os vetores numéricos do tipo ‘double‘ podem ser representados de forma decima (0.123), científica (1.23e5), ou hexadecimal (3E0A);</p></li>
+<li><p>os vetores numéricos do tipo ’double‘ podem ser representados de forma decima (0.123), científica (1.23e5), ou hexadecimal (3E0A);</p></li>
 <li><p>os vetores numéricos do tipo integer são representados pela letra L ao final do número inteiro,
 isto é, 1L, 1.23e5L, etc.;</p></li>
 <li><p>os caracteres são representados pelas palavras, letras, números ou caracteres especiais entre aspas, isto é, ’Ben’, ’a’. Pode ser utilizado também aspa simples, ’Ben’, ’a’, etc.</p></li>
@@ -656,8 +656,8 @@ isto é, 1L, 1.23e5L, etc.;</p></li>
 <p><span class="math display">\[CODIGO-4\]</span></p>
 <p><span class="math display">\[CODIGO-5\]</span></p>
 </div>
-<div id="vetores-longos" class="section level4" number="3.3.1.2">
-<h4><span class="header-section-number">3.3.1.2</span> Vetores longos</h4>
+<div id="vetores-longos" class="section level4 hasAnchor" number="3.3.1.2">
+<h4><span class="header-section-number">3.3.1.2</span> Vetores longos<a href="objetos.html#vetores-longos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Os vetores longos podem ser criados pela função c(), a inicial da palavra concatenar (do inglês, concatenate), que significa agrupar. Vejamos um primeiro exemplo no Código R 5.16.</p>
 <div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="objetos.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criando um vetor &#39;double&#39;</span></span>
 <span id="cb116-2"><a href="objetos.html#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> vetor.num <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>); vetor.num</span></code></pre></div>
@@ -695,7 +695,7 @@ R 5.17.</p>
 <pre><code>## 80 B</code></pre>
 <div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="objetos.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(vetor.num3)</span></code></pre></div>
 <pre><code>## 680 B</code></pre>
-<p>O que podemos observar é que o vetor de modo double precisa de mais memória para armazenar os valores do que o objeto de modo integer. O último objeto, gerado pela chamada ‘:‘(), aparentemente ocupa mais memória. Porém, essa função apresenta um recurso interessante apresentado nas versões posteriores <strong>R</strong> (3.5.0), que é chamado de <strong>abreviação alternativa</strong>. Esse recurso faz com que a sequência de números não seja armazenada completamente, apenas os extremos. Isso significa que para qualquer tamanho de sequência, a ocupação de memória do objeto será sempre a mesma. Lembrando que essa sequência sempre terá o modo double na tipagem C. Outras formas de criar
+<p>O que podemos observar é que o vetor de modo double precisa de mais memória para armazenar os valores do que o objeto de modo integer. O último objeto, gerado pela chamada ’:’(), aparentemente ocupa mais memória. Porém, essa função apresenta um recurso interessante apresentado nas versões posteriores <strong>R</strong> (3.5.0), que é chamado de <strong>abreviação alternativa</strong>. Esse recurso faz com que a sequência de números não seja armazenada completamente, apenas os extremos. Isso significa que para qualquer tamanho de sequência, a ocupação de memória do objeto será sempre a mesma. Lembrando que essa sequência sempre terá o modo double na tipagem C. Outras formas de criar
 sequências de números é usando as funções <em>rep()</em>, <em>rep_len()</em> (mais rápido), <em>seq()</em>, <em>seq_along()</em> (mais rápido) e <em>seq_len()</em> (mais rápido), <em>sequence()</em>, <em>replicate()</em>, <em>gl()</em>, e que pode ser observado no Código R 5.19.</p>
 <div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="objetos.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Repete o numero 2 tres vezes</span></span>
 <span id="cb138-2"><a href="objetos.html#cb138-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">times =</span> <span class="dv">3</span>)</span></code></pre></div>
@@ -766,8 +766,8 @@ sequências de números é usando as funções <em>rep()</em>, <em>rep_len()</em
 <div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="objetos.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> lobstr<span class="sc">::</span><span class="fu">obj_size</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">1000000</span>))</span></code></pre></div>
 <pre><code>## 4,000,048 B</code></pre>
 </div>
-<div id="manipulando-vetores" class="section level4" number="3.3.1.3">
-<h4><span class="header-section-number">3.3.1.3</span> Manipulando vetores</h4>
+<div id="manipulando-vetores" class="section level4 hasAnchor" number="3.3.1.3">
+<h4><span class="header-section-number">3.3.1.3</span> Manipulando vetores<a href="objetos.html#manipulando-vetores" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Quando algum elemento de um vetor não está disponível, representamos pela constante lógica NA, que pode ser coagida para qualquer outro modo de vetor, exceto para raw. Podemos ter constantes lógicas NA específicas para modos específicos: NA_integer_, NA_real_ (o equivalente para o modo double), NA_complex_ e NA_character_. Entretando, dependendo de onde o NA é inserido, o atributo modo no objeto já converte para NA específico de acordo com o seu atributo modo. Essa constante contido no vetor não altera o modo do vetor, isto é,</p>
 <div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="objetos.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">typeof</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">NA</span>))</span></code></pre></div>
 <pre><code>## [1] &quot;double&quot;</code></pre>
@@ -786,28 +786,28 @@ character(0) e logical(0), isto é,</p>
 <pre><code>## [1] 0</code></pre>
 </div>
 </div>
-<div id="matrizes-bidimensionais" class="section level3" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> Matrizes bidimensionais</h3>
+<div id="matrizes-bidimensionais" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Matrizes bidimensionais<a href="objetos.html#matrizes-bidimensionais" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="matrizes-multidimensionais" class="section level3" number="3.3.3">
-<h3><span class="header-section-number">3.3.3</span> Matrizes multidimensionais</h3>
+<div id="matrizes-multidimensionais" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Matrizes multidimensionais<a href="objetos.html#matrizes-multidimensionais" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="listas" class="section level3" number="3.3.4">
-<h3><span class="header-section-number">3.3.4</span> Listas</h3>
+<div id="listas" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Listas<a href="objetos.html#listas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="quadro-de-dados" class="section level3" number="3.3.5">
-<h3><span class="header-section-number">3.3.5</span> Quadro de dados</h3>
+<div id="quadro-de-dados" class="section level3 hasAnchor" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Quadro de dados<a href="objetos.html#quadro-de-dados" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="funções" class="section level3" number="3.3.6">
-<h3><span class="header-section-number">3.3.6</span> Funções</h3>
-<div id="estruturas-de-controle" class="section level4" number="3.3.6.1">
-<h4><span class="header-section-number">3.3.6.1</span> Estruturas de controle</h4>
+<div id="funções" class="section level3 hasAnchor" number="3.3.6">
+<h3><span class="header-section-number">3.3.6</span> Funções<a href="objetos.html#funções" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="estruturas-de-controle" class="section level4 hasAnchor" number="3.3.6.1">
+<h4><span class="header-section-number">3.3.6.1</span> Estruturas de controle<a href="objetos.html#estruturas-de-controle" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
-<div id="como-criar-funções" class="section level4" number="3.3.6.2">
-<h4><span class="header-section-number">3.3.6.2</span> Como criar funções</h4>
+<div id="como-criar-funções" class="section level4 hasAnchor" number="3.3.6.2">
+<h4><span class="header-section-number">3.3.6.2</span> Como criar funções<a href="objetos.html#como-criar-funções" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
-<div id="escopo-léxico" class="section level4" number="3.3.6.3">
-<h4><span class="header-section-number">3.3.6.3</span> Escopo léxico</h4>
+<div id="escopo-léxico" class="section level4 hasAnchor" number="3.3.6.3">
+<h4><span class="header-section-number">3.3.6.3</span> Escopo léxico<a href="objetos.html#escopo-léxico" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 
 </div>
 </div>
@@ -823,7 +823,6 @@ character(0) e logical(0), isto é,</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -863,6 +862,10 @@ gitbook.start({
 "text": null
 },
 "download": ["book-eambr01.pdf", "book-eambr01.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsubsection",
 "scroll_highlight": true

@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Epígrafe | Estudando o Ambiente R</title>
-  <meta name="description" content="Epígrafe | Estudando o Ambiente R" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <title>Epígrafe | R básico</title>
+  <meta name="description" content="Epígrafe | R básico" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Epígrafe | Estudando o Ambiente R" />
+  <meta property="og:title" content="Epígrafe | R básico" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://bendeivide.github.io/book-eambr/" />
   
   
   <meta name="github-repo" content="bendeivide/book-eambr" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Epígrafe | Estudando o Ambiente R" />
+  <meta name="twitter:title" content="Epígrafe | R básico" />
   
   
   
 
-<meta name="author" content="Ben Dêivide, Diego Arthur e Henrique JP Alves" />
+<meta name="author" content="Ben Dêivide e Diego Arthur" />
 
 
-<meta name="date" content="2022-02-23" />
+<meta name="date" content="2022-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="prefácio.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script>
 <script>
@@ -169,86 +168,87 @@ div.csl-indent {
 <li><a href="./">Estudando o ambiente R</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bem-vindo</a>
+<li><a href="index.html#bem-vindo" id="toc-bem-vindo">Bem-vindo<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#licença"><i class="fa fa-check"></i>Licença</a></li>
+<li><a href="index.html#sugestões-e-críticas" id="toc-sugestões-e-críticas">Sugestões e críticas<span></span></a></li>
+<li><a href="index.html#licença" id="toc-licença">Licença<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="epígrafe.html"><a href="epígrafe.html"><i class="fa fa-check"></i>Epígrafe</a></li>
-<li class="chapter" data-level="" data-path="prefácio.html"><a href="prefácio.html"><i class="fa fa-check"></i>Prefácio</a></li>
-<li class="chapter" data-level="1" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html"><i class="fa fa-check"></i><b>1</b> Entendendo a coleção <em>Estudando o ambiente R </em></a>
+<li><a href="epígrafe.html#epígrafe" id="toc-epígrafe">Epígrafe<span></span></a></li>
+<li><a href="prefácio.html#prefácio" id="toc-prefácio">Prefácio<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#entendendo-a-coleção-estudando-o-ambiente-r" id="toc-entendendo-a-coleção-estudando-o-ambiente-r"><span class="toc-section-number">1</span> Entendendo a coleção <em>Estudando o ambiente R </em><span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-i-nível-básico"><i class="fa fa-check"></i><b>1.1</b> Volume I: Nível Básico</a></li>
-<li class="chapter" data-level="1.2" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-ii-nível-intermediário"><i class="fa fa-check"></i><b>1.2</b> Volume II: Nível Intermediário</a></li>
-<li class="chapter" data-level="1.3" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-iii-nível-avançado"><i class="fa fa-check"></i><b>1.3</b> Volume III: Nível Avançado</a></li>
-<li class="chapter" data-level="1.4" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#demais-volumes"><i class="fa fa-check"></i><b>1.4</b> Demais volumes</a></li>
-<li class="chapter" data-level="1.5" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#referencias"><i class="fa fa-check"></i><b>1.5</b> Referências complementares da Coleção</a></li>
-<li class="chapter" data-level="1.6" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#pacutilizados"><i class="fa fa-check"></i><b>1.6</b> Pacotes R utilizados para essa coleção</a></li>
-<li class="chapter" data-level="1.7" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#história-do-r"><i class="fa fa-check"></i><b>1.7</b> História do R</a></li>
-<li class="chapter" data-level="1.8" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#o-que-é-o-r"><i class="fa fa-check"></i><b>1.8</b> O que é o R ?</a></li>
-<li class="chapter" data-level="1.9" data-path="entendendo-a-coleção-estudando-o-ambiente-r.html"><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#instalação-do-r-e-rstudio"><i class="fa fa-check"></i><b>1.9</b> Instalação do R e RStudio</a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-i-nível-básico" id="toc-volume-i-nível-básico"><span class="toc-section-number">1.1</span> Volume I: Nível Básico<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-ii-nível-intermediário" id="toc-volume-ii-nível-intermediário"><span class="toc-section-number">1.2</span> Volume II: Nível Intermediário<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-iii-nível-avançado" id="toc-volume-iii-nível-avançado"><span class="toc-section-number">1.3</span> Volume III: Nível Avançado<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#demais-volumes" id="toc-demais-volumes"><span class="toc-section-number">1.4</span> Demais volumes<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#referencias" id="toc-referencias"><span class="toc-section-number">1.5</span> Referências complementares da Coleção<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#pacutilizados" id="toc-pacutilizados"><span class="toc-section-number">1.6</span> Pacotes R utilizados para essa coleção<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#história-do-r" id="toc-história-do-r"><span class="toc-section-number">1.7</span> História do R<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#o-que-é-o-r" id="toc-o-que-é-o-r"><span class="toc-section-number">1.8</span> O que é o R ?<span></span></a></li>
+<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#instalação-do-r-e-rstudio" id="toc-instalação-do-r-e-rstudio"><span class="toc-section-number">1.9</span> Instalação do R e RStudio<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html"><i class="fa fa-check"></i><b>2</b> Como o R trabalha</a>
+<li><a href="como-o-r-trabalha.html#como-o-r-trabalha" id="toc-como-o-r-trabalha"><span class="toc-section-number">2</span> Como o R trabalha<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio"><i class="fa fa-check"></i><b>2.1</b> Como utilizar o R e o RStudio</a></li>
-<li class="chapter" data-level="2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-no-r"><i class="fa fa-check"></i><b>2.2</b> Comandos no R</a>
+<li><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio" id="toc-como-utilizar-o-r-e-o-rstudio"><span class="toc-section-number">2.1</span> Como utilizar o R e o RStudio<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#comandos-no-r" id="toc-comandos-no-r"><span class="toc-section-number">2.2</span> Comandos no R<span></span></a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#console-e-prompt-de-comando"><i class="fa fa-check"></i><b>2.2.1</b> Console e <em>Prompt</em> de comando</a></li>
-<li class="chapter" data-level="2.2.2" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#comandos-elementares"><i class="fa fa-check"></i><b>2.2.2</b> Comandos elementares</a></li>
-<li class="chapter" data-level="2.2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#execução-de-comandos"><i class="fa fa-check"></i><b>2.2.3</b> Execução de comandos</a></li>
-<li class="chapter" data-level="2.2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores"><i class="fa fa-check"></i><b>2.2.4</b> Chamada e correção de comandos anteriores</a></li>
+<li><a href="como-o-r-trabalha.html#console-e-prompt-de-comando" id="toc-console-e-prompt-de-comando"><span class="toc-section-number">2.2.1</span> Console e <em>Prompt</em> de comando<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#comandos-elementares" id="toc-comandos-elementares"><span class="toc-section-number">2.2.2</span> Comandos elementares<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#execução-de-comandos" id="toc-execução-de-comandos"><span class="toc-section-number">2.2.3</span> Execução de comandos<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores" id="toc-chamada-e-correção-de-comandos-anteriores"><span class="toc-section-number">2.2.4</span> Chamada e correção de comandos anteriores<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace"><i class="fa fa-check"></i><b>2.3</b> Ambiente Global (área de trabalho ou <em>Workspace</em>)</a></li>
-<li class="chapter" data-level="2.4" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory"><i class="fa fa-check"></i><b>2.4</b> Arquivos <code>.RData</code> e <code>.Rhistory</code></a></li>
-<li class="chapter" data-level="2.5" data-path="como-o-r-trabalha.html"><a href="como-o-r-trabalha.html#criando-e-salvando-um-script"><i class="fa fa-check"></i><b>2.5</b> Criando e salvando um <em>script</em></a></li>
+<li><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace" id="toc-ambiente-global-área-de-trabalho-ou-workspace"><span class="toc-section-number">2.3</span> Ambiente Global (área de trabalho ou <em>Workspace</em>)<span></span></a></li>
+<li><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory" id="toc-arquivos-.rdata-e-.rhistory"><span class="toc-section-number">2.4</span> Arquivos <code>.RData</code> e <code>.Rhistory</code><span></span></a></li>
+<li><a href="como-o-r-trabalha.html#criando-e-salvando-um-script" id="toc-criando-e-salvando-um-script"><span class="toc-section-number">2.5</span> Criando e salvando um <em>script</em><span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="objetos.html"><a href="objetos.html"><i class="fa fa-check"></i><b>3</b> Objetos</a>
+<li><a href="objetos.html#objetos" id="toc-objetos"><span class="toc-section-number">3</span> Objetos<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="objetos.html"><a href="objetos.html#atributos"><i class="fa fa-check"></i><b>3.1</b> Atributos</a>
+<li><a href="objetos.html#atributos" id="toc-atributos"><span class="toc-section-number">3.1</span> Atributos<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="objetos.html"><a href="objetos.html#atributos-intrínsecos"><i class="fa fa-check"></i><b>3.1.1</b> Atributos intrínsecos</a></li>
+<li><a href="objetos.html#atributos-intrínsecos" id="toc-atributos-intrínsecos"><span class="toc-section-number">3.1.1</span> Atributos intrínsecos<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="objetos.html"><a href="objetos.html#coerção"><i class="fa fa-check"></i><b>3.2</b> Coerção</a></li>
-<li class="chapter" data-level="3.3" data-path="objetos.html"><a href="objetos.html#tipo-de-objetos"><i class="fa fa-check"></i><b>3.3</b> Tipo de objetos</a>
+<li><a href="objetos.html#coerção" id="toc-coerção"><span class="toc-section-number">3.2</span> Coerção<span></span></a></li>
+<li><a href="objetos.html#tipo-de-objetos" id="toc-tipo-de-objetos"><span class="toc-section-number">3.3</span> Tipo de objetos<span></span></a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="objetos.html"><a href="objetos.html#vetores"><i class="fa fa-check"></i><b>3.3.1</b> Vetores</a></li>
-<li class="chapter" data-level="3.3.2" data-path="objetos.html"><a href="objetos.html#matrizes-bidimensionais"><i class="fa fa-check"></i><b>3.3.2</b> Matrizes bidimensionais</a></li>
-<li class="chapter" data-level="3.3.3" data-path="objetos.html"><a href="objetos.html#matrizes-multidimensionais"><i class="fa fa-check"></i><b>3.3.3</b> Matrizes multidimensionais</a></li>
-<li class="chapter" data-level="3.3.4" data-path="objetos.html"><a href="objetos.html#listas"><i class="fa fa-check"></i><b>3.3.4</b> Listas</a></li>
-<li class="chapter" data-level="3.3.5" data-path="objetos.html"><a href="objetos.html#quadro-de-dados"><i class="fa fa-check"></i><b>3.3.5</b> Quadro de dados</a></li>
-<li class="chapter" data-level="3.3.6" data-path="objetos.html"><a href="objetos.html#funções"><i class="fa fa-check"></i><b>3.3.6</b> Funções</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="importando-dados.html"><a href="importando-dados.html"><i class="fa fa-check"></i><b>4</b> Importando dados</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="importando-dados.html"><a href="importando-dados.html#preparação-dos-dados"><i class="fa fa-check"></i><b>4.1</b> Preparação dos dados</a></li>
-<li class="chapter" data-level="4.2" data-path="importando-dados.html"><a href="importando-dados.html#importando-dados-1"><i class="fa fa-check"></i><b>4.2</b> Importando dados</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html"><i class="fa fa-check"></i><b>5</b> Boas práticas de como escrever um código</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos"><i class="fa fa-check"></i><b>5.1</b> Nomes de arquivos</a></li>
-<li class="chapter" data-level="5.2" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando"><i class="fa fa-check"></i><b>5.2</b> Comentar as linahs de comando</a></li>
-<li class="chapter" data-level="5.3" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos"><i class="fa fa-check"></i><b>5.3</b> Nome de objetos</a>
-<ul>
-<li class="chapter" data-level="5.3.1" data-path="boas-práticas-de-como-escrever-um-código.html"><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe"><i class="fa fa-check"></i><b>5.3.1</b> Sintaxe</a></li>
+<li><a href="objetos.html#vetores" id="toc-vetores"><span class="toc-section-number">3.3.1</span> Vetores<span></span></a></li>
+<li><a href="objetos.html#matrizes-bidimensionais" id="toc-matrizes-bidimensionais"><span class="toc-section-number">3.3.2</span> Matrizes bidimensionais<span></span></a></li>
+<li><a href="objetos.html#matrizes-multidimensionais" id="toc-matrizes-multidimensionais"><span class="toc-section-number">3.3.3</span> Matrizes multidimensionais<span></span></a></li>
+<li><a href="objetos.html#listas" id="toc-listas"><span class="toc-section-number">3.3.4</span> Listas<span></span></a></li>
+<li><a href="objetos.html#quadro-de-dados" id="toc-quadro-de-dados"><span class="toc-section-number">3.3.5</span> Quadro de dados<span></span></a></li>
+<li><a href="objetos.html#funções" id="toc-funções"><span class="toc-section-number">3.3.6</span> Funções<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="pacotes.html"><a href="pacotes.html"><i class="fa fa-check"></i><b>6</b> Pacotes</a>
+<li><a href="importando-dados.html#importando-dados" id="toc-importando-dados"><span class="toc-section-number">4</span> Importando dados<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="pacotes.html"><a href="pacotes.html#estrutura-básica-de-um-pacote"><i class="fa fa-check"></i><b>6.1</b> Estrutura básica de um pacote</a></li>
-<li class="chapter" data-level="6.2" data-path="pacotes.html"><a href="pacotes.html#instalação-de-um-pacote"><i class="fa fa-check"></i><b>6.2</b> Instalação de um pacote</a></li>
-<li class="chapter" data-level="6.3" data-path="pacotes.html"><a href="pacotes.html#objetivos-de-um-pacote"><i class="fa fa-check"></i><b>6.3</b> Objetivos de um pacote</a></li>
-<li class="chapter" data-level="6.4" data-path="pacotes.html"><a href="pacotes.html#utilizando-funções-de-um-pacote"><i class="fa fa-check"></i><b>6.4</b> Utilizando funções de um pacote</a></li>
-<li class="chapter" data-level="6.5" data-path="pacotes.html"><a href="pacotes.html#carregando-e-anexando-um-pacote"><i class="fa fa-check"></i><b>6.5</b> Carregando e anexando um pacote</a></li>
-<li class="chapter" data-level="6.6" data-path="pacotes.html"><a href="pacotes.html#namespace-de-um-pacote"><i class="fa fa-check"></i><b>6.6</b> <em>NAMESPACE</em> de um pacote</a></li>
-<li class="chapter" data-level="6.7" data-path="pacotes.html"><a href="pacotes.html#usando-os-operadores-e"><i class="fa fa-check"></i><b>6.7</b> Usando os operadores <code>::</code> e <code>:::</code></a></li>
+<li><a href="importando-dados.html#preparação-dos-dados" id="toc-preparação-dos-dados"><span class="toc-section-number">4.1</span> Preparação dos dados<span></span></a></li>
+<li><a href="importando-dados.html#importando-dados-1" id="toc-importando-dados-1"><span class="toc-section-number">4.2</span> Importando dados<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html"><i class="fa fa-check"></i><b>7</b> Ambientes e caminho de busca</a>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#boas-práticas-de-como-escrever-um-código" id="toc-boas-práticas-de-como-escrever-um-código"><span class="toc-section-number">5</span> Boas práticas de como escrever um código<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="ambientes-e-caminho-de-busca.html"><a href="ambientes-e-caminho-de-busca.html#a-superatribuição"><i class="fa fa-check"></i><b>7.1</b> A superatribuição</a></li>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos" id="toc-nomes-de-arquivos"><span class="toc-section-number">5.1</span> Nomes de arquivos<span></span></a></li>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando" id="toc-comentar-as-linahs-de-comando"><span class="toc-section-number">5.2</span> Comentar as linahs de comando<span></span></a></li>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos" id="toc-nome-de-objetos"><span class="toc-section-number">5.3</span> Nome de objetos<span></span></a>
+<ul>
+<li><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe" id="toc-sintaxe"><span class="toc-section-number">5.3.1</span> Sintaxe<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="interfaces-com-outras-linguagens.html"><a href="interfaces-com-outras-linguagens.html"><i class="fa fa-check"></i><b>8</b> Interfaces com outras linguagens</a></li>
-<li class="chapter" data-level="9" data-path="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html"><i class="fa fa-check"></i><b>9</b> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
-<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+</ul></li>
+<li><a href="pacotes.html#pacotes" id="toc-pacotes"><span class="toc-section-number">6</span> Pacotes<span></span></a>
+<ul>
+<li><a href="pacotes.html#estrutura-básica-de-um-pacote" id="toc-estrutura-básica-de-um-pacote"><span class="toc-section-number">6.1</span> Estrutura básica de um pacote<span></span></a></li>
+<li><a href="pacotes.html#instalação-de-um-pacote" id="toc-instalação-de-um-pacote"><span class="toc-section-number">6.2</span> Instalação de um pacote<span></span></a></li>
+<li><a href="pacotes.html#objetivos-de-um-pacote" id="toc-objetivos-de-um-pacote"><span class="toc-section-number">6.3</span> Objetivos de um pacote<span></span></a></li>
+<li><a href="pacotes.html#utilizando-funções-de-um-pacote" id="toc-utilizando-funções-de-um-pacote"><span class="toc-section-number">6.4</span> Utilizando funções de um pacote<span></span></a></li>
+<li><a href="pacotes.html#carregando-e-anexando-um-pacote" id="toc-carregando-e-anexando-um-pacote"><span class="toc-section-number">6.5</span> Carregando e anexando um pacote<span></span></a></li>
+<li><a href="pacotes.html#namespace-de-um-pacote" id="toc-namespace-de-um-pacote"><span class="toc-section-number">6.6</span> <em>NAMESPACE</em> de um pacote<span></span></a></li>
+<li><a href="pacotes.html#usando-os-operadores-e" id="toc-usando-os-operadores-e"><span class="toc-section-number">6.7</span> Usando os operadores <code>::</code> e <code>:::</code><span></span></a></li>
+</ul></li>
+<li><a href="ambientes-e-caminho-de-busca.html#ambientes-e-caminho-de-busca" id="toc-ambientes-e-caminho-de-busca"><span class="toc-section-number">7</span> Ambientes e caminho de busca<span></span></a>
+<ul>
+<li><a href="ambientes-e-caminho-de-busca.html#a-superatribuição" id="toc-a-superatribuição"><span class="toc-section-number">7.1</span> A superatribuição<span></span></a></li>
+</ul></li>
+<li><a href="interfaces-com-outras-linguagens.html#interfaces-com-outras-linguagens" id="toc-interfaces-com-outras-linguagens"><span class="toc-section-number">8</span> Interfaces com outras linguagens<span></span></a></li>
+<li><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html#considerações-e-preparação-para-programação-em-r-nível-intermediário" id="toc-considerações-e-preparação-para-programação-em-r-nível-intermediário"><span class="toc-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)<span></span></a></li>
+<li><a href="referências.html#referências" id="toc-referências">Referências<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://bendeivide.github.io/cursor" target="blank">Acesse o curso desse material!</a></li>
 
@@ -261,7 +261,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Estudando o Ambiente R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R básico</a>
           </h1>
         </div>
 
@@ -269,8 +269,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="epígrafe" class="section level1 unnumbered">
-<h1>Epígrafe</h1>
+<div id="epígrafe" class="section level1 unnumbered hasAnchor">
+<h1>Epígrafe<a href="epígrafe.html#epígrafe" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><em>A melhor linguagem é a que você domina!</em> (Ben Dêivide)</p>
 </div>
             </section>
@@ -283,7 +283,6 @@ div.csl-indent {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -323,6 +322,10 @@ gitbook.start({
 "text": null
 },
 "download": ["book-eambr01.pdf", "book-eambr01.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsubsection",
 "scroll_highlight": true
