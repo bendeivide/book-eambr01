@@ -1,7 +1,7 @@
 bookdown::bs4_book:
   theme:
     # Cor dos links
-    primary: "#59293F"
+    primary: "#0067BE"
     # Cor do texto
     fg: "#000000"
     # Cor do fundo

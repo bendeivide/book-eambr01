@@ -1,276 +1,102 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Capítulo 1 Entendendo a coleção Estudando o ambiente R  | R básico</title>
+<meta name="author" content="Ben Dêivide e Diego Arthur">
+<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta property="og:title" content="Capítulo 1 Entendendo a coleção Estudando o ambiente R  | R básico">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://bendeivide.github.io/book-eambr01/entendendo-a-coleção-estudando-o-ambiente-r.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Capítulo 1 Entendendo a coleção Estudando o ambiente R  | R básico">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Entendendo a coleção Estudando o ambiente R  | R básico</title>
-  <meta name="description" content="Capítulo 1 Entendendo a coleção Estudando o ambiente R  | R básico" />
-  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Capítulo 1 Entendendo a coleção Estudando o ambiente R  | R básico" />
-  <meta property="og:type" content="book" />
-  
-  
-  <meta name="github-repo" content="bendeivide/book-eambr" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Entendendo a coleção Estudando o ambiente R  | R básico" />
-  
-  
-  
-
-<meta name="author" content="Ben Dêivide e Diego Arthur" />
-
-
-<meta name="date" content="2022-09-02" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="prefácio.html"/>
-<link rel="next" href="como-o-r-trabalha.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BG6SYWV817');
-</script>
-
-
+      gtag('config', 'G-BG6SYWV817');
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 1em;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+          margin-bottom: 1em;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<meta name="description" content="A Coleção Estudando o ambiente R não tem como objetivo principal de ensinar análise de dados. Mas sim, proporcionar ao leitor um conhecimento sobre a linguagem R, de modo que se possa usufruir...">
+<meta property="og:description" content="A Coleção Estudando o ambiente R não tem como objetivo principal de ensinar análise de dados. Mas sim, proporcionar ao leitor um conhecimento sobre a linguagem R, de modo que se possa usufruir...">
+<meta name="twitter:description" content="A Coleção Estudando o ambiente R não tem como objetivo principal de ensinar análise de dados. Mas sim, proporcionar ao leitor um conhecimento sobre a linguagem R, de modo que se possa usufruir...">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Estudando o ambiente R</a></li>
-
-<li class="divider"></li>
-<li><a href="index.html#bem-vindo" id="toc-bem-vindo">Bem-vindo<span></span></a>
-<ul>
-<li><a href="index.html#sugestões-e-críticas" id="toc-sugestões-e-críticas">Sugestões e críticas<span></span></a></li>
-<li><a href="index.html#licença" id="toc-licença">Licença<span></span></a></li>
-</ul></li>
-<li><a href="epígrafe.html#epígrafe" id="toc-epígrafe">Epígrafe<span></span></a></li>
-<li><a href="prefácio.html#prefácio" id="toc-prefácio">Prefácio<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#entendendo-a-coleção-estudando-o-ambiente-r" id="toc-entendendo-a-coleção-estudando-o-ambiente-r"><span class="toc-section-number">1</span> Entendendo a coleção <em>Estudando o ambiente R </em><span></span></a>
-<ul>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-i-nível-básico" id="toc-volume-i-nível-básico"><span class="toc-section-number">1.1</span> Volume I: Nível Básico<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-ii-nível-intermediário" id="toc-volume-ii-nível-intermediário"><span class="toc-section-number">1.2</span> Volume II: Nível Intermediário<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-iii-nível-avançado" id="toc-volume-iii-nível-avançado"><span class="toc-section-number">1.3</span> Volume III: Nível Avançado<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#demais-volumes" id="toc-demais-volumes"><span class="toc-section-number">1.4</span> Demais volumes<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#referencias" id="toc-referencias"><span class="toc-section-number">1.5</span> Referências complementares da Coleção<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#pacutilizados" id="toc-pacutilizados"><span class="toc-section-number">1.6</span> Pacotes R utilizados para essa coleção<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#história-do-r" id="toc-história-do-r"><span class="toc-section-number">1.7</span> História do R<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#o-que-é-o-r" id="toc-o-que-é-o-r"><span class="toc-section-number">1.8</span> O que é o R ?<span></span></a></li>
-<li><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#instalação-do-r-e-rstudio" id="toc-instalação-do-r-e-rstudio"><span class="toc-section-number">1.9</span> Instalação do R e RStudio<span></span></a></li>
-</ul></li>
-<li><a href="como-o-r-trabalha.html#como-o-r-trabalha" id="toc-como-o-r-trabalha"><span class="toc-section-number">2</span> Como o R trabalha<span></span></a>
-<ul>
-<li><a href="como-o-r-trabalha.html#como-utilizar-o-r-e-o-rstudio" id="toc-como-utilizar-o-r-e-o-rstudio"><span class="toc-section-number">2.1</span> Como utilizar o R e o RStudio<span></span></a></li>
-<li><a href="como-o-r-trabalha.html#comandos-no-r" id="toc-comandos-no-r"><span class="toc-section-number">2.2</span> Comandos no R<span></span></a>
-<ul>
-<li><a href="como-o-r-trabalha.html#console-e-prompt-de-comando" id="toc-console-e-prompt-de-comando"><span class="toc-section-number">2.2.1</span> Console e <em>Prompt</em> de comando<span></span></a></li>
-<li><a href="como-o-r-trabalha.html#comandos-elementares" id="toc-comandos-elementares"><span class="toc-section-number">2.2.2</span> Comandos elementares<span></span></a></li>
-<li><a href="como-o-r-trabalha.html#execução-de-comandos" id="toc-execução-de-comandos"><span class="toc-section-number">2.2.3</span> Execução de comandos<span></span></a></li>
-<li><a href="como-o-r-trabalha.html#chamada-e-correção-de-comandos-anteriores" id="toc-chamada-e-correção-de-comandos-anteriores"><span class="toc-section-number">2.2.4</span> Chamada e correção de comandos anteriores<span></span></a></li>
-</ul></li>
-<li><a href="como-o-r-trabalha.html#ambiente-global-área-de-trabalho-ou-workspace" id="toc-ambiente-global-área-de-trabalho-ou-workspace"><span class="toc-section-number">2.3</span> Ambiente Global (área de trabalho ou <em>Workspace</em>)<span></span></a></li>
-<li><a href="como-o-r-trabalha.html#arquivos-.rdata-e-.rhistory" id="toc-arquivos-.rdata-e-.rhistory"><span class="toc-section-number">2.4</span> Arquivos <code>.RData</code> e <code>.Rhistory</code><span></span></a></li>
-<li><a href="como-o-r-trabalha.html#criando-e-salvando-um-script" id="toc-criando-e-salvando-um-script"><span class="toc-section-number">2.5</span> Criando e salvando um <em>script</em><span></span></a></li>
-</ul></li>
-<li><a href="objetos.html#objetos" id="toc-objetos"><span class="toc-section-number">3</span> Objetos<span></span></a>
-<ul>
-<li><a href="objetos.html#atributos" id="toc-atributos"><span class="toc-section-number">3.1</span> Atributos<span></span></a>
-<ul>
-<li><a href="objetos.html#atributos-intrínsecos" id="toc-atributos-intrínsecos"><span class="toc-section-number">3.1.1</span> Atributos intrínsecos<span></span></a></li>
-</ul></li>
-<li><a href="objetos.html#coerção" id="toc-coerção"><span class="toc-section-number">3.2</span> Coerção<span></span></a></li>
-<li><a href="objetos.html#tipo-de-objetos" id="toc-tipo-de-objetos"><span class="toc-section-number">3.3</span> Tipo de objetos<span></span></a>
-<ul>
-<li><a href="objetos.html#vetores" id="toc-vetores"><span class="toc-section-number">3.3.1</span> Vetores<span></span></a></li>
-<li><a href="objetos.html#matrizes-bidimensionais" id="toc-matrizes-bidimensionais"><span class="toc-section-number">3.3.2</span> Matrizes bidimensionais<span></span></a></li>
-<li><a href="objetos.html#matrizes-multidimensionais" id="toc-matrizes-multidimensionais"><span class="toc-section-number">3.3.3</span> Matrizes multidimensionais<span></span></a></li>
-<li><a href="objetos.html#listas" id="toc-listas"><span class="toc-section-number">3.3.4</span> Listas<span></span></a></li>
-<li><a href="objetos.html#quadro-de-dados" id="toc-quadro-de-dados"><span class="toc-section-number">3.3.5</span> Quadro de dados<span></span></a></li>
-<li><a href="objetos.html#funções" id="toc-funções"><span class="toc-section-number">3.3.6</span> Funções<span></span></a></li>
-</ul></li>
-</ul></li>
-<li><a href="importando-dados.html#importando-dados" id="toc-importando-dados"><span class="toc-section-number">4</span> Importando dados<span></span></a>
-<ul>
-<li><a href="importando-dados.html#preparação-dos-dados" id="toc-preparação-dos-dados"><span class="toc-section-number">4.1</span> Preparação dos dados<span></span></a></li>
-<li><a href="importando-dados.html#importando-dados-1" id="toc-importando-dados-1"><span class="toc-section-number">4.2</span> Importando dados<span></span></a></li>
-</ul></li>
-<li><a href="boas-práticas-de-como-escrever-um-código.html#boas-práticas-de-como-escrever-um-código" id="toc-boas-práticas-de-como-escrever-um-código"><span class="toc-section-number">5</span> Boas práticas de como escrever um código<span></span></a>
-<ul>
-<li><a href="boas-práticas-de-como-escrever-um-código.html#nomes-de-arquivos" id="toc-nomes-de-arquivos"><span class="toc-section-number">5.1</span> Nomes de arquivos<span></span></a></li>
-<li><a href="boas-práticas-de-como-escrever-um-código.html#comentar-as-linahs-de-comando" id="toc-comentar-as-linahs-de-comando"><span class="toc-section-number">5.2</span> Comentar as linahs de comando<span></span></a></li>
-<li><a href="boas-práticas-de-como-escrever-um-código.html#nome-de-objetos" id="toc-nome-de-objetos"><span class="toc-section-number">5.3</span> Nome de objetos<span></span></a>
-<ul>
-<li><a href="boas-práticas-de-como-escrever-um-código.html#sintaxe" id="toc-sintaxe"><span class="toc-section-number">5.3.1</span> Sintaxe<span></span></a></li>
-</ul></li>
-</ul></li>
-<li><a href="pacotes.html#pacotes" id="toc-pacotes"><span class="toc-section-number">6</span> Pacotes<span></span></a>
-<ul>
-<li><a href="pacotes.html#estrutura-básica-de-um-pacote" id="toc-estrutura-básica-de-um-pacote"><span class="toc-section-number">6.1</span> Estrutura básica de um pacote<span></span></a></li>
-<li><a href="pacotes.html#instalação-de-um-pacote" id="toc-instalação-de-um-pacote"><span class="toc-section-number">6.2</span> Instalação de um pacote<span></span></a></li>
-<li><a href="pacotes.html#objetivos-de-um-pacote" id="toc-objetivos-de-um-pacote"><span class="toc-section-number">6.3</span> Objetivos de um pacote<span></span></a></li>
-<li><a href="pacotes.html#utilizando-funções-de-um-pacote" id="toc-utilizando-funções-de-um-pacote"><span class="toc-section-number">6.4</span> Utilizando funções de um pacote<span></span></a></li>
-<li><a href="pacotes.html#carregando-e-anexando-um-pacote" id="toc-carregando-e-anexando-um-pacote"><span class="toc-section-number">6.5</span> Carregando e anexando um pacote<span></span></a></li>
-<li><a href="pacotes.html#namespace-de-um-pacote" id="toc-namespace-de-um-pacote"><span class="toc-section-number">6.6</span> <em>NAMESPACE</em> de um pacote<span></span></a></li>
-<li><a href="pacotes.html#usando-os-operadores-e" id="toc-usando-os-operadores-e"><span class="toc-section-number">6.7</span> Usando os operadores <code>::</code> e <code>:::</code><span></span></a></li>
-</ul></li>
-<li><a href="ambientes-e-caminho-de-busca.html#ambientes-e-caminho-de-busca" id="toc-ambientes-e-caminho-de-busca"><span class="toc-section-number">7</span> Ambientes e caminho de busca<span></span></a>
-<ul>
-<li><a href="ambientes-e-caminho-de-busca.html#a-superatribuição" id="toc-a-superatribuição"><span class="toc-section-number">7.1</span> A superatribuição<span></span></a></li>
-</ul></li>
-<li><a href="interfaces-com-outras-linguagens.html#interfaces-com-outras-linguagens" id="toc-interfaces-com-outras-linguagens"><span class="toc-section-number">8</span> Interfaces com outras linguagens<span></span></a></li>
-<li><a href="considerações-e-preparação-para-programação-em-r-nível-intermediário.html#considerações-e-preparação-para-programação-em-r-nível-intermediário" id="toc-considerações-e-preparação-para-programação-em-r-nível-intermediário"><span class="toc-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)<span></span></a></li>
-<li><a href="referências.html#referências" id="toc-referências">Referências<span></span></a></li>
-<li class="divider"></li>
-<li><a href="https://bendeivide.github.io/cursor" target="blank">Acesse o curso desse material!</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Coleção Estudando o Ambiente R (Volume I)">R básico</a>:
+        <small class="text-muted">Coleção Estudando o Ambiente R (Volume I)</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R básico</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Bem-vindo</a></li>
+<li><a class="" href="ep%C3%ADgrafe.html">Epígrafe</a></li>
+<li><a class="" href="pref%C3%A1cio.html">Prefácio</a></li>
+<li><a class="active" href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
+<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></li>
+<li><a class="" href="objetos.html"><span class="header-section-number">3</span> Objetos</a></li>
+<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
+<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></li>
+<li><a class="" href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></li>
+<li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
+<li><a class="" href="pacotes-1.html"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li><a class="" href="refer%C3%AAncias.html">Referências</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/bendeivide/book-eambr01">View book source <i class="fab fa-github"></i></a></p>
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="entendendo-a-coleção-estudando-o-ambiente-r" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Entendendo a coleção <em>Estudando o ambiente R </em><a href="entendendo-a-coleção-estudando-o-ambiente-r.html#entendendo-a-coleção-estudando-o-ambiente-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="entendendo-a-coleção-estudando-o-ambiente-r" class="section level1" number="1">
+<h1>
+<span class="header-section-number">Capítulo 1</span> Entendendo a coleção <em>Estudando o ambiente R </em><a class="anchor" aria-label="anchor" href="#entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r"><i class="fas fa-link"></i></a>
+</h1>
 <p>A Coleção <em>Estudando o ambiente R</em> não tem como objetivo principal de ensinar análise de dados. Mas sim, proporcionar ao leitor um conhecimento sobre a linguagem <a href="http://r-project.org/" target="_blank">R</a>, de modo que se possa usufruir todos os recursos que esse ambiente possa proporcionar.</p>
 <p>Ainda como complemento, não queremos nesse material, convencê-lo a utilizar a linguagem <a href="http://r-project.org/" target="_blank">R</a>, pois a melhor linguagem é aquela que você domina. Contudo, pretendemos mostrar que os recursos utilizados pelo <a href="http://r-project.org/" target="_blank">R</a> não estão mais limitados a própria análise de dados. Um exemplo é esse material, que nesse momento usufruímos da própria linguagem para repassar as nossas experiências sem ao menos ter o domínio sobre linguagens do tipo <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code>, dentre outras, necessárias para uma boa renderização de página <em>web</em>. Isso mostra a potencial ferramenta de trabalho que o ambiente <a href="http://r-project.org/" target="_blank">R</a> pode ser para a vida profissional.</p>
 <p>Dessa forma, propormos um entendimento sobre a sintaxe e semântica de como a linguagem <a href="http://r-project.org/" target="_blank">R</a> é desenvolvida. Com isso, o leitor será capaz após a leitura dos dois primeiros volumes, de estudar um pouco mais sobre essa ciência que nos últimos anos vem ganhando mais evidência, que é a Estatística. Tudo isso devido ao grande volume de informações obtidos nessa era tecnológica. Juntamente com ela, o <a href="http://r-project.org/" target="_blank">R</a> se tornará uma poderosa ferramenta para entender os padrões que estão por trás dos dados, que por sinal, é a moeda valiosa do momento, ou melhor, sempre foi!</p>
@@ -287,26 +113,36 @@ div.csl-indent {
 <li>Volume III: Nìvel Avançado.</li>
 </ul>
 <p>A seguir, explanaremos sobre cada um dos módulos.</p>
-<div id="volume-i-nível-básico" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Volume I: Nível Básico<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-i-nível-básico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Esse primeiro volume, que representa o livro corrente, apresenta um breve <strong>histórico</strong> sobre a linguagem, a sua instalação, bem como os recursos que a IDE<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> <a href="http://rstudio.org/" target="_blank">RStudio</a>, o conhecimento da <strong>sintaxe</strong> e <strong>semântica</strong> da linguagem <a href="http://r-project.org/" target="_blank">R</a>, compreendendo as estruturas bases da linguagem, sobre o que é um <strong>objeto</strong> e como construir uma <strong>função</strong>, o entendimento sobre <strong>fluxos de controle</strong>. O que é um <strong>pacote</strong>, <strong>carregar</strong> e <strong>anexar</strong> um pacote, e quem são as pessoas que fazem parte da manutenção dessa linguagem, também serão assuntos desse primeiro módulo. <strong>Caminhos de busca</strong>, <strong>ambientes</strong> e <em>namespaces</em>, teremos noções básicas. Algo muito interessante, que pode mudar a vida de um programador em <a href="http://r-project.org/" target="_blank">R</a> são as <strong>boas práticas para a escrita de um código</strong>, tema também abordado nesse módulo.</p>
+<div id="volume-i-nível-básico" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Volume I: Nível Básico<a class="anchor" aria-label="anchor" href="#volume-i-n%C3%ADvel-b%C3%A1sico"><i class="fas fa-link"></i></a>
+</h2>
+<p>Esse primeiro volume, que representa o livro corrente, apresenta um breve <strong>histórico</strong> sobre a linguagem, a sua instalação, bem como os recursos que a IDE<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Do inglês, &lt;em&gt;Integrated Development Environment&lt;/em&gt;, que significa ambiente de desenvolvimento integrado&lt;/p&gt;"><sup>1</sup></a> <a href="http://rstudio.org/" target="_blank">RStudio</a>, o conhecimento da <strong>sintaxe</strong> e <strong>semântica</strong> da linguagem <a href="http://r-project.org/" target="_blank">R</a>, compreendendo as estruturas bases da linguagem, sobre o que é um <strong>objeto</strong> e como construir uma <strong>função</strong>, o entendimento sobre <strong>fluxos de controle</strong>. O que é um <strong>pacote</strong>, <strong>carregar</strong> e <strong>anexar</strong> um pacote, e quem são as pessoas que fazem parte da manutenção dessa linguagem, também serão assuntos desse primeiro módulo. <strong>Caminhos de busca</strong>, <strong>ambientes</strong> e <em>namespaces</em>, teremos noções básicas. Algo muito interessante, que pode mudar a vida de um programador em <a href="http://r-project.org/" target="_blank">R</a> são as <strong>boas práticas para a escrita de um código</strong>, tema também abordado nesse módulo.</p>
 <p>A ideia desse volume é proporcionar um entendimento básico, um primeiro contato com a linguagem, fazendo com que o leitor possa dar os primeiros passos, executando as primeiras linhas de comando. Mas também, dando o enfoque com erros tão recorrentes, como o entendimento sobre um objeto, ou o anexo de um pacote no caminho de busca. Temas como esses, dentre outros, serão a forma inicial que encontramos, para que posteriormente, seja dado um aprofundamento sobre a estrutura de um objeto <a href="http://r-project.org/" target="_blank">R</a> bem como a sua manipulação, e adicionado a isso, a inserção de como são os paradigmas da programação nesse ambiente. Essa última parte será estudada, no Volume II, apresentado a seguir.</p>
 </div>
-<div id="volume-ii-nível-intermediário" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Volume II: Nível Intermediário<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-ii-nível-intermediário" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="volume-ii-nível-intermediário" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Volume II: Nível Intermediário<a class="anchor" aria-label="anchor" href="#volume-ii-n%C3%ADvel-intermedi%C3%A1rio"><i class="fas fa-link"></i></a>
+</h2>
 <p>O volume II é introduzido com uma melhor caracterização do ambiente <a href="http://r-project.org/" target="_blank">R</a> quanto ao seu <strong>escopo léxico</strong>, como <strong>linguagem interpretada</strong>, como <strong>programação funcional</strong>, como <strong>programação meta-paradigma</strong>, como <strong>programação dinâmica</strong>; apresentaremos <strong>manipulações de objetos em mais detalhe</strong>, bem como o surgimento de alguns outros objetos como <em>tibble</em>, <strong>cópias de objetos</strong>. Uma característica do ambiente <a href="http://r-project.org/" target="_blank">R</a> é que a linguagem pode ser <strong>orientada a objetos</strong> e isso será estudado nesse módulo. Introduziremos ao <strong>desenvolvimento de pacotes R</strong>, e aprofundaremos sobre os <strong>ambientes</strong>. Por fim, mostraremos como desenvolver Projeto do <a href="http://rstudio.org/" target="_blank">RStudio</a> e integrá-los ao <a href="http://github.com/" target="_blank">GitHub</a>, e dessa forma, introduziremos sobre o sistema <a href="https://git-scm.com/">Git</a>.</p>
 <p>Esse talvez seja o maior volume, dentre os três iniciais, porque apenar de não precisarmos entender mais a ideia dos objetos, que foram retratadas no Volume I, a inserção dos paradigmas da programação para este volume, trará uma maior riqueza de características para o <a href="http://r-project.org/" target="_blank">R</a>, mostrando a sua versatilidade. Também, daremos um maior detalhamento como manipular objetos, e as otimizações existentes da linguagem, como por exemplo, a modificação no local, que se entendida, poderá perceber que o <em>loop</em> no ambiente <a href="http://r-project.org/" target="_blank">R</a> não é lento quanto parece. Ao final desse volume, falaremos sobre como propagar o seu código com o sistema <a href="https://git-scm.com/">Git</a> na plataforma <a href="http://github.com/" target="_blank">GitHub</a>, sincronizado com os projetos do <a href="http://rstudio.org/" target="_blank">RStudio</a>.</p>
 </div>
-<div id="volume-iii-nível-avançado" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Volume III: Nível Avançado<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#volume-iii-nível-avançado" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="volume-iii-nível-avançado" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Volume III: Nível Avançado<a class="anchor" aria-label="anchor" href="#volume-iii-n%C3%ADvel-avan%C3%A7ado"><i class="fas fa-link"></i></a>
+</h2>
 <p>O Volume III, será a total exploração do manual <a href="https://cran.r-project.org/doc/manuals/R-ints.html">R Internals</a>. Apesar de ser um assunto voltado para membros do <a href="https://www.r-project.org/contributors.html">R Core Team</a>, pretendemos entender como o <a href="http://r-project.org/" target="_blank">R</a> trabalha nos bastidores. Dessa forma, teremos total controle sobre as nossas rotinas. Contudo, para usários que pretendem entender o ambiente <a href="http://r-project.org/" target="_blank">R</a> de forma aplicada, pode avançar esse volume para a leitura dos volumes seguintes.</p>
 </div>
-<div id="demais-volumes" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Demais volumes<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#demais-volumes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="demais-volumes" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> Demais volumes<a class="anchor" aria-label="anchor" href="#demais-volumes"><i class="fas fa-link"></i></a>
+</h2>
 <p>Os demais volumes compreendem lacunas necessárias para serem abordadas com profundidade, tais como: <em>Documentações no R</em>, <em>Desenvolvimento de pacote R</em>, <em>Gráficos</em>, <em>Banco de dados</em>, <em>Interface Gráfica ao Usuário</em>, <em>Interface R com outras linguagens</em>, dentre outros.</p>
 </div>
-<div id="referencias" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Referências complementares da Coleção<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="referencias" class="section level2" number="1.5">
+<h2>
+<span class="header-section-number">1.5</span> Referências complementares da Coleção<a class="anchor" aria-label="anchor" href="#referencias"><i class="fas fa-link"></i></a>
+</h2>
 <p>Citaremos alguns livros e materiais utilizados para o desenvolvimento dessa coleção, que alguns podem ser acessados <em>online</em> via <em>bookdown</em>, tais como:</p>
 <ul>
 <li><p><a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.html">An Introduction to R</a> (R Core Team)</p></li>
@@ -315,50 +151,55 @@ div.csl-indent {
 <li><p><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html">Writing R Extensions</a> (R Core Team)</p></li>
 <li><p><a href="https://cran.r-project.org/doc/manuals/R-lang.html">R Language Definition</a> (R Core Team)</p></li>
 <li><p><a href="https://cran.r-project.org/doc/manuals/R-ints.html">R Internals</a> (R Core Team)</p></li>
-<li><p><a href="https://adv-r.hadley.nz/">Advanced R</a> <span class="citation">(<a href="#ref-hadley2019" role="doc-biblioref">WICKHAM, 2019</a>)</span></p></li>
-<li><p><a href="http://advanced-r-solutions.rbind.io/">Advanced R Solutions</a> <span class="citation">(<a href="#ref-hadleyetal2021" role="doc-biblioref">GROSSER; BUMAN; WICKHAM, 2021</a>)</span></p></li>
-<li><p><a href="https://r-pkgs.org/index.html">R Packages</a> <span class="citation">(<a href="#ref-hadley2015" role="doc-biblioref">WICKHAM, 2015</a>)</span></p></li>
-<li><p><a href="https://r4ds.had.co.nz/">R for Data Science</a> <span class="citation">(<a href="#ref-hadley2017" role="doc-biblioref">WICKHAM; GROLEMUND, 2017</a>)</span></p></li>
-<li><p>Extending R <span class="citation">(<a href="#ref-chambers2016" role="doc-biblioref">CHAMBERS, 2016</a>)</span></p></li>
-<li><p>Software for Data Analysis: Programming with R <span class="citation">(<a href="#ref-chambers2008" role="doc-biblioref">CHAMBERS, 2008</a>)</span></p></li>
-<li><p>R in a Nutshell <span class="citation">(<a href="#ref-adler2012" role="doc-biblioref">ADLER, 2012</a>)</span></p></li>
-<li><p>The New S Language (Livro Branco) <span class="citation">(<a href="#ref-chambers1988" role="doc-biblioref">BECKER; CHAMBERS; WILKS, 1988</a>)</span></p></li>
-<li><p>Statistical Models in S (Livro Azul) <span class="citation">(<a href="#ref-chambers1991" role="doc-biblioref">CHAMBERS; HASTIE, 1991</a>)</span></p></li>
-<li><p>Programming with Data (Livro Verde) <span class="citation">(<a href="#ref-chambers1998" role="doc-biblioref">CHAMBERS; HASTIE, 1998</a>)</span></p></li>
+<li><p><a href="https://adv-r.hadley.nz/">Advanced R</a> <span class="citation">(<a href="refer%C3%AAncias.html#ref-hadley2019" role="doc-biblioref">WICKHAM, 2019</a>)</span></p></li>
+<li><p><a href="http://advanced-r-solutions.rbind.io/">Advanced R Solutions</a> <span class="citation">(<a href="refer%C3%AAncias.html#ref-hadleyetal2021" role="doc-biblioref">GROSSER; BUMAN; WICKHAM, 2021</a>)</span></p></li>
+<li><p><a href="https://r-pkgs.org/index.html">R Packages</a> <span class="citation">(<a href="refer%C3%AAncias.html#ref-hadley2015" role="doc-biblioref">WICKHAM, 2015</a>)</span></p></li>
+<li><p><a href="https://r4ds.had.co.nz/">R for Data Science</a> <span class="citation">(<a href="refer%C3%AAncias.html#ref-hadley2017" role="doc-biblioref">WICKHAM; GROLEMUND, 2017</a>)</span></p></li>
+<li><p>Extending R <span class="citation">(<a href="refer%C3%AAncias.html#ref-chambers2016" role="doc-biblioref">CHAMBERS, 2016</a>)</span></p></li>
+<li><p>Software for Data Analysis: Programming with R <span class="citation">(<a href="refer%C3%AAncias.html#ref-chambers2008" role="doc-biblioref">CHAMBERS, 2008</a>)</span></p></li>
+<li><p>R in a Nutshell <span class="citation">(<a href="refer%C3%AAncias.html#ref-adler2012" role="doc-biblioref">ADLER, 2012</a>)</span></p></li>
+<li><p>The New S Language (Livro Branco) <span class="citation">(<a href="refer%C3%AAncias.html#ref-chambers1988" role="doc-biblioref">BECKER; CHAMBERS; WILKS, 1988</a>)</span></p></li>
+<li><p>Statistical Models in S (Livro Azul) <span class="citation">(<a href="refer%C3%AAncias.html#ref-chambers1991" role="doc-biblioref">CHAMBERS; HASTIE, 1991</a>)</span></p></li>
+<li><p>Programming with Data (Livro Verde) <span class="citation">(<a href="refer%C3%AAncias.html#ref-chambers1998" role="doc-biblioref">CHAMBERS; HASTIE, 1998</a>)</span></p></li>
 </ul>
 <p>Vale salientar que esses três últimos livros, se pudéssemos unir, seria a bíblia do ambiente <a href="http://r-project.org/" target="_blank">R</a>.</p>
 </div>
-<div id="pacutilizados" class="section level2 hasAnchor" number="1.6">
-<h2><span class="header-section-number">1.6</span> Pacotes R utilizados para essa coleção<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#pacutilizados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Apresentamos uma lista de pacotes, Tabela <a href="entendendo-a-coleção-estudando-o-ambiente-r.html#tab:instalar-pacotes">1.1</a>, utilizados ao longo da coleção para os exemplos abordados, como também para o próprio desenvolvimento dos livros.</p>
-<table>
-<caption><span id="tab:instalar-pacotes">TABELA 1.1: </span> Pacotes a serem instalados para o acompanhamento dos exemplos e exercícios da coleção <em>Estudando o ambiente R</em>.</caption>
+<div id="pacutilizados" class="section level2" number="1.6">
+<h2>
+<span class="header-section-number">1.6</span> Pacotes R utilizados para essa coleção<a class="anchor" aria-label="anchor" href="#pacutilizados"><i class="fas fa-link"></i></a>
+</h2>
+<p>Apresentamos uma lista de pacotes, Tabela <a href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html#tab:instalar-pacotes">1.1</a>, utilizados ao longo da coleção para os exemplos abordados, como também para o próprio desenvolvimento dos livros.</p>
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:instalar-pacotes">TABELA 1.1: </span> Pacotes a serem instalados para o acompanhamento dos exemplos e exercícios da coleção <em>Estudando o ambiente R</em>.</caption>
 <colgroup>
-<col width="25%" />
-<col width="74%" />
+<col width="25%">
+<col width="74%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="center">Pacote</th>
 <th align="center">Finalidade</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="center"><a href="https://lobstr.r-lib.org/">lobstr</a></td>
-<td align="center">Estudar a sintaxe do ambiente <a href="http://r-project.org/" target="_blank">R</a></td>
+<td align="center">Estudar a sintaxe do ambiente <a href="http://r-project.org/" target="_blank">R</a>
+</td>
 </tr>
 <tr class="even">
 <td align="center"><a href="https://cran.r-project.org/package=codetools/">codetools</a></td>
-<td align="center">Estudar a sintaxe do ambiente <a href="http://r-project.org/" target="_blank">R</a></td>
+<td align="center">Estudar a sintaxe do ambiente <a href="http://r-project.org/" target="_blank">R</a>
+</td>
 </tr>
 <tr class="odd">
 <td align="center"><a href="https://cran.r-project.org/package=XR/">XR</a></td>
-<td align="center">Estudar a sintaxe do ambiente <a href="http://r-project.org/" target="_blank">R</a></td>
+<td align="center">Estudar a sintaxe do ambiente <a href="http://r-project.org/" target="_blank">R</a>
+</td>
 </tr>
 <tr class="even">
 <td align="center"><a href="https://rlang.r-lib.org/">rlang</a></td>
-<td align="center">Estudar a sintaxe do ambiente <a href="http://r-project.org/" target="_blank">R</a></td>
+<td align="center">Estudar a sintaxe do ambiente <a href="http://r-project.org/" target="_blank">R</a>
+</td>
 </tr>
 <tr class="odd">
 <td align="center"><a href="https://sloop.r-lib.org/">sloop</a></td>
@@ -374,21 +215,23 @@ div.csl-indent {
 </tr>
 <tr class="even">
 <td align="center"><a href="https://rstudio.github.io/distill/">distill</a></td>
-<td align="center">Criação da página <em>web</em></td>
+<td align="center">Criação da página <em>web</em>
+</td>
 </tr>
 </tbody>
-</table>
-
+</table></div>
 <!-- # (PART) Programação em R (Nível Básico) {-} -->
 </div>
-<div id="história-do-r" class="section level2 hasAnchor" number="1.7">
-<h2><span class="header-section-number">1.7</span> História do R<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#história-do-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="história-do-r" class="section level2" number="1.7">
+<h2>
+<span class="header-section-number">1.7</span> História do R<a class="anchor" aria-label="anchor" href="#hist%C3%B3ria-do-r"><i class="fas fa-link"></i></a>
+</h2>
 <p>A linguagem <strong>R</strong> tem a sua primeira aparição científica publicada em 1996, com o artigo intitulado
 R: A Language for Data Analysis and Graphics, cujos os autores são os desenvolvedores da linguagem,
 George Ross Ihaka e Robert Clifford Gentleman.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:CriadoresR"></span>
-<img src="img/Criadores_R.PNG" alt="Criadores do R." width="100%" />
-<p class="caption">
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CriadoresR"></span>
+<img src="img/Criadores_R.PNG" alt="Criadores do R." width="100%"><p class="caption">
 FIGURA 1.1: Criadores do R.
 </p>
 </div>
@@ -402,21 +245,26 @@ Lumley, Martin Maechler, Sebastian Meyer, Paul Murrel, Martyn Plummer, Brian Rip
 Sarkarm, Duncan Temple Lang, Luke Tierney e Simon Urbanek. Por fim, o CRAN (Comprehensive R Archive Network) foi oficialmente anunciado em 23 de abril de 1997 3. O CRAN é um conjunto de sites (espelhos) que transportam material idêntico, com
 as contribuições do <strong>R</strong> de uma forma geral.</p>
 </div>
-<div id="o-que-é-o-r" class="section level2 hasAnchor" number="1.8">
-<h2><span class="header-section-number">1.8</span> O que é o R ?<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#o-que-é-o-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="o-que-é-o-r" class="section level2" number="1.8">
+<h2>
+<span class="header-section-number">1.8</span> O que é o R ?<a class="anchor" aria-label="anchor" href="#o-que-%C3%A9-o-r"><i class="fas fa-link"></i></a>
+</h2>
 <p>R é uma linguagem de programação e ambiente de software livre e código aberto (open source). Entendemos4:</p>
 <ul>
-<li><p><strong>Software livre</strong>: <em>software</em> que respeita a liberdade e sendo de comunidade dos usuários, isto é, os usuários possuem a liberdade de executar, copiar, distribuir, estudar, mudar, melhorar o <em>software</em>. Ainda reforça que um <em>software</em> é livre se os seus usuários possuem quatro liberdades:</p>
+<li>
+<p><strong>Software livre</strong>: <em>software</em> que respeita a liberdade e sendo de comunidade dos usuários, isto é, os usuários possuem a liberdade de executar, copiar, distribuir, estudar, mudar, melhorar o <em>software</em>. Ainda reforça que um <em>software</em> é livre se os seus usuários possuem quatro liberdades:</p>
 <ol style="list-style-type: decimal">
 <li>Liberdade 0 - A liberdade de executar o programa como você desejar, para qualquer propósito;</li>
 <li>Liberdade 1 - A liberdade de estudar como o programa funciona, e adaptá-la as suas necessidades;</li>
 <li>Liberdade 2 - A liberdade de redistribuir cópias de modo que você possa ajudar outros;</li>
 <li>Liberdade 3 - A liberdade de distribuir cópias de suas versões modificadas a outros;</li>
-</ol></li>
+</ol>
+</li>
 </ul>
 <p>Algo que deve estar claro é que um <em>software</em> livre não significa não comercial. Sem esse fim, o <em>software</em> livre não atingiria seus objetivos. Agora perceba que, segundo Richard Stallman, a ideia de software livre faz campanha pela liberdade para os usuários da computação. Por outro lado, o código aberto valoriza principalmente a vantagem prática e não faz campanha por princípios.</p>
 <ul>
-<li><em>Código aberto</em>: Para Richard Stallman 6 código aberto apoia critérios um pouco mais flexíveis que os do software livre. Todos os códigos abertos de software livre lançados se qualificariam como código aberto. Quase todos os softwares de código aberto são software livre, mas há exceções, como algumas licenças de código aberto que são restritivas demais, de forma que elas não se qualificam como licenças livres. Nesse contexto, o autor cita muitas situações que diferenciam os dois termos. Vale a pena a leitura.</li>
+<li>
+<em>Código aberto</em>: Para Richard Stallman 6 código aberto apoia critérios um pouco mais flexíveis que os do software livre. Todos os códigos abertos de software livre lançados se qualificariam como código aberto. Quase todos os softwares de código aberto são software livre, mas há exceções, como algumas licenças de código aberto que são restritivas demais, de forma que elas não se qualificam como licenças livres. Nesse contexto, o autor cita muitas situações que diferenciam os dois termos. Vale a pena a leitura.</li>
 </ul>
 <p>A linguagem <strong>R</strong> é uma combinação da linguagem S com a semântica de escopo léxico da linguagem Scheme. Dessa forma, a linguagem <strong>R</strong> se diferencia em dois aspectos principais 7:</p>
 <ul>
@@ -426,32 +274,34 @@ as contribuições do <strong>R</strong> de uma forma geral.</p>
 <p>Vejamos alguns exemplos para entendimento (Se você ainda não está ambientado ao <strong>R</strong>, estude esse módulo primeiro, e depois reflita sobre esses exemplos). Antes de executar as linhas de comando, instale o pacote <strong>lobstr</strong> como segue:</p>
 <p><span class="math display">\[CODIGO\]</span></p>
 <p>Como a linguagem <em>S</em> é uma linguagem interpretada cuja base é a linguagem <em>FORTRAN</em>, a linguagem <em>R</em> também é uma linguagem interpretada e baseada além da linguagem <em>S</em>, tem como base as linguagens de baixo nível <em>C</em>, <em>FORTRAN</em> e a própria linguagem <em>R</em>.</p>
-<p>Embora o <em>R</em> tenha uma interface baseada em linhas de comando, existem muitas interfaces gráficas ao usuário com destaque ao <em>RStudio</em>, criado por Joseph J. Allaire, Figura <a href="entendendo-a-coleção-estudando-o-ambiente-r.html#fig:CriadorRStudio">1.2</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:CriadorRStudio"></span>
-<img src="img/Criador_RStudio.PNG" alt="J. J. Allaire, o criador do RStudio" width="100%" />
-<p class="caption">
+<p>Embora o <em>R</em> tenha uma interface baseada em linhas de comando, existem muitas interfaces gráficas ao usuário com destaque ao <em>RStudio</em>, criado por Joseph J. Allaire, Figura <a href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html#fig:CriadorRStudio">1.2</a>.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CriadorRStudio"></span>
+<img src="img/Criador_RStudio.PNG" alt="J. J. Allaire, o criador do RStudio" width="100%"><p class="caption">
 FIGURA 1.2: J. J. Allaire, o criador do RStudio
 </p>
 </div>
 <p>Essa interface tornou o <em>R</em> mais popular, pois além de produzir,hoje, pacotes de grande utilização como a família de pacotes <em>tidyverse</em>, <strong>rmarkdown</strong>, <strong>shiny</strong>, dentre outros, permite uma eficiente capacidade de trabalho de análise de utilização do <strong>R</strong>. Uma vez que o <strong>RStudio</strong> facilita a utilização de muitos recursos por meio de botões, como por exemplo, a criação de um pacote <em>R</em>. Há quem diga que para um iniciante em <strong>R</strong>, não seja recomendado utilizar o <em>RStudio</em> para o entendimento da linguagem. Cremos, que o problema não é a IDE utilizada, e sim, o caminho onde deseja chegar com a linguagem <strong>R</strong>.</p>
 <p>No Brasil, o primeiro espelho do CRAN foi criado na UFPR, pelo grupo do Prof. Paulo Justiniano. Inclusive um dos primeiros materiais mais completos sobre a linguagem <strong>R</strong> produzidos no Brasil, foi dele, iniciado em 2005, intitulado “Introdução ao Ambiente Estatístico <strong>R</strong>”. Vale a pena assistirmos do evento a palestra: R Reflexões: um pouco de história e experiências com o R, proferida pelo Prof. Paulo Justiniano Ribeiro Júnior, no R Day - Encontro nacional de usuários do R, ocorrido em 2018 em Curitiba/UFPR, do qual o vídeo está disponível no Canal (Youtube) LEG UFPR.</p>
 </div>
-<div id="instalação-do-r-e-rstudio" class="section level2 hasAnchor" number="1.9">
-<h2><span class="header-section-number">1.9</span> Instalação do R e RStudio<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#instalação-do-r-e-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="instalação-do-r-e-rstudio" class="section level2" number="1.9">
+<h2>
+<span class="header-section-number">1.9</span> Instalação do R e RStudio<a class="anchor" aria-label="anchor" href="#instala%C3%A7%C3%A3o-do-r-e-rstudio"><i class="fas fa-link"></i></a>
+</h2>
 <p>Para realizarmos a instalação do ambiente <strong>R</strong> , uma vez que o <strong>RStudio</strong> é apenas uma IDE, e sem o <strong>R</strong>, não há sentido instalá-lo, seguimos os seguintes passos:</p>
 <ul>
-<li>Instalação do R - <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>, Figura <a href="entendendo-a-coleção-estudando-o-ambiente-r.html#fig:InstalacaoR01">1.3</a> e <a href="entendendo-a-coleção-estudando-o-ambiente-r.html#fig:InstalacaoR02">1.4</a>:</li>
+<li>Instalação do R - <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>, Figura <a href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html#fig:InstalacaoR01">1.3</a> e <a href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html#fig:InstalacaoR02">1.4</a>:</li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:InstalacaoR01"></span>
-<img src="img/Instalacao_R_01.PNG" alt=" Primeiro passo para Instalação do R" width="100%" />
-<p class="caption">
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:InstalacaoR01"></span>
+<img src="img/Instalacao_R_01.PNG" alt=" Primeiro passo para Instalação do R" width="100%"><p class="caption">
 FIGURA 1.3:  Primeiro passo para Instalação do R
 </p>
 </div>
 <!-- IMAGEM 02 -->
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:InstalacaoR02"></span>
-<img src="img/Instalacao_R_02.PNG" alt="Segundo passo para Instalação do R" width="100%" />
-<p class="caption">
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:InstalacaoR02"></span>
+<img src="img/Instalacao_R_02.PNG" alt="Segundo passo para Instalação do R" width="100%"><p class="caption">
 FIGURA 1.4: Segundo passo para Instalação do R
 </p>
 </div>
@@ -461,120 +311,58 @@ FIGURA 1.4: Segundo passo para Instalação do R
 <p>Justificamos a utilização do <strong>RStudio</strong> pela quantidade de recursos disponíveis e a diversidade de usuários <strong>R</strong>, que hoje o perfil não é apenas de um programador, mas de um usuário que necessita de uma ferramenta estatística para análise de seus dados. Dessa forma, até por questão de praticidade, e de uso pessoal, não deixaremos de repassar o entendimento sobre a linguagem <strong>R</strong> com o uso do <strong>RStudio</strong>.</p>
 <p>Outra coisa importante, é que esses passos para a instalação do R e RStudio se basearam no sistema operacional Windows, mas para detalhes sobre essas instalações em outros sistemas operacionais, acesse:
 <a href="https://bendeivide.github.io/cursor" class="uri">https://bendeivide.github.io/cursor</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="img/Instalacao_R_Studio01.PNG" alt="Instalação do RStudio" width="100%" />
-<p class="caption">
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="img/Instalacao_R_Studio01.PNG" alt="Instalação do RStudio" width="100%"><p class="caption">
 FIGURA 1.5: Instalação do RStudio
 </p>
 </div>
 
 </div>
 </div>
-<h3>Referências<a href="referências.html#referências" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body" entry-spacing="1">
-<div id="ref-adler2012" class="csl-entry">
-ADLER, J. <strong><span>R</span> in a Nutshell</strong>. Sebastopol: O’Reilly Media, 2012.
-</div>
-<div id="ref-chambers1988" class="csl-entry">
-BECKER, R. A.; CHAMBERS, J. M.; WILKS, A. R. <strong>The New S Language: A Programming Environment for Data Analysis and Graphics</strong>. Boca Raton, Flórida: CRC Press, 1988.
-</div>
-<div id="ref-chambers2008" class="csl-entry">
-CHAMBERS, J. M. <strong>Software for Data Analysis: Programming with <span>R</span></strong>. New York: Springer, 2008.
-</div>
-<div id="ref-chambers2016" class="csl-entry">
-CHAMBERS, J. M. <strong>Extending <span>R</span></strong>. Boca Raton, Florida: Chapman; Hall/CRC, 2016.
-</div>
-<div id="ref-chambers1991" class="csl-entry">
-CHAMBERS, J. M.; HASTIE, T. J. <strong>Statistical Methods in <span>S</span></strong>. London: Chapman &amp; Hall, 1991.
-</div>
-<div id="ref-chambers1998" class="csl-entry">
-CHAMBERS, J. M.; HASTIE, T. J. <strong>Programming with Data: A Guide to the S Language</strong>. Ney York: Springer, 1998.
-</div>
-<div id="ref-hadleyetal2021" class="csl-entry">
-GROSSER, M.; BUMAN, H.; WICKHAM, H. <strong><a href="https://adv-r.hadley.nz/">Advanced <span>R</span> <span>S</span>olutions</a></strong>. 2nd. ed. Boca Raton, Florida: Chapman; Hall/CRC, 2021.
-</div>
-<div id="ref-hadley2015" class="csl-entry">
-WICKHAM, H. <strong><a href="https://r-pkgs.org/index.html"><span>R</span> Packages</a></strong>. 2nd. ed. [s.l.] O’Reilly Media, 2015.
-</div>
-<div id="ref-hadley2019" class="csl-entry">
-WICKHAM, H. <strong><a href="https://adv-r.hadley.nz/">Advanced <span>R</span></a></strong>. 2nd. ed. Boca Raton, Florida: Chapman; Hall/CRC, 2019.
-</div>
-<div id="ref-hadley2017" class="csl-entry">
-WICKHAM, H.; GROLEMUND, G. <strong><a href="https://r4ds.had.co.nz/"><span>R</span> for Data Science</a></strong>. Sebastopol: O’Reilly Media, 2017.
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Do inglês, <em>Integrated Development Environment</em>, que significa ambiente de desenvolvimento integrado<a href="entendendo-a-coleção-estudando-o-ambiente-r.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
-</div>
-            </section>
 
-          </div>
-        </div>
-      </div>
-<a href="prefácio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="como-o-r-trabalha.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+  <div class="chapter-nav">
+<div class="prev"><a href="pref%C3%A1cio.html">Prefácio</a></div>
+<div class="next"><a href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
+<li><a class="nav-link" href="#volume-i-n%C3%ADvel-b%C3%A1sico"><span class="header-section-number">1.1</span> Volume I: Nível Básico</a></li>
+<li><a class="nav-link" href="#volume-ii-n%C3%ADvel-intermedi%C3%A1rio"><span class="header-section-number">1.2</span> Volume II: Nível Intermediário</a></li>
+<li><a class="nav-link" href="#volume-iii-n%C3%ADvel-avan%C3%A7ado"><span class="header-section-number">1.3</span> Volume III: Nível Avançado</a></li>
+<li><a class="nav-link" href="#demais-volumes"><span class="header-section-number">1.4</span> Demais volumes</a></li>
+<li><a class="nav-link" href="#referencias"><span class="header-section-number">1.5</span> Referências complementares da Coleção</a></li>
+<li><a class="nav-link" href="#pacutilizados"><span class="header-section-number">1.6</span> Pacotes R utilizados para essa coleção</a></li>
+<li><a class="nav-link" href="#hist%C3%B3ria-do-r"><span class="header-section-number">1.7</span> História do R</a></li>
+<li><a class="nav-link" href="#o-que-%C3%A9-o-r"><span class="header-section-number">1.8</span> O que é o R ?</a></li>
+<li><a class="nav-link" href="#instala%C3%A7%C3%A3o-do-r-e-rstudio"><span class="header-section-number">1.9</span> Instalação do R e RStudio</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/bendeivide/book-eambr01/blob/master/01-intro.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/bendeivide/book-eambr01/edit/master/01-intro.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-20.</p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": true,
-"facebook": true,
-"twitter": true,
-"linkedin": true,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": true,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/bendeivide/book-eambr01/edit/main/01-intro.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["book-eambr01.pdf", "book-eambr01.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsubsection",
-"scroll_highlight": true
-},
-"toolbar": {
-"position": "fixed"
-}
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -586,7 +374,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

@@ -141,23 +141,21 @@ As funções que utilizaremos, a seguir, são utilizadas quando desejamos realiz
 
 A sintaxe das estruturas de controle de tipo special é:
 
-```{r echo=TRUE, prompt=TRUE}
- função (condição) {
+```{}
+função (condição) {
  expressão
- }
-
+}
 ```
 
 A sintaxe das funções repeat e swicth() foge um pouco desse padrão, e explicaremos em sua aplicação, mais a frente. Apesar da linguagem **R** ser interpretada, acaba ganhando a fama de que as funções loops são mais lentas. Em alguns casos, a construção do algoritmo proporciona isso e não a implementação dessas funções em si. Um exemplo que podemos citar, são as cópias de objetos que podem ter um gasto de memória ativa imenso no processo e proporcionar um gasto computacional. E isso foi devido a forma de como o algoritmo copiou os objetos, e não o desempenho das funções loops. Veremos isso em detalhes no Volume II.
 
 A primeira estrutura é o if(), com sintaxe:
 
-```{r echo=TRUE, prompt=TRUE}
-
- if (condição) {
+```{}
+if (condição) {
  # Corpo do if()
  #instruções sob condição = TRUE
- }
+}
 
 ```
 
@@ -165,15 +163,14 @@ O fluxograma para o entendimento da função if() pode ser observado na Figura 6
 
 Agora, acrescentando a função else trabalhando conjuntamente com a função if(), temos a sua forma sintática dada por:
 
-```{r echo=TRUE, prompt=TRUE}
-  if (condição) {
+```{}
+if (condição) {
  # Corpo do if()
-#instruções sob condição = TRUE
- } else {
+ # instruções sob condição = TRUE
+} else {
  # Corpo do else
-# instruções sob condição = FALSE
- }
-
+ # instruções sob condição = FALSE
+}
 ```
 em que o fluxograma da combinação dessas duas funções podem ser representados pela Figura \@ref(fig:FluxogramadaFuncaoif).
 
@@ -187,9 +184,9 @@ knitr::include_graphics("img/Fluxograma_da_Funcao_if.png")
 knitr::include_graphics("img/Fluxograma_da_Funcao_if_else.png")
 ```
 
-```{r echo=TRUE, prompt=TRUE}
- if (condição) instr1
- if (condição) instr1 else instr2
+```{}
+if (condição) instr1
+if (condição) instr1 else instr2
 ```
 
 ```{r echo=TRUE, prompt=TRUE}
@@ -250,7 +247,7 @@ Observamos na primeira forma que a condição para if() avaliar, nós não preci
 
 Observamos que o fato de x < y ser vetorizado, tivemos problema com a condição if(). A partir de w > 5, o resultado era para ter retornado sempre o valor 5, isto é, o valor verdadeiro (x) para a condição. Isso implica que a condição deve ser sempre entre vetores escalares. Uma saída seria utilizar a função for(), conjugada com if() e else. Porém, como forma de vetorizar essa condição, foi criado a função ifelse(), em que o fluxograma dessa função pode ser observado pela Figura , cuja forma sintática é dada a seguir.
 
-```{r echo=TRUE, prompt=TRUE}
+```{}
 ifelse (condição, expressão sob TRUE, expressão sob FALSE)
 
 ```
@@ -343,10 +340,10 @@ knitr::include_graphics("img/Fluxograma_loop.png")
 
 A primeira função loop é repeat, apresentamos sua sintaxe:
 
-```{r echo=TRUE, prompt=TRUE}
- repeat {
+```{}
+repeat {
  expressão ...
- }
+}
 ```
 
 Juntamente com o repeat, usamos as funções break e next, pois a função repeat não tem uma
@@ -404,12 +401,10 @@ O que diferencia o Código R 6.9 para o Código R 6.10 é o acréscimo da funç�
 
 Similar a função repeat(), temos a função while(), que agora, temos uma condição de parada, cujo fluxograma é dado pela Figura \@ref(fig:FluxogramaWhile), com sintaxe dada por:
 
-```{r echo=TRUE, prompt=TRUE}
- while (condição) {
+```{}
+while (condição) {
  expressão ...
- }
-
-
+}
 ```
 
 ```{r FluxogramaWhile, fig.cap = "Fluxograma da função while", out.width = "80%", fig.align='center'}
@@ -452,10 +447,10 @@ ao ciclo. Vejamos um outro exemplo, no Código R 6.12.
 Observamos a utilização da função next, similar ao que foi realizado com a função repeat. Por
 fim, a função for(), com cuja sintaxe é dada por:
 
-```{r echo=TRUE, prompt=TRUE}
- for (contador in lista) {
+```{}
+for (contador in lista) {
  expressão ...
- }
+}
 ```
 
 Com essa função, também podemos utilizar break e next. Porém, o controle do ciclo nessa
@@ -503,11 +498,11 @@ Como falado anteriormente, no início, a estrutura da função criada se mantém
 Desse modo, apresentamos o primeiro exemplo no Código R 6.15, a seguir
 
 ```{r echo=TRUE, prompt=TRUE}
- # Criando a funcao 'fun1'
- fun1 <- function(x) {
+# Criando a funcao 'fun1'
+fun1 <- function(x) {
  res <- x + 1
  return(res)
- }
+}
 ```
 
 Nesse caso, temos uma função chamada fun1(), cujo argumento de entrada é x. Observemos que uma função é como um objeto do tipo vector, associamos um nome ao objeto da mesma forma. O corpo apresenta uma delimitação por chaves ..., em que apresenta um comando de atribuição, cujo nome res se associa ao resultado da soma x + 1. Por fim, o resultado dessa função, imprime res, por meio da função return(). Para executar fun1(), fazemos:
@@ -519,19 +514,12 @@ fun1(x = 5)
 O que aconteceu foi que ao assumir x = 5 no argumento, essa informação foi repassada para o corpo da função fun1(), aonde existia o nome x, que se associou ao objeto 5, para esse caso. A função + é chamada, e a expressão x + 1 é avaliada, cujo nome res se associa ao resultado dessa expressão. Por fim, quando a função fun1() é chamada, o resultado de res é impressa no console, por meio de return(res). Vamos verificar os três componentes da função fun1() no console, isto é,
 
 ```{r echo=TRUE, prompt=TRUE}
- # Argumentos
+# Argumentos
 formals(fun1)
-$x
- # Corpo
- body(fun1)
-{
-res <- x + 1
-return(res)
-}
- # Ambiente
- environment(fun1)
-<environment: R_GlobalEnv>
-
+# Corpo
+body(fun1)
+# Ambiente
+environment(fun1)
 ```
 
 O corpo da função é executado de forma sequencial, a partir da primeira linha de comando até a última. Apesar de recomendado, também não é obrigatório o uso da função return(), são as chamadas saídas explícitas6, sendo observado como segue,
@@ -615,41 +603,24 @@ Mais detalhes sobre esses três aspectos serão abordados no Volume II.
 Os argumentos nas funções podem ser nomeados ou não. Quando nomeados, a ordem como são
 inseridos na função não importa. Já os argumentos não nomeados, seus valores precisam estar na ordem como a função foi desenvolvida. Vejamos o Código R 6.17, para entender melhor.
 
-```{r echo=TRUE, prompt=TRUE}
- estdesc <- function(x, opcao) {
+```{r echo=TRUE, prompt=TRUE, error=TRUE}
+estdesc <- function(x, opcao) {
  res <- switch(opcao,
  media = round(mean(x), 4),
  mediana = round(mean(x), 4),
  medapar = round(mean(x, trim = 0.1), 4))
  return(res)
- }
- # Objeto
- set.seed(15)
- x <- rnorm(1000)
- # Argumentos nomeados na funcao
- estdesc(x = x, opcao = "media")
-
-```
-
-```{r echo=TRUE, prompt=TRUE}
+}
+# Objeto
+set.seed(15)
+x <- rnorm(1000)
+# Argumentos nomeados na funcao
+estdesc(x = x, opcao = "media")
 estdesc(opcao = "media", x = x)
-
-```
-
-
-```{r echo=TRUE, prompt=TRUE}
- # Argumentos não nomeados ordenados
- estdesc(x, "media")
-
-
-```
-
-
-
-```{r echo=TRUE, prompt=TRUE}
- # Argumentos não ordenados (Gera erro)
- estdesc("media", x)
-
+# Argumentos não nomeados ordenados
+estdesc(x, "media")
+# Argumentos não ordenados (Gera erro)
+estdesc("media", x)
 ```
 
 ### Objeto reticências (“...”)
@@ -684,19 +655,12 @@ argumentos. Dessa forma, criamos a função grafico(), com os argumentos que rep
 Vamos retornar aos componentes da função fun1(), desenvolvido no Código R 6.15, reapresentando novamente as três estruturas de uma função,
 
 ```{r echo=TRUE, prompt=TRUE}
- # Argumentos
- formals(fun1)
-$x
- # Corpo
- body(fun1)
-{
-res <- x + 1
-return(res)
-}
- # Ambiente
- environment(fun1)
-<environment: R_GlobalEnv>
-
+# Argumentos
+formals(fun1)
+# Corpo
+body(fun1)
+# Ambiente
+environment(fun1)
 ```
 Observemos que o último componente é o ambiente onde o nome fun1 foi associado a função.
 Este ambiente é chamado de **ambiente envolvente**. Nesse caso é o ambiente global. Contudo, quando a função é executada, momentaneamente é criado o **ambiente de execução**. É neste ambiente que os nomes que estão no corpo da função são associados aos objetos. Vejamos um primeiro exemplo, Código R 6.19.

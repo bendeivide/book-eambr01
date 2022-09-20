@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Capítulo 4 Importação e exportação de dados | R básico</title>
+<meta name="author" content="Ben Dêivide e Diego Arthur">
+<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta property="og:title" content="Capítulo 4 Importação e exportação de dados | R básico">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://bendeivide.github.io/book-eambr01/importação-e-exportação-de-dados.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Capítulo 4 Importação e exportação de dados | R básico">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BG6SYWV817');
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+          margin-bottom: 1em;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<meta name="description" content="4.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
+<meta property="og:description" content="4.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
+<meta name="twitter:description" content="4.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Coleção Estudando o Ambiente R (Volume I)">R básico</a>:
+        <small class="text-muted">Coleção Estudando o Ambiente R (Volume I)</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Bem-vindo</a></li>
+<li><a class="" href="ep%C3%ADgrafe.html">Epígrafe</a></li>
+<li><a class="" href="pref%C3%A1cio.html">Prefácio</a></li>
+<li><a class="" href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
+<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></li>
+<li><a class="" href="objetos.html"><span class="header-section-number">3</span> Objetos</a></li>
+<li><a class="active" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
+<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></li>
+<li><a class="" href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></li>
+<li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
+<li><a class="" href="pacotes-1.html"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li><a class="" href="refer%C3%AAncias.html">Referências</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/bendeivide/book-eambr01">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="importação-e-exportação-de-dados" class="section level1" number="4">
+<h1>
+<span class="header-section-number">Capítulo 4</span> Importação e exportação de dados<a class="anchor" aria-label="anchor" href="#importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados"><i class="fas fa-link"></i></a>
+</h1>
+<div id="introdução" class="section level2" number="4.1">
+<h2>
+<span class="header-section-number">4.1</span> Introdução<a class="anchor" aria-label="anchor" href="#introdu%C3%A7%C3%A3o"><i class="fas fa-link"></i></a>
+</h2>
+<p>A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio do R, afirmado por Chambers (2016): “Interfaces para outros programas são parte do <strong>R</strong>”. Hoje é uma realidade a interação que o ambiente <strong>R</strong> tem com outras interfaces (programas, linguagens, etc.). A facilidade em utilizar outras linguagens dentro do ambiente <strong>R</strong> torna assim mais complexo a importação/exportação de dados, uma vez que o objetivo do <strong>R</strong> , apesar do R Core Team ainda limitar a sua definição como o ambiente para a computação estatística, a ferramenta se tornou tão versátil, que hoje torna humilde essa definição. Para mais detalhes acesse o manual ??R Data Import/Export (R CORE TEAM, 2021a). Um outro fator e tema atual é a era dos grandes bancos de dados (Big Data), do qual se tem um grande conjunto de variáveis e necessitamos fazer a importação por APIs1 ,por exemplo, ou outras vias. Temas como esses, serão abordados em outros volumes da coleção Estudando o Ambiente <strong>R</strong>. Nesse momento, limitaremos esse assunto ao objetivo de termos um conjunto de dados em arquivos de texto (extensões do tipo .txt, .csv, .xls), formato binário (.xls ou .xlsx) ou digitados manualmente pelo teclado do computador. Assim, a primeira forma de como os dados estão dispostos, precisaremos importá-los e armazená-los em um quadro de dados (data frame), para que esteja disponível na área de trabalho (ambiente global) do <strong>R</strong> , e dessa forma, possamos utilizá-lo. Ao final do tratamento dos dados, podemos exportar essas informações para arquivos externos, e daí também, usaremos os arquivos de textos e o formato binário (.xls), mensionados anteriormente.</p>
+</div>
+<div id="preparação-dos-dados" class="section level2" number="4.2">
+<h2>
+<span class="header-section-number">4.2</span> Preparação dos dados<a class="anchor" aria-label="anchor" href="#prepara%C3%A7%C3%A3o-dos-dados"><i class="fas fa-link"></i></a>
+</h2>
+<p>A primeira coisa que devemos entender quando desejamos construir o arquivo de dados, é entender que sempre organizaremos as variáveis em colunas, com os seus valores em linhas, Figura ??fig:bdados). Sempre a primeira linha das colunas representarar o nome das variáveis. Esse é outro ponto importante, pois devemos ter a noção que alguma linguagem irá ler esse banco de dados. Assim, quanto mais caracteres diferentes do padrão ASCII, mais difícil será a leitura desses dados. Assim, sugerimos alguns padrões:</p>
+<ul>
+<li><p>Evitem símbolos fora do padrão alfanumérico;</p></li>
+<li><p>Evitem mistura de letras minúsculas com letras maiúsculas. Isso facilitará o acesso a essas variáveis. Contudo, lembremos do padrão de nomes sintéticos permissíveis observados na seção 3.3.2;</p></li>
+<li><p>Lembremos que o banco de dados será utilizado para que um programa faça a sua leitura, portanto, deixemos a formatação da apresentação dos dados para arquivos específico. Sendo assim, evitem comentários nesses arquivos, ou qualquer outro tipo de informação que não seja o banco de dados;</p></li>
+<li><p>Evitem palavras longas, por exemplo, segundavariavel (má escolha), segvar (boa escolha), seg_var (boa escolha);</p></li>
+<li><p>Evitem palavras compostas com espaço entre elas. Para isso use o símbolo _, por exemplo, var 2 (má escolha), var2 (boa escolha), var_2 (boa escolha);</p></li>
+</ul>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Modelo_Estrutural_Banco_Dados.png"</span><span class="op">)</span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:ModeloEstruturalBancoDados"></span>
+<img src="img/Modelo_Estrutural_Banco_Dados.png" alt=" Modelo estrutural de um banco de dados." width="80%"><p class="caption">
+FIGURA 4.1:  Modelo estrutural de um banco de dados.
+</p>
+</div>
+</div>
+<div id="importando-dados" class="section level2" number="4.3">
+<h2>
+<span class="header-section-number">4.3</span> Importando dados<a class="anchor" aria-label="anchor" href="#importando-dados"><i class="fas fa-link"></i></a>
+</h2>
+<p>A função primária responável pela importação de dados é a função scan(). Por exemplo, funções
+como read.table(), read.csv() e read.delim(), usam a função scan() em seu algoritmo. A primeira ideia sobre importação de dados pode ser inserindo-os pelo teclado no próprio ambiente R . Para isso, usaremos a função scan(), isto é,</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Criando e inserido os elementos do objeto dados</span></span>
+<span id="cb24-2"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> x <span class="ot">&lt;-</span> <span class="fu">scan</span>()</span></code></pre></div>
+<p>Após executado essa linha de comando, aparecerá no console 1: que significa, digitar o primeiro valor do objeto x, e depois clicar em ENTER. Depois 2:, que significa digitar o segundo valor, e clicar em ENTER. Depois de inserido todos os valores necessários, aperte a tecla ENTER duas vezes no console, para sair da função scan().</p>
+<p>O mais tradicional é usar programa para criação de banco de dados e deixá-lo pronto para o <strong>R</strong> lê-lo. O tipo de arquivo de texto que melhor controla a separação de variáveis é com a extensão .csv, uma vez que separamos as variáveis por “;”, é o padrão. O arquivo de texto com extensão .txt, geralmente usa espaços. Isso acaba gerando problema de leitura no <strong>R</strong> , porque muitos usuários usam nomes de variáveis muito grandes, palavras compostas, de forma a desalinhar as colunas das variáveis. Daí, como a separação das variáveis é por meio de espaços, acaba gerando problema de leitura. Uma outra forma, é fazer importação de dados gerados pelo próprio <strong>R</strong> , extensão .RData.</p>
+<p>Temos a opção de usar um editor de banco de dados para essas extensões por meio de programas como MS Excel, Libre Office, dentre outros. Estes exportam arquivos binários do tipo .xls, .xlsx, dentre outros. Uma sugestão para diminuir complicações, é exportar os bancos de dados para arquivos de texto sitados acima, que também é possível ser exportado por esses programas. Isso evita a necessidade de ser instalado mais pacotes e dor de cabeça. Porém, para quem ainda deseja enfrentar, sugerimos a leitura do pacote readr, como exemplo, porém existem diversos outros pacotes para este mesmo fim.</p>
+<p>Uma vez que o banco de dados está pronto, a leitura destes pode ser feita por alguns caminhos. Mostraremos o mais trivial que é o botão Import Dataset, terceiro quadrante, aba Environment, na IDE do RStudio , como observado na Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados01">4.2</a>.</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Importando_Dados_01.png"</span><span class="op">)</span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:importarDados01"></span>
+<img src="img/Importando_Dados_01.png" alt="Usando o RStudio para importar dados" width="80%"><p class="caption">
+FIGURA 4.2: Usando o RStudio para importar dados
+</p>
+</div>
+<p>Posteriormente, indique o arquivo para leitura. Aparece algumas opções de tipo de arquivo. Em
+nosso caso, usaremos a opção From Text (base), que significa realizar a leitura para os tipos de arquivo
+.txt ou .csv. Daí os passos seguintes são:</p>
+<ol style="list-style-type: decimal">
+<li><p>Escolher o arquivo para leitura dos dados Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados01">4.2</a>;</p></li>
+<li><p>Configurar a leitura do banco de dados. Uma prévia pode ser vista no quadro Data Frame. Se for visualizado, algum problema, isso significa que deve ser informado opções adicionais como separador de variáveis (Separator), símbolo para casas decimais (Decimal), dentre outras opções. Por fim, digitar o nome associado ao objeto (Name) que será criado do tipo quadro de dados (data frame), e clicar no botão Import Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados02">4.3</a>;</p></li>
+<li><p>Uma vez inserido, o RStudio apresenta a linha de comando utilizada para importar os dados no
+console (2º quadrante), o conjunto de dados (1º quadrante), e a ligação entre o nome e o objeto no
+ambiente global (3º quadrante), Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados03">4.4</a>;</p></li>
+</ol>
+<p>A outra forma é utilizar linhas de comando. Para isso utilizaremos a função read.table(). Antes de importarmos o banco de dados, algo interessante é inserir o arquivo de dados no diretório de trabalho no ambiente R . Para verificar o ambiente de trabalho use a função getwd(). Para alterar o local do ambiente de trabalho use setwd(). Se esse procedimento não for realizado, o usuário deve informar na função read.table(), o local exato do arquivo de texto.</p>
+<p>Vamos usar como diretório o local C:. Lembre-se que no R , a barra deve ser invertida. Vamos inserir nesse diretório três arquivos alfafa.txt, datast1980.txt e producao.csv.</p>
+<p>Os três conjuntos de dados são:</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Importando_Dados_02.png"</span><span class="op">)</span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:importarDados02"></span>
+<img src="img/Importando_Dados_02.png" alt="Usando o RStudio para importar dados" width="80%"><p class="caption">
+FIGURA 4.3: Usando o RStudio para importar dados
+</p>
+</div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Importando_Dados_03.png"</span><span class="op">)</span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:importarDados03"></span>
+<img src="img/Importando_Dados_03.png" alt="Usando o RStudio para importar dados" width="80%"><p class="caption">
+FIGURA 4.4: Usando o RStudio para importar dados
+</p>
+</div>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Importando_Dados_04.png"</span><span class="op">)</span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:importarDados04"></span>
+<img src="img/Importando_Dados_04.png" alt="Usando o RStudio para importar dados" width="80%"><p class="caption">
+FIGURA 4.5: Usando o RStudio para importar dados
+</p>
+</div>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>TRAT</th>
+<th>BLOCO</th>
+<th>PROD</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>I</td>
+<td>2.89</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>II</td>
+<td>2.88</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>III</td>
+<td>1.88</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>IV</td>
+<td>2.90</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>V</td>
+<td>2.20</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>VI</td>
+<td>2.65</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td>I</td>
+<td>1.58</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>II</td>
+<td>1.28</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td>III</td>
+<td>1.22</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>IV</td>
+<td>1.21</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td>V</td>
+<td>1.30</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>VI</td>
+<td>1.66</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>I</td>
+<td>2.29</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>II</td>
+<td>2.98</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>III</td>
+<td>1.55</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>IV</td>
+<td>1.95</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>V</td>
+<td>1.15</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>VI</td>
+<td>1.12</td>
+</tr>
+<tr class="odd">
+<td>D</td>
+<td>I</td>
+<td>2.56</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>II</td>
+<td>2.00</td>
+</tr>
+<tr class="odd">
+<td>D</td>
+<td>III</td>
+<td>1.82</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>IV</td>
+<td>2.20</td>
+</tr>
+<tr class="odd">
+<td>D</td>
+<td>V</td>
+<td>1.33</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>VI</td>
+<td>1.00</td>
+</tr>
+</tbody>
+</table></div>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>trt</th>
+<th>y</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>19,4</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>32,6</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>27,0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>32,1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>33,0</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>17,7</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>24,8</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>27,9</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>25,2</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>24,3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>17,0</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>19,4</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>9,1</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>11,9</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>15,8</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>20,7</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>21,0</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>20,5</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>18,8</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>18,6</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>14,3</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>14,4</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>11,8</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>11,6</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>14,2</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>17,3</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>19,4</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>19,1</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>16,9</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>20,8</td>
+</tr>
+</tbody>
+</table></div>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>X</th>
+<th>y</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>6.7</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>7.9</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>9.1</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>6.6</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>7.5</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>8.8</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>7.7</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>7.6</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>6.5</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>7.9</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>8.7</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>6.2</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>7.9</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>7.4</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>9.7</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>6.2</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>4.9</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>5.6</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>6</td>
+</tr>
+</tbody>
+</table></div>
+<p>Vejamos as linhas de comando para importar os dados, Código R 5.1.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Diretorio</span></span>
+<span id="cb29-2"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">getwd</span>()</span>
+<span id="cb29-3"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Mudadando para o diretorio de interesse</span></span>
+<span id="cb29-4"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">setwd</span>(<span class="st">"C:/cursor"</span>)</span>
+<span id="cb29-5"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Verificando os arquivos no diretorio de trabalho</span></span>
+<span id="cb29-6"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">list.files</span>()</span>
+<span id="cb29-7"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Importando os dados apontando para o diretorio do arquivo</span></span>
+<span id="cb29-8"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  dados1 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"C:/cursor/alfafa.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-9"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Considerando que o arquivo esta no diretorio de</span></span>
+<span id="cb29-10"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># trabalho, isto eh, getwd()</span></span>
+<span id="cb29-11"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  dados2 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"alfafa.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-12"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Importando os dados com decimais com ',' apontando para o diretorio do</span></span>
+<span id="cb29-13"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> arquivo</span>
+<span id="cb29-14"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  dados3 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"C:/cursor/dadost1980.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">dec =</span></span>
+<span id="cb29-15"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="st">","</span>)</span>
+<span id="cb29-16"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Considerando que o arquivo esta no diretorio de</span></span>
+<span id="cb29-17"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># trabalho, isto eh, getwd()</span></span>
+<span id="cb29-18"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  dados4 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"dadost1980.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">dec =</span> <span class="st">","</span>)</span>
+<span id="cb29-19"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Importando os dados com decimais ',', e separados por ';' apontando para o diretorio do arquivo</span></span>
+<span id="cb29-20"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  dados5 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"C:/cursor/producao.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">dec =</span></span>
+<span id="cb29-21"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-21" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="st">","</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span>
+<span id="cb29-22"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Considerando que o arquivo esta no diretorio de</span></span>
+<span id="cb29-23"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># trabalho, isto eh, getwd()</span></span>
+<span id="cb29-24"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  dados6 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"producao.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">dec =</span> <span class="st">","</span>, <span class="at">sep =</span></span>
+<span id="cb29-25"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="st">";"</span>)</span>
+<span id="cb29-26"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Importando da internet</span></span>
+<span id="cb29-27"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  dados7 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span></span>
+<span id="cb29-28"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-28" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="st">"https://raw.githubusercontent.com/bendeivide/book-eambr01/main/files/␣</span></span>
+<span id="cb29-29"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb29-29" aria-hidden="true" tabindex="-1"></a><span class="st">+ alfafa.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>Na última linha de comando, mostramos que também é possível importar dados de arquivos de texto da internet, e claro considerando que o usuário está com acesso a internet no momento da importação. E um recurso interessante que pode ser feito, principalmente para este caso, é salvar o banco de dados em um arquivo de dados no ’.RData‘. Dessa forma, todos os dados, inclusive os importados da internet serão agora armazenados nesse tipo de arquivo, e não precisaremos, nesse caso, de acesso a internet. Para salvar, usamos a função save(). Para carregar os dados e armazenálo no ambiente global, usamos a função load(), Código R 5.2.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Diretorio</span></span>
+<span id="cb30-2"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">getwd</span>()</span>
+<span id="cb30-3"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb30-4"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Verificando os arquivos do diretorio de trabalho</span></span>
+<span id="cb30-5"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">list.files</span>()</span>
+<span id="cb30-6"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb30-7"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Importando os dados da internet</span></span>
+<span id="cb30-8"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  dados7 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="at">file =</span></span>
+<span id="cb30-9"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="st">"https://raw.githubusercontent.com/bendeivide/book-eambr01/main/files/alfafa.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb30-10"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb30-11"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Salvando em '.RData'</span></span>
+<span id="cb30-12"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">save</span>(dados7, <span class="at">file =</span> <span class="st">"alfafa.RData"</span>)</span>
+<span id="cb30-13"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> </span>
+<span id="cb30-14"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Carregando '.RData' para o ambiente global</span></span>
+<span id="cb30-15"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">load</span>(<span class="st">"alfafa.RData"</span>)</span></code></pre></div>
+<p>Percebemos que as extensões .txt e .csv são idênticos, exceto pela estrutura de como os dados estão dispostos. Para comprovar isso, o usuário manualmente poderá mudar a extensão de um arquivo do tipo .csv para um arquivo .txt e observar em um bloco de notas. Até agora, usamos as funções no <strong>R</strong>, em algumas situações, sem apresentar os argumentos dessas funções dentro dos parênteses. Isso porque quando inserimos os valores dos argumentos na posição correta destes, não precisaremos inserir o nome dos argumentos. Por exemplo, já usamos anteriormente a função mean() que calcula a média de um conjunto de valores, por exemplo, valores &lt;- 1:10. Temos como primeiro argumento para essa função o x que representa um objeto R que recebe os valores para o cálculo. Assim, como sabemos que x é o primeiro argumento dessa função, podemos omitir o seu nome e calcular a média por mean(valores), que é o mesmo que mean(x = valores). Para mais detalhes, ?mean(), como também, para mais detalhes sobre a função read.table(), use ?read.table()</p>
+</div>
+<div id="exportando-dados" class="section level2" number="4.4">
+<h2>
+<span class="header-section-number">4.4</span> Exportando dados<a class="anchor" aria-label="anchor" href="#exportando-dados"><i class="fas fa-link"></i></a>
+</h2>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="objetos.html"><span class="header-section-number">3</span> Objetos</a></div>
+<div class="next"><a href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
+<li><a class="nav-link" href="#introdu%C3%A7%C3%A3o"><span class="header-section-number">4.1</span> Introdução</a></li>
+<li><a class="nav-link" href="#prepara%C3%A7%C3%A3o-dos-dados"><span class="header-section-number">4.2</span> Preparação dos dados</a></li>
+<li><a class="nav-link" href="#importando-dados"><span class="header-section-number">4.3</span> Importando dados</a></li>
+<li><a class="nav-link" href="#exportando-dados"><span class="header-section-number">4.4</span> Exportando dados</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/bendeivide/book-eambr01/blob/master/05-importacao_exportacao_dados.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/bendeivide/book-eambr01/edit/master/05-importacao_exportacao_dados.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Capítulo 8 Pacotes | R básico</title>
+<meta name="author" content="Ben Dêivide e Diego Arthur">
+<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta property="og:title" content="Capítulo 8 Pacotes | R básico">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://bendeivide.github.io/book-eambr01/pacotes-1.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Capítulo 8 Pacotes | R básico">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BG6SYWV817');
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+          margin-bottom: 1em;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<meta name="description" content="8.1 Introdução Um pacote em R é um diretório de arquivos necessários para carregar um código de funções, dados, documentações de ajuda, testes, etc. O próprio R em sua instalação, contém 30...">
+<meta property="og:description" content="8.1 Introdução Um pacote em R é um diretório de arquivos necessários para carregar um código de funções, dados, documentações de ajuda, testes, etc. O próprio R em sua instalação, contém 30...">
+<meta name="twitter:description" content="8.1 Introdução Um pacote em R é um diretório de arquivos necessários para carregar um código de funções, dados, documentações de ajuda, testes, etc. O próprio R em sua instalação, contém 30...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Coleção Estudando o Ambiente R (Volume I)">R básico</a>:
+        <small class="text-muted">Coleção Estudando o Ambiente R (Volume I)</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Bem-vindo</a></li>
+<li><a class="" href="ep%C3%ADgrafe.html">Epígrafe</a></li>
+<li><a class="" href="pref%C3%A1cio.html">Prefácio</a></li>
+<li><a class="" href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
+<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></li>
+<li><a class="" href="objetos.html"><span class="header-section-number">3</span> Objetos</a></li>
+<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
+<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></li>
+<li><a class="" href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></li>
+<li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
+<li><a class="active" href="pacotes-1.html"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li><a class="" href="refer%C3%AAncias.html">Referências</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/bendeivide/book-eambr01">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="pacotes-1" class="section level1" number="8">
+<h1>
+<span class="header-section-number">Capítulo 8</span> Pacotes<a class="anchor" aria-label="anchor" href="#pacotes-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="introdução-3" class="section level2" number="8.1">
+<h2>
+<span class="header-section-number">8.1</span> Introdução<a class="anchor" aria-label="anchor" href="#introdu%C3%A7%C3%A3o-3"><i class="fas fa-link"></i></a>
+</h2>
+<p>Um pacote em <strong>R</strong> é um diretório de arquivos necessários para carregar um código de funções, dados, documentações de ajuda, testes, etc. O próprio <strong>R</strong> em sua instalação, contém 30 pacotes nativos, que contém as funções mínimas para a utilização do ambiente. No pacote, não há apenas códigos em <strong>R</strong> , mas um pacote fonte (do inglês, source package), contendo os arquivos mencionados acima, ou um arquivo compactado, de extensão .tar.gz do pacote fonte, ou um pacote instalado, resultado do comando <strong>R</strong> CMD INSTALL, que será visto no Volume V: Desenvolvimento de Pacotes <strong>R</strong>, coleção Estudando o Ambiente <strong>R</strong>. Isso acontece no SO Linux. Para as plataformas Windows e Macintosh, existem também os pacotes binários ou compactados com a extensão .zip ou .tgz, respectivamente.</p>
+<p>Um pacote, portanto é a unidade básica para o compartilhamento de um código. Atualmente, até 01/12/2021, o número de pacotes disponíveis no CRAN é 18.524. Podemos encontrar a lista de pacotes por data de publicação ou por ordem alfabética. Qualquer usuário pode publicar um pacote e disponibilizá-lo sob o CRAN. Para isso, uma série de testes iniciais são realizados no próprio ambiente R , para verificar se o pacote em desenvolvimento não contém problemas previsíveis, e posteriormente, uma checagem mais aprofundada, após a submissão, é realizada por algum dos mantenedores do <strong>R</strong> (<strong>R</strong> Development Core Team). Isso significa dizer que se um pacote está disponível no CRAN, além de sua estabilidade, o pacote será executável nas três plataformas mais usadas em sistema operacional, SO Linux ou sitemas Unix, SO Windows e SO Macintosh. Isso é um padrão hoje no <strong>R</strong>.</p>
+<p>Há outros repositórios que podem ser disponibilizados os pacotes, como por exemplo, Biocondutor, R-forge, GitHub. Este último está sendo muito utilizado, nesses últimos anos. Porém, quando os pacotes estão em repositórios diferentes do CRAN, não haverá garantias dos padrões mencionados anteriormente. Além do mais, devemos entender que a principal preocupação dos mantenedores do <strong>R</strong>, é que os pacotes funcionem corretamente, naquilo em que os mesmos objetivam, mas em nada é discutido sobre a metodologia científica, ou de análises, a que o pacote se destina. Isso é verificado, quando o pacote após disponível no CRAN, também é submetido para o journal do <strong>R</strong>, o The R Journal ou ao Journal of Statistical Software, por exemplo. Aí sim, o pacote é esmiuçado tanto no aspecto computacional, quanto no metodológico.</p>
+<p>Portanto, entenda que nem todo pacote sob o CRAN é confiável naquilo que se propõe, o que não significa dizer, que um pacote é confiável se apenas tiver sido publicado nas revistas anteriores ou em qualquer outra específica para a área de interesse, mas a cautela é sempre necessária, tentando entender quem são os desenvolvedores, ou fazendo uma pesquisa mais ampla sobre o referido pacote, para que assim, a decisão da escolha seja confiável. Fazemos esse adendo, porque quando se vai pesquisar sobre um determinado assunto poderá existir diversos pacotes para o mesmo, e a pergunta será, qual pacote devemos escolher? Aquele que é mais fácil utilizar? E daí, uma boa pesquisa para a escolha não deve ser levado apenas em consideração a facilidade de utilização do pacote, mas saber se as funções do pacote realmente retornam os resultados confiáveis para aquilo que se destina. Fica a nossa dica.</p>
+<p>Para uma instalação mais rápida dos pacotes, optem pelos espelhos disponíveis nos países em que vivem, uma vez que a transferência de dados ocorrem mais rapidamente. Aqui no Brasil, por exemplo, o primeiro espelho desenvolvido e ativo até hoje é o da UFPR. Mas, temos mais quatro espelhos: dois na USP, uma na Fiocruz/RJ, e outra na UESC.</p>
+<p>Um termo que deve ficar claro, que erroneamente, alguns usuários chamam o termo biblioteca como um sinônimo de pacote. Nas documentações do <strong>R</strong> , biblioteca é o diretório onde os pacotes são instalados, também chamados de diretório de biblioteca ou diretório de árvores. O outro sentido de biblioteca é o de biblioteca compartilhada (dinâmica ou estática), que armazenam código compilado que se vinculam aos pacotes, por exemplo, no Windows são as DLLs.</p>
+</div>
+<div id="estrutura-básica-de-um-pacote-1" class="section level2" number="8.2">
+<h2>
+<span class="header-section-number">8.2</span> Estrutura básica de um pacote<a class="anchor" aria-label="anchor" href="#estrutura-b%C3%A1sica-de-um-pacote-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>A estrutura básica de um pacote é apresentada na Figura <a href="pacotes-1.html#fig:EsqueletoBasicoPacote">8.1</a></p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:EsqueletoBasicoPacote"></span>
+<img src="img/Esqueleto_Basico_Pacote.png" alt="Esqueleto básico de um pacote" width="100%"><p class="caption">
+FIGURA 8.1: Esqueleto básico de um pacote
+</p>
+</div>
+<p>Vejamos as ideias básicas desses subdiretórios e arquivos:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><strong>DESCRIPTION</strong>: Esse é um arquivo de texto, contendo informações básicas como o título do pacote, versão, licença, descrição, nome dos autores, e o mantenedor do pacote, isto é, para quando um pacote estiver com problema ou o CRAN entre em contato, será para este último. Esses as informações obrigatórias que devem ter nesse arquivo;</p></li>
+<li><p><strong>NAMESPACE</strong>: Esse arquivo embora tenha tenha muita semelhança com a linguagem R , o seu conteúdo, se destina a importação e exportação de funções no pacote. Será nesse arquivo, que diremos quais os pacotes que ele depende, isto é, as funções, e quais as funções exportadas, visíveis, que devem ser apresentadas aos usuários;</p></li>
+<li><p><strong>R/</strong>: Esse subdiretório apresenta os scripts com as funções em R . é o cérebro do pacote;</p></li>
+<li><p><strong>man/</strong>: Esse subdiretório apresenta os arquivos de ajuda, com extensão .Rd. Isso significa, que uma vez instalado o pacote no R , o acesso aos manuais de ajuda do referido pacote, estarão disponíveis, graças a esses arquivos.</p></li>
+</ol>
+<p>Claro, que quando os pacotes se tornam mais complexos, outros subdiretórios e arquivos são
+necessário. Mas isso é assunto para o <em>Volume V: Desenvolvimento de Pacotes R</em>, coleção <em>Estudando o Ambiente R</em>.</p>
+</div>
+<div id="instalação-de-um-pacote-1" class="section level2" number="8.3">
+<h2>
+<span class="header-section-number">8.3</span> Instalação de um pacote<a class="anchor" aria-label="anchor" href="#instala%C3%A7%C3%A3o-de-um-pacote-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>A instalação de um pacote via <strong>R</strong> pode ser feito pela função install.packages(pkgs = “nome_pacote”). Por exemplo, vamos tentar instalar o pacote <strong>midrangeMCP</strong>, da seguinte forma:</p>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="pacotes-1.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"midrangeMCP"</span>)</span></code></pre></div>
+<p>Pode ser que nesse processo, dependendo de onde o usuário esteja executando essa linha de comando, interface do <strong>R</strong> ou <strong>RStudio</strong>, que seja solicitado o espelho por onde deseja fazer a instalação. Isso é apenas um atalho para ter um acesso mais rápido na instalação do pacote. A sugestão é escolher um espelho de seu país de origem.</p>
+<p>Uma forma simples de se ter detalhes do pacote na internet, tais como, baixar o pacote fonte ou o pacote binário do midrangeMCP, por exemplo, é sempre usar essa url: &lt;<a href="http://cran.r-project" class="uri">http://cran.r-project</a>. org/package=midrangeMCP&gt;. Para qualquer outro pacote, basta mudar o nome do pacote na url, e assim, estaremos na página do repositório do pacote. O pacote fonte, como falado anteriormente, é compactado com extensão <em>.tar.gz</em>, no caso, midrangeMCP_3.1.1.tar.gz. O pacote binário tem a compactação zipada, midrangeMCP_3.1.1.tar.zip para o Windows e midrangeMCP_3.1.1.tgz para o Macintosh. O acesso aos arquivos do pacote mencionados no esqueleto são disponíveis no pacote fonte.</p>
+<p>Uma outra forma possível de instalação é baixar o arquivo do pacote fonte para o seu computador e instalá-lo, via comando:</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="pacotes-1.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="fu">install.packages</span>(<span class="at">pkgs =</span> <span class="st">"./midrangeMCP.tar.gz"</span>, <span class="at">repos =</span> <span class="cn">NULL</span>, <span class="at">type =</span> <span class="st">"source"</span>)</span></code></pre></div>
+<pre><code>## Installing package into 'C:/Users/MABENLA/Documents/R/win-library/4.1'
+## (as 'lib' is unspecified)</code></pre>
+<pre><code>## Warning in install.packages(pkgs = "./midrangeMCP.tar.gz", repos = NULL, :
+## installation of package './midrangeMCP.tar.gz' had non-zero exit status</code></pre>
+<p>Consideramos que o arquivo do pacote esteja no diretório de trabalho do usuário. Caso contrário, deve ser informado o local onde pacote se encontra no computador. Para o Window ou Macintosh, é possível instalar também, a partir dos pacotes binários.</p>
+<p>Muitos dos desenvolvedores, estão disponibilizando seus projetos de pacotes, principalmente no <strong>GitHub</strong>, inclusive com manuals de ajuda com maiores detalhes. Pode ser possível instalar esses pacotes por esse repositório. Precisamos inicialmente do pacote <strong>devtools</strong>, e posteriormente a instalação do pacote. Segue as linhas de comando:</p>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="pacotes-1.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb153-2"><a href="pacotes-1.html#cb153-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install_github</span>(<span class="st">"bendeivide/midrangeMCP"</span>)</span></code></pre></div>
+<p>Contudo, devemos dar a preferência pela instalação via CRAN. Por lá, teremos a garantia que os pacotes estão estáveis para a utilização nas referidas plataformas mencionadas acima.</p>
+<p>Alguns pacotes, por falta de manutenção, seja por atualizações do <strong>R</strong> ou por qualquer outro motivo, podem se tornar incompatíveis para utilização sobre alguns dos três sistemas operacionais básicos (<em>SO Windows, Unix e SO Mac</em>) exigidos pelo <strong>R</strong>. Dessa forma, se as correções não forem feitas, estes pacotes e tornam órfãos, ou seja, desativados sob o CRAN. O primeiros pacotes sob o <em>CRAN</em>, por exemplo, não tinham o arquivo <strong>NAMESPACE</strong>, que hoje é exigido. Qualquer tentativa de instalação desses pacotes nessas situações, não serão bem sucedidas. Dessa forma, fizemos uma vídeo-aula, como tentativa de recuperar os pacotes desativados. Porém, deixemos claro que nem sempre é possível a instalação de pacotes desativados.</p>
+</div>
+<div id="objetivos-de-um-pacote-1" class="section level2" number="8.4">
+<h2>
+<span class="header-section-number">8.4</span> Objetivos de um pacote<a class="anchor" aria-label="anchor" href="#objetivos-de-um-pacote-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>A ideia de um pacote para um usuário <strong>R</strong> deve representar como uma ferramenta para otimizar suas atividades do dia-a-dia na utilização da linguagem. Suponha que o usuário seja um cientista de dados, e todos os dias ele carrega uma sequência de scripts, via source, para disponibilizar suas funções no ambiente global. Isso acaba gerando processos repetitivos de trabalho desnecessários.</p>
+<p>Ao invés, o cientista de dados pode desenvolver um pacote, e esse pacote conter todas as funções necessárias para as suas análises. De uma vez, o pacote instalado e anexado no caminho de busca, todas as suas funções estarão disponíveis para utilização. Portanto, o entendimento disso, permite uma maior eficiência de trabalho.</p>
+<p>Outro ponto é que a experiência contida em um pacote pode ser propagada mais facilmente para outros usuários, mostrando que o conhecimento é uma liberdade necessária. Tanto pelo CRAN, quanto por outras plataformas, o pacote pode ser disponibilizado.</p>
+</div>
+<div id="utilizar-as-funções-de-um-pacote" class="section level2" number="8.5">
+<h2>
+<span class="header-section-number">8.5</span> Utilizar as funções de um pacote<a class="anchor" aria-label="anchor" href="#utilizar-as-fun%C3%A7%C3%B5es-de-um-pacote"><i class="fas fa-link"></i></a>
+</h2>
+<p>Uma vez instalado o pacote, precisamos carregar e anexá-lo, para que possamos utilizar os recursos disponíveis no pacote, como funções, dados, etc. Isso significa, disponibilizar na memória e inseri-lo no caminho de busca, respectivamente. Para fazer essas duas ações ao mesmo tempo, use a função library() ou require(). A primeira função se for utilizada sem argumento algum, retorna todos os pacotes instalados na biblioteca de pacotes do R . Vejamos o exemplo do pacote <strong>midrangeMCP</strong>, no Código R 9.1.</p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="pacotes-1.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Carregando e anexando o pacote midrangeMCP</span></span>
+<span id="cb154-2"><a href="pacotes-1.html#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">library</span>(midrangeMCP)</span>
+<span id="cb154-3"><a href="pacotes-1.html#cb154-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Usando a função MRtest() desse pacote</span></span>
+<span id="cb154-4"><a href="pacotes-1.html#cb154-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co">#-----</span></span>
+<span id="cb154-5"><a href="pacotes-1.html#cb154-5" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Dados simulados de um experimento em DIC (Delineamento Inteiramente Casualizado)</span></span>
+<span id="cb154-6"><a href="pacotes-1.html#cb154-6" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Variavel resposta</span></span>
+<span id="cb154-7"><a href="pacotes-1.html#cb154-7" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  rv <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">100.08</span>, <span class="fl">105.66</span>, <span class="fl">97.64</span>, <span class="fl">100.11</span>, <span class="fl">102.60</span>, <span class="fl">121.29</span>, <span class="fl">100.80</span>,</span>
+<span id="cb154-8"><a href="pacotes-1.html#cb154-8" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="dv">8</span> <span class="sc">+</span> <span class="fl">99.11</span>, <span class="fl">104.43</span>, <span class="fl">122.18</span>, <span class="fl">119.49</span>, <span class="fl">124.37</span>, <span class="fl">123.19</span>, <span class="fl">134.16</span>,</span>
+<span id="cb154-9"><a href="pacotes-1.html#cb154-9" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="dv">9</span> <span class="sc">+</span> <span class="fl">125.67</span>, <span class="fl">128.88</span>, <span class="fl">148.07</span>, <span class="fl">134.27</span>, <span class="fl">151.53</span>, <span class="fl">127.31</span>)</span>
+<span id="cb154-10"><a href="pacotes-1.html#cb154-10" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Tratamento</span></span>
+<span id="cb154-11"><a href="pacotes-1.html#cb154-11" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  treat <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">rep</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">each =</span> <span class="dv">4</span>))</span>
+<span id="cb154-12"><a href="pacotes-1.html#cb154-12" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Anava</span></span>
+<span id="cb154-13"><a href="pacotes-1.html#cb154-13" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  res <span class="ot">&lt;-</span> <span class="fu">anova</span>(<span class="fu">aov</span>(rv<span class="sc">~</span>treat))</span>
+<span id="cb154-14"><a href="pacotes-1.html#cb154-14" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  DFerror <span class="ot">&lt;-</span> res<span class="sc">$</span>Df[<span class="dv">2</span>]</span>
+<span id="cb154-15"><a href="pacotes-1.html#cb154-15" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  MSerror <span class="ot">&lt;-</span> res<span class="sc">$</span><span class="st">`</span><span class="at">Mean Sq</span><span class="st">`</span>[<span class="dv">2</span>]</span>
+<span id="cb154-16"><a href="pacotes-1.html#cb154-16" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Aplicando testes</span></span>
+<span id="cb154-17"><a href="pacotes-1.html#cb154-17" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  results <span class="ot">&lt;-</span> midrangeMCP<span class="sc">::</span><span class="fu">MRtest</span>(<span class="at">y =</span> rv,</span>
+<span id="cb154-18"><a href="pacotes-1.html#cb154-18" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">trt =</span> treat,</span>
+<span id="cb154-19"><a href="pacotes-1.html#cb154-19" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">dferror =</span> DFerror,</span>
+<span id="cb154-20"><a href="pacotes-1.html#cb154-20" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">mserror =</span> MSerror,</span>
+<span id="cb154-21"><a href="pacotes-1.html#cb154-21" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">alpha =</span> <span class="fl">0.05</span>,</span>
+<span id="cb154-22"><a href="pacotes-1.html#cb154-22" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">main =</span> <span class="st">"PCMs"</span>,</span>
+<span id="cb154-23"><a href="pacotes-1.html#cb154-23" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">MCP =</span> <span class="fu">c</span>(<span class="st">"all"</span>))</span></code></pre></div>
+<pre><code>## MCP's based on distributions of the studentized midrange and range
+## 
+## Study:  PCMs 
+## 
+## Summary:
+##    Means   std r    Min    Max
+## A 100.87  3.40 4  97.64 105.66
+## B 107.95  9.28 4 100.80 121.29
+## C 117.62  9.02 4 104.43 124.37
+## D 130.22  5.37 4 123.19 134.67
+## E 140.30 11.42 4 127.31 151.53
+## 
+##  Mean Grouping Midrange Test
+## 
+## Statistics: 
+##   Exp.Mean       CV  MSerror Df n Stud.Midrange  Ext.DMS  Int.DMS
+##    119.392 6.889695 67.66288 15 5      1.089969 5.783507 4.482902
+## 
+## Groups: 
+##    Means Groups
+## E 140.30     g1
+## D 130.22     g2
+## C 117.62     g3
+## B 107.95     g4
+## A 100.87     g4
+## 
+## Mean Grouping Range Test
+## 
+## Statistics: 
+##   Exp.Mean       CV  MSerror Df n Stud.Range      DMS
+##    119.392 6.889695 67.66288 15 5   4.366985 17.96085
+## 
+## Groups: 
+##    Means Groups
+## E 140.30     g1
+## D 130.22     g1
+## C 117.62     g2
+## B 107.95     g2
+## A 100.87     g2
+## 
+## SNK Midrange Test
+## 
+## Statistics: 
+##       Exp.Mean     CV MSerror Df n Stud.Midrange    DMS
+## comp1  119.392 6.8897 67.6629 15 5        1.0900 5.7835
+## comp2  119.392 6.8897 67.6629 15 4        1.1646 6.0906
+## comp3  119.392 6.8897 67.6629 15 3        1.2828 6.5768
+## comp4  119.392 6.8897 67.6629 15 2        1.5072 7.4994
+## 
+## Groups: 
+##    Means Groups
+## E 140.30     g1
+## D 130.22   g1g2
+## C 117.62 g1g2g3
+## B 107.95   g2g3
+## A 100.87     g3
+## 
+## Tukey Midrange Test
+## 
+## Statistics: 
+##   Exp.Mean       CV  MSerror Df n Stud.Midrange  Ext.DMS  Int.DMS
+##    119.392 6.889695 67.66288 15 5      1.089969 5.783507 4.482902
+## 
+## Groups: 
+##    Means Groups
+## E 140.30     g1
+## D 130.22     g2
+## C 117.62     g3
+## B 107.95     g4
+## A 100.87     g4</code></pre>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="pacotes-1.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> midrangeMCP<span class="sc">::</span><span class="fu">MRbarplot</span>(results)</span></code></pre></div>
+<div class="inline-figure"><img src="09-interfaces_r_files/figure-html/unnamed-chunk-5-1.png" width="672"></div>
+</div>
+<div id="carregando-e-anexando-um-pacote-1" class="section level2" number="8.6">
+<h2>
+<span class="header-section-number">8.6</span> Carregando e anexando um pacote<a class="anchor" aria-label="anchor" href="#carregando-e-anexando-um-pacote-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>Anteriormente, falamos que usamos a função library() ou require() para carregar e anexar um pacote para utilizar suas funções, após a instalação. Carregar um pacote significa disponibilizar na memória ativa. Para acessar uma função de um pacote após ter sido carregado, usamos o operador ::, isto é, nome_pacote::nome_função. Isto significa, que será chamado a função necessária sem anexar o pacote no caminho de busca. Estudaremos no Capítulo 10, um pouco mais sobre caminho de busca. Para esse momento, entendamos que é um caminho hierarquizado de ambientes, isto é, objetos que armazenam, em forma de lista, nomes associados a objetos. A função para ver o caminho de busca é search(), como pode ser observado no Código R 9.2.</p>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="pacotes-1.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Caminho de busca</span></span>
+<span id="cb157-2"><a href="pacotes-1.html#cb157-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>   <span class="fu">search</span>()</span></code></pre></div>
+<pre><code>##  [1] ".GlobalEnv"          "package:midrangeMCP" "package:stats"      
+##  [4] "package:graphics"    "package:grDevices"   "package:utils"      
+##  [7] "package:datasets"    "package:methods"     "Autoloads"          
+## [10] "package:base"</code></pre>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="pacotes-1.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Carregando e chamando uma função de um pacote</span></span>
+<span id="cb159-2"><a href="pacotes-1.html#cb159-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> midrangeMCP<span class="sc">::</span><span class="fu">MRwrite</span>(results, <span class="at">extension =</span> <span class="st">"latex"</span>)</span></code></pre></div>
+<pre><code>## Table in latex of results of the MGM test
+## 
+## % latex table generated in R 4.1.3 by xtable 1.8-4 package
+## % Tue Sep 20 15:27:35 2022
+## \begin{table}[ht]
+## \centering
+## \begin{tabular}{lrl}
+##   \hline
+## trt &amp; Means &amp; Groups \\ 
+##   \hline
+## E &amp; 140.30 &amp; g1 \\ 
+##   D &amp; 130.22 &amp; g2 \\ 
+##   C &amp; 117.62 &amp; g3 \\ 
+##   B &amp; 107.95 &amp; g4 \\ 
+##   A &amp; 100.87 &amp; g4 \\ 
+##    \hline
+## \end{tabular}
+## \end{table}
+## 
+## 
+## Table in latex of results of the MGR test
+## 
+## % latex table generated in R 4.1.3 by xtable 1.8-4 package
+## % Tue Sep 20 15:27:35 2022
+## \begin{table}[ht]
+## \centering
+## \begin{tabular}{lrl}
+##   \hline
+## trt &amp; Means &amp; Groups \\ 
+##   \hline
+## E &amp; 140.30 &amp; g1 \\ 
+##   D &amp; 130.22 &amp; g1 \\ 
+##   C &amp; 117.62 &amp; g2 \\ 
+##   B &amp; 107.95 &amp; g2 \\ 
+##   A &amp; 100.87 &amp; g2 \\ 
+##    \hline
+## \end{tabular}
+## \end{table}
+## 
+## 
+## Table in latex of results of the SNKM test
+## 
+## % latex table generated in R 4.1.3 by xtable 1.8-4 package
+## % Tue Sep 20 15:27:35 2022
+## \begin{table}[ht]
+## \centering
+## \begin{tabular}{lrl}
+##   \hline
+## trt &amp; Means &amp; Groups \\ 
+##   \hline
+## E &amp; 140.30 &amp; g1 \\ 
+##   D &amp; 130.22 &amp; g1g2 \\ 
+##   C &amp; 117.62 &amp; g1g2g3 \\ 
+##   B &amp; 107.95 &amp; g2g3 \\ 
+##   A &amp; 100.87 &amp; g3 \\ 
+##    \hline
+## \end{tabular}
+## \end{table}
+## 
+## 
+## Table in latex of results of the TM test
+## 
+## % latex table generated in R 4.1.3 by xtable 1.8-4 package
+## % Tue Sep 20 15:27:35 2022
+## \begin{table}[ht]
+## \centering
+## \begin{tabular}{lrl}
+##   \hline
+## trt &amp; Means &amp; Groups \\ 
+##   \hline
+## E &amp; 140.30 &amp; g1 \\ 
+##   D &amp; 130.22 &amp; g2 \\ 
+##   C &amp; 117.62 &amp; g3 \\ 
+##   B &amp; 107.95 &amp; g4 \\ 
+##   A &amp; 100.87 &amp; g4 \\ 
+##    \hline
+## \end{tabular}
+## \end{table}
+## 
+## 
+## Table in latex of results of descriptive statistics
+## 
+## % latex table generated in R 4.1.3 by xtable 1.8-4 package
+## % Tue Sep 20 15:27:35 2022
+## \begin{table}[ht]
+## \centering
+## \begin{tabular}{lrrrrr}
+##   \hline
+## trt &amp; Means &amp; std &amp; r &amp; Min &amp; Max \\ 
+##   \hline
+## A &amp; 100.87 &amp; 3.40 &amp; 4.00 &amp; 97.64 &amp; 105.66 \\ 
+##   B &amp; 107.95 &amp; 9.28 &amp; 4.00 &amp; 100.80 &amp; 121.29 \\ 
+##   C &amp; 117.62 &amp; 9.02 &amp; 4.00 &amp; 104.43 &amp; 124.37 \\ 
+##   D &amp; 130.22 &amp; 5.37 &amp; 4.00 &amp; 123.19 &amp; 134.67 \\ 
+##   E &amp; 140.30 &amp; 11.42 &amp; 4.00 &amp; 127.31 &amp; 151.53 \\ 
+##    \hline
+## \end{tabular}
+## \end{table}
+## 
+## See yours tables in Console
+##  Format: latex</code></pre>
+<p>Com as linhas de comando apresentadas anteriormente, percebemos ao executar a função MRwrite() do pacote midrangeMCP, usando :: que o caminho de busca não foi alterado. Isso significa que o pacote não foi anexado, apenas carregado, ou seja, se o usuário desejar usar alguma função do pacote digitando apenas o nome no console, não será possível, porque o pacote não está anexado ao caminho de busca. Vejamos outra situação pelo Código R 9.3.</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="pacotes-1.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Caso o pacote midrangeMCP esteja anexado, use:</span></span>
+<span id="cb161-2"><a href="pacotes-1.html#cb161-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># detach("package:midrangeMCP", unload = TRUE)</span></span>
+<span id="cb161-3"><a href="pacotes-1.html#cb161-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Caminho de busca</span></span>
+<span id="cb161-4"><a href="pacotes-1.html#cb161-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">search</span>()</span></code></pre></div>
+<pre><code>##  [1] ".GlobalEnv"          "package:midrangeMCP" "package:stats"      
+##  [4] "package:graphics"    "package:grDevices"   "package:utils"      
+##  [7] "package:datasets"    "package:methods"     "Autoloads"          
+## [10] "package:base"</code></pre>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="pacotes-1.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Carregando e anexando um pacote</span></span>
+<span id="cb163-2"><a href="pacotes-1.html#cb163-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">library</span>(midrangeMCP)</span>
+<span id="cb163-3"><a href="pacotes-1.html#cb163-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Verificando novamente o caminho de busca</span></span>
+<span id="cb163-4"><a href="pacotes-1.html#cb163-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">search</span>()</span></code></pre></div>
+<pre><code>##  [1] ".GlobalEnv"          "package:midrangeMCP" "package:stats"      
+##  [4] "package:graphics"    "package:grDevices"   "package:utils"      
+##  [7] "package:datasets"    "package:methods"     "Autoloads"          
+## [10] "package:base"</code></pre>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="pacotes-1.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Chamando uma funcao do pacote</span></span>
+<span id="cb165-2"><a href="pacotes-1.html#cb165-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">guimidrangeMCP</span>()</span></code></pre></div>
+<p>Com o uso da função <em>library()</em>, percebemos que o caminho de busca foi alterado, porque agora temos o ambiente de pacote <em>package:midrangeMCP</em>. Isso significa que agora poderemos acessar os objetos desse pacote apenas digitando o nome associado a eles. Por fim, a última linha de comando, representa a interface gráfica ao usuário para o pacote, o que chamamos de <em>GUI</em> (do inglês, <em>Graphical User Interface</em>).</p>
+</div>
+<div id="namespace-de-um-pacote-1" class="section level2" number="8.7">
+<h2>
+<span class="header-section-number">8.7</span> NAMESPACE de um pacote<a class="anchor" aria-label="anchor" href="#namespace-de-um-pacote-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>No início da seção sobre pacotes, falamos sobre o esqueleto de um pacote, isto é, os componentes básicos de um pacote. Um dos arquivos foi o <strong>NAMESPACE</strong>. Esse arquivo é responsável pela exportação e importação de funções. As funções exportadas de um pacote, por meio desse arquivo, são aquelas visíveis após a anexação do pacote ao caminho de busca, ou por meio do operador ::. As funções importadas são aquelas utilizadas de outros pacotes, utilizadas internamente ao referido pacote.</p>
+<p>As funções ditas internas são aquelas não mencionadas no <strong>NAMESPACE</strong>. Em muitas situações, precisamos de funções internas necessárias para a finalidade do pacote, que muitas vezes não é objetivo final para disponibilidade dos usuários, mas códigos intermediários para a boa funcionabilidade do pacote. Dessa forma, uma boa escolha para que não haja conflitos em nomes associados a objetos no ambiente de trabalho, é a decisão de não exportá-los.</p>
+<p>Porém, quando se cria um pacote, por exemplo, pelo <strong>RStudio</strong> , o padrão no <strong>NAMESPACE</strong>
+é o comando: exportPattern(’‘<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;^\.&lt;/p&gt;"><sup>3</sup></a>’’), que significa que todas as funções no pacote serão
+exportadas que não iniciam por um ponto (“.”).</p>
+</div>
+<div id="documentações-de-um-pacote" class="section level2" number="8.8">
+<h2>
+<span class="header-section-number">8.8</span> Documentações de um pacote<a class="anchor" aria-label="anchor" href="#documenta%C3%A7%C3%B5es-de-um-pacote"><i class="fas fa-link"></i></a>
+</h2>
+<p>Toda função exportada de um pacote precisa de um arquivo de ajuda (.Rd). Rodas as funções deverão ter esses tipos arquivos inseridos no subdiretório man/. Mais detalhes sobre o desenvolvimento de pacotes será abordado no <em>Volume V: Desenvolvimento de Pacotes R, coleção Estudando o Ambiente R</em>.</p>
+</div>
+<div id="operadores-e" class="section level2" number="8.9">
+<h2>
+<span class="header-section-number">8.9</span> Operadores :: e :::<a class="anchor" aria-label="anchor" href="#operadores-e"><i class="fas fa-link"></i></a>
+</h2>
+<p>Como falamos anteriormente, para chamarmos uma função sem a necessidade de anexar o pacote, usamos o operador ::. Comentamos também, que algumas funções não eram exportadas pelo NAMESPACE de um pacote. Contudo, se desejarmos visualizar ou executá-las, poderemos utilizar o operador ’:::’. Vejamos um exemplo, nas linhas de comando a seguir.</p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="pacotes-1.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Instale o pacote SMR</span></span>
+<span id="cb166-2"><a href="pacotes-1.html#cb166-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># install.packages(SMR) # Descomente a linha de comando para instalar</span></span>
+<span id="cb166-3"><a href="pacotes-1.html#cb166-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Carregando e chamando funcoes exportadas do pacote SMR</span></span>
+<span id="cb166-4"><a href="pacotes-1.html#cb166-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  SMR<span class="sc">::</span><span class="fu">pSMR</span>(<span class="at">q =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">df =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 0.9905216</code></pre>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="pacotes-1.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Carregando e chamando funcoes nao exportadas ao pacote</span></span>
+<span id="cb168-2"><a href="pacotes-1.html#cb168-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  SMR<span class="sc">:::</span><span class="fu">GaussLegendre</span>(<span class="at">size =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## $nodes
+## [1] -0.8611363 -0.3399810  0.3399810  0.8611363
+## 
+## $weights
+## [1] 0.3478548 0.6521452 0.6521452 0.3478548</code></pre>
+<p>As funções internas dos pacotes devem ser utilizadas com muita cautela, uma vez que são funções que podem passar por atualizações, mudanças. Isso porque, como não são funções exportadas, alguns pacotes podem passar por atualizações, e desse modo, estas funções também podem ser atualizadas ou até mesmo alteradas.</p>
+<p>Outro ponto interessante é que não se recomenda a utilização de importação de funções internas de outros pacotes no desenvolvimento de pacotes, uma vez que são funções que podem passar por mudanças drásticas, e portanto, gerar problemas nas rotinas. Se uma função em um pacote não foi exportada, é porque o desenvolvedor tem um bom motivo para tal situação. As funções exportadas são de fato a essência do objetivo de um pacote, e por isso que elas são exportadas.</p>
+
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></div>
+<div class="next"><a href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#pacotes-1"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="nav-link" href="#introdu%C3%A7%C3%A3o-3"><span class="header-section-number">8.1</span> Introdução</a></li>
+<li><a class="nav-link" href="#estrutura-b%C3%A1sica-de-um-pacote-1"><span class="header-section-number">8.2</span> Estrutura básica de um pacote</a></li>
+<li><a class="nav-link" href="#instala%C3%A7%C3%A3o-de-um-pacote-1"><span class="header-section-number">8.3</span> Instalação de um pacote</a></li>
+<li><a class="nav-link" href="#objetivos-de-um-pacote-1"><span class="header-section-number">8.4</span> Objetivos de um pacote</a></li>
+<li><a class="nav-link" href="#utilizar-as-fun%C3%A7%C3%B5es-de-um-pacote"><span class="header-section-number">8.5</span> Utilizar as funções de um pacote</a></li>
+<li><a class="nav-link" href="#carregando-e-anexando-um-pacote-1"><span class="header-section-number">8.6</span> Carregando e anexando um pacote</a></li>
+<li><a class="nav-link" href="#namespace-de-um-pacote-1"><span class="header-section-number">8.7</span> NAMESPACE de um pacote</a></li>
+<li><a class="nav-link" href="#documenta%C3%A7%C3%B5es-de-um-pacote"><span class="header-section-number">8.8</span> Documentações de um pacote</a></li>
+<li><a class="nav-link" href="#operadores-e"><span class="header-section-number">8.9</span> Operadores :: e :::</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/bendeivide/book-eambr01/blob/master/09-interfaces_r.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/bendeivide/book-eambr01/edit/master/09-interfaces_r.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

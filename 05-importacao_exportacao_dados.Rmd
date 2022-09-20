@@ -180,7 +180,7 @@ knitr::include_graphics("img/Importando_Dados_04.png")
 
 Vejamos as linhas de comando para importar os dados, Código R 5.1.
 
-```{r echo=TRUE, prompt=TRUE}
+```{r echo=TRUE, prompt=TRUE, eval=FALSE}
  # Diretorio
  getwd()
 # Mudadando para o diretorio de interesse
@@ -217,7 +217,7 @@ alfafa.txt", header = TRUE)
 
 Na última linha de comando, mostramos que também é possível importar dados de arquivos de texto da internet, e claro considerando que o usuário está com acesso a internet no momento da importação. E um recurso interessante que pode ser feito, principalmente para este caso, é salvar o banco de dados em um arquivo de dados no ‘.RData‘. Dessa forma, todos os dados, inclusive os importados da internet serão agora armazenados nesse tipo de arquivo, e não precisaremos, nesse caso, de acesso a internet. Para salvar, usamos a função save(). Para carregar os dados e armazenálo no ambiente global, usamos a função load(), Código R 5.2.
 
-```{r echo=TRUE, prompt=TRUE}
+```{r echo=TRUE, prompt=TRUE, eval=FALSE}
  # Diretorio
  getwd()
 
@@ -226,8 +226,7 @@ Na última linha de comando, mostramos que também é possível importar dados d
 
  # Importando os dados da internet
  dados7 <- read.table(file =
-"https://raw.githubusercontent.com/bendeivide/book-eambr01/main/files/␣
-alfafa.txt", header = TRUE)
+"https://raw.githubusercontent.com/bendeivide/book-eambr01/main/files/alfafa.txt", header = TRUE)
 
  # Salvando em '.RData'
  save(dados7, file = "alfafa.RData")

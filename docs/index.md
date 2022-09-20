@@ -2,7 +2,7 @@
 title: "R básico"
 subtitle: "Coleção Estudando o Ambiente R (Volume I)"
 author: "Ben Dêivide e Diego Arthur"
-date: "2022-09-02"
+date: "2022-09-20"
 #lang: pt
 csl: abnt.csl
 site: bookdown::bookdown_site
@@ -14,13 +14,13 @@ link-citations: yes
 
 
 
-url: 'https://bendeivide.github.io/book-eambr/'
-github-repo: bendeivide/book-eambr
+url: 'https://bendeivide.github.io/book-eambr01/'
+github-repo: bendeivide/book-eambr01
 
 ---
 # Bem-vindo {-}
 
-<a href="http://bendeivide.github.io/cursor"><img src="capa.png" align="right" width="250" height="366" class="cover" alt="Compre pela internet" /></a> Este é um *livro digital* da coleção __"[Estudando o ambiente R](https://bendeivide.github.io/#books)"__, *Volume 1*, intitulado **R Básico**, com o selo [Democratizando Conhecimento (DC)](https://bendeivide.github.io/dc/). O Livro é destinado aos usuários R que objetivam aprofundar o entendimento do ambiente R para seus projetos pessoais e profissionais.
+<a href="https://www.amazon.com/dp/6500515994"><img src="capa.png" align="right" width="250" height="366" class="cover" alt="Compre pela internet" /></a> Este é um *livro digital* da coleção __"[Estudando o ambiente R](https://bendeivide.github.io/#books)"__, *Volume 1*, intitulado **R Básico**, com o selo [Democratizando Conhecimento (DC)](https://bendeivide.github.io/dc/). O Livro é destinado aos usuários R que objetivam aprofundar o entendimento do ambiente R para seus projetos pessoais e profissionais.
 
 O número de leitores  que acessaram esse livro:
 </br>
@@ -29,6 +29,14 @@ O número de leitores  que acessaram esse livro:
 ## Sugestões e críticas {-}
 
 Sugestões e críticas sobre o livro podem ser enviadas para [livrosdeben@gmail.com](mailto:livrosdeben@gmail.com).
+
+## Livro físico {-}
+
+O livro físico se encontra à venda pela [Amazon](https://www.amazon.com/dp/6500515994), e pode ser acessado em: [https://www.amazon.com/dp/6500515994](https://www.amazon.com/dp/6500515994).
+
+## Materiais complamentares {-}
+
+Todos os códigos aprensentados no livro, apresentações, a versão digital em PDF, dentre outras informações, podem ser encontradas em: [https://bendeivide.github.io/books/eambr01/](https://bendeivide.github.io/books/eambr01/).
 
 ## Licença {-}
 

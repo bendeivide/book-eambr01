@@ -22,12 +22,11 @@ Com isso, colorações nas linhas de comando ocorrerão, distinguindo diversas e
 
 Uma vez feito isso, vamos para o passo seguinte que são as boas práticas de como se escrever um script. Temos algumas ferramentas prontas, como o pacote styler e como alternativa o pacote **formatR**, que automatiza todo o nosso código seja em script, contido em um pacote, ou diretório. Acesse <https://yihui.org/formatr>, para mais detalhes. Para instalar e anexar o pacote styler, use as linhas de comando:
 
-```{r echo=TRUE, prompt=TRUE}
- # Instalando pacote
- install.packages(styler)
- # Carregando e anexando
- library(styler)
-
+```{r echo=TRUE, prompt=TRUE, eval = FALSE}
+# Instalando pacote
+install.packages(styler)
+# Carregando e anexando
+library(styler)
 ```
 
 Vejamos a Figura \@ref(fig:configuracaoStyler), para entendermos a funcionabilidade desse pacote.
