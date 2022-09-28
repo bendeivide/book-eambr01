@@ -22,9 +22,14 @@ github-repo: bendeivide/book-eambr01
 
 <a href="https://www.amazon.com/dp/6500515994"><img src="capa.png" align="right" width="250" height="366" class="cover" alt="Compre pela internet" /></a> Este é um *livro digital* da coleção __"[Estudando o ambiente R](https://bendeivide.github.io/#books)"__, *Volume 1*, intitulado **R Básico**, com o selo [Democratizando Conhecimento (DC)](https://bendeivide.github.io/dc/). O Livro é destinado aos usuários R que objetivam aprofundar o entendimento do ambiente R para seus projetos pessoais e profissionais.
 
-O número de leitores  que acessaram esse livro:
+O número de leitores  que acessaram este livro:
 </br>
 <div align='center'><a href='https://www.free-website-hit-counter.com'><img src='https://hitwebcounter.com/counter/counter.php?page=7819661&style=0024&nbdigits=9&type=page&initCount=0' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">Free website hit counter</a></small></div>
+
+<script type='text/javascript' src='http://dstats.net/js/dstracker.js'></script>
+<a href='https://github.com/bendeivide/book-eambr01/raw/main/docs/book-eambr01.pdf' onclick='return dstatstracker(this);'>Estatística de downloads do R básico (PDF): </a>
+<script type='text/javascript' src='http://dstats.net/dstatsjs.php?file=https://github.com/bendeivide/book-eambr01/raw/main/docs/book-eambr01.pdf'></script>
+<script type='text/javascript'>document.write(dsCounter);</script>
 
 ## Sugestões e críticas {-}
 
@@ -36,7 +41,7 @@ O livro físico encontra-se à venda pela [Amazon](https://www.amazon.com/dp/650
 
 ## Materiais complamentares {-}
 
-Todos os códigos aprensentados no livro, apresentações, a versão digital em PDF, dentre outras informações, podem ser encontradas em: [https://bendeivide.github.io/books/eambr01/](https://bendeivide.github.io/books/eambr01/).
+Todos os códigos aprensentados no livro, apresentações, a versão digital em PDF, dentre outras informações, podem ser encontrados em: [https://bendeivide.github.io/books/eambr01/](https://bendeivide.github.io/books/eambr01/).
 
 ## Licença {-}
 
