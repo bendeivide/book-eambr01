@@ -31,7 +31,7 @@ volume-iii-nível-avançado
 demais-volumes
 referencias
 pacutilizados
-história-do-r
+história-e-instalação-do-r
 o-que-é-o-r
 instalação-do-r-e-rstudio
 como-o-r-trabalha
@@ -44,7 +44,7 @@ chamada-e-correção-de-comandos-anteriores
 ambiente-global-área-de-trabalho-ou-workspace
 arquivos-.rdata-e-.rhistory
 criando-e-salvando-um-script
-objetos
+objetos-e-estrutura-de-dados
 atributos
 atributos-intrínsecos
 coersão
@@ -79,6 +79,7 @@ chamadas-de-função
 ordenação-de-argumentos
 objeto-reticências
 escopo-léxico-1
+boas-práticas-de-como-escrever-um-código
 pacotes
 estrutura-básica-de-um-pacote
 instalação-de-um-pacote
@@ -87,7 +88,7 @@ utilizando-funções-de-um-pacote
 carregando-e-anexando-um-pacote
 namespace-de-um-pacote
 usando-os-operadores-e
-boas-práticas-de-como-escrever-um-código
+boas-práticas-de-como-escrever-um-código-1
 introdução-2
 pacotes-1
 introdução-3

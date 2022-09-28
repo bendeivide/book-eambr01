@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Capítulo 9 Boas práticas de como escrever um código | R básico</title>
+<meta name="author" content="Ben Dêivide e Diego Arthur">
+<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta property="og:title" content="Capítulo 9 Boas práticas de como escrever um código | R básico">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://bendeivide.github.io/book-eambr01/boas-práticas-de-como-escrever-um-código-1.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Capítulo 9 Boas práticas de como escrever um código | R básico">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BG6SYWV817');
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+          margin-bottom: 1em;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<meta name="description" content="9.1 Introdução Nesse momento, entendemos os principais objetos para escrevermos os nossos scripts. Quando escrevemos um código, duas consequências ocorrem: guardá-lo para futuras consultas, ou...">
+<meta property="og:description" content="9.1 Introdução Nesse momento, entendemos os principais objetos para escrevermos os nossos scripts. Quando escrevemos um código, duas consequências ocorrem: guardá-lo para futuras consultas, ou...">
+<meta name="twitter:description" content="9.1 Introdução Nesse momento, entendemos os principais objetos para escrevermos os nossos scripts. Quando escrevemos um código, duas consequências ocorrem: guardá-lo para futuras consultas, ou...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Coleção Estudando o Ambiente R (Volume I)">R básico</a>:
+        <small class="text-muted">Coleção Estudando o Ambiente R (Volume I)</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Bem-vindo</a></li>
+<li><a class="" href="ep%C3%ADgrafe.html">Epígrafe</a></li>
+<li><a class="" href="pref%C3%A1cio.html">Prefácio</a></li>
+<li><a class="" href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
+<li><a class="" href="hist%C3%B3ria-e-instala%C3%A7%C3%A3o-do-r.html"><span class="header-section-number">2</span> História e instalação do R</a></li>
+<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">3</span> Como o R trabalha?</a></li>
+<li><a class="" href="objetos-e-estrutura-de-dados.html"><span class="header-section-number">4</span> Objetos e estrutura de dados</a></li>
+<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">5</span> Importação e exportação de dados</a></li>
+<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">6</span> Funções no R</a></li>
+<li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
+<li><a class="" href="pacotes.html"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="active" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html"><span class="header-section-number">9</span> Boas práticas de como escrever um código</a></li>
+<li><a class="" href="pacotes-1.html"><span class="header-section-number">10</span> Pacotes</a></li>
+<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">11</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li><a class="" href="refer%C3%AAncias.html">Referências</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/bendeivide/book-eambr01">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="boas-práticas-de-como-escrever-um-código-1" class="section level1" number="9">
+<h1>
+<span class="header-section-number">Capítulo 9</span> Boas práticas de como escrever um código<a class="anchor" aria-label="anchor" href="#boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="introdução-2" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> Introdução<a class="anchor" aria-label="anchor" href="#introdu%C3%A7%C3%A3o-2"><i class="fas fa-link"></i></a>
+</h2>
+<p>Nesse momento, entendemos os principais objetos para escrevermos os nossos scripts. Quando escrevemos um código, duas consequências ocorrem:</p>
+<ul>
+<li><p>guardá-lo para futuras consultas, ou</p></li>
+<li><p>compartilhamento.</p></li>
+</ul>
+<p>Nesses dois casos, percebemos que alguém irá ler esse código, ou até mesmo o próprio usuário, irá retornar àquelas linhas de código e tentar raciocinar quais as ideias por trás disso tudo. Para um melhor entendimento de seu script, nada mais importante do que uma boa escrita, separação das estruturas por hierarquização, comentários, etc.</p>
+<p>Uma primeira ferramenta que pode ser configurada para quem usa o RStudio é acionar todas as opções de diagnóstico do seu código. Para isso no menu:</p>
+<ul>
+<li><p>Tools &gt; Global options &gt; Code &gt; Editing. Marque todas as opções em General;</p></li>
+<li><p>Tools &gt; Global options &gt; Code &gt; Display, Marque todas as opções;</p></li>
+<li><p>Tools &gt; Global options &gt; Code &gt; Diagnostics. Marque todas as opções em R Diagnostics.</p></li>
+</ul>
+<p>Com isso, colorações nas linhas de comando ocorrerão, distinguindo diversas estruturas, como linhas de comentário, funções, espaçamentos, dentre outras coisas.</p>
+<p>Uma vez feito isso, vamos para o passo seguinte que são as boas práticas de como se escrever um script. Temos algumas ferramentas prontas, como o pacote styler e como alternativa o pacote <strong>formatR</strong>, que automatiza todo o nosso código seja em script, contido em um pacote, ou diretório. Acesse <a href="https://yihui.org/formatr" class="uri">https://yihui.org/formatr</a>, para mais detalhes. Para instalar e anexar o pacote styler, use as linhas de comando:</p>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Instalando pacote</span></span>
+<span id="cb147-2"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html#cb147-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">install.packages</span>(styler)</span>
+<span id="cb147-3"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html#cb147-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Carregando e anexando</span></span>
+<span id="cb147-4"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html#cb147-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">library</span>(styler)</span></code></pre></div>
+<p>Vejamos a Figura <a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html#fig:configuracaoStyler">9.1</a>, para entendermos a funcionabilidade desse pacote.</p>
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Configuracao_Styler.png"</span><span class="op">)</span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:configuracaoStyler"></span>
+<img src="img/Configuracao_Styler.png" alt="Passos para configurar o pacote styler." width="80%"><p class="caption">
+FIGURA 9.1: Passos para configurar o pacote styler.
+</p>
+</div>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="pacotes.html"><span class="header-section-number">8</span> Pacotes</a></div>
+<div class="next"><a href="pacotes-1.html"><span class="header-section-number">10</span> Pacotes</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1"><span class="header-section-number">9</span> Boas práticas de como escrever um código</a></li>
+<li><a class="nav-link" href="#introdu%C3%A7%C3%A3o-2"><span class="header-section-number">9.1</span> Introdução</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/bendeivide/book-eambr01/blob/master/09-ambiente_caminho_busca.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/bendeivide/book-eambr01/edit/master/09-ambiente_caminho_busca.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-28.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

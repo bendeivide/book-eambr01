@@ -4,14 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 4 Importação e exportação de dados | R básico</title>
+<title>Capítulo 5 Importação e exportação de dados | R básico</title>
 <meta name="author" content="Ben Dêivide e Diego Arthur">
 <meta name="generator" content="bookdown 0.25 with bs4_book()">
-<meta property="og:title" content="Capítulo 4 Importação e exportação de dados | R básico">
+<meta property="og:title" content="Capítulo 5 Importação e exportação de dados | R básico">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://bendeivide.github.io/book-eambr01/importação-e-exportação-de-dados.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 4 Importação e exportação de dados | R básico">
+<meta name="twitter:title" content="Capítulo 5 Importação e exportação de dados | R básico">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -48,9 +48,9 @@
       margin-left: 2em;
     }
   </style>
-<meta name="description" content="4.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
-<meta property="og:description" content="4.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
-<meta name="twitter:description" content="4.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
+<meta name="description" content="5.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
+<meta property="og:description" content="5.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
+<meta name="twitter:description" content="5.1 Introdução A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -77,14 +77,16 @@
 <li><a class="" href="ep%C3%ADgrafe.html">Epígrafe</a></li>
 <li><a class="" href="pref%C3%A1cio.html">Prefácio</a></li>
 <li><a class="" href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
-<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></li>
-<li><a class="" href="objetos.html"><span class="header-section-number">3</span> Objetos</a></li>
-<li><a class="active" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
-<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></li>
-<li><a class="" href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></li>
+<li><a class="" href="hist%C3%B3ria-e-instala%C3%A7%C3%A3o-do-r.html"><span class="header-section-number">2</span> História e instalação do R</a></li>
+<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">3</span> Como o R trabalha?</a></li>
+<li><a class="" href="objetos-e-estrutura-de-dados.html"><span class="header-section-number">4</span> Objetos e estrutura de dados</a></li>
+<li><a class="active" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">5</span> Importação e exportação de dados</a></li>
+<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">6</span> Funções no R</a></li>
 <li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
-<li><a class="" href="pacotes-1.html"><span class="header-section-number">8</span> Pacotes</a></li>
-<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li><a class="" href="pacotes.html"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html"><span class="header-section-number">9</span> Boas práticas de como escrever um código</a></li>
+<li><a class="" href="pacotes-1.html"><span class="header-section-number">10</span> Pacotes</a></li>
+<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">11</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
 <li><a class="" href="refer%C3%AAncias.html">Referências</a></li>
 </ul>
 
@@ -93,19 +95,19 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="importação-e-exportação-de-dados" class="section level1" number="4">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="importação-e-exportação-de-dados" class="section level1" number="5">
 <h1>
-<span class="header-section-number">Capítulo 4</span> Importação e exportação de dados<a class="anchor" aria-label="anchor" href="#importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 5</span> Importação e exportação de dados<a class="anchor" aria-label="anchor" href="#importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados"><i class="fas fa-link"></i></a>
 </h1>
-<div id="introdução" class="section level2" number="4.1">
+<div id="introdução" class="section level2" number="5.1">
 <h2>
-<span class="header-section-number">4.1</span> Introdução<a class="anchor" aria-label="anchor" href="#introdu%C3%A7%C3%A3o"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1</span> Introdução<a class="anchor" aria-label="anchor" href="#introdu%C3%A7%C3%A3o"><i class="fas fa-link"></i></a>
 </h2>
 <p>A importação/exportação de dados era algo que em poucas linhas conseguíamos explicar sobre o ambiente R , no sentido de análise de dados. Entretanto, observando o terceiro princípio do R, afirmado por Chambers (2016): “Interfaces para outros programas são parte do <strong>R</strong>”. Hoje é uma realidade a interação que o ambiente <strong>R</strong> tem com outras interfaces (programas, linguagens, etc.). A facilidade em utilizar outras linguagens dentro do ambiente <strong>R</strong> torna assim mais complexo a importação/exportação de dados, uma vez que o objetivo do <strong>R</strong> , apesar do R Core Team ainda limitar a sua definição como o ambiente para a computação estatística, a ferramenta se tornou tão versátil, que hoje torna humilde essa definição. Para mais detalhes acesse o manual ??R Data Import/Export (R CORE TEAM, 2021a). Um outro fator e tema atual é a era dos grandes bancos de dados (Big Data), do qual se tem um grande conjunto de variáveis e necessitamos fazer a importação por APIs1 ,por exemplo, ou outras vias. Temas como esses, serão abordados em outros volumes da coleção Estudando o Ambiente <strong>R</strong>. Nesse momento, limitaremos esse assunto ao objetivo de termos um conjunto de dados em arquivos de texto (extensões do tipo .txt, .csv, .xls), formato binário (.xls ou .xlsx) ou digitados manualmente pelo teclado do computador. Assim, a primeira forma de como os dados estão dispostos, precisaremos importá-los e armazená-los em um quadro de dados (data frame), para que esteja disponível na área de trabalho (ambiente global) do <strong>R</strong> , e dessa forma, possamos utilizá-lo. Ao final do tratamento dos dados, podemos exportar essas informações para arquivos externos, e daí também, usaremos os arquivos de textos e o formato binário (.xls), mensionados anteriormente.</p>
 </div>
-<div id="preparação-dos-dados" class="section level2" number="4.2">
+<div id="preparação-dos-dados" class="section level2" number="5.2">
 <h2>
-<span class="header-section-number">4.2</span> Preparação dos dados<a class="anchor" aria-label="anchor" href="#prepara%C3%A7%C3%A3o-dos-dados"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2</span> Preparação dos dados<a class="anchor" aria-label="anchor" href="#prepara%C3%A7%C3%A3o-dos-dados"><i class="fas fa-link"></i></a>
 </h2>
 <p>A primeira coisa que devemos entender quando desejamos construir o arquivo de dados, é entender que sempre organizaremos as variáveis em colunas, com os seus valores em linhas, Figura ??fig:bdados). Sempre a primeira linha das colunas representarar o nome das variáveis. Esse é outro ponto importante, pois devemos ter a noção que alguma linguagem irá ler esse banco de dados. Assim, quanto mais caracteres diferentes do padrão ASCII, mais difícil será a leitura desses dados. Assim, sugerimos alguns padrões:</p>
 <ul>
@@ -120,13 +122,13 @@
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:ModeloEstruturalBancoDados"></span>
 <img src="img/Modelo_Estrutural_Banco_Dados.png" alt=" Modelo estrutural de um banco de dados." width="80%"><p class="caption">
-FIGURA 4.1:  Modelo estrutural de um banco de dados.
+FIGURA 5.1:  Modelo estrutural de um banco de dados.
 </p>
 </div>
 </div>
-<div id="importando-dados" class="section level2" number="4.3">
+<div id="importando-dados" class="section level2" number="5.3">
 <h2>
-<span class="header-section-number">4.3</span> Importando dados<a class="anchor" aria-label="anchor" href="#importando-dados"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3</span> Importando dados<a class="anchor" aria-label="anchor" href="#importando-dados"><i class="fas fa-link"></i></a>
 </h2>
 <p>A função primária responável pela importação de dados é a função scan(). Por exemplo, funções
 como read.table(), read.csv() e read.delim(), usam a função scan() em seu algoritmo. A primeira ideia sobre importação de dados pode ser inserindo-os pelo teclado no próprio ambiente R . Para isso, usaremos a função scan(), isto é,</p>
@@ -135,24 +137,24 @@ como read.table(), read.csv() e read.delim(), usam a função scan() em seu algo
 <p>Após executado essa linha de comando, aparecerá no console 1: que significa, digitar o primeiro valor do objeto x, e depois clicar em ENTER. Depois 2:, que significa digitar o segundo valor, e clicar em ENTER. Depois de inserido todos os valores necessários, aperte a tecla ENTER duas vezes no console, para sair da função scan().</p>
 <p>O mais tradicional é usar programa para criação de banco de dados e deixá-lo pronto para o <strong>R</strong> lê-lo. O tipo de arquivo de texto que melhor controla a separação de variáveis é com a extensão .csv, uma vez que separamos as variáveis por “;”, é o padrão. O arquivo de texto com extensão .txt, geralmente usa espaços. Isso acaba gerando problema de leitura no <strong>R</strong> , porque muitos usuários usam nomes de variáveis muito grandes, palavras compostas, de forma a desalinhar as colunas das variáveis. Daí, como a separação das variáveis é por meio de espaços, acaba gerando problema de leitura. Uma outra forma, é fazer importação de dados gerados pelo próprio <strong>R</strong> , extensão .RData.</p>
 <p>Temos a opção de usar um editor de banco de dados para essas extensões por meio de programas como MS Excel, Libre Office, dentre outros. Estes exportam arquivos binários do tipo .xls, .xlsx, dentre outros. Uma sugestão para diminuir complicações, é exportar os bancos de dados para arquivos de texto sitados acima, que também é possível ser exportado por esses programas. Isso evita a necessidade de ser instalado mais pacotes e dor de cabeça. Porém, para quem ainda deseja enfrentar, sugerimos a leitura do pacote readr, como exemplo, porém existem diversos outros pacotes para este mesmo fim.</p>
-<p>Uma vez que o banco de dados está pronto, a leitura destes pode ser feita por alguns caminhos. Mostraremos o mais trivial que é o botão Import Dataset, terceiro quadrante, aba Environment, na IDE do RStudio , como observado na Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados01">4.2</a>.</p>
+<p>Uma vez que o banco de dados está pronto, a leitura destes pode ser feita por alguns caminhos. Mostraremos o mais trivial que é o botão Import Dataset, terceiro quadrante, aba Environment, na IDE do RStudio , como observado na Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados01">5.2</a>.</p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Importando_Dados_01.png"</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:importarDados01"></span>
 <img src="img/Importando_Dados_01.png" alt="Usando o RStudio para importar dados" width="80%"><p class="caption">
-FIGURA 4.2: Usando o RStudio para importar dados
+FIGURA 5.2: Usando o RStudio para importar dados
 </p>
 </div>
 <p>Posteriormente, indique o arquivo para leitura. Aparece algumas opções de tipo de arquivo. Em
 nosso caso, usaremos a opção From Text (base), que significa realizar a leitura para os tipos de arquivo
 .txt ou .csv. Daí os passos seguintes são:</p>
 <ol style="list-style-type: decimal">
-<li><p>Escolher o arquivo para leitura dos dados Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados01">4.2</a>;</p></li>
-<li><p>Configurar a leitura do banco de dados. Uma prévia pode ser vista no quadro Data Frame. Se for visualizado, algum problema, isso significa que deve ser informado opções adicionais como separador de variáveis (Separator), símbolo para casas decimais (Decimal), dentre outras opções. Por fim, digitar o nome associado ao objeto (Name) que será criado do tipo quadro de dados (data frame), e clicar no botão Import Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados02">4.3</a>;</p></li>
+<li><p>Escolher o arquivo para leitura dos dados Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados01">5.2</a>;</p></li>
+<li><p>Configurar a leitura do banco de dados. Uma prévia pode ser vista no quadro Data Frame. Se for visualizado, algum problema, isso significa que deve ser informado opções adicionais como separador de variáveis (Separator), símbolo para casas decimais (Decimal), dentre outras opções. Por fim, digitar o nome associado ao objeto (Name) que será criado do tipo quadro de dados (data frame), e clicar no botão Import Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados02">5.3</a>;</p></li>
 <li><p>Uma vez inserido, o RStudio apresenta a linha de comando utilizada para importar os dados no
 console (2º quadrante), o conjunto de dados (1º quadrante), e a ligação entre o nome e o objeto no
-ambiente global (3º quadrante), Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados03">4.4</a>;</p></li>
+ambiente global (3º quadrante), Figura <a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#fig:importarDados03">5.4</a>;</p></li>
 </ol>
 <p>A outra forma é utilizar linhas de comando. Para isso utilizaremos a função read.table(). Antes de importarmos o banco de dados, algo interessante é inserir o arquivo de dados no diretório de trabalho no ambiente R . Para verificar o ambiente de trabalho use a função getwd(). Para alterar o local do ambiente de trabalho use setwd(). Se esse procedimento não for realizado, o usuário deve informar na função read.table(), o local exato do arquivo de texto.</p>
 <p>Vamos usar como diretório o local C:. Lembre-se que no R , a barra deve ser invertida. Vamos inserir nesse diretório três arquivos alfafa.txt, datast1980.txt e producao.csv.</p>
@@ -162,7 +164,7 @@ ambiente global (3º quadrante), Figura <a href="importa%C3%A7%C3%A3o-e-exporta%
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:importarDados02"></span>
 <img src="img/Importando_Dados_02.png" alt="Usando o RStudio para importar dados" width="80%"><p class="caption">
-FIGURA 4.3: Usando o RStudio para importar dados
+FIGURA 5.3: Usando o RStudio para importar dados
 </p>
 </div>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
@@ -170,7 +172,7 @@ FIGURA 4.3: Usando o RStudio para importar dados
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:importarDados03"></span>
 <img src="img/Importando_Dados_03.png" alt="Usando o RStudio para importar dados" width="80%"><p class="caption">
-FIGURA 4.4: Usando o RStudio para importar dados
+FIGURA 5.4: Usando o RStudio para importar dados
 </p>
 </div>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
@@ -178,7 +180,7 @@ FIGURA 4.4: Usando o RStudio para importar dados
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:importarDados04"></span>
 <img src="img/Importando_Dados_04.png" alt="Usando o RStudio para importar dados" width="80%"><p class="caption">
-FIGURA 4.5: Usando o RStudio para importar dados
+FIGURA 5.5: Usando o RStudio para importar dados
 </p>
 </div>
 <div class="inline-table"><table class="table table-sm">
@@ -574,24 +576,24 @@ FIGURA 4.5: Usando o RStudio para importar dados
 <span id="cb30-15"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">load</span>(<span class="st">"alfafa.RData"</span>)</span></code></pre></div>
 <p>Percebemos que as extensões .txt e .csv são idênticos, exceto pela estrutura de como os dados estão dispostos. Para comprovar isso, o usuário manualmente poderá mudar a extensão de um arquivo do tipo .csv para um arquivo .txt e observar em um bloco de notas. Até agora, usamos as funções no <strong>R</strong>, em algumas situações, sem apresentar os argumentos dessas funções dentro dos parênteses. Isso porque quando inserimos os valores dos argumentos na posição correta destes, não precisaremos inserir o nome dos argumentos. Por exemplo, já usamos anteriormente a função mean() que calcula a média de um conjunto de valores, por exemplo, valores &lt;- 1:10. Temos como primeiro argumento para essa função o x que representa um objeto R que recebe os valores para o cálculo. Assim, como sabemos que x é o primeiro argumento dessa função, podemos omitir o seu nome e calcular a média por mean(valores), que é o mesmo que mean(x = valores). Para mais detalhes, ?mean(), como também, para mais detalhes sobre a função read.table(), use ?read.table()</p>
 </div>
-<div id="exportando-dados" class="section level2" number="4.4">
+<div id="exportando-dados" class="section level2" number="5.4">
 <h2>
-<span class="header-section-number">4.4</span> Exportando dados<a class="anchor" aria-label="anchor" href="#exportando-dados"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.4</span> Exportando dados<a class="anchor" aria-label="anchor" href="#exportando-dados"><i class="fas fa-link"></i></a>
 </h2>
 
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="objetos.html"><span class="header-section-number">3</span> Objetos</a></div>
-<div class="next"><a href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></div>
+<div class="prev"><a href="objetos-e-estrutura-de-dados.html"><span class="header-section-number">4</span> Objetos e estrutura de dados</a></div>
+<div class="next"><a href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">6</span> Funções no R</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
-<li><a class="nav-link" href="#introdu%C3%A7%C3%A3o"><span class="header-section-number">4.1</span> Introdução</a></li>
-<li><a class="nav-link" href="#prepara%C3%A7%C3%A3o-dos-dados"><span class="header-section-number">4.2</span> Preparação dos dados</a></li>
-<li><a class="nav-link" href="#importando-dados"><span class="header-section-number">4.3</span> Importando dados</a></li>
-<li><a class="nav-link" href="#exportando-dados"><span class="header-section-number">4.4</span> Exportando dados</a></li>
+<li><a class="nav-link" href="#importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados"><span class="header-section-number">5</span> Importação e exportação de dados</a></li>
+<li><a class="nav-link" href="#introdu%C3%A7%C3%A3o"><span class="header-section-number">5.1</span> Introdução</a></li>
+<li><a class="nav-link" href="#prepara%C3%A7%C3%A3o-dos-dados"><span class="header-section-number">5.2</span> Preparação dos dados</a></li>
+<li><a class="nav-link" href="#importando-dados"><span class="header-section-number">5.3</span> Importando dados</a></li>
+<li><a class="nav-link" href="#exportando-dados"><span class="header-section-number">5.4</span> Exportando dados</a></li>
 </ul>
 
       <div class="book-extra">
@@ -609,7 +611,7 @@ FIGURA 4.5: Usando o RStudio para importar dados
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-20.</p>
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

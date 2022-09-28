@@ -1,4 +1,4 @@
-# Como o R trabalha
+# Como o R trabalha?
 
 Iniciamos a discussão por uma afirmação de John McKinley Chambers, do qual afirmou que o R tem três princípios (Chambers 2016):
 

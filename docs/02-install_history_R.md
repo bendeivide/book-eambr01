@@ -1,5 +1,7 @@
 <!-- # (PART) Programação em R (Nível Básico) {-} -->
-## História do R
+
+# História e instalação do R
+
 A linguagem **R** tem a sua primeira aparição científica publicada em 1996, com o artigo intitulado
 R: A Language for Data Analysis and Graphics, cujos os autores são os desenvolvedores da linguagem,
 George Ross Ihaka e Robert Clifford Gentleman.

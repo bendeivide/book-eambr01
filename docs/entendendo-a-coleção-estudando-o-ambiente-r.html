@@ -77,14 +77,16 @@
 <li><a class="" href="ep%C3%ADgrafe.html">Epígrafe</a></li>
 <li><a class="" href="pref%C3%A1cio.html">Prefácio</a></li>
 <li><a class="active" href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
-<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></li>
-<li><a class="" href="objetos.html"><span class="header-section-number">3</span> Objetos</a></li>
-<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
-<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></li>
-<li><a class="" href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></li>
+<li><a class="" href="hist%C3%B3ria-e-instala%C3%A7%C3%A3o-do-r.html"><span class="header-section-number">2</span> História e instalação do R</a></li>
+<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">3</span> Como o R trabalha?</a></li>
+<li><a class="" href="objetos-e-estrutura-de-dados.html"><span class="header-section-number">4</span> Objetos e estrutura de dados</a></li>
+<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">5</span> Importação e exportação de dados</a></li>
+<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">6</span> Funções no R</a></li>
 <li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
-<li><a class="" href="pacotes-1.html"><span class="header-section-number">8</span> Pacotes</a></li>
-<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li><a class="" href="pacotes.html"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html"><span class="header-section-number">9</span> Boas práticas de como escrever um código</a></li>
+<li><a class="" href="pacotes-1.html"><span class="header-section-number">10</span> Pacotes</a></li>
+<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">11</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
 <li><a class="" href="refer%C3%AAncias.html">Referências</a></li>
 </ul>
 
@@ -222,108 +224,11 @@
 </table></div>
 <!-- # (PART) Programação em R (Nível Básico) {-} -->
 </div>
-<div id="história-do-r" class="section level2" number="1.7">
-<h2>
-<span class="header-section-number">1.7</span> História do R<a class="anchor" aria-label="anchor" href="#hist%C3%B3ria-do-r"><i class="fas fa-link"></i></a>
-</h2>
-<p>A linguagem <strong>R</strong> tem a sua primeira aparição científica publicada em 1996, com o artigo intitulado
-R: A Language for Data Analysis and Graphics, cujos os autores são os desenvolvedores da linguagem,
-George Ross Ihaka e Robert Clifford Gentleman.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:CriadoresR"></span>
-<img src="img/Criadores_R.PNG" alt="Criadores do R." width="100%"><p class="caption">
-FIGURA 1.1: Criadores do R.
-</p>
-</div>
-<p>Durante a época em que estes professores trabalhavam na Universidade de Auckland, Nova Zelândia, desenvolvendo uma implementação alternativa da lingugagem S, desenvolvida por John Chambers, que comercialmente era o <strong>S-PLUS</strong>, nasceu em 1991, o projeto da linguagem <strong>R</strong> , em que em 1993 o projeto é divulgado e em 1995, o primeiro lançamento oficial, como software livre com
-a licença GNU. Devido a demanda de correções da linguagem que estava acima da capacidade de
-atualização em tempo real, foi criado em 1997, um grupo central voluntário, responsável por essas
-atualizações, o conhecido R Development Core Team2, que hoje está em 20 membros (atualizado
-em 5 de novembro de 2021): Douglas Bates, John Chambers, Peter Delgaard, Robert Gentleman,
-Kurt Hornik, Ross Ihaka, Tomas Kalibera, Michael Lawrence, Friedrich Leisch, Uwe Ligges, Thomas
-Lumley, Martin Maechler, Sebastian Meyer, Paul Murrel, Martyn Plummer, Brian Ripley, Deepayan
-Sarkarm, Duncan Temple Lang, Luke Tierney e Simon Urbanek. Por fim, o CRAN (Comprehensive R Archive Network) foi oficialmente anunciado em 23 de abril de 1997 3. O CRAN é um conjunto de sites (espelhos) que transportam material idêntico, com
-as contribuições do <strong>R</strong> de uma forma geral.</p>
-</div>
-<div id="o-que-é-o-r" class="section level2" number="1.8">
-<h2>
-<span class="header-section-number">1.8</span> O que é o R ?<a class="anchor" aria-label="anchor" href="#o-que-%C3%A9-o-r"><i class="fas fa-link"></i></a>
-</h2>
-<p>R é uma linguagem de programação e ambiente de software livre e código aberto (open source). Entendemos4:</p>
-<ul>
-<li>
-<p><strong>Software livre</strong>: <em>software</em> que respeita a liberdade e sendo de comunidade dos usuários, isto é, os usuários possuem a liberdade de executar, copiar, distribuir, estudar, mudar, melhorar o <em>software</em>. Ainda reforça que um <em>software</em> é livre se os seus usuários possuem quatro liberdades:</p>
-<ol style="list-style-type: decimal">
-<li>Liberdade 0 - A liberdade de executar o programa como você desejar, para qualquer propósito;</li>
-<li>Liberdade 1 - A liberdade de estudar como o programa funciona, e adaptá-la as suas necessidades;</li>
-<li>Liberdade 2 - A liberdade de redistribuir cópias de modo que você possa ajudar outros;</li>
-<li>Liberdade 3 - A liberdade de distribuir cópias de suas versões modificadas a outros;</li>
-</ol>
-</li>
-</ul>
-<p>Algo que deve estar claro é que um <em>software</em> livre não significa não comercial. Sem esse fim, o <em>software</em> livre não atingiria seus objetivos. Agora perceba que, segundo Richard Stallman, a ideia de software livre faz campanha pela liberdade para os usuários da computação. Por outro lado, o código aberto valoriza principalmente a vantagem prática e não faz campanha por princípios.</p>
-<ul>
-<li>
-<em>Código aberto</em>: Para Richard Stallman 6 código aberto apoia critérios um pouco mais flexíveis que os do software livre. Todos os códigos abertos de software livre lançados se qualificariam como código aberto. Quase todos os softwares de código aberto são software livre, mas há exceções, como algumas licenças de código aberto que são restritivas demais, de forma que elas não se qualificam como licenças livres. Nesse contexto, o autor cita muitas situações que diferenciam os dois termos. Vale a pena a leitura.</li>
-</ul>
-<p>A linguagem <strong>R</strong> é uma combinação da linguagem S com a semântica de escopo léxico da linguagem Scheme. Dessa forma, a linguagem <strong>R</strong> se diferencia em dois aspectos principais 7:</p>
-<ul>
-<li><p><strong>Gerenciamento de memória</strong>: usando as próprias palavras de Ross Ihaka, em <strong>R</strong>, alocamos uma quantidade fixa de memória na inicialização e a gerenciamos com um coletor de lixo dinâmico. Isso significa que há muito pouco crescimento de <em>heap</em> e, como resultado, há menos problemas de paginação do que os vistos em S.</p></li>
-<li><p><strong>Escopo</strong>: na linguagem <em>R</em>, as funções acessam as variáveis criadas pelo o corpo da própria função, como também as variáveis contidas no ambiente que a função foi criada. No caso da linguagem S, isso não ocorre, assim, como por exemplo na linguagem C, em que as funções acessam apenas variáveis definidas globalmente.</p></li>
-</ul>
-<p>Vejamos alguns exemplos para entendimento (Se você ainda não está ambientado ao <strong>R</strong>, estude esse módulo primeiro, e depois reflita sobre esses exemplos). Antes de executar as linhas de comando, instale o pacote <strong>lobstr</strong> como segue:</p>
-<p><span class="math display">\[CODIGO\]</span></p>
-<p>Como a linguagem <em>S</em> é uma linguagem interpretada cuja base é a linguagem <em>FORTRAN</em>, a linguagem <em>R</em> também é uma linguagem interpretada e baseada além da linguagem <em>S</em>, tem como base as linguagens de baixo nível <em>C</em>, <em>FORTRAN</em> e a própria linguagem <em>R</em>.</p>
-<p>Embora o <em>R</em> tenha uma interface baseada em linhas de comando, existem muitas interfaces gráficas ao usuário com destaque ao <em>RStudio</em>, criado por Joseph J. Allaire, Figura <a href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html#fig:CriadorRStudio">1.2</a>.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:CriadorRStudio"></span>
-<img src="img/Criador_RStudio.PNG" alt="J. J. Allaire, o criador do RStudio" width="100%"><p class="caption">
-FIGURA 1.2: J. J. Allaire, o criador do RStudio
-</p>
-</div>
-<p>Essa interface tornou o <em>R</em> mais popular, pois além de produzir,hoje, pacotes de grande utilização como a família de pacotes <em>tidyverse</em>, <strong>rmarkdown</strong>, <strong>shiny</strong>, dentre outros, permite uma eficiente capacidade de trabalho de análise de utilização do <strong>R</strong>. Uma vez que o <strong>RStudio</strong> facilita a utilização de muitos recursos por meio de botões, como por exemplo, a criação de um pacote <em>R</em>. Há quem diga que para um iniciante em <strong>R</strong>, não seja recomendado utilizar o <em>RStudio</em> para o entendimento da linguagem. Cremos, que o problema não é a IDE utilizada, e sim, o caminho onde deseja chegar com a linguagem <strong>R</strong>.</p>
-<p>No Brasil, o primeiro espelho do CRAN foi criado na UFPR, pelo grupo do Prof. Paulo Justiniano. Inclusive um dos primeiros materiais mais completos sobre a linguagem <strong>R</strong> produzidos no Brasil, foi dele, iniciado em 2005, intitulado “Introdução ao Ambiente Estatístico <strong>R</strong>”. Vale a pena assistirmos do evento a palestra: R Reflexões: um pouco de história e experiências com o R, proferida pelo Prof. Paulo Justiniano Ribeiro Júnior, no R Day - Encontro nacional de usuários do R, ocorrido em 2018 em Curitiba/UFPR, do qual o vídeo está disponível no Canal (Youtube) LEG UFPR.</p>
-</div>
-<div id="instalação-do-r-e-rstudio" class="section level2" number="1.9">
-<h2>
-<span class="header-section-number">1.9</span> Instalação do R e RStudio<a class="anchor" aria-label="anchor" href="#instala%C3%A7%C3%A3o-do-r-e-rstudio"><i class="fas fa-link"></i></a>
-</h2>
-<p>Para realizarmos a instalação do ambiente <strong>R</strong> , uma vez que o <strong>RStudio</strong> é apenas uma IDE, e sem o <strong>R</strong>, não há sentido instalá-lo, seguimos os seguintes passos:</p>
-<ul>
-<li>Instalação do R - <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>, Figura <a href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html#fig:InstalacaoR01">1.3</a> e <a href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html#fig:InstalacaoR02">1.4</a>:</li>
-</ul>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:InstalacaoR01"></span>
-<img src="img/Instalacao_R_01.PNG" alt=" Primeiro passo para Instalação do R" width="100%"><p class="caption">
-FIGURA 1.3:  Primeiro passo para Instalação do R
-</p>
-</div>
-<!-- IMAGEM 02 -->
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:InstalacaoR02"></span>
-<img src="img/Instalacao_R_02.PNG" alt="Segundo passo para Instalação do R" width="100%"><p class="caption">
-FIGURA 1.4: Segundo passo para Instalação do R
-</p>
-</div>
-<ul>
-<li>Instalação do RStudio - <a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a>:</li>
-</ul>
-<p>Justificamos a utilização do <strong>RStudio</strong> pela quantidade de recursos disponíveis e a diversidade de usuários <strong>R</strong>, que hoje o perfil não é apenas de um programador, mas de um usuário que necessita de uma ferramenta estatística para análise de seus dados. Dessa forma, até por questão de praticidade, e de uso pessoal, não deixaremos de repassar o entendimento sobre a linguagem <strong>R</strong> com o uso do <strong>RStudio</strong>.</p>
-<p>Outra coisa importante, é que esses passos para a instalação do R e RStudio se basearam no sistema operacional Windows, mas para detalhes sobre essas instalações em outros sistemas operacionais, acesse:
-<a href="https://bendeivide.github.io/cursor" class="uri">https://bendeivide.github.io/cursor</a>.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="img/Instalacao_R_Studio01.PNG" alt="Instalação do RStudio" width="100%"><p class="caption">
-FIGURA 1.5: Instalação do RStudio
-</p>
-</div>
-
-</div>
 </div>
 
   <div class="chapter-nav">
 <div class="prev"><a href="pref%C3%A1cio.html">Prefácio</a></div>
-<div class="next"><a href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></div>
+<div class="next"><a href="hist%C3%B3ria-e-instala%C3%A7%C3%A3o-do-r.html"><span class="header-section-number">2</span> História e instalação do R</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -334,9 +239,6 @@ FIGURA 1.5: Instalação do RStudio
 <li><a class="nav-link" href="#demais-volumes"><span class="header-section-number">1.4</span> Demais volumes</a></li>
 <li><a class="nav-link" href="#referencias"><span class="header-section-number">1.5</span> Referências complementares da Coleção</a></li>
 <li><a class="nav-link" href="#pacutilizados"><span class="header-section-number">1.6</span> Pacotes R utilizados para essa coleção</a></li>
-<li><a class="nav-link" href="#hist%C3%B3ria-do-r"><span class="header-section-number">1.7</span> História do R</a></li>
-<li><a class="nav-link" href="#o-que-%C3%A9-o-r"><span class="header-section-number">1.8</span> O que é o R ?</a></li>
-<li><a class="nav-link" href="#instala%C3%A7%C3%A3o-do-r-e-rstudio"><span class="header-section-number">1.9</span> Instalação do R e RStudio</a></li>
 </ul>
 
       <div class="book-extra">
@@ -354,7 +256,7 @@ FIGURA 1.5: Instalação do RStudio
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-20.</p>
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

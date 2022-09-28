@@ -4,14 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 5 Funções no R | R básico</title>
+<title>Capítulo 6 Funções no R | R básico</title>
 <meta name="author" content="Ben Dêivide e Diego Arthur">
 <meta name="generator" content="bookdown 0.25 with bs4_book()">
-<meta property="og:title" content="Capítulo 5 Funções no R | R básico">
+<meta property="og:title" content="Capítulo 6 Funções no R | R básico">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://bendeivide.github.io/book-eambr01/funções-no-r.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 5 Funções no R | R básico">
+<meta name="twitter:title" content="Capítulo 6 Funções no R | R básico">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -48,9 +48,9 @@
       margin-left: 2em;
     }
   </style>
-<meta name="description" content="5.1 Introdução Mais uma vez, nos reportamos aos princípios do R (CHAMBERS, 2016), mais especificamente ao segundo princípio, “Tudo que acontece no R é uma chamada de função”. Quando associamos um...">
-<meta property="og:description" content="5.1 Introdução Mais uma vez, nos reportamos aos princípios do R (CHAMBERS, 2016), mais especificamente ao segundo princípio, “Tudo que acontece no R é uma chamada de função”. Quando associamos um...">
-<meta name="twitter:description" content="5.1 Introdução Mais uma vez, nos reportamos aos princípios do R (CHAMBERS, 2016), mais especificamente ao segundo princípio, “Tudo que acontece no R é uma chamada de função”. Quando associamos um...">
+<meta name="description" content="6.1 Introdução Mais uma vez, nos reportamos aos princípios do R (CHAMBERS, 2016), mais especificamente ao segundo princípio, “Tudo que acontece no R é uma chamada de função”. Quando associamos um...">
+<meta property="og:description" content="6.1 Introdução Mais uma vez, nos reportamos aos princípios do R (CHAMBERS, 2016), mais especificamente ao segundo princípio, “Tudo que acontece no R é uma chamada de função”. Quando associamos um...">
+<meta name="twitter:description" content="6.1 Introdução Mais uma vez, nos reportamos aos princípios do R (CHAMBERS, 2016), mais especificamente ao segundo princípio, “Tudo que acontece no R é uma chamada de função”. Quando associamos um...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -77,14 +77,16 @@
 <li><a class="" href="ep%C3%ADgrafe.html">Epígrafe</a></li>
 <li><a class="" href="pref%C3%A1cio.html">Prefácio</a></li>
 <li><a class="" href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
-<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></li>
-<li><a class="" href="objetos.html"><span class="header-section-number">3</span> Objetos</a></li>
-<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
-<li><a class="active" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></li>
-<li><a class="" href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></li>
+<li><a class="" href="hist%C3%B3ria-e-instala%C3%A7%C3%A3o-do-r.html"><span class="header-section-number">2</span> História e instalação do R</a></li>
+<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">3</span> Como o R trabalha?</a></li>
+<li><a class="" href="objetos-e-estrutura-de-dados.html"><span class="header-section-number">4</span> Objetos e estrutura de dados</a></li>
+<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">5</span> Importação e exportação de dados</a></li>
+<li><a class="active" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">6</span> Funções no R</a></li>
 <li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
-<li><a class="" href="pacotes-1.html"><span class="header-section-number">8</span> Pacotes</a></li>
-<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li><a class="" href="pacotes.html"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html"><span class="header-section-number">9</span> Boas práticas de como escrever um código</a></li>
+<li><a class="" href="pacotes-1.html"><span class="header-section-number">10</span> Pacotes</a></li>
+<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">11</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
 <li><a class="" href="refer%C3%AAncias.html">Referências</a></li>
 </ul>
 
@@ -93,27 +95,27 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="funções-no-r" class="section level1" number="5">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="funções-no-r" class="section level1" number="6">
 <h1>
-<span class="header-section-number">Capítulo 5</span> Funções no R<a class="anchor" aria-label="anchor" href="#fun%C3%A7%C3%B5es-no-r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 6</span> Funções no R<a class="anchor" aria-label="anchor" href="#fun%C3%A7%C3%B5es-no-r"><i class="fas fa-link"></i></a>
 </h1>
-<div id="introdução-1" class="section level2" number="5.1">
+<div id="introdução-1" class="section level2" number="6.1">
 <h2>
-<span class="header-section-number">5.1</span> Introdução<a class="anchor" aria-label="anchor" href="#introdu%C3%A7%C3%A3o-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> Introdução<a class="anchor" aria-label="anchor" href="#introdu%C3%A7%C3%A3o-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>Mais uma vez, nos reportamos aos princípios do <strong>R</strong> (CHAMBERS, 2016), mais especificamente ao segundo princípio, “Tudo que acontece no <strong>R</strong> é uma chamada de função”. Quando associamos um nome a um objeto (x &lt;- 10) pelo símbolo de atribuição (&lt;-), o que temos é uma chamada de função realizando esse processo, isto é, ’&lt;-’(x, 10). Ao digitar x no console e posteriormente apertando o botão ENTER do teclado, nos bastidores, estamos na realidade chamando a função print(x) para imprimir o valor que o nome se associa. Desde coisas básicas como essas, até coisas mais complexas, temos sempre por trás uma chamada de função.</p>
 </div>
-<div id="o-que-é-uma-função-no-r" class="section level2" number="5.2">
+<div id="o-que-é-uma-função-no-r" class="section level2" number="6.2">
 <h2>
-<span class="header-section-number">5.2</span> O que é uma função no R?<a class="anchor" aria-label="anchor" href="#o-que-%C3%A9-uma-fun%C3%A7%C3%A3o-no-r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2</span> O que é uma função no R?<a class="anchor" aria-label="anchor" href="#o-que-%C3%A9-uma-fun%C3%A7%C3%A3o-no-r"><i class="fas fa-link"></i></a>
 </h2>
 <p>Os princípios falados por Chambers (2016) são interligados, principalmente os dois primeiros, porque apesar de tudo que acontece no R ser uma chamada de função, a função é um objeto, com estrutura definida como qualquer outro objeto, de modo function()1 ,assim como os vetores. Ainda mais, dizemos que a linguagem R tem um estilo funcional, devido a esse fato. Mais isso é assunto para o Volume II.</p>
 <p>A ideia de função aqui não é pensada como uma relação matemática, mas como um sistema que tem uma entrada e saída. Podemos ter funções no ambiente R que organiza dados, e não operações matemáticas por exemplo. Vejamos a função sort() do pacote base que ordena de forma crescente ou descrescente um conjunto de valores, como pode ser observado no Código R 6.1.</p>
 <p>As funções de modo closure (funções criadas por meio de function(), do qual o seu modo pode ser verificado por typeof()), apresenta três estruturas básicas: argumento, corpo e ambiente, que será abordada a seguir.</p>
 </div>
-<div id="estrutura-básica-de-uma-função" class="section level2" number="5.3">
+<div id="estrutura-básica-de-uma-função" class="section level2" number="6.3">
 <h2>
-<span class="header-section-number">5.3</span> Estrutura básica de uma função<a class="anchor" aria-label="anchor" href="#estrutura-b%C3%A1sica-de-uma-fun%C3%A7%C3%A3o"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3</span> Estrutura básica de uma função<a class="anchor" aria-label="anchor" href="#estrutura-b%C3%A1sica-de-uma-fun%C3%A7%C3%A3o"><i class="fas fa-link"></i></a>
 </h2>
 <p>As funções podem ser dividas em três componentes:</p>
 <ul>
@@ -155,17 +157,17 @@
 <p>O próximo item é o corpo da função. É nele que inserirmos as instruções, isto é, as linhas de comandos necessárias a que se destina a sua criação. Uma outra forma de acessarmos o corpo das funções é digitar no console apenas o seu nome sem o parêntese, isto é, sort.</p>
 <p>Por fim, o ambiente que no caso da função sort() representa o ambiente do pacote base, isto é, o namespace <strong>base</strong>.</p>
 </div>
-<div id="funções-em-pacotes" class="section level2" number="5.4">
+<div id="funções-em-pacotes" class="section level2" number="6.4">
 <h2>
-<span class="header-section-number">5.4</span> Funções em pacotes<a class="anchor" aria-label="anchor" href="#fun%C3%A7%C3%B5es-em-pacotes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4</span> Funções em pacotes<a class="anchor" aria-label="anchor" href="#fun%C3%A7%C3%B5es-em-pacotes"><i class="fas fa-link"></i></a>
 </h2>
 <p>Podemos observar que essas funções utilizadas até agora, não foram criadas pelo usuário. Estas funções vieram do que chamamos de pacotes2. Alguns pacotes estão disponíveis quando instalamos o <strong>R</strong> , dizemos que estes são os pacotes nativos do <strong>R</strong> , para a linguagem. O principal pacote deles é o <strong>base</strong>. Os demais pacotes desenvolvidos podem ser obtidos via CRAN, e falaremos mais adiante.</p>
 <p>O ambiente <strong>R</strong> apresenta uma versatilidade de manuais para a linguagem. Por exemplo, para verificar informações sobre um determinado pacote como o <strong>base</strong>, use help(package = ’base’). A função help() pode ser utilizada para funções de pacotes anexados. Por exemplo, help(’sort’). Uma outra função que pode ser usada para procurar por funções com determinado parte de nome é apropos(), isto é, para o exemplo anterior, temos apropost(’sort’). O pacote <strong>base</strong> sempre estará anexado, isto é, disponível no caminho de busca para a utilização. Para os que não estão anexados, a função help deve informar o nome da função que necessita de ajuda, bem como o seu pacote. Por exemplo, temos uma função read.dbf() do pacote <strong>foreign</strong>, Base do <strong>R</strong> , porém, esse pacote não está anexado3 ao inicializar o <strong>R</strong>. Assim, caso não seja anexado o pacote, basta executar library(’foreign’) no console. A ajuda sobre a função pode ser realizada com help(’read.dbf’, package = ’foreign’). Outras sintaxes para a função help() é usar ? antes do nome de uma função de um pacote anexado, isto é, ?sort()‘ para o caso da função estudada.</p>
 <p>Para os manuais de ajuda na internet, use ?? antes do nome da função, por exemplo ??sort(), read.dbf(), etc. Essa sintaxe não precisa dos pacotes estarem anexados para ajuda de determinada função, porém o pacote necessita estar instalado. Para mais detalhes sobre pacotes, leia o Capítulo 9.</p>
 </div>
-<div id="chamadas-de-funções" class="section level2" number="5.5">
+<div id="chamadas-de-funções" class="section level2" number="6.5">
 <h2>
-<span class="header-section-number">5.5</span> Chamadas de funções<a class="anchor" aria-label="anchor" href="#chamadas-de-fun%C3%A7%C3%B5es"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.5</span> Chamadas de funções<a class="anchor" aria-label="anchor" href="#chamadas-de-fun%C3%A7%C3%B5es"><i class="fas fa-link"></i></a>
 </h2>
 <p>As chamadas de funções podem ocorrer de três formas: aninhada, intermediária ou de forma pipe. Todas essas formas estão implementadas no R de forma nativa, porém este último, foi implementado inicialmente pelo pacote magrittr, e na versão do R 4.1, foi implementado o operador pipe nativo (|&gt;), sendo aprofundado no Volume II.</p>
 <p>Suponha que desejamos calcular o desvio padrão de um conjunto de valores. Vamos utilizar as três formas de chamadas de função, que segue:</p>
@@ -199,9 +201,9 @@
 <p>A ideia da chamada de função aninhada é inserir função como argumento de funções sem necessidade de associar nomes aos objetos. A ordem de execução começa sempre da direita para a esquerda. No caso da chamada de função intermediária, associamos nomes a cada função, e os passos seguem. Por fim, o operador especial pipe (%&gt;%) tem como primeiro operando o primeiro argumento da função no segundo operando.</p>
 <p>Quando desenvolvemos pacotes, preferimos os dois primeiros, pois é a forma tradicional de chamadas de função no R . A chamada de função pipe é muito utilizada para ciência de dados, uma vez que trabalhamos com manipulações de dados, visualizações gráficas, sem necessariamente precisarmos associar nomes aos objetos, de modo a armazenar seus resultados. Dessa forma é preferível o operador pipe.</p>
 </div>
-<div id="estruturas-de-controle-1" class="section level2" number="5.6">
+<div id="estruturas-de-controle-1" class="section level2" number="6.6">
 <h2>
-<span class="header-section-number">5.6</span> Estruturas de controle<a class="anchor" aria-label="anchor" href="#estruturas-de-controle-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.6</span> Estruturas de controle<a class="anchor" aria-label="anchor" href="#estruturas-de-controle-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>As funções que utilizaremos, a seguir, são utilizadas quando desejamos realizar processos repetitivos para um determinado fim ou condicionado, as famosas estruturas de controle. Assim, como em outras linguagens, as funções utilizadas são: <em>if()</em>, <em>switch()</em>, <em>ifelse()</em>, <em>while()</em>, <em>repeat</em>, <em>for()</em>. Todos esses nomes são reservados no ambiente R, isto é, não podemos associar esses nomes a objetos. Esses objetos tem modo special4 ,porque as expressão não são necessariamente avaliadas. Já a função ifelse() é de modo closure. Este último é um tipo de objeto que é uma função criada por function(), e será o mesmo tipo de objeto que os usuários terão quando desenvolverem as suas próprias funções.</p>
 <p>A sintaxe das estruturas de controle de tipo special é:</p>
@@ -224,14 +226,14 @@
  # Corpo do else
  # instruções sob condição = FALSE
 }</code></pre>
-<p>em que o fluxograma da combinação dessas duas funções podem ser representados pela Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramadaFuncaoif">5.1</a>.</p>
+<p>em que o fluxograma da combinação dessas duas funções podem ser representados pela Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramadaFuncaoif">6.1</a>.</p>
 <p>Uma forma mais simplificada unindo as funções if() e else, resultaram na função ifelse(), que pode ser representada sintaticamente da seguinte forma:</p>
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Fluxograma_da_Funcao_if.png"</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramadaFuncaoif"></span>
 <img src="img/Fluxograma_da_Funcao_if.png" alt="Fluxograma da função if()" width="80%"><p class="caption">
-FIGURA 5.1: Fluxograma da função if()
+FIGURA 6.1: Fluxograma da função if()
 </p>
 </div>
 <div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
@@ -239,7 +241,7 @@ FIGURA 5.1: Fluxograma da função if()
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramaElse"></span>
 <img src="img/Fluxograma_da_Funcao_if_else.png" alt=" Modelo estrutural de um banco de dados" width="80%"><p class="caption">
-FIGURA 5.2:  Modelo estrutural de um banco de dados
+FIGURA 6.2:  Modelo estrutural de um banco de dados
 </p>
 </div>
 <pre><code>if (condição) instr1
@@ -295,7 +297,7 @@ if (condição) instr1 else instr2</code></pre>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramaIfElse"></span>
 <img src="img/Fluxograma_da_Funcao_ifelse.png" alt="Fluxograma da função ifelse()" width="80%"><p class="caption">
-FIGURA 5.3: Fluxograma da função ifelse()
+FIGURA 6.3: Fluxograma da função ifelse()
 </p>
 </div>
 <p>a função ifelse(), verificaremos que esta por ser vetorizada, o resultado retornado ocorre como
@@ -323,13 +325,13 @@ esperado.</p>
 <span id="cb71-14"><a href="fun%C3%A7%C3%B5es-no-r.html#cb71-14" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  }</span></code></pre></div>
 <pre><code>## numero_par:&lt;U+2423&gt; 2</code></pre>
 <p>A ideia no Código R 6.6 é escolher um numero inteiro o algoritmo verificar se este é par ou ímpar. O que pode ocorrer como supostos erros que foram protegidos pelo código, o primeiro é de se avaliar um valor que não seja número. Nesse caso, a primeira condição if(!is.numeric(x)) retornar uma mensagem que o valor não é um número. O segundo erro que poderia ocorrer é do valor inserido não ser um número inteiro. Nesse caso, truncamos o número apenas usando a sua parte inteira e desprezando a decimal, sem o arredondamento. Tentar evitar erros previsíveis, é o que chamamos de programação defensiva, uma forma do próprio usuário conseguir identificar o erro mais facilmente.</p>
-<p>Um próximo exemplo, apresentado no Código R 6.6, mostrará inicialmente por meio da condição if() e else pode se apresentar um código mais complexo, sendo simplificado na sequência com o uso da função switch(), Código R 6.8. O fluxograma da função switch() pode ser observado pela Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaSwitch">5.4</a>.</p>
+<p>Um próximo exemplo, apresentado no Código R 6.6, mostrará inicialmente por meio da condição if() e else pode se apresentar um código mais complexo, sendo simplificado na sequência com o uso da função switch(), Código R 6.8. O fluxograma da função switch() pode ser observado pela Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaSwitch">6.4</a>.</p>
 <div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Fluxograma_Funcao_switch.png"</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramaSwitch"></span>
 <img src="img/Fluxograma_Funcao_switch.png" alt="Fluxograma da função switch()." width="80%"><p class="caption">
-FIGURA 5.4: Fluxograma da função switch().
+FIGURA 6.4: Fluxograma da função switch().
 </p>
 </div>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="fun%C3%A7%C3%B5es-no-r.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Objeto</span></span>
@@ -359,13 +361,13 @@ FIGURA 5.4: Fluxograma da função switch().
 <span id="cb76-8"><a href="fun%C3%A7%C3%B5es-no-r.html#cb76-8" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">mediana =</span> <span class="fu">cat</span>(<span class="st">"A␣mediana␣é:"</span>, <span class="fu">round</span>(<span class="fu">mean</span>(x), <span class="dv">4</span>)),</span>
 <span id="cb76-9"><a href="fun%C3%A7%C3%B5es-no-r.html#cb76-9" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">medapar =</span> <span class="fu">cat</span>(<span class="st">"A␣média␣aparada␣é:"</span>, <span class="fu">round</span>(<span class="fu">mean</span>(x, <span class="at">trim =</span> <span class="fl">0.1</span>), <span class="dv">4</span>)) )</span></code></pre></div>
 <pre><code>## A&lt;U+2423&gt;média&lt;U+2423&gt;aritmética&lt;U+2423&gt;é: 0.037</code></pre>
-<p>As três estruturas básicas de loop no R são: repeat, while() e for(). Dizemos que um loop é um conjunto de instruções (expressões) em um algoritmo que se repete um número de vezes até que sejam alcançados os objetivos desejados. A repetição é controlada pelo contador, um objeto R . Cada repetição represeta um ciclo do loop. Enquanto a condição do loop for verdadeira, os ciclos se repetem atualizando o contador, Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaLoop">5.5</a>. Algumas funções não têm condição explícita (repeat e while), e precisam de funções adicionais em suas expressões.</p>
+<p>As três estruturas básicas de loop no R são: repeat, while() e for(). Dizemos que um loop é um conjunto de instruções (expressões) em um algoritmo que se repete um número de vezes até que sejam alcançados os objetivos desejados. A repetição é controlada pelo contador, um objeto R . Cada repetição represeta um ciclo do loop. Enquanto a condição do loop for verdadeira, os ciclos se repetem atualizando o contador, Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaLoop">6.5</a>. Algumas funções não têm condição explícita (repeat e while), e precisam de funções adicionais em suas expressões.</p>
 <div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Fluxograma_loop.png"</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramaLoop"></span>
 <img src="img/Fluxograma_loop.png" alt="Fluxograma do loop" width="80%"><p class="caption">
-FIGURA 5.5: Fluxograma do loop
+FIGURA 6.5: Fluxograma do loop
 </p>
 </div>
 <p>A primeira função loop é repeat, apresentamos sua sintaxe:</p>
@@ -373,13 +375,13 @@ FIGURA 5.5: Fluxograma do loop
  expressão ...
 }</code></pre>
 <p>Juntamente com o repeat, usamos as funções break e next, pois a função repeat não tem uma
-condição explícita. Para o entendimento, criamos dois fluxogramas, sendo o primeiro entendendo a função repeat junto com a função break e o outro a função repeat juntamente com a função next, dos quais podem ser verificadas pelas Figuras <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaRepeatBreak">5.6</a> e <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaRepeatNext">5.7</a>, respectivamente. Vejamos, alguns exemplos para essas funções, iniciando pelo Código R 6.9.</p>
+condição explícita. Para o entendimento, criamos dois fluxogramas, sendo o primeiro entendendo a função repeat junto com a função break e o outro a função repeat juntamente com a função next, dos quais podem ser verificadas pelas Figuras <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaRepeatBreak">6.6</a> e <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaRepeatNext">6.7</a>, respectivamente. Vejamos, alguns exemplos para essas funções, iniciando pelo Código R 6.9.</p>
 <div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Fluxograma_Funcao_repeat_break.png"</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramaRepeatBreak"></span>
 <img src="img/Fluxograma_Funcao_repeat_break.png" alt="Fluxograma das funções repeat e break" width="80%"><p class="caption">
-FIGURA 5.6: Fluxograma das funções repeat e break
+FIGURA 6.6: Fluxograma das funções repeat e break
 </p>
 </div>
 <div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
@@ -387,7 +389,7 @@ FIGURA 5.6: Fluxograma das funções repeat e break
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramaRepeatNext"></span>
 <img src="img/Fluxograma_Funcao_repeat_next.png" alt="Fluxograma das funções repeat e next" width="80%"><p class="caption">
-FIGURA 5.7: Fluxograma das funções repeat e next
+FIGURA 6.7: Fluxograma das funções repeat e next
 </p>
 </div>
 <div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="fun%C3%A7%C3%B5es-no-r.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Contador</span></span>
@@ -431,7 +433,7 @@ em que o objeto i &lt;- 1 [linha 1, Código R 6.9] é o contador do ciclo. Perce
 ## [1] 4
 ## [1] 5</code></pre>
 <p>O que diferencia o Código R 6.9 para o Código R 6.10 é o acréscimo da função next ao código. Quando a condição if(i == 3) [linha 9, Código R 6.10] é verdadeira, as linhas 10 e 11 são executadas. Primeiro atualizamos o contador i &lt;- 3 + 1 [linha 10, Código R 6.10] e posteriormente, a função next [linha 10, Código R 6.10] é executada. Inserimos a linha 12 no Código R 6.10] para termos a ideia da função next, que é avançar o ciclo quando esta função é executada, ou seja, quando o contador quando assume valor 3, as linhas 10 e 11 são executadas, e após a função next ser chamada, as linhas 12, 14 e 15 não são executadas, porque se fossem, o valor 5 seria impresso duas vezes, e isso não ocorreu. O que aconteceu foi o avanço de ciclo. Devemos ter uma atenção a função repeat, porque como ela não tem um critério de parada explícito, podemos incorrer em um loop infinito.</p>
-<p>Similar a função repeat(), temos a função while(), que agora, temos uma condição de parada, cujo fluxograma é dado pela Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaWhile">5.8</a>, com sintaxe dada por:</p>
+<p>Similar a função repeat(), temos a função while(), que agora, temos uma condição de parada, cujo fluxograma é dado pela Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaWhile">6.8</a>, com sintaxe dada por:</p>
 <pre><code>while (condição) {
  expressão ...
 }</code></pre>
@@ -440,7 +442,7 @@ em que o objeto i &lt;- 1 [linha 1, Código R 6.9] é o contador do ciclo. Perce
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramaWhile"></span>
 <img src="img/Fluxograma_Funcao_while.png" alt="Fluxograma da função while" width="80%"><p class="caption">
-FIGURA 5.8: Fluxograma da função while
+FIGURA 6.8: Fluxograma da função while
 </p>
 </div>
 <p>Nessa função, também podemos usar as funções break e next, como usados na função repeat. Vejamos o exemplo no Código R 6.11.</p>
@@ -479,13 +481,13 @@ fim, a função for(), com cuja sintaxe é dada por:</p>
  expressão ...
 }</code></pre>
 <p>Com essa função, também podemos utilizar break e next. Porém, o controle do ciclo nessa
-situação é maior, e menos necessário essas funções. Vejamos a Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaFuncaoFor">5.9</a>.</p>
+situação é maior, e menos necessário essas funções. Vejamos a Figura <a href="fun%C3%A7%C3%B5es-no-r.html#fig:FluxogramaFuncaoFor">6.9</a>.</p>
 <div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Fluxograma_Funcao_for.png"</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:FluxogramaFuncaoFor"></span>
 <img src="img/Fluxograma_Funcao_for.png" alt="Fluxograma da função for()" width="80%"><p class="caption">
-FIGURA 5.9: Fluxograma da função for()
+FIGURA 6.9: Fluxograma da função for()
 </p>
 </div>
 <div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="fun%C3%A7%C3%B5es-no-r.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Loop for</span></span>
@@ -511,9 +513,9 @@ FIGURA 5.9: Fluxograma da função for()
 ## [1] 5</code></pre>
 <p>Mais uma vez, foi utilizado a função next, sem necessidade agora, de atualizar o contador i, uma vez que já está definido na função for(). Veremos na próxima subseção, que temos funções de alto nível que podem substituir as funções loops. São as chamadas funções da família apply.</p>
 </div>
-<div id="criando-funções" class="section level2" number="5.7">
+<div id="criando-funções" class="section level2" number="6.7">
 <h2>
-<span class="header-section-number">5.7</span> Criando funções<a class="anchor" aria-label="anchor" href="#criando-fun%C3%A7%C3%B5es"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.7</span> Criando funções<a class="anchor" aria-label="anchor" href="#criando-fun%C3%A7%C3%B5es"><i class="fas fa-link"></i></a>
 </h2>
 <p>Até esse momento, usamos funções já desenvolvidas no <strong>R</strong>, seja dos pacotes nativos, seja via instalação dos pacotes via CRAN. Agora, iremos desenvolver as nossas próprias funções.</p>
 <p>Como falado anteriormente, no início, a estrutura da função criada se mantém, argumento, corpo e ambiente. Para isso, usaremos a função function(). O modo desse objeto é closure5. Vejamos a sua sintaxe,</p>
@@ -549,9 +551,9 @@ FIGURA 5.9: Fluxograma da função for()
 <div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="fun%C3%A7%C3%B5es-no-r.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>   <span class="co"># Funcao</span></span>
 <span id="cb108-2"><a href="fun%C3%A7%C3%B5es-no-r.html#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>   fun2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x) x <span class="sc">+</span> <span class="dv">1</span></span>
 <span id="cb108-3"><a href="fun%C3%A7%C3%B5es-no-r.html#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>   <span class="co"># Executando</span></span></code></pre></div>
-<div id="função-anônima" class="section level3" number="5.7.1">
+<div id="função-anônima" class="section level3" number="6.7.1">
 <h3>
-<span class="header-section-number">5.7.1</span> Função anônima<a class="anchor" aria-label="anchor" href="#fun%C3%A7%C3%A3o-an%C3%B4nima"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.7.1</span> Função anônima<a class="anchor" aria-label="anchor" href="#fun%C3%A7%C3%A3o-an%C3%B4nima"><i class="fas fa-link"></i></a>
 </h3>
 <p>Podemos também ter o que chamamos de função anônima, da qual não associamos nome as funções. Contudo, sendo criada esta não pode ser recuperada como qualquer outro objeto. Essa forma é interessante quando não precisamos dela após o seu uso. Por exemplo, queremos calcular a integral,</p>
 <p><span class="math display">\[ \int_{0}^{1} x^2 \,dx=\frac{1}{3} \]</span>
@@ -562,9 +564,9 @@ e criamos uma função <span class="math inline">\(x^2\)</span>. Então,</p>
 <pre><code>## 0.3333333 with absolute error &lt; 3.7e-15</code></pre>
 <p>A função integrate() é utilizada para o cálculo de integral, do qual, passamos os argumentos, função (f), limite inferior (lower) e limite superior (upper) da integração, respectivamente. Observemos que não houve necessidade de nomear a função no argumento, pois não há objetivo de ser reutilizado. Isso também ocorre muito na área de ciência de dados, quando muitas vezes fazemos manipulações com os dados ao mesmo tempo, sem necessidade de associar nomes aos resultados intermediários.</p>
 </div>
-<div id="chamadas-de-função" class="section level3" number="5.7.2">
+<div id="chamadas-de-função" class="section level3" number="6.7.2">
 <h3>
-<span class="header-section-number">5.7.2</span> Chamadas de função<a class="anchor" aria-label="anchor" href="#chamadas-de-fun%C3%A7%C3%A3o"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.7.2</span> Chamadas de função<a class="anchor" aria-label="anchor" href="#chamadas-de-fun%C3%A7%C3%A3o"><i class="fas fa-link"></i></a>
 </h3>
 <p>As chamadas de funções ocorrem de três formas: aninhado, intermediário e via pipe. Vejamos o cálculo do desvio padrão novamente, Código R 6.16.</p>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="fun%C3%A7%C3%B5es-no-r.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Funcao auxiliar 1</span></span>
@@ -597,9 +599,9 @@ e criamos uma função <span class="math inline">\(x^2\)</span>. Então,</p>
 <pre><code>## [1] 0.9412359</code></pre>
 <p>Mais detalhes sobre esses três aspectos serão abordados no Volume II.</p>
 </div>
-<div id="ordenação-de-argumentos" class="section level3" number="5.7.3">
+<div id="ordenação-de-argumentos" class="section level3" number="6.7.3">
 <h3>
-<span class="header-section-number">5.7.3</span> Ordenação de argumentos<a class="anchor" aria-label="anchor" href="#ordena%C3%A7%C3%A3o-de-argumentos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.7.3</span> Ordenação de argumentos<a class="anchor" aria-label="anchor" href="#ordena%C3%A7%C3%A3o-de-argumentos"><i class="fas fa-link"></i></a>
 </h3>
 <p>Os argumentos nas funções podem ser nomeados ou não. Quando nomeados, a ordem como são
 inseridos na função não importa. Já os argumentos não nomeados, seus valores precisam estar na ordem como a função foi desenvolvida. Vejamos o Código R 6.17, para entender melhor.</p>
@@ -625,9 +627,9 @@ inseridos na função não importa. Já os argumentos não nomeados, seus valore
 <span id="cb123-2"><a href="fun%C3%A7%C3%B5es-no-r.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">estdesc</span>(<span class="st">"media"</span>, x)</span></code></pre></div>
 <pre><code>## Error in switch(opcao, media = round(mean(x), 4), mediana = round(mean(x), : EXPR deve ser um vetor de comprimento 1</code></pre>
 </div>
-<div id="objeto-reticências" class="section level3" number="5.7.4">
+<div id="objeto-reticências" class="section level3" number="6.7.4">
 <h3>
-<span class="header-section-number">5.7.4</span> Objeto reticências (“…”)<a class="anchor" aria-label="anchor" href="#objeto-retic%C3%AAncias"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.7.4</span> Objeto reticências (“…”)<a class="anchor" aria-label="anchor" href="#objeto-retic%C3%AAncias"><i class="fas fa-link"></i></a>
 </h3>
 <p>O objeto reticências é do tipo pairlist, um tipo de objeto usado bastante internamente no <strong>R</strong> , e dificilmente utilizado no código interpretado. Desse modo, não temos acesso direto a estrutura do objeto …. Contudo, esse objeto tem um papel fundamental nas funções, quando damos a liberdade de inserir mais argumentos além dos definidos na criação da função. Esse argumento é usado na função plot(), por exemplo, do pacote nativo <strong>base</strong>. Vejamos como o argumento … pode ser usado em uma função, no Código R 6.18.</p>
 <div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="fun%C3%A7%C3%B5es-no-r.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Funcao que plota um grafico</span></span>
@@ -638,17 +640,17 @@ inseridos na função não importa. Já os argumentos não nomeados, seus valore
 <span id="cb125-6"><a href="fun%C3%A7%C3%B5es-no-r.html#cb125-6" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>; y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
 <span id="cb125-7"><a href="fun%C3%A7%C3%B5es-no-r.html#cb125-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Chamada 1, com os argumentos definidos</span></span>
 <span id="cb125-8"><a href="fun%C3%A7%C3%B5es-no-r.html#cb125-8" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">grafico</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)</span></code></pre></div>
-<div class="inline-figure"><img src="06-boas_praticas_files/figure-html/unnamed-chunk-35-1.png" width="672"></div>
+<div class="inline-figure"><img src="06-funcoes_files/figure-html/unnamed-chunk-35-1.png" width="672"></div>
 <div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="fun%C3%A7%C3%B5es-no-r.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Chamada 2, inserindo argumentos nao definidos</span></span>
 <span id="cb126-2"><a href="fun%C3%A7%C3%B5es-no-r.html#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="fu">grafico</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">main =</span> <span class="st">"Título"</span>)</span></code></pre></div>
-<div class="inline-figure"><img src="06-boas_praticas_files/figure-html/unnamed-chunk-36-1.png" width="672"></div>
+<div class="inline-figure"><img src="06-funcoes_files/figure-html/unnamed-chunk-36-1.png" width="672"></div>
 <p>Isso ocorre, porque temos a função plot() no corpo da função grafico() que apresenta muitos
 argumentos. Dessa forma, criamos a função grafico(), com os argumentos que representam as coordenadas, mas a reticências (‘…’) garantem que os demais argumentos da função plot, omitidos, possam ser utilizados.</p>
 </div>
 </div>
-<div id="escopo-léxico-1" class="section level2" number="5.8">
+<div id="escopo-léxico-1" class="section level2" number="6.8">
 <h2>
-<span class="header-section-number">5.8</span> Escopo léxico<a class="anchor" aria-label="anchor" href="#escopo-l%C3%A9xico-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.8</span> Escopo léxico<a class="anchor" aria-label="anchor" href="#escopo-l%C3%A9xico-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>Vamos retornar aos componentes da função fun1(), desenvolvido no Código R 6.15, reapresentando novamente as três estruturas de uma função,</p>
 <div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="fun%C3%A7%C3%B5es-no-r.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Argumentos</span></span>
@@ -723,33 +725,33 @@ necessita de definição de argumentos, devido a flexibilidade do escopo léxico
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">4</span> Importação e exportação de dados</a></div>
-<div class="next"><a href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></div>
+<div class="prev"><a href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">5</span> Importação e exportação de dados</a></div>
+<div class="next"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#fun%C3%A7%C3%B5es-no-r"><span class="header-section-number">5</span> Funções no R</a></li>
-<li><a class="nav-link" href="#introdu%C3%A7%C3%A3o-1"><span class="header-section-number">5.1</span> Introdução</a></li>
-<li><a class="nav-link" href="#o-que-%C3%A9-uma-fun%C3%A7%C3%A3o-no-r"><span class="header-section-number">5.2</span> O que é uma função no R?</a></li>
-<li><a class="nav-link" href="#estrutura-b%C3%A1sica-de-uma-fun%C3%A7%C3%A3o"><span class="header-section-number">5.3</span> Estrutura básica de uma função</a></li>
-<li><a class="nav-link" href="#fun%C3%A7%C3%B5es-em-pacotes"><span class="header-section-number">5.4</span> Funções em pacotes</a></li>
-<li><a class="nav-link" href="#chamadas-de-fun%C3%A7%C3%B5es"><span class="header-section-number">5.5</span> Chamadas de funções</a></li>
-<li><a class="nav-link" href="#estruturas-de-controle-1"><span class="header-section-number">5.6</span> Estruturas de controle</a></li>
+<li><a class="nav-link" href="#fun%C3%A7%C3%B5es-no-r"><span class="header-section-number">6</span> Funções no R</a></li>
+<li><a class="nav-link" href="#introdu%C3%A7%C3%A3o-1"><span class="header-section-number">6.1</span> Introdução</a></li>
+<li><a class="nav-link" href="#o-que-%C3%A9-uma-fun%C3%A7%C3%A3o-no-r"><span class="header-section-number">6.2</span> O que é uma função no R?</a></li>
+<li><a class="nav-link" href="#estrutura-b%C3%A1sica-de-uma-fun%C3%A7%C3%A3o"><span class="header-section-number">6.3</span> Estrutura básica de uma função</a></li>
+<li><a class="nav-link" href="#fun%C3%A7%C3%B5es-em-pacotes"><span class="header-section-number">6.4</span> Funções em pacotes</a></li>
+<li><a class="nav-link" href="#chamadas-de-fun%C3%A7%C3%B5es"><span class="header-section-number">6.5</span> Chamadas de funções</a></li>
+<li><a class="nav-link" href="#estruturas-de-controle-1"><span class="header-section-number">6.6</span> Estruturas de controle</a></li>
 <li>
-<a class="nav-link" href="#criando-fun%C3%A7%C3%B5es"><span class="header-section-number">5.7</span> Criando funções</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#fun%C3%A7%C3%A3o-an%C3%B4nima"><span class="header-section-number">5.7.1</span> Função anônima</a></li>
-<li><a class="nav-link" href="#chamadas-de-fun%C3%A7%C3%A3o"><span class="header-section-number">5.7.2</span> Chamadas de função</a></li>
-<li><a class="nav-link" href="#ordena%C3%A7%C3%A3o-de-argumentos"><span class="header-section-number">5.7.3</span> Ordenação de argumentos</a></li>
-<li><a class="nav-link" href="#objeto-retic%C3%AAncias"><span class="header-section-number">5.7.4</span> Objeto reticências (“…”)</a></li>
+<a class="nav-link" href="#criando-fun%C3%A7%C3%B5es"><span class="header-section-number">6.7</span> Criando funções</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#fun%C3%A7%C3%A3o-an%C3%B4nima"><span class="header-section-number">6.7.1</span> Função anônima</a></li>
+<li><a class="nav-link" href="#chamadas-de-fun%C3%A7%C3%A3o"><span class="header-section-number">6.7.2</span> Chamadas de função</a></li>
+<li><a class="nav-link" href="#ordena%C3%A7%C3%A3o-de-argumentos"><span class="header-section-number">6.7.3</span> Ordenação de argumentos</a></li>
+<li><a class="nav-link" href="#objeto-retic%C3%AAncias"><span class="header-section-number">6.7.4</span> Objeto reticências (“…”)</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#escopo-l%C3%A9xico-1"><span class="header-section-number">5.8</span> Escopo léxico</a></li>
+<li><a class="nav-link" href="#escopo-l%C3%A9xico-1"><span class="header-section-number">6.8</span> Escopo léxico</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/bendeivide/book-eambr01/blob/master/06-boas_praticas.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/bendeivide/book-eambr01/edit/master/06-boas_praticas.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/bendeivide/book-eambr01/blob/master/06-funcoes.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/bendeivide/book-eambr01/edit/master/06-funcoes.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -761,7 +763,7 @@ necessita de definição de argumentos, devido a flexibilidade do escopo léxico
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-20.</p>
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

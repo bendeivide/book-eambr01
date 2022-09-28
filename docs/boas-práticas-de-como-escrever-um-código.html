@@ -48,9 +48,9 @@
       margin-left: 2em;
     }
   </style>
-<meta name="description" content="7.1 Introdução Nesse momento, entendemos os principais objetos para escrevermos os nossos scripts. Quando escrevemos um código, duas consequências ocorrem: guardá-lo para futuras consultas, ou...">
-<meta property="og:description" content="7.1 Introdução Nesse momento, entendemos os principais objetos para escrevermos os nossos scripts. Quando escrevemos um código, duas consequências ocorrem: guardá-lo para futuras consultas, ou...">
-<meta name="twitter:description" content="7.1 Introdução Nesse momento, entendemos os principais objetos para escrevermos os nossos scripts. Quando escrevemos um código, duas consequências ocorrem: guardá-lo para futuras consultas, ou...">
+<meta name="description" content="A book created with bookdown.">
+<meta property="og:description" content="A book created with bookdown.">
+<meta name="twitter:description" content="A book created with bookdown.">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -77,14 +77,16 @@
 <li><a class="" href="ep%C3%ADgrafe.html">Epígrafe</a></li>
 <li><a class="" href="pref%C3%A1cio.html">Prefácio</a></li>
 <li><a class="" href="entendendo-a-cole%C3%A7%C3%A3o-estudando-o-ambiente-r.html"><span class="header-section-number">1</span> Entendendo a coleção Estudando o ambiente R </a></li>
-<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">2</span> Como o R trabalha</a></li>
-<li><a class="" href="objetos.html"><span class="header-section-number">3</span> Objetos</a></li>
-<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">4</span> Importação e exportação de dados</a></li>
-<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">5</span> Funções no R</a></li>
-<li><a class="" href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></li>
+<li><a class="" href="hist%C3%B3ria-e-instala%C3%A7%C3%A3o-do-r.html"><span class="header-section-number">2</span> História e instalação do R</a></li>
+<li><a class="" href="como-o-r-trabalha.html"><span class="header-section-number">3</span> Como o R trabalha?</a></li>
+<li><a class="" href="objetos-e-estrutura-de-dados.html"><span class="header-section-number">4</span> Objetos e estrutura de dados</a></li>
+<li><a class="" href="importa%C3%A7%C3%A3o-e-exporta%C3%A7%C3%A3o-de-dados.html"><span class="header-section-number">5</span> Importação e exportação de dados</a></li>
+<li><a class="" href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">6</span> Funções no R</a></li>
 <li><a class="active" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
-<li><a class="" href="pacotes-1.html"><span class="header-section-number">8</span> Pacotes</a></li>
-<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">9</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
+<li><a class="" href="pacotes.html"><span class="header-section-number">8</span> Pacotes</a></li>
+<li><a class="" href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo-1.html"><span class="header-section-number">9</span> Boas práticas de como escrever um código</a></li>
+<li><a class="" href="pacotes-1.html"><span class="header-section-number">10</span> Pacotes</a></li>
+<li><a class="" href="considera%C3%A7%C3%B5es-e-prepara%C3%A7%C3%A3o-para-programa%C3%A7%C3%A3o-em-r-n%C3%ADvel-intermedi%C3%A1rio.html"><span class="header-section-number">11</span> Considerações e preparação para Programação em R (Nível Intermediário)</a></li>
 <li><a class="" href="refer%C3%AAncias.html">Referências</a></li>
 </ul>
 
@@ -97,54 +99,19 @@
 <h1>
 <span class="header-section-number">Capítulo 7</span> Boas práticas de como escrever um código<a class="anchor" aria-label="anchor" href="#boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo"><i class="fas fa-link"></i></a>
 </h1>
-<div id="introdução-2" class="section level2" number="7.1">
-<h2>
-<span class="header-section-number">7.1</span> Introdução<a class="anchor" aria-label="anchor" href="#introdu%C3%A7%C3%A3o-2"><i class="fas fa-link"></i></a>
-</h2>
-<p>Nesse momento, entendemos os principais objetos para escrevermos os nossos scripts. Quando escrevemos um código, duas consequências ocorrem:</p>
-<ul>
-<li><p>guardá-lo para futuras consultas, ou</p></li>
-<li><p>compartilhamento.</p></li>
-</ul>
-<p>Nesses dois casos, percebemos que alguém irá ler esse código, ou até mesmo o próprio usuário, irá retornar àquelas linhas de código e tentar raciocinar quais as ideias por trás disso tudo. Para um melhor entendimento de seu script, nada mais importante do que uma boa escrita, separação das estruturas por hierarquização, comentários, etc.</p>
-<p>Uma primeira ferramenta que pode ser configurada para quem usa o RStudio é acionar todas as opções de diagnóstico do seu código. Para isso no menu:</p>
-<ul>
-<li><p>Tools &gt; Global options &gt; Code &gt; Editing. Marque todas as opções em General;</p></li>
-<li><p>Tools &gt; Global options &gt; Code &gt; Display, Marque todas as opções;</p></li>
-<li><p>Tools &gt; Global options &gt; Code &gt; Diagnostics. Marque todas as opções em R Diagnostics.</p></li>
-</ul>
-<p>Com isso, colorações nas linhas de comando ocorrerão, distinguindo diversas estruturas, como linhas de comentário, funções, espaçamentos, dentre outras coisas.</p>
-<p>Uma vez feito isso, vamos para o passo seguinte que são as boas práticas de como se escrever um script. Temos algumas ferramentas prontas, como o pacote styler e como alternativa o pacote <strong>formatR</strong>, que automatiza todo o nosso código seja em script, contido em um pacote, ou diretório. Acesse <a href="https://yihui.org/formatr" class="uri">https://yihui.org/formatr</a>, para mais detalhes. Para instalar e anexar o pacote styler, use as linhas de comando:</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Instalando pacote</span></span>
-<span id="cb147-2"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html#cb147-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">install.packages</span>(styler)</span>
-<span id="cb147-3"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html#cb147-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Carregando e anexando</span></span>
-<span id="cb147-4"><a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html#cb147-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">library</span>(styler)</span></code></pre></div>
-<p>Vejamos a Figura <a href="boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo.html#fig:configuracaoStyler">7.1</a>, para entendermos a funcionabilidade desse pacote.</p>
-<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Configuracao_Styler.png"</span><span class="op">)</span></code></pre></div>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:configuracaoStyler"></span>
-<img src="img/Configuracao_Styler.png" alt="Passos para configurar o pacote styler." width="80%"><p class="caption">
-FIGURA 7.1: Passos para configurar o pacote styler.
-</p>
-</div>
 
 </div>
-</div>
   <div class="chapter-nav">
-<div class="prev"><a href="pacotes.html"><span class="header-section-number">6</span> Pacotes</a></div>
-<div class="next"><a href="pacotes-1.html"><span class="header-section-number">8</span> Pacotes</a></div>
+<div class="prev"><a href="fun%C3%A7%C3%B5es-no-r.html"><span class="header-section-number">6</span> Funções no R</a></div>
+<div class="next"><a href="pacotes.html"><span class="header-section-number">8</span> Pacotes</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li>
-<li><a class="nav-link" href="#introdu%C3%A7%C3%A3o-2"><span class="header-section-number">7.1</span> Introdução</a></li>
-</ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#boas-pr%C3%A1ticas-de-como-escrever-um-c%C3%B3digo"><span class="header-section-number">7</span> Boas práticas de como escrever um código</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/bendeivide/book-eambr01/blob/master/08-ambiente_caminho_busca.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/bendeivide/book-eambr01/edit/master/08-ambiente_caminho_busca.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/bendeivide/book-eambr01/blob/master/07-boas_praticas.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/bendeivide/book-eambr01/edit/master/07-boas_praticas.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -156,7 +123,7 @@ FIGURA 7.1: Passos para configurar o pacote styler.
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-20.</p>
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2022-09-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
