@@ -6,9 +6,13 @@ bookdown::bs4_book:
     fg: "#000000"
     # Cor do fundo
     bg: "#EBEBEB"
-  repo: https://github.com/bendeivide/book-eambr01
+  repo: 
+    base: https://github.com/bendeivide/book-eambr01
+    branch: main
   includes:
     in_header: [ga_book-eambr01.html]
+  config:
+    edit: https://github.com/bendeivide/book-eambr01/edit/main/%s
 bookdown::gitbook:
   #split_by: section
   css: style.css

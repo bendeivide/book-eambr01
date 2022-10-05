@@ -148,7 +148,7 @@ Uma vez instalado o pacote, precisamos carregar e anexá-lo, para que possamos u
 ## 
 ## Statistics: 
 ##   Exp.Mean       CV  MSerror Df n Stud.Midrange  Ext.DMS  Int.DMS
-##    119.392 6.889695 67.66288 15 5      1.089969 5.783507 4.482902
+##    119.392 6.889695 67.66288 15 5      1.089968 5.783505 4.482901
 ## 
 ## Groups: 
 ##    Means Groups
@@ -193,7 +193,7 @@ Uma vez instalado o pacote, precisamos carregar e anexá-lo, para que possamos u
 ## 
 ## Statistics: 
 ##   Exp.Mean       CV  MSerror Df n Stud.Midrange  Ext.DMS  Int.DMS
-##    119.392 6.889695 67.66288 15 5      1.089969 5.783507 4.482902
+##    119.392 6.889695 67.66288 15 5      1.089968 5.783505 4.482901
 ## 
 ## Groups: 
 ##    Means Groups
@@ -238,7 +238,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of the MGM test
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Wed Sep 28 06:37:14 2022
+## % Wed Oct 05 16:11:00 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -258,7 +258,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of the MGR test
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Wed Sep 28 06:37:14 2022
+## % Wed Oct 05 16:11:00 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -278,7 +278,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of the SNKM test
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Wed Sep 28 06:37:14 2022
+## % Wed Oct 05 16:11:00 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -298,7 +298,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of the TM test
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Wed Sep 28 06:37:14 2022
+## % Wed Oct 05 16:11:00 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -318,7 +318,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of descriptive statistics
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Wed Sep 28 06:37:14 2022
+## % Wed Oct 05 16:11:00 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrrrrr}
