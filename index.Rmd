@@ -20,7 +20,7 @@ github-repo: bendeivide/book-eambr01
 ---
 # Bem-vindo {-}
 
-<a href="https://www.amazon.com/dp/6500515994"><img src="capa.png" align="right" width="250" height="366" class="cover" alt="Compre pela internet" /></a> Este é um *livro digital* da coleção __"[Estudando o ambiente R](https://bendeivide.github.io/#books)"__, *Volume 1*, intitulado **R Básico**, com o selo [Democratizando Conhecimento (DC)](https://bendeivide.github.io/dc/). O Livro é destinado aos usuários R que objetivam aprofundar o entendimento do ambiente R para seus projetos pessoais e profissionais.
+<a href="https://produto.mercadolivre.com.br/MLB-2838245818-livro-r-basico-capa-simples-colorido-e-impresso-interna-em-preto-e-branco-_JMben"><img src="capa.png" align="right" width="250" height="366" class="cover" alt="Compre pela internet" /></a> Este é um *livro digital* da coleção __"[Estudando o ambiente R](https://bendeivide.github.io/#books)"__, *Volume 1*, intitulado **R Básico**, com o selo [Democratizando Conhecimento (DC)](https://bendeivide.github.io/dc/). O Livro é destinado aos usuários R que objetivam aprofundar o entendimento do ambiente R para seus projetos pessoais e profissionais.
 
 O número de leitores  que acessaram este livro:
 </br>
@@ -40,6 +40,12 @@ O número de leitores  que acessaram este livro:
 Sugestões e críticas sobre o livro podem ser enviadas para [livrosdeben@gmail.com](mailto:livrosdeben@gmail.com).
 
 ## Livro físico {-}
+
+O livro físico encontra-se à venda pelo [mercado livre](https://produto.mercadolivre.com.br/MLB-2838245818-livro-r-basico-capa-simples-colorido-e-impresso-interna-em-preto-e-branco-_JMben):
+
+- [R básico (capa comum - internamente preto e branco)](https://produto.mercadolivre.com.br/MLB-2838245818-livro-r-basico-capa-simples-colorido-e-impresso-interna-em-preto-e-branco-_JM)
+
+---
 
 O livro físico encontra-se à venda pela [Amazon](https://www.amazon.com/dp/6500515994): 
 
