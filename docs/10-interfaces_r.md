@@ -238,7 +238,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of the MGM test
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Oct 11 08:05:32 2022
+## % Thu Oct 13 15:59:12 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -258,7 +258,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of the MGR test
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Oct 11 08:05:32 2022
+## % Thu Oct 13 15:59:12 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -278,7 +278,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of the SNKM test
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Oct 11 08:05:32 2022
+## % Thu Oct 13 15:59:12 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -298,7 +298,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of the TM test
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Oct 11 08:05:32 2022
+## % Thu Oct 13 15:59:12 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -318,7 +318,7 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## Table in latex of results of descriptive statistics
 ## 
 ## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Oct 11 08:05:32 2022
+## % Thu Oct 13 15:59:12 2022
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrrrrr}

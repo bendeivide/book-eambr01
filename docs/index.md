@@ -2,7 +2,7 @@
 title: "R básico"
 subtitle: "Coleção Estudando o Ambiente R (Volume I)"
 author: "Ben Dêivide e Diego Arthur"
-date: "2022-10-11"
+date: "2022-10-13"
 #lang: pt
 csl: abnt.csl
 site: bookdown::bookdown_site
@@ -28,7 +28,7 @@ O número de leitores  que acessaram este livro:
 
 ---
 
-<a href='http://dstats.net/show/https://github.com/bendeivide/book-eambr01/raw/main/docs/book-eambr01.pdf'>Estatísticas de download do R básico (PDF): </a>
+<a href='http://dstats.net/show/https://github.com/bendeivide/book-eambr01/raw/main/docs/book-eambr01.pdf'>Estatísticas de download do R básico (PDF)</a>
 <script type='text/javascript' src='http://dstats.net/dstatsjs.php?file=https://github.com/bendeivide/book-eambr01/raw/main/docs/book-eambr01.pdf'></script>
 <script type='text/javascript'>document.write(dsdlcounter(dsCounter));</script>
 
