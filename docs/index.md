@@ -2,7 +2,7 @@
 title: "R básico"
 subtitle: "Coleção Estudando o Ambiente R (Volume I)"
 author: "Ben Dêivide e Diego Arthur"
-date: "2022-10-13"
+date: "2022-11-17"
 #lang: pt
 csl: abnt.csl
 site: bookdown::bookdown_site
@@ -40,6 +40,12 @@ O número de leitores  que acessaram este livro:
 Sugestões e críticas sobre o livro podem ser enviadas para [livrosdeben@gmail.com](mailto:livrosdeben@gmail.com).
 
 ## Livro físico {-}
+
+O livro físico encontra-se à venda diretamente com a Representante comercial (Allanna Lopes) pelo [Whatsapp](https://api.whatsapp.com/send?phone=5584998196064&text=Ol%C3%A1!%20Sou%20Allanna%20Lopes%2C%20representante%20comercial%20do%20Livro%20%22R%20b%C3%A1sico%22.%20Antes%20de%20enviar%20a%20mensagem%20para%20mais%20detalhes%2C%20eu%20consigo%20enviar%20o%20livro%20por%20R%24%2095%2C00%20para%20qualquer%20local%20do%20Brasil!):
+
+- [Clique aqui para entrar em contato](https://api.whatsapp.com/send?phone=5584998196064&text=Ol%C3%A1!%20Sou%20Allanna%20Lopes%2C%20representante%20comercial%20do%20Livro%20%22R%20b%C3%A1sico%22.%20Antes%20de%20enviar%20a%20mensagem%20para%20mais%20detalhes%2C%20eu%20consigo%20enviar%20o%20livro%20por%20R%24%2095%2C00%20para%20qualquer%20local%20do%20Brasil!)
+
+---
 
 O livro físico encontra-se à venda pelo [Shopee](https://shopee.com.br/product/880978340/20053618529/):
 
