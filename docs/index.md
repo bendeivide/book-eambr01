@@ -2,7 +2,7 @@
 title: "R básico"
 subtitle: "Coleção Estudando o Ambiente R (Volume I)"
 author: "Ben Dêivide e Diego Arthur"
-date: "2022-11-17"
+date: "2023-02-28"
 #lang: pt
 csl: abnt.csl
 site: bookdown::bookdown_site

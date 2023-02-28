@@ -2,43 +2,87 @@
 
 # Entendendo a coleção *Estudando o ambiente R *
 
-A Coleção *Estudando o ambiente R* não tem como objetivo principal de ensinar análise de dados. Mas sim, proporcionar ao leitor um conhecimento sobre a linguagem [R](http://r-project.org/){target='_blank'}, de modo que se possa usufruir todos os recursos que esse ambiente possa proporcionar.
+A coleção *Estudando o ambiente R* não tem como objetivo principal ensinar análise de dados, mas proporcionar ao leitor um conhecimento sobre a linguagem [R](http://r-project.org/){target='_blank'}, de modo a usufruir de todos os recursos que o ambiente proporciona. Pressupomos também, que na leitura do livro haja um conhecimento básico sobre linguagem de programação.
 
-Ainda como complemento, não queremos nesse material, convencê-lo a utilizar a linguagem [R](http://r-project.org/){target='_blank'}, pois a melhor linguagem é aquela que você domina. Contudo, pretendemos mostrar que os recursos utilizados pelo [R](http://r-project.org/){target='_blank'} não estão mais limitados a própria análise de dados. Um exemplo é esse material, que nesse momento usufruímos da própria linguagem para repassar as nossas experiências sem ao menos ter o domínio sobre linguagens do tipo `HTML`, `CSS`, `JavaScript`, dentre outras, necessárias para uma boa renderização de página *web*. Isso mostra a potencial ferramenta de trabalho que o ambiente [R](http://r-project.org/){target='_blank'} pode ser para a vida profissional.
+::: {.rmdimportant}
 
-Dessa forma, propormos um entendimento sobre a sintaxe e semântica de como a linguagem [R](http://r-project.org/){target='_blank'} é desenvolvida. Com isso, o leitor será capaz após a leitura dos dois primeiros volumes, de estudar um pouco mais sobre essa ciência que nos últimos anos vem ganhando mais evidência, que é a Estatística. Tudo isso devido ao grande volume de informações obtidos nessa era tecnológica. Juntamente com ela, o [R](http://r-project.org/){target='_blank'} se tornará uma poderosa ferramenta para entender os padrões que estão por trás dos dados, que por sinal, é a moeda valiosa do momento, ou melhor, sempre foi!
+:::: {style="display: flex;"}
 
-Aprenderemos também recursos diversos na área da computação, como programação defensiva, desenvolvimento de interfaces gráficas, paralelização, como também recursos na área da estatística sem complexidades teóricas, como o desenvolvimento de gráficos e o uso de banco de dados. Ensinaremos também o desenvolvimento de materiais como artigos, livros, *websites*, *blogs*, *dashboards*. Por fim, chegaremos a maior cobiça de um programador [R](http://r-project.org/){target='_blank'}, desenvolver um pacote.
+::: {}
 
-<blockquote>
-<p>
-<em> Observem que em muitos momentos utilizamos o artigo "o" para a linguagem [R](http://r-project.org/){target='_blank'}. Pois é, isso ocorre porque ela também é considerada um software ou ambiente. Daí, também podemos chamá-la de software [R](http://r-project.org/){target='_blank'}, ou preferivelmente, ambiente [R](http://r-project.org/){target='_blank'}. </em>
-</p>
-</blockquote>
+![](stop.png){width=3cm, height=3cm}
 
-Os módulos dessa coleção terão os três volumes base para o entendimento do ambiente [R](http://r-project.org/){target='_blank'}:
+:::
 
-- Volume I: Nível Básico;
-- Volume II: Nível Intermediário; e 
-- Volume III: Nìvel Avançado.
+::: {}
 
-A seguir, explanaremos sobre cada um dos módulos.
+**Linguagem [R](http://r-project.org/){target='_blank'}**
 
-## Volume I: Nível Básico
 
-Esse primeiro volume, que representa o livro corrente, apresenta um breve **histórico** sobre a linguagem, a sua instalação, bem como os recursos que a IDE^[Do inglês, *Integrated Development Environment*, que significa ambiente de desenvolvimento integrado] [RStudio](http://rstudio.org/){target='_blank'}, o conhecimento da **sintaxe** e **semântica** da linguagem [R](http://r-project.org/){target='_blank'}, compreendendo as estruturas bases da linguagem, sobre o que é um **objeto** e como construir uma **função**, o entendimento sobre **fluxos de controle**. O que é um **pacote**, **carregar** e **anexar** um pacote, e quem são as pessoas que fazem parte da manutenção dessa linguagem, também serão assuntos desse primeiro módulo. **Caminhos de busca**, **ambientes** e *namespaces*, teremos noções básicas. Algo muito interessante, que pode mudar a vida de um programador em [R](http://r-project.org/){target='_blank'} são as **boas práticas para a escrita de um código**, tema também abordado nesse módulo.
 
-A ideia desse volume é proporcionar um entendimento básico, um primeiro contato com a linguagem, fazendo com que o leitor possa dar os primeiros passos, executando as primeiras linhas de comando. Mas também, dando o enfoque com erros tão recorrentes, como o entendimento sobre um objeto, ou o anexo de um pacote no caminho de busca. Temas como esses, dentre outros, serão a forma inicial que encontramos, para que posteriormente, seja dado um aprofundamento sobre a estrutura de um objeto [R](http://r-project.org/){target='_blank'} bem como a sua manipulação, e adicionado a isso, a inserção de como são os paradigmas da programação nesse ambiente. Essa última parte será estudada, no Volume II, apresentado a seguir.
+O [R](http://r-project.org/){target='_blank'} é um ambiente de *software* livre e código aberto, com recursos gráficos, cujo objetivo se inicia pela análise e apresentação de dados até recursos para desenvolvimento de página *web*, por exemplo. Devido a contribuição da linguagem ser realizada por toda a comunidade científica e sociedade como um todo, os recursos desenvolvidos pelo [R](http://r-project.org/){target='_blank'} são dos mais diversos possíveis.
 
-## Volume II: Nível Intermediário
+:::
 
-O volume II é introduzido com uma melhor caracterização do ambiente [R](http://r-project.org/){target='_blank'} quanto ao seu **escopo léxico**, como **linguagem interpretada**, como **programação funcional**, como **programação meta-paradigma**, como **programação dinâmica**; apresentaremos **manipulações de objetos em mais detalhe**, bem como o surgimento de alguns outros objetos como *tibble*, **cópias de objetos**. Uma característica do ambiente [R](http://r-project.org/){target='_blank'} é que a linguagem pode ser **orientada a objetos** e isso será estudado nesse módulo. Introduziremos ao **desenvolvimento de pacotes R**, e aprofundaremos sobre os **ambientes**. Por fim, mostraremos como desenvolver Projeto do [RStudio](http://rstudio.org/){target='_blank'} e integrá-los ao [GitHub](http://github.com/){target='_blank'}, e dessa forma, introduziremos sobre o sistema [Git](https://git-scm.com/).
+::::
 
-Esse talvez seja o maior volume, dentre os três iniciais, porque apenar de não precisarmos entender mais a ideia dos objetos, que foram retratadas no Volume I, a inserção dos paradigmas da programação para este volume, trará uma maior riqueza de características para o [R](http://r-project.org/){target='_blank'}, mostrando a sua versatilidade. Também, daremos um maior detalhamento como manipular objetos, e as otimizações existentes da linguagem, como por exemplo, a modificação no local, que se entendida, poderá perceber que o *loop* no ambiente [R](http://r-project.org/){target='_blank'} não é lento quanto parece. Ao final desse volume, falaremos sobre como propagar o seu código com o sistema [Git](https://git-scm.com/) na plataforma [GitHub](http://github.com/){target='_blank'}, sincronizado com os projetos do [RStudio](http://rstudio.org/){target='_blank'}.
+:::
 
-## Volume III: Nível Avançado
 
-O Volume III, será a total exploração do manual [R Internals](https://cran.r-project.org/doc/manuals/R-ints.html). Apesar de ser um assunto voltado para membros do [R Core Team](https://www.r-project.org/contributors.html), pretendemos entender como o [R](http://r-project.org/){target='_blank'} trabalha nos bastidores. Dessa forma, teremos total controle sobre as nossas rotinas. Contudo, para usários que pretendem entender o  ambiente [R](http://r-project.org/){target='_blank'} de forma aplicada, pode avançar esse volume para a leitura dos volumes seguintes.
+
+Ainda como complemento, não queremos neste material convencê-lo a utilizar o ambiente [R](http://r-project.org/){target='_blank'}, pois a melhor linguagem é a que dominamos. Contudo, pretendemos mostrar que os recursos utilizados pelo [R](http://r-project.org/){target='_blank'} não estão limitados apenas a análise de dados nos dias atuais. Um exemplo é o desenvolvimento escrito  do material didático desta coleção, que pode ser acessado em: [https://bendeivide.github.io/cursor/](https://bendeivide.github.io/cursor/). Usufruímos das próprias ferramentas do [R](http://r-project.org/){target='_blank'} para repassar as nossas experiências, sem ao menos ter o domínio sobre linguagens do tipo `HTML`, `CSS`, `JavaScript`, dentre outras, necessárias para uma boa renderização de uma página *web*. Isso mostra a potencial ferramenta de trabalho que o [R](http://r-project.org/){target='_blank'} pode ser para nossa vida profissional.
+
+Dessa forma, propomos um entendimento sobre a sintaxe e semântica^[Em linguagem de programação, a sintaxe representa a estrutura de como a linguagem é escrita. Ao passo que a semântica representa o comportamento associado a essas estruturas.] de como a linguagem [R](http://r-project.org/){target='_blank'} é desenvolvida. Seremos capazes, após a leitura dos dois primeiros *Volumes*, de acompanhar qualquer curso de Estatística com aplicações em [R](http://r-project.org/){target='_blank'}, dedicando-se apenas aos assuntos pertinentes à área da Estatística, uma vez que o embasamento sobre a linguagem será suprida por esta coleção. A nova revolução dos dados, se deve ao grande volume de informações obtidas nessa era tecnológica. Juntamente com a Estatística, o [R](http://r-project.org/){target='_blank'} representa uma poderosa ferramenta para entender os padrões que estão por trás dos dados, que por sinal, são a moeda valiosa do momento, ou melhor, sempre foram!
+
+Aprenderemos também recursos diversos na área da computação, como programação defensiva,  desenvolvimento de interfaces gráficas ao usuário (IGU), paralelização, recursos na área da estatística, como o desenvolvimento de gráficos e o uso de banco de dados. Ensinaremos também o desenvolvimento de materiais como artigos, livros, *websites*, *blogs*, *dashboards*. Por fim, chegaremos a maior cobiça de um programador [R](http://r-project.org/){target='_blank'}: desenvolver um pacote.
+
+::: {.rmdimportant}
+
+:::: {style="display: flex;"}
+
+::: {}
+
+![](stop.png){width=3cm, height=3cm}
+
+:::
+
+::: {}
+
+**Por que os artigos "o" e "a" para o [R](http://r-project.org/){target='_blank'}?**
+
+
+Em muitos momentos utilizaremos o artigo "o" para a linguagem [R](http://r-project.org/){target='_blank'}. Pois é, isso ocorre porque ela também é considerada um *software* ou ambiente. Daí, chamamos de programa [R](http://r-project.org/){target='_blank'}, ou preferivelmente, ambiente [R](http://r-project.org/){target='_blank'}.
+
+:::
+
+::::
+
+:::
+
+
+A coleção apresenta três *Volumes* iniciais para o entendimento do ambiente  [R](http://r-project.org/){target='_blank'}:
+
+- [R](http://r-project.org/){target='_blank'} Básico (Volume I);
+- [R](http://r-project.org/){target='_blank'} Intermediário (Volume II); e 
+- [R](http://r-project.org/){target='_blank'} Avançado (Volume III).
+
+A seguir, explanaremos sobre cada um dos volumes.
+
+## [R](http://r-project.org/){target='_blank'} Básico (Volume I)
+
+Este primeiro *Volume*, apresenta um breve **histórico** sobre a linguagem, a sua instalação, bem como os recursos da *IDE*^[Do inglês, *Integrated Development Environment*, que significa ambiente de desenvolvimento integrado.] [RStudio](http://rstudio.org/){target='_blank'}, o conhecimento da **sintaxe** e **semântica** da linguagem [R](http://r-project.org/){target='_blank'}, as estruturas bases da linguagem, o que é um **objeto** e como construir uma **função**, o entendimento sobre **controle de fluxos**. O que é um **pacote**, **carregar** e **anexar** um pacote, e quem são os mantenedores da linguagem, também serão assuntos deste primeiro *Volume*. Noções básicas sobre o **caminho de busca**, **ambientes** e **_namespaces_** serão abordados. Algo muito interessante, que pode mudar o *script* de um programador em [R](http://r-project.org/){target='_blank'}, são as **boas práticas para a escrita de um código**, tema também abordado neste *Volume*.
+
+A ideia do *Volume I* é proporcionar um entendimento básico, um primeiro contato com a linguagem, fazendo com que nós possamos dar os primeiros passos, executando as primeiras linhas de comando. Apresentaremos erros recorrentes, como o entendimento sobre um objeto, ou o anexo de um pacote ao caminho de busca. Temas como esses, dentre outros, foram a forma inicial que encontramos para aprofundar sobre a estrutura de um objeto [R](http://r-project.org/){target='_blank'}, bem como a sua manipulação. Adicionado a isso, faremos a inserção de como são os paradigmas da programação no ambiente. Esta última parte será estudada no *Volume II*, apresentada a seguir.
+
+## [R](http://r-project.org/){target='_blank'} Intermediário (Volume II)
+
+O **Volume II** é introduzido com uma maior caracterização do ambiente [R](http://r-project.org/){target='_blank'} quanto ao seu **escopo léxico**, como **linguagem interpretada**, como **programação funcional**, como **programação meta-paradigma**, como **programação dinâmica**; apresentaremos **manipulações de objetos em mais detalhe**, bem como o surgimento de algumas outras estruturas de dados como *tibble*, **cópias de objetos**, detre outras situações. Uma característica do ambiente [R](http://r-project.org/){target='_blank'} é que a linguagem pode ser **orientada a objetos** e isso será estudado neste *Volume*. Introduziremos o **desenvolvimento de pacotes R**, e aprofundaremos sobre os **ambientes**. Por fim, mostraremos como desenvolver um projeto do **[R](http://r-project.org/){target='_blank'}** e integrá-lo ao [GitHub](http://github.com/){target='_blank'}, e dessa forma, introduziremos sobre o sistema [Git](https://git-scm.com/).
+
+Este talvez seja o maior *Volume* dentre os três iniciais, pois apesar de não ser mais necessário entender a ideia de objeto, retratada no *Volume I*, a inserção dos paradigmas da programação para o *Volume II* trará uma maior riqueza de características para o [R](http://r-project.org/){target='_blank'}, mostrando a sua versatilidade. Também, daremos um maior detalhe sobre como manipular objetos, e as otimizações existentes da linguagem como por exemplo, a modificação no local, que se entendida, perceberemos que o *loop* no ambiente [R](http://r-project.org/){target='_blank'} não é lento como ouvimos falar. Ao final do *Volume II*, falaremos sobre como propagar um código com o sistema [Git](https://git-scm.com/) na plataforma [GitHub](http://github.com/){target='_blank'}, sincronizado com os projeto [RStudio](http://rstudio.org/){target='_blank'}.
+
+## [R](http://r-project.org/){target='_blank'} Avançado (Volume III)
+
+O *Volume III*, será a total exploração do manual [R Internals](https://cran.r-project.org/doc/manuals/R-ints.html). Apesar de ser um assunto voltado para membros do [R Core Team](https://www.r-project.org/contributors.html), pretendemos entender como o [R](http://r-project.org/){target='_blank'} trabalha nos bastidores. Dessa forma, teremos total controle sobre as nossas rotinas. Contudo, para usários que pretendem entender o  ambiente [R](http://r-project.org/){target='_blank'} de forma aplicada, pode avançar esse volume para a leitura dos volumes seguintes.
 
 ## Demais volumes
 

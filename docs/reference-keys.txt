@@ -25,9 +25,9 @@ fig:FluxogramaFuncaoFor
 fig:configuracaoStyler
 fig:EsqueletoBasicoPacote
 entendendo-a-coleção-estudando-o-ambiente-r
-volume-i-nível-básico
-volume-ii-nível-intermediário
-volume-iii-nível-avançado
+r-básico-volume-i
+r-intermediário-volume-ii
+r-avançado-volume-iii
 demais-volumes
 referencias
 pacutilizados

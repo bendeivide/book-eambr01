@@ -6,6 +6,7 @@ bookdown::bs4_book:
     fg: "#000000"
     # Cor do fundo
     bg: "#EBEBEB"
+    success: "#0067BE"
   repo: 
     base: https://github.com/bendeivide/book-eambr01
     branch: main
