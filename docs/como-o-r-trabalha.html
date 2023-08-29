@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Capítulo 3 Como o R trabalha? | R básico</title>
 <meta name="author" content="Ben Dêivide e Diego Arthur">
-<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Capítulo 3 Como o R trabalha? | R básico">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://bendeivide.github.io/book-eambr01/como-o-r-trabalha.html">
@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="Capítulo 3 Como o R trabalha? | R básico">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -101,7 +101,7 @@
 </h1>
 <p>Iniciamos a discussão por uma afirmação de John McKinley Chambers, do qual afirmou que o R tem três princípios (Chambers 2016):</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Criador_S.PNG"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Criador_S.PNG"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:chambers"></span>
 <img src="img/Criador_S.PNG" alt="John Chambers^[Fonte da foto: Retirada de sua página pessoal, [https://statweb.stanford.edu/~jmc4/](https://statweb.stanford.edu/~jmc4/)], o criador da linguagem `S`." width="89"><p class="caption">
@@ -119,7 +119,7 @@ FIGURA 3.1: John Chambers<a class="footnote-ref" tabindex="0" data-toggle="popov
 <p>Ao longo de todo o curso, para os três módulos, iremos nos referir a esses princípios. Vamos inicialmente observar uma adaptação da ilustração feita por Paradis (2005), mostrando como o R trabalha, Figura <a href="como-o-r-trabalha.html#fig:rworks">3.2</a>.</p>
 <p>Toda ação que acontece no <strong>R</strong> é uma chamada de função (Operadores e funções), que por sua vez é armazenada na forma de um objeto, e este se associa a um nome. A forma de execução de uma função é baseada em argumentos (dados, fórmulas, expressões, etc), que são entradas, ou argumentos padrões que já são pré-estabelecidos na criação da função. Esses tipos de argumentos podem ser modificados na execução da função. Por fim, a saída é o resultado, que é também um objeto, e pode ser usado como argumento de outras funções.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Funcionamento_R.PNG"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Funcionamento_R.PNG"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:rworks"></span>
 <img src="img/Funcionamento_R.PNG" alt="Esquema de como o `R` funciona." width="50%"><p class="caption">
@@ -136,18 +136,18 @@ FIGURA 3.2: Esquema de como o <code>R</code> funciona.
 <p>O <strong>RStudio</strong> se apresenta como uma interface para facilitar a utilização do <strong>R</strong>, tendo por padrão quatro quadrantes, demonstrado na Figura <a href="como-o-r-trabalha.html#fig:iderstudio">3.4</a></p>
 <p>Muitas coisas na interface do <strong>R</strong> podem se tornar problemas para os usuários, uma vez que janelas gráficas, janelas de scripts, dentre outras, se sobrepõe. Uma vantagem no <strong>RStudio</strong> foi essa divisão de quadrantes, que torna muito mais organizado as atividades realizadas no <strong>R</strong>.De um modo geral, diremos que o primeiro quadrante é responsável pela entrada de dados, comandos, isto é, o input. O segundo quadrante, que é o console do R , representa tanto entrada como saída de informações (input/output). Dependendo as atividades as abas podem aumentar. O terceiro quadrante representa informações básicas como objetos no ambiente global, a memória de comandos na aba History, dentre outras, e também representa entrada como saída de informações (input/output). Por fim, o quarto quadrante é responsável por representação gráficas, instalação de pacotes, renderização de páginas web.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Console_do_R.PNG"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Console_do_R.PNG"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:promptr"></span>
-<img src="img/Console_do_R.png" alt="Console do R (Versão 4.0.3)." width="80%"><p class="caption">
+<img src="img/Console_do_R.PNG" alt="Console do R (Versão 4.0.3)." width="80%"><p class="caption">
 FIGURA 3.3: Console do R (Versão 4.0.3).
 </p>
 </div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Interface_RStudio.PNG"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/Interface_RStudio.PNG"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:iderstudio"></span>
-<img src="img/Interface_RStudio.png" alt="Interface do RStudio (Versão 1.4.1103)." width="80%"><p class="caption">
+<img src="img/Interface_RStudio.PNG" alt="Interface do RStudio (Versão 1.4.1103)." width="80%"><p class="caption">
 FIGURA 3.4: Interface do RStudio (Versão 1.4.1103).
 </p>
 </div>
@@ -190,21 +190,21 @@ for, dentre outras, que pode ser consultado usando o comando ?Reserved().</p></l
 </h3>
 <p>Os <strong>comandos elementares</strong> podem ser divididos em <strong>expressões</strong> e <strong>atribuições</strong>. Por exemplo, podemos estar interessados em resolver a seguinte expressão <span class="math inline">\(10+15=25\)</span>. No console quando passamos pelo comando:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">R</span><span class="op">&gt;</span><span class="fl">10</span> <span class="op">+</span> <span class="fl">15</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">R</span><span class="op">&gt;</span><span class="fl">10</span> <span class="op">+</span> <span class="fl">15</span></span></code></pre></div>
 <pre><code>## [1] 25</code></pre>
 <p>No <em>console</em> quando passamos pelo comando do Código R 4.2, o <strong>R</strong> avalia essa expressão internamente e imprime o resultado na tela, após apertar o botão ENTER do teclado. Esse fato é o que ocorre no segundo princípio mencionado por Chambers (2016), tudo em <strong>R</strong> acontece por uma chamada de função. Na realidade o símbolo + é uma função interna do <strong>R</strong> , que chamamos de função primitiva, porque foi implementada em outra linguagem. Assim, esse é o resultado de três objetos (“10”, “+”, “15”) que são avaliados internamente, do qual a função ’+’(e1, e2) é chamada, e em seguida o resultado é impresso no console. Intrinsecamente, podemos também afirmar que a função print() também trabalha nessa situação, fazendo o papel de imprimir o resultado no console.</p>
 <p>Do mesmo modo, se houver algum problema em algum dos objetos o retorno da avaliação pode ser uma mensagem de erro. Um caso muito prático é quando utilizamos o separador de casas decimais, sendo a <strong>vírgula “,”</strong>, para os números. Quando na realidade deve ser um <strong>ponto “.”</strong>, respeitando o sistema internacional de medidas. A vírgula é utilizada para separar elementos, argumentos em uma função, etc. Vejamos um exemplo no Código R 4.3.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fl">10.5</span> <span class="op">+</span> <span class="fl">15.5</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fl">10.5</span> <span class="op">+</span> <span class="fl">15.5</span></span></code></pre></div>
 <pre><code>## [1] 26</code></pre>
 <p>Porém, tem que ficar claro que uma expressão é qualquer comando repassado no console. Este comando é avaliado e seu resultado impresso, há menos que explicitamente o usuário queira tornálo invisível. Caso algum elemento do comando não seja reconhecido pelo <strong>R</strong>, há um retorno de alguma mensagem em forma de “erro” ou “alerta”, tentando indicar o possível problema. Todos esses processos ocorrem na memória ativa do computador, e uma vez o resultado impresso no console, o valor é perdido, há menos que você atribua essa expressão a um nome, que erroneamento usamos o termo: “criamos um objeto!”. A atribuição dessa expressão será dada pela junção de dois símbolos &lt;-, falado mais a frente. Um comando em forma de atribuição também avalia a sua expressão, um nome se associa ao seu resultado, e o resultado será mostrado, se posteriormente, após a execução você digitar o “nome” atribuído a esse resultado. Vejamos um exemplo o Código R 4.4.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Foi criado um objeto do tipo caractere e o nome "meu_nome" foi associado a ele</span>
-<span class="co"># O 'R' avalia essa expressão, mas não imprime no console!</span>
-<span class="va">meu_nome</span> <span class="op">&lt;-</span> <span class="st">"Ben"</span>
-<span class="co"># Para imprimir o resultado da expressão, digitamos o nome "meu_nome" no console</span>
-<span class="co"># e apertamos o botão ENTER do teclado!</span>
-<span class="va">meu_nome</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Foi criado um objeto do tipo caractere e o nome "meu_nome" foi associado a ele</span></span>
+<span><span class="co"># O 'R' avalia essa expressão, mas não imprime no console!</span></span>
+<span><span class="va">meu_nome</span> <span class="op">&lt;-</span> <span class="st">"Ben"</span></span>
+<span><span class="co"># Para imprimir o resultado da expressão, digitamos o nome "meu_nome" no console</span></span>
+<span><span class="co"># e apertamos o botão ENTER do teclado!</span></span>
+<span><span class="va">meu_nome</span></span></code></pre></div>
 <pre><code>## [1] "Ben"</code></pre>
 </div>
 <div id="execução-de-comandos" class="section level3" number="3.2.3">
@@ -213,21 +213,21 @@ for, dentre outras, que pode ser consultado usando o comando ?Reserved().</p></l
 </h3>
 <p>Quando inserimos um comando no console, executamos uma linha de comando por vez ou separados por “;” em uma mesma linha. Vejamos o Código</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Uma linha de comando por vez</span>
-<span class="va">meu_nome</span> <span class="op">&lt;-</span> <span class="st">"Ben"</span> <span class="co"># Criamos e associamos um nome ao objeto</span>
-<span class="va">meu_nome</span> <span class="co"># Imprimos o objeto</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Uma linha de comando por vez</span></span>
+<span><span class="va">meu_nome</span> <span class="op">&lt;-</span> <span class="st">"Ben"</span> <span class="co"># Criamos e associamos um nome ao objeto</span></span>
+<span><span class="va">meu_nome</span> <span class="co"># Imprimos o objeto</span></span></code></pre></div>
 <pre><code>## [1] "Ben"</code></pre>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Tudo em uma linha de comando</span>
-<span class="va">meu_nome</span> <span class="op">&lt;-</span> <span class="st">"Ben"</span>; <span class="va">meu_nome</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Tudo em uma linha de comando</span></span>
+<span><span class="va">meu_nome</span> <span class="op">&lt;-</span> <span class="st">"Ben"</span>; <span class="va">meu_nome</span></span></code></pre></div>
 <pre><code>## [1] "Ben"</code></pre>
 <p>Se um comando for muito grande e não couber em uma linha, ou caso deseje completar um
 comando em mais de uma linha, após a primeira linha haverá o símbolo “+” iniciando a linha seguinte ao invés do símbolo de prompt de comando (“&gt;”), até que o comando esteja sintaticamente
 completo. Vejamos o Código R 4.6, a seguir.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Uma linha de comando em mais de uma linha</span>
-<span class="op">(</span><span class="fl">10</span> <span class="op">+</span> <span class="fl">10</span><span class="op">)</span> <span class="op">/</span>
-  <span class="fl">2</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Uma linha de comando em mais de uma linha</span></span>
+<span><span class="op">(</span><span class="fl">10</span> <span class="op">+</span> <span class="fl">10</span><span class="op">)</span> <span class="op">/</span></span>
+<span>  <span class="fl">2</span></span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
 <p>Por fim, todas linhas de comando quando iniciam pelo símbolo jogo da velha, “#” indica um comentário e essa linha de comando não é avaliada pelo console, apenas impressa na tela. E ainda, as linhas de comandos no console são limitadas a aproximadamente 4095 bytes (não caracteres).</p>
 </div>
@@ -249,10 +249,10 @@ introdutória na seção Ambientes e caminhos de busca, mas entendamos inicialme
 de um ambiente é associar um conjunto de nomes a um conjunto de valores. Vejamos o Código R
 4.7.</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Nomes criados no ambiente </span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span> <span class="op">-</span> <span class="fl">6</span>; <span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">10</span> <span class="op">+</span> <span class="fl">4</span>; <span class="va">w</span> <span class="op">&lt;-</span> <span class="st">"Maria Isabel"</span>
-<span class="co"># Verificando o nomes contidos no ambiente global</span>
-<span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Nomes criados no ambiente </span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span> <span class="op">-</span> <span class="fl">6</span>; <span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">10</span> <span class="op">+</span> <span class="fl">4</span>; <span class="va">w</span> <span class="op">&lt;-</span> <span class="st">"Maria Isabel"</span></span>
+<span><span class="co"># Verificando o nomes contidos no ambiente global</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] "meu_nome" "w"        "x"        "y"</code></pre>
 <p>Observemos que todos os objetos criados até o momento estão listados, e o que é mais surpreendente é que ambientes podem conter outros ambientes e até mesmo se conterem. Observe o objeto meu_nome é um ambiente e está contido no Ambiente global. Será sempre dessa forma que recuperaremos um objeto criado no console do <strong>R</strong> . Caso contrário, se no console esse comando não for de atribuição esse objeto é perdido.</p>
 </div>
@@ -283,7 +283,7 @@ de um ambiente é associar um conjunto de nomes a um conjunto de valores. Vejamo
 </ul>
 <p>Um ponto bem interessante é o diretório. Quando criamos um Script a primeira vez, e trabalhamos nele a pós a criação, muitos erros podem ser encontrados de início. Um problema clássico é a importação de dados. O usuário tem um conjunto de de dados e deseja fazer a importação para o R , porém, mesmo com todos os comandos corretos, o console retorna um erro, informando que não existe esse arquivo que contém os dados para serem informados. Isso é devido ao diretório de trabalho atual. Para verificar qual o diretório que está trabalhando no momento, use a linha de comando:</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Para alterar o diretório de trabalho, o usuário deve usar a seguinte função setwd(“Aqui, deve ser apontado para o local desejado!”). Supomos que salvamos o nosso Script em C:_scripts_r. Assim, usamos a função setwd() e ao apontarmos o local, as barras devem ser inseridas de modo invertido, isto é, setwd(“C:/meu_scripts_r”), além de estar entre aspas.</p>
 <p>No RStudio , isso pode ser feito em Session &gt; Set Working Directory &gt; To Source File Location. Isso levará ao diretório corrente do Script. Se desejar escolher outro diretório, vá em Session &gt; Set Working Directory &gt; Choose Directory…. Porém, uma vez criado um Script, e utilizado novamente, se o usuário estiver abrindo o RStudio também naquele primeiro momento, por padrão, o diretório de trabalho corrente será o mesmo do diretório do Script. Isso acaba otimizando o trabalho.</p>
 <p>Devemos nos atentar também, quando trabalhamos utilizando Scripts ou arquivos de banco de dados, em locais diferentes do diretório corrente. Um outro recurso interessante é a função source(), que tem o objetivo de executar todas as linhas de comando de um Script sem precisar abri-lo. Isso pode ser útil, quando criamos funções para as nossas atividades, porém elas não se encontram no Script de trabalho para o momento. Assim, podemos criar um Script auxiliar que armazenas todas as funções criadas para as análises desejadas, e no Script corrente, poderemos chamá-las sem precisar abri o Script auxiliar. Todos os objetos passam a estar disponíveis no ambiente global.</p>
@@ -330,7 +330,7 @@ entender o que foi escrito.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2023-02-28.</p>
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2023-08-29.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -343,7 +343,7 @@ entender o que foi escrito.</p>
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

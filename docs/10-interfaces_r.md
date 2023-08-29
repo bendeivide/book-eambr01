@@ -64,7 +64,7 @@ Uma outra forma possível de instalação é baixar o arquivo do pacote fonte pa
 ```
 
 ```
-## Installing package into 'C:/Users/MABENLA/Documents/R/win-library/4.1'
+## Installing package into 'C:/Users/MABENLA/AppData/Local/R/win-library/4.2'
 ## (as 'lib' is unspecified)
 ```
 
@@ -108,6 +108,13 @@ Uma vez instalado o pacote, precisamos carregar e anexá-lo, para que possamos u
 ```r
 >  # Carregando e anexando o pacote midrangeMCP
 > library(midrangeMCP)
+```
+
+```
+## Warning: package 'midrangeMCP' was built under R version 4.2.3
+```
+
+```r
 > # Usando a função MRtest() desse pacote
 >  #-----
 >  # Dados simulados de um experimento em DIC (Delineamento Inteiramente Casualizado)
@@ -237,8 +244,8 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ```
 ## Table in latex of results of the MGM test
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -257,8 +264,8 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## 
 ## Table in latex of results of the MGR test
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -277,8 +284,8 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## 
 ## Table in latex of results of the SNKM test
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -297,8 +304,8 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## 
 ## Table in latex of results of the TM test
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -317,8 +324,8 @@ Anteriormente, falamos que usamos a função library() ou require() para carrega
 ## 
 ## Table in latex of results of descriptive statistics
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrrrrr}

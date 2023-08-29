@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Capítulo 10 Pacotes | R básico</title>
 <meta name="author" content="Ben Dêivide e Diego Arthur">
-<meta name="generator" content="bookdown 0.25 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Capítulo 10 Pacotes | R básico">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://bendeivide.github.io/book-eambr01/pacotes-1.html">
@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="Capítulo 10 Pacotes | R básico">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-BG6SYWV817"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -136,19 +136,19 @@ necessário. Mas isso é assunto para o <em>Volume V: Desenvolvimento de Pacotes
 <span class="header-section-number">10.3</span> Instalação de um pacote<a class="anchor" aria-label="anchor" href="#instala%C3%A7%C3%A3o-de-um-pacote-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>A instalação de um pacote via <strong>R</strong> pode ser feito pela função install.packages(pkgs = “nome_pacote”). Por exemplo, vamos tentar instalar o pacote <strong>midrangeMCP</strong>, da seguinte forma:</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="pacotes-1.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"midrangeMCP"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="pacotes-1.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"midrangeMCP"</span>)</span></code></pre></div>
 <p>Pode ser que nesse processo, dependendo de onde o usuário esteja executando essa linha de comando, interface do <strong>R</strong> ou <strong>RStudio</strong>, que seja solicitado o espelho por onde deseja fazer a instalação. Isso é apenas um atalho para ter um acesso mais rápido na instalação do pacote. A sugestão é escolher um espelho de seu país de origem.</p>
 <p>Uma forma simples de se ter detalhes do pacote na internet, tais como, baixar o pacote fonte ou o pacote binário do midrangeMCP, por exemplo, é sempre usar essa url: &lt;<a href="http://cran.r-project" class="uri">http://cran.r-project</a>. org/package=midrangeMCP&gt;. Para qualquer outro pacote, basta mudar o nome do pacote na url, e assim, estaremos na página do repositório do pacote. O pacote fonte, como falado anteriormente, é compactado com extensão <em>.tar.gz</em>, no caso, midrangeMCP_3.1.1.tar.gz. O pacote binário tem a compactação zipada, midrangeMCP_3.1.1.tar.zip para o Windows e midrangeMCP_3.1.1.tgz para o Macintosh. O acesso aos arquivos do pacote mencionados no esqueleto são disponíveis no pacote fonte.</p>
 <p>Uma outra forma possível de instalação é baixar o arquivo do pacote fonte para o seu computador e instalá-lo, via comando:</p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="pacotes-1.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="fu">install.packages</span>(<span class="at">pkgs =</span> <span class="st">"./midrangeMCP.tar.gz"</span>, <span class="at">repos =</span> <span class="cn">NULL</span>, <span class="at">type =</span> <span class="st">"source"</span>)</span></code></pre></div>
-<pre><code>## Installing package into 'C:/Users/MABENLA/Documents/R/win-library/4.1'
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="pacotes-1.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="fu">install.packages</span>(<span class="at">pkgs =</span> <span class="st">"./midrangeMCP.tar.gz"</span>, <span class="at">repos =</span> <span class="cn">NULL</span>, <span class="at">type =</span> <span class="st">"source"</span>)</span></code></pre></div>
+<pre><code>## Installing package into 'C:/Users/MABENLA/AppData/Local/R/win-library/4.2'
 ## (as 'lib' is unspecified)</code></pre>
 <pre><code>## Warning in install.packages(pkgs = "./midrangeMCP.tar.gz", repos = NULL, :
 ## installation of package './midrangeMCP.tar.gz' had non-zero exit status</code></pre>
 <p>Consideramos que o arquivo do pacote esteja no diretório de trabalho do usuário. Caso contrário, deve ser informado o local onde pacote se encontra no computador. Para o Window ou Macintosh, é possível instalar também, a partir dos pacotes binários.</p>
 <p>Muitos dos desenvolvedores, estão disponibilizando seus projetos de pacotes, principalmente no <strong>GitHub</strong>, inclusive com manuals de ajuda com maiores detalhes. Pode ser possível instalar esses pacotes por esse repositório. Precisamos inicialmente do pacote <strong>devtools</strong>, e posteriormente a instalação do pacote. Segue as linhas de comando:</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="pacotes-1.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb153-2"><a href="pacotes-1.html#cb153-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install_github</span>(<span class="st">"bendeivide/midrangeMCP"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="pacotes-1.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb151-2"><a href="pacotes-1.html#cb151-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install_github</span>(<span class="st">"bendeivide/midrangeMCP"</span>)</span></code></pre></div>
 <p>Contudo, devemos dar a preferência pela instalação via CRAN. Por lá, teremos a garantia que os pacotes estão estáveis para a utilização nas referidas plataformas mencionadas acima.</p>
 <p>Alguns pacotes, por falta de manutenção, seja por atualizações do <strong>R</strong> ou por qualquer outro motivo, podem se tornar incompatíveis para utilização sobre alguns dos três sistemas operacionais básicos (<em>SO Windows, Unix e SO Mac</em>) exigidos pelo <strong>R</strong>. Dessa forma, se as correções não forem feitas, estes pacotes e tornam órfãos, ou seja, desativados sob o CRAN. O primeiros pacotes sob o <em>CRAN</em>, por exemplo, não tinham o arquivo <strong>NAMESPACE</strong>, que hoje é exigido. Qualquer tentativa de instalação desses pacotes nessas situações, não serão bem sucedidas. Dessa forma, fizemos uma vídeo-aula, como tentativa de recuperar os pacotes desativados. Porém, deixemos claro que nem sempre é possível a instalação de pacotes desativados.</p>
 </div>
@@ -165,29 +165,30 @@ necessário. Mas isso é assunto para o <em>Volume V: Desenvolvimento de Pacotes
 <span class="header-section-number">10.5</span> Utilizar as funções de um pacote<a class="anchor" aria-label="anchor" href="#utilizar-as-fun%C3%A7%C3%B5es-de-um-pacote"><i class="fas fa-link"></i></a>
 </h2>
 <p>Uma vez instalado o pacote, precisamos carregar e anexá-lo, para que possamos utilizar os recursos disponíveis no pacote, como funções, dados, etc. Isso significa, disponibilizar na memória e inseri-lo no caminho de busca, respectivamente. Para fazer essas duas ações ao mesmo tempo, use a função library() ou require(). A primeira função se for utilizada sem argumento algum, retorna todos os pacotes instalados na biblioteca de pacotes do R . Vejamos o exemplo do pacote <strong>midrangeMCP</strong>, no Código R 9.1.</p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="pacotes-1.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Carregando e anexando o pacote midrangeMCP</span></span>
-<span id="cb154-2"><a href="pacotes-1.html#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">library</span>(midrangeMCP)</span>
-<span id="cb154-3"><a href="pacotes-1.html#cb154-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Usando a função MRtest() desse pacote</span></span>
-<span id="cb154-4"><a href="pacotes-1.html#cb154-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co">#-----</span></span>
-<span id="cb154-5"><a href="pacotes-1.html#cb154-5" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Dados simulados de um experimento em DIC (Delineamento Inteiramente Casualizado)</span></span>
-<span id="cb154-6"><a href="pacotes-1.html#cb154-6" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Variavel resposta</span></span>
-<span id="cb154-7"><a href="pacotes-1.html#cb154-7" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  rv <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">100.08</span>, <span class="fl">105.66</span>, <span class="fl">97.64</span>, <span class="fl">100.11</span>, <span class="fl">102.60</span>, <span class="fl">121.29</span>, <span class="fl">100.80</span>,</span>
-<span id="cb154-8"><a href="pacotes-1.html#cb154-8" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="dv">8</span> <span class="sc">+</span> <span class="fl">99.11</span>, <span class="fl">104.43</span>, <span class="fl">122.18</span>, <span class="fl">119.49</span>, <span class="fl">124.37</span>, <span class="fl">123.19</span>, <span class="fl">134.16</span>,</span>
-<span id="cb154-9"><a href="pacotes-1.html#cb154-9" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="dv">9</span> <span class="sc">+</span> <span class="fl">125.67</span>, <span class="fl">128.88</span>, <span class="fl">148.07</span>, <span class="fl">134.27</span>, <span class="fl">151.53</span>, <span class="fl">127.31</span>)</span>
-<span id="cb154-10"><a href="pacotes-1.html#cb154-10" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Tratamento</span></span>
-<span id="cb154-11"><a href="pacotes-1.html#cb154-11" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  treat <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">rep</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">each =</span> <span class="dv">4</span>))</span>
-<span id="cb154-12"><a href="pacotes-1.html#cb154-12" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Anava</span></span>
-<span id="cb154-13"><a href="pacotes-1.html#cb154-13" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  res <span class="ot">&lt;-</span> <span class="fu">anova</span>(<span class="fu">aov</span>(rv<span class="sc">~</span>treat))</span>
-<span id="cb154-14"><a href="pacotes-1.html#cb154-14" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  DFerror <span class="ot">&lt;-</span> res<span class="sc">$</span>Df[<span class="dv">2</span>]</span>
-<span id="cb154-15"><a href="pacotes-1.html#cb154-15" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  MSerror <span class="ot">&lt;-</span> res<span class="sc">$</span><span class="st">`</span><span class="at">Mean Sq</span><span class="st">`</span>[<span class="dv">2</span>]</span>
-<span id="cb154-16"><a href="pacotes-1.html#cb154-16" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Aplicando testes</span></span>
-<span id="cb154-17"><a href="pacotes-1.html#cb154-17" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  results <span class="ot">&lt;-</span> midrangeMCP<span class="sc">::</span><span class="fu">MRtest</span>(<span class="at">y =</span> rv,</span>
-<span id="cb154-18"><a href="pacotes-1.html#cb154-18" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">trt =</span> treat,</span>
-<span id="cb154-19"><a href="pacotes-1.html#cb154-19" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">dferror =</span> DFerror,</span>
-<span id="cb154-20"><a href="pacotes-1.html#cb154-20" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">mserror =</span> MSerror,</span>
-<span id="cb154-21"><a href="pacotes-1.html#cb154-21" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">alpha =</span> <span class="fl">0.05</span>,</span>
-<span id="cb154-22"><a href="pacotes-1.html#cb154-22" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">main =</span> <span class="st">"PCMs"</span>,</span>
-<span id="cb154-23"><a href="pacotes-1.html#cb154-23" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">MCP =</span> <span class="fu">c</span>(<span class="st">"all"</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="pacotes-1.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Carregando e anexando o pacote midrangeMCP</span></span>
+<span id="cb152-2"><a href="pacotes-1.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="fu">library</span>(midrangeMCP)</span></code></pre></div>
+<pre><code>## Warning: package 'midrangeMCP' was built under R version 4.2.3</code></pre>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="pacotes-1.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="co"># Usando a função MRtest() desse pacote</span></span>
+<span id="cb154-2"><a href="pacotes-1.html#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co">#-----</span></span>
+<span id="cb154-3"><a href="pacotes-1.html#cb154-3" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  <span class="co"># Dados simulados de um experimento em DIC (Delineamento Inteiramente Casualizado)</span></span>
+<span id="cb154-4"><a href="pacotes-1.html#cb154-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> <span class="co"># Variavel resposta</span></span>
+<span id="cb154-5"><a href="pacotes-1.html#cb154-5" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  rv <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">100.08</span>, <span class="fl">105.66</span>, <span class="fl">97.64</span>, <span class="fl">100.11</span>, <span class="fl">102.60</span>, <span class="fl">121.29</span>, <span class="fl">100.80</span>,</span>
+<span id="cb154-6"><a href="pacotes-1.html#cb154-6" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="dv">8</span> <span class="sc">+</span> <span class="fl">99.11</span>, <span class="fl">104.43</span>, <span class="fl">122.18</span>, <span class="fl">119.49</span>, <span class="fl">124.37</span>, <span class="fl">123.19</span>, <span class="fl">134.16</span>,</span>
+<span id="cb154-7"><a href="pacotes-1.html#cb154-7" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="dv">9</span> <span class="sc">+</span> <span class="fl">125.67</span>, <span class="fl">128.88</span>, <span class="fl">148.07</span>, <span class="fl">134.27</span>, <span class="fl">151.53</span>, <span class="fl">127.31</span>)</span>
+<span id="cb154-8"><a href="pacotes-1.html#cb154-8" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Tratamento</span></span>
+<span id="cb154-9"><a href="pacotes-1.html#cb154-9" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  treat <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">rep</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">each =</span> <span class="dv">4</span>))</span>
+<span id="cb154-10"><a href="pacotes-1.html#cb154-10" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Anava</span></span>
+<span id="cb154-11"><a href="pacotes-1.html#cb154-11" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  res <span class="ot">&lt;-</span> <span class="fu">anova</span>(<span class="fu">aov</span>(rv<span class="sc">~</span>treat))</span>
+<span id="cb154-12"><a href="pacotes-1.html#cb154-12" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  DFerror <span class="ot">&lt;-</span> res<span class="sc">$</span>Df[<span class="dv">2</span>]</span>
+<span id="cb154-13"><a href="pacotes-1.html#cb154-13" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  MSerror <span class="ot">&lt;-</span> res<span class="sc">$</span><span class="st">`</span><span class="at">Mean Sq</span><span class="st">`</span>[<span class="dv">2</span>]</span>
+<span id="cb154-14"><a href="pacotes-1.html#cb154-14" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span>  <span class="co"># Aplicando testes</span></span>
+<span id="cb154-15"><a href="pacotes-1.html#cb154-15" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span>  results <span class="ot">&lt;-</span> midrangeMCP<span class="sc">::</span><span class="fu">MRtest</span>(<span class="at">y =</span> rv,</span>
+<span id="cb154-16"><a href="pacotes-1.html#cb154-16" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">trt =</span> treat,</span>
+<span id="cb154-17"><a href="pacotes-1.html#cb154-17" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">dferror =</span> DFerror,</span>
+<span id="cb154-18"><a href="pacotes-1.html#cb154-18" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">mserror =</span> MSerror,</span>
+<span id="cb154-19"><a href="pacotes-1.html#cb154-19" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">alpha =</span> <span class="fl">0.05</span>,</span>
+<span id="cb154-20"><a href="pacotes-1.html#cb154-20" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">main =</span> <span class="st">"PCMs"</span>,</span>
+<span id="cb154-21"><a href="pacotes-1.html#cb154-21" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span>  <span class="at">MCP =</span> <span class="fu">c</span>(<span class="st">"all"</span>))</span></code></pre></div>
 <pre><code>## MCP's based on distributions of the studentized midrange and range
 ## 
 ## Study:  PCMs 
@@ -276,8 +277,8 @@ necessário. Mas isso é assunto para o <em>Volume V: Desenvolvimento de Pacotes
 <span id="cb159-2"><a href="pacotes-1.html#cb159-2" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> midrangeMCP<span class="sc">::</span><span class="fu">MRwrite</span>(results, <span class="at">extension =</span> <span class="st">"latex"</span>)</span></code></pre></div>
 <pre><code>## Table in latex of results of the MGM test
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -296,8 +297,8 @@ necessário. Mas isso é assunto para o <em>Volume V: Desenvolvimento de Pacotes
 ## 
 ## Table in latex of results of the MGR test
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -316,8 +317,8 @@ necessário. Mas isso é assunto para o <em>Volume V: Desenvolvimento de Pacotes
 ## 
 ## Table in latex of results of the SNKM test
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -336,8 +337,8 @@ necessário. Mas isso é assunto para o <em>Volume V: Desenvolvimento de Pacotes
 ## 
 ## Table in latex of results of the TM test
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrl}
@@ -356,8 +357,8 @@ necessário. Mas isso é assunto para o <em>Volume V: Desenvolvimento de Pacotes
 ## 
 ## Table in latex of results of descriptive statistics
 ## 
-## % latex table generated in R 4.1.3 by xtable 1.8-4 package
-## % Tue Feb 28 11:32:06 2023
+## % latex table generated in R 4.2.0 by xtable 1.8-4 package
+## % Tue Aug 29 02:21:18 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{lrrrrr}
@@ -468,7 +469,7 @@ exportadas que não iniciam por um ponto (“.”).</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2023-02-28.</p>
+    <p>"<strong>R básico</strong>: Coleção Estudando o Ambiente R (Volume I)" was written by Ben Dêivide e Diego Arthur. It was last built on 2023-08-29.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -481,7 +482,7 @@ exportadas que não iniciam por um ponto (“.”).</p>
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

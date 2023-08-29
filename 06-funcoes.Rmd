@@ -194,7 +194,7 @@ if (condição) instr1 else instr2
  i <- 5
  # Estrutura if()
  if (i > 3) {
- print("Maior␣que␣3!")
+ print("Maior que 3!")
  }
 ```
 Como observado no Código R 6.2, após associado o nome x associado ao objeto 5, isto é i <- 5, a função if() foi chamada e a condição foi verificada se i < 3. Como essa condição era verdadeira, a expressão sob a condição verdadeira é impressa, e a função if é encerrada. Vejamos mais um exemplo no Código R 6.3, a seguir.
@@ -230,18 +230,18 @@ Observamos na primeira forma que a condição para if() avaliar, nós não preci
  x <- 5
  w <- 3:8
  # Primeira sintaxe (Preferivel)
- if (x < w) {
- x
- } else {
- w
- }
+ # if (x < w) {
+ # x
+ # } else {
+ # w
+ # }
 
 
 ```
 
 ```{r echo=TRUE, prompt=TRUE}
  # Segunda forma
- if (x < w) x else w
+ # if (x < w) x else w
 
 ```
 

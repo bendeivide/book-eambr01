@@ -154,6 +154,13 @@ Suponha que desejamos calcular o desvio padrão de um conjunto de valores. Vamos
 > # Para usar o pipe (magrittr), substitua |> por %>%, e instale e anexe o pacote:
 > # install.packages(magrittr)
 >  library(magrittr)
+```
+
+```
+## Warning: package 'magrittr' was built under R version 4.2.1
+```
+
+```r
 > # Calculando o desvio padrao
 >  x  %>% 
 +   var()%>%
@@ -243,12 +250,12 @@ if (condição) instr1 else instr2
 >  i <- 5
 >  # Estrutura if()
 >  if (i > 3) {
-+  print("Maior␣que␣3!")
++  print("Maior que 3!")
 +  }
 ```
 
 ```
-## [1] "Maior<U+2423>que<U+2423>3!"
+## [1] "Maior que 3!"
 ```
 Como observado no Código R 6.2, após associado o nome x associado ao objeto 5, isto é i <- 5, a função if() foi chamada e a condição foi verificada se i < 3. Como essa condição era verdadeira, a expressão sob a condição verdadeira é impressa, e a função if é encerrada. Vejamos mais um exemplo no Código R 6.3, a seguir.
 
@@ -289,35 +296,17 @@ Observamos na primeira forma que a condição para if() avaliar, nós não preci
 >  x <- 5
 >  w <- 3:8
 >  # Primeira sintaxe (Preferivel)
->  if (x < w) {
-+  x
-+  } else {
-+  w
-+  }
-```
-
-```
-## Warning in if (x < w) {: a condição tem comprimento > 1 e somente o primeiro
-## elemento será usado
-```
-
-```
-## [1] 3 4 5 6 7 8
+>  # if (x < w) {
+>  # x
+>  # } else {
+>  # w
+>  # }
 ```
 
 
 ```r
 >  # Segunda forma
->  if (x < w) x else w
-```
-
-```
-## Warning in if (x < w) x else w: a condição tem comprimento > 1 e somente o
-## primeiro elemento será usado
-```
-
-```
-## [1] 3 4 5 6 7 8
+>  # if (x < w) x else w
 ```
 
 Observamos que o fato de x < y ser vetorizado, tivemos problema com a condição if(). A partir de w > 5, o resultado era para ter retornado sempre o valor 5, isto é, o valor verdadeiro (x) para a condição. Isso implica que a condição deve ser sempre entre vetores escalares. Uma saída seria utilizar a função for(), conjugada com if() e else. Porém, como forma de vetorizar essa condição, foi criado a função ifelse(), em que o fluxograma dessa função pode ser observado pela Figura , cuja forma sintática é dada a seguir.
